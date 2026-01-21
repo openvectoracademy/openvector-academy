@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Terms of Service | OpenVector Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    <style>
+        /* CSS Reset and Base Styles - SAME AS INDEX */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #06b6d4;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        /* Header Styles - EXACT SAME AS INDEX */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+        
+        .header-content {
+            width: 100%;
+            max-width: 100vw;
+            margin: 0 auto;
+            overflow: visible;
+        }
+        
+        .header.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        
+        .logo-img {
+            height: 40px;
+            width: auto;
+            max-width: 100%;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark);
+            white-space: nowrap;
+        }
+        
+        /* Top Bar Actions */
+        .top-bar-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow: visible;
+        }
+        
+        /* Search Container */
+        .search-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .search-icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .search-icon-btn:hover {
+            background-color: #f1f5f9;
+        }
+        
+        .search-input {
+            padding: 8px 15px 8px 40px;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            width: 180px;
+            transition: var(--transition);
+            max-width: 100%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .search-container.active .search-input {
+            opacity: 1;
+            visibility: visible;
+            width: 220px;
+        }
+        
+        .search-container.active .search-icon-btn {
+            position: relative;
+            z-index: 11;
+            background-color: #f1f5f9;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            z-index: 11;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            white-space: nowrap;
+            flex-shrink: 0;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        
+        .language-toggle:hover {
+            background-color: #f1f5f9;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            flex-shrink: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .hamburger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--dark);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        
+        .hamburger-menu.active span:nth-child(1) {
+            transform: translateY(14px) rotate(45deg);
+        }
+        
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger-menu.active span:nth-child(3) {
+            transform: translateY(-14px) rotate(-45deg);
+        }
+        
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .nav-menu::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 25px;
+            padding: 0 20px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark);
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.btn-primary {
+            color: white;
+            padding: 8px 20px;
+            margin-left: 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 90px;
+            right: -100%;
+            width: 100%;
+            max-width: 300px;
+            height: calc(100vh - 90px);
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: var(--transition);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .mobile-menu-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-link:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+        
+        /* Terms of Service Hero Section */
+        .terms-hero {
+            background-color: #f8fafc;
+            padding: 150px 0 60px;
+            margin-top: 90px;
+            text-align: center;
+        }
+        
+        .terms-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .terms-hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .last-updated {
+            background-color: #e0f2fe;
+            color: var(--primary-dark);
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        /* Terms Content */
+        .terms-content {
+            padding: 80px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .terms-section {
+            margin-bottom: 50px;
+        }
+        
+        .terms-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .terms-section h3 {
+            font-size: 1.3rem;
+            margin: 30px 0 15px;
+            color: var(--dark);
+        }
+        
+        .terms-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .terms-section ul, .terms-section ol {
+            margin: 15px 0 15px 30px;
+            color: var(--gray);
+        }
+        
+        .terms-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .terms-section ol {
+            list-style-type: decimal;
+        }
+        
+        .terms-section ul {
+            list-style-type: disc;
+        }
+        
+        .highlight-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--dark);
+        }
+        
+        .notice-box {
+            background-color: #fef3c7;
+            border: 1px solid #fbbf24;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: var(--border-radius);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        th {
+            background-color: #f1f5f9;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            border: 1px solid var(--light-gray);
+        }
+        
+        td {
+            padding: 15px;
+            border: 1px solid var(--light-gray);
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .contact-info {
+            background-color: #f0f9ff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        .toc-list {
+            margin-left: 20px;
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+        
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+        
+        .toc-list a {
+            color: var(--primary);
+        }
+        
+        .toc-list a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer - EXACT SAME AS INDEX */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            width: 100%;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-description {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-link {
+            color: #cbd5e1;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .terms-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .language-toggle span {
+                display: none;
+            }
+            
+            .language-toggle {
+                padding: 8px;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+            }
+            
+            .terms-hero {
+                padding: 130px 0 40px;
+            }
+            
+            .terms-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .terms-content {
+                padding: 50px 0;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+            
+            .highlight-box, .notice-box {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .terms-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .terms-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .highlight-box {
+                padding: 15px;
+            }
+            
+            .last-updated {
+                font-size: 0.9rem;
+                padding: 8px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header - EXACT SAME AS INDEX -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" alt="OpenVector Academy Logo" class="logo-img">
+                    <div class="logo-text">OpenVector Academy</div>
+                </div>
+                
+                <div class="top-bar-actions">
+                    <!-- Search Icon with Expandable Input -->
+                    <div class="search-container" id="search-container">
+                        <button class="search-icon-btn" id="search-toggle">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input type="text" class="search-input" placeholder="Search courses..." id="search-input">
+                    </div>
+                    
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </div>
+                    
+                    <!-- Hamburger Menu -->
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="live.html" class="nav-link">Live Classes</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="registration.html" class="nav-link btn btn-primary">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+            <li><a href="courses.html" class="mobile-menu-link">Courses</a></li>
+            <li><a href="resources.html" class="mobile-menu-link">Resources</a></li>
+            <li><a href="news.html" class="mobile-menu-link">News</a></li>
+            <li><a href="live.html" class="mobile-menu-link">Live Classes</a></li>
+            <li><a href="events.html" class="mobile-menu-link">Events</a></li>
+            <li><a href="about.html" class="mobile-menu-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+            <li><a href="registration.html" class="mobile-menu-link">Register</a></li>
+        </ul>
+    </div>
+
+    <!-- Terms of Service Hero -->
+    <section class="terms-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these Terms of Service carefully before using our website and services. By accessing or using our services, you agree to be bound by these terms.</p>
+            <div class="last-updated">Last Updated: January 15, 2026</div>
+        </div>
+    </section>
+
+    <!-- Terms of Service Content -->
+    <section class="terms-content">
+        <div class="container">
+            <!-- Table of Contents -->
+            <div class="terms-section">
+                <h2>Table of Contents</h2>
+                <ul class="toc-list">
+                    <li><a href="#section1">1. Agreement to Terms</a></li>
+                    <li><a href="#section2">2. User Accounts and Registration</a></li>
+                    <li><a href="#section3">3. Course Access and License</a></li>
+                    <li><a href="#section4">4. Payments and Refunds</a></li>
+                    <li><a href="#section5">5. Intellectual Property Rights</a></li>
+                    <li><a href="#section6">6. User Conduct and Responsibilities</a></li>
+                    <li><a href="#section7">7. Third-Party Content and Links</a></li>
+                    <li><a href="#section8">8. Termination and Account Suspension</a></li>
+                    <li><a href="#section9">9. Disclaimer of Warranties</a></li>
+                    <li><a href="#section10">10. Limitation of Liability</a></li>
+                    <li><a href="#section11">11. Indemnification</a></li>
+                    <li><a href="#section12">12. Changes to Terms</a></li>
+                    <li><a href="#section13">13. Governing Law and Dispute Resolution</a></li>
+                    <li><a href="#section14">14. Contact Information</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="terms-section" id="section1">
+                <h2>1. Agreement to Terms</h2>
+                <p>These Terms of Service ("Terms") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and OpenVector Academy ("we," "us," or "our"), concerning your access to and use of the openvector.edu website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> By accessing the Site, you agree that you have read, understood, and agree to be bound by all of these Terms. If you do not agree with all of these Terms, then you are expressly prohibited from using the Site and you must discontinue use immediately.</p>
+                </div>
+                
+                <p>Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms at any time and for any reason.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="terms-section" id="section2">
+                <h2>2. User Accounts and Registration</h2>
+                <p>To access certain features of the Site, you may be required to register for an account. When you register for an account, you agree to:</p>
+                
+                <ul>
+                    <li>Provide accurate, current, and complete information during the registration process</li>
+                    <li>Maintain and promptly update your account information to keep it accurate, current, and complete</li>
+                    <li>Maintain the security of your password and accept all risks of unauthorized access to your account</li>
+                    <li>Notify us immediately if you discover or otherwise suspect any security breaches related to the Site</li>
+                    <li>Take responsibility for all activities that occur under your account</li>
+                </ul>
+                
+                <p>You must be at least 16 years of age to create an account on the Site and use the Services. If you are under 16, you may only use the Services with the consent and supervision of a parent or legal guardian.</p>
+                
+                <div class="notice-box">
+                    <p><strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account login information and are fully responsible for all activities that occur under your account. We reserve the right to disable any user account at any time in our sole discretion for any or no reason, including if, in our opinion, you have violated any provision of these Terms.</p>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="terms-section" id="section3">
+                <h2>3. Course Access and License</h2>
+                <p>Upon enrollment in a course and payment of any applicable fees, we grant you a limited, non-exclusive, non-transferable, revocable license to access and view the course content for which you have paid all required fees, solely for your personal, non-commercial, educational purposes.</p>
+                
+                <h3>3.1 Course Materials</h3>
+                <p>All course materials, including but not limited to videos, lectures, presentations, PDFs, eBooks, quizzes, and assignments, are protected by copyright and other intellectual property laws. You may not:</p>
+                
+                <ul>
+                    <li>Copy, reproduce, distribute, transmit, broadcast, display, sell, license, or otherwise exploit any course content for any other purposes without our prior written consent</li>
+                    <li>Remove any copyright or other proprietary notices from any course content</li>
+                    <li>Share your account login credentials with others or allow others to access the course content through your account</li>
+                    <li>Download course content in bulk or use automated systems to access course content</li>
+                    <li>Use the course content to create a competing service or product</li>
+                </ul>
+                
+                <h3>3.2 Course Duration and Access</h3>
+                <p>Access to courses is typically granted for the duration specified at the time of enrollment. Some courses may offer lifetime access, while others may have time-limited access. Please check the specific course details for information about access duration.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="terms-section" id="section4">
+                <h2>4. Payments and Refunds</h2>
+                
+                <h3>4.1 Pricing and Payment Terms</h3>
+                <p>All fees for courses and services are quoted in US Dollars unless otherwise specified. You agree to pay all fees charged to your account based on the pricing and payment terms in effect at the time a fee is payable.</p>
+                
+                <p>We may offer promotions or discounts that may affect pricing. These promotions and discounts are subject to change or termination at any time.</p>
+                
+                <h3>4.2 Refund Policy</h3>
+                <p>Our refund policy varies by course and is outlined at the time of purchase. Generally, we offer the following refund terms:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Type</th>
+                            <th>Refund Period</th>
+                            <th>Conditions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Self-paced Courses</td>
+                            <td>30 days from purchase</td>
+                            <td>If less than 30% of course content has been accessed</td>
+                        </tr>
+                        <tr>
+                            <td>Live Instructor-led Courses</td>
+                            <td>7 days from course start date</td>
+                            <td>If no live sessions have been attended</td>
+                        </tr>
+                        <tr>
+                            <td>Subscription Plans</td>
+                            <td>14 days from initial subscription</td>
+                            <td>Cancel anytime, but refund only within first 14 days</td>
+                        </tr>
+                        <tr>
+                            <td>Bundles & Special Offers</td>
+                            <td>As specified in offer</td>
+                            <td>Subject to specific terms of the offer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>To request a refund, please contact our support team at support@openvector.edu. Refunds will be processed to the original payment method within 7-14 business days.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Important Refund Exceptions:</strong> No refunds will be provided: (1) After the refund period has expired, (2) If you have completed more than 30% of the course content, (3) For downloadable resources that have been accessed, or (4) For certificate fees.</p>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="terms-section" id="section5">
+                <h2>5. Intellectual Property Rights</h2>
+                <p>The Site and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by OpenVector Academy, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                
+                <h3>5.1 Trademarks</h3>
+                <p>The OpenVector Academy name, the OpenVector Academy logo, and all related names, logos, product and service names, designs, and slogans are trademarks of OpenVector Academy or its affiliates or licensors. You must not use such marks without our prior written permission.</p>
+                
+                <h3>5.2 User Content</h3>
+                <p>By submitting, posting, or displaying content on or through our Services, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, translate, and distribute such content for the purpose of operating and improving our Services.</p>
+                
+                <p>You represent and warrant that you own or have the necessary rights to the content you submit and that such content does not violate any third-party rights.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="terms-section" id="section6">
+                <h2>6. User Conduct and Responsibilities</h2>
+                <p>As a condition of your use of the Site, you agree not to use the Site for any purpose that is unlawful or prohibited by these Terms. You agree to abide by all applicable local, state, national, and international laws and regulations.</p>
+                
+                <h3>6.1 Prohibited Activities</h3>
+                <p>You agree not to engage in any of the following prohibited activities:</p>
+                
+                <ul>
+                    <li>Violating any applicable laws or regulations</li>
+                    <li>Infringing upon our intellectual property rights or the intellectual property rights of others</li>
+                    <li>Harassing, abusing, or harming another person</li>
+                    <li>Submitting false or misleading information</li>
+                    <li>Uploading or transmitting viruses or any other type of malicious code</li>
+                    <li>Collecting or tracking the personal information of others</li>
+                    <li>Spamming, phishing, or scraping content</li>
+                    <li>Interfering with or disrupting the integrity or performance of the Site</li>
+                    <li>Attempting to gain unauthorized access to the Site or its related systems or networks</li>
+                    <li>Using the Site for any commercial purpose without our express written consent</li>
+                </ul>
+                
+                <h3>6.2 Academic Integrity</h3>
+                <p>You agree to maintain academic integrity in all coursework, including but not limited to:</p>
+                
+                <ul>
+                    <li>Completing your own assignments and assessments</li>
+                    <li>Not sharing quiz or exam answers with other students</li>
+                    <li>Not plagiarizing content from other sources</li>
+                    <li>Not using unauthorized assistance during exams</li>
+                </ul>
+                
+                <p>Violations of academic integrity may result in suspension or termination of your account and may invalidate any certificates earned.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="terms-section" id="section7">
+                <h2>7. Third-Party Content and Links</h2>
+                <p>The Site may contain links to third-party websites or resources. We provide these links only as a convenience and are not responsible for the content, products, or services on or available from those websites or resources or links displayed on such websites.</p>
+                
+                <p>You acknowledge sole responsibility for and assume all risk arising from your use of any third-party websites or resources.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="terms-section" id="section8">
+                <h2>8. Termination and Account Suspension</h2>
+                <p>We may terminate or suspend your account and bar access to the Site immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+                
+                <p>If you wish to terminate your account, you may simply discontinue using the Site or contact us to request account deletion.</p>
+                
+                <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="terms-section" id="section9">
+                <h2>9. Disclaimer of Warranties</h2>
+                <p>YOUR USE OF THE SITE AND SERVICES IS AT YOUR SOLE RISK. THE SITE AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. OPENVECTOR ACADEMY EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                
+                <p>OPENVECTOR ACADEMY MAKES NO WARRANTY THAT (I) THE SITE OR SERVICES WILL MEET YOUR REQUIREMENTS, (II) THE SITE OR SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, (III) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SITE OR SERVICES WILL BE ACCURATE OR RELIABLE, OR (IV) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SITE OR SERVICES WILL MEET YOUR EXPECTATIONS.</p>
+                
+                <div class="notice-box">
+                    <p><strong>Educational Outcomes:</strong> We do not guarantee any specific educational or career outcomes from completing our courses. Course completion does not guarantee employment, salary increases, or any other specific results.</p>
+                </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="terms-section" id="section10">
+                <h2>10. Limitation of Liability</h2>
+                <p>IN NO EVENT SHALL OPENVECTOR ACADEMY, NOR ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (I) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SITE OR SERVICES; (II) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SITE OR SERVICES; (III) ANY CONTENT OBTAINED FROM THE SITE OR SERVICES; AND (IV) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE) OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</p>
+                
+                <p>OUR MAXIMUM AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE SITE OR SERVICES SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU HAVE PAID TO OPENVECTOR ACADEMY IN THE LAST 12 MONTHS, OR (B) ONE HUNDRED DOLLARS ($100).</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="terms-section" id="section11">
+                <h2>11. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless OpenVector Academy and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Site or Services, by you or any person using your account and password; b) a breach of these Terms, or c) Content posted on the Site.</p>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="terms-section" id="section12">
+                <h2>12. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                
+                <p>By continuing to access or use our Site after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Site.</p>
+                
+                <p>We encourage you to review these Terms periodically for any changes. Changes to these Terms are effective when they are posted on this page.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="terms-section" id="section13">
+                <h2>13. Governing Law and Dispute Resolution</h2>
+                <h3>13.1 Governing Law</h3>
+                <p>These Terms shall be governed and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.</p>
+                
+                <h3>13.2 Dispute Resolution</h3>
+                <p>Any dispute arising from or relating to the subject matter of these Terms shall be finally settled in San Francisco County, California, in English, in accordance with the Streamlined Arbitration Rules and Procedures of Judicial Arbitration and Mediation Services, Inc. ("JAMS") then in effect, by one commercial arbitrator with substantial experience in resolving intellectual property and commercial contract disputes.</p>
+                
+                <p>Judgment upon the award rendered by such arbitrator may be entered in any court of competent jurisdiction.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Class Action Waiver:</strong> You agree that any arbitration or proceeding shall be limited to the dispute between us and you individually. You acknowledge and agree that you are waiving the right to participate as a plaintiff or class member in any purported class action or representative proceeding.</p>
+                </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="terms-section" id="section14">
+                <h2>14. Contact Information</h2>
+                <div class="contact-info">
+                    <p>If you have any questions about these Terms of Service, please contact us:</p>
+                    
+                    <p><strong>OpenVector Academy Legal Department</strong></p>
+                    <p>123 Education Street</p>
+                    <p>Tech City, TC 10101</p>
+                    <p>United States</p>
+                    <p>Email: legal@openvector.edu</p>
+                    <p>Phone: +1 (555) 123-4567 (Legal Department)</p>
+                    
+                    <p><strong>For general inquiries:</strong> support@openvector.edu</p>
+                    <p><strong>For privacy-related questions:</strong> privacy@openvector.edu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - EXACT SAME AS INDEX -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">OpenVector Academy</div>
+                    <p class="footer-description">Learn Without Limits. Quality online education for the digital age.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="courses.html" class="footer-link">Courses</a></li>
+                        <li><a href="resources.html" class="footer-link">Resources</a></li>
+                        <li><a href="news.html" class="footer-link">News</a></li>
+                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQs</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> support@openvector.edu</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Tech City, TC 10101</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 OpenVector Academy. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for learners worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle - SAME AS INDEX
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Close search if open
+            searchContainer.classList.remove('active');
+            searchInput.blur();
+        });
+        
+        // Search Toggle Functionality - SAME AS INDEX
+        const searchContainer = document.getElementById('search-container');
+        const searchToggle = document.getElementById('search-toggle');
+        const searchInput = document.getElementById('search-input');
+        
+        searchToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchContainer.classList.toggle('active');
+            
+            if (searchContainer.classList.contains('active')) {
+                searchInput.focus();
+            } else {
+                searchInput.blur();
+            }
+            
+            // Close mobile menu if open
+            hamburgerMenu.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+        
+        // Close search when clicking outside - SAME AS INDEX
+        document.addEventListener('click', (e) => {
+            if (!searchContainer.contains(e.target)) {
+                searchContainer.classList.remove('active');
+                searchInput.blur();
+            }
+            
+            if (!hamburgerMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburgerMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Close search on escape key - SAME AS INDEX
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchContainer.classList.remove('active');
+                searchInput.blur();
+            }
+        });
+        
+        // Header scroll effect - SAME AS INDEX
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Prevent zooming - SAME AS INDEX
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                e.preventDefault();
+            }
+        });
+        
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Prevent double-tap zoom on mobile - SAME AS INDEX
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    hamburgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    
+                    // Close search if open
+                    searchContainer.classList.remove('active');
+                    searchInput.blur();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
