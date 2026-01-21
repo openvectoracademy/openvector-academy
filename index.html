@@ -129,7 +129,7 @@
             padding: 80px 0;
         }
         
-        /* Header Styles - SIMPLIFIED */
+        /* Header Styles */
         .header {
             position: fixed;
             top: 0;
@@ -185,7 +185,7 @@
             white-space: nowrap;
         }
         
-        /* Simplified Top Bar Actions */
+        /* Top Bar Actions */
         .top-bar-actions {
             display: flex;
             align-items: center;
@@ -194,7 +194,7 @@
             overflow: visible;
         }
         
-        /* Search Container - Icon only on mobile, expands on click */
+        /* Search Container */
         .search-container {
             position: relative;
             flex-shrink: 0;
@@ -280,7 +280,7 @@
             background-color: #f1f5f9;
         }
         
-        /* Hamburger Menu - SIZE ADJUSTED */
+        /* Hamburger Menu */
         .hamburger-menu {
             display: none;
             flex-direction: column;
@@ -412,26 +412,33 @@
             padding-left: 10px;
         }
         
-        /* Hero Section */
+        /* Hero Section - CENTERED CONTENT */
         .hero {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            background-color: #f8fafc;
             padding: 150px 0 100px;
             margin-top: 90px;
             position: relative;
             overflow: hidden;
             width: 100%;
+            display: flex;
+            align-items: center;
+            min-height: calc(100vh - 90px);
         }
         
         .hero-content {
             max-width: 700px;
             position: relative;
             z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
         }
         
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
+            line-height: 1.1;
         }
         
         .hero p {
@@ -439,51 +446,15 @@
             color: var(--gray);
             margin-bottom: 2.5rem;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-buttons {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-        }
-        
-        .hero-bg-shapes {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-        
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            background-color: var(--primary);
-            top: 10%;
-            right: 10%;
-        }
-        
-        .shape-2 {
-            width: 200px;
-            height: 200px;
-            background-color: var(--secondary);
-            top: 50%;
-            right: 20%;
-        }
-        
-        .shape-3 {
-            width: 150px;
-            height: 150px;
-            background-color: var(--accent);
-            bottom: 10%;
-            right: 30%;
+            justify-content: center;
         }
         
         /* Featured Courses */
@@ -864,17 +835,23 @@
                 justify-content: center;
             }
             
+            .hero {
+                padding: 120px 0 80px;
+                min-height: auto;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
             }
             
             .hero-buttons {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
             
             .hero-buttons .btn {
                 width: 100%;
+                max-width: 280px;
                 text-align: center;
                 margin-bottom: 10px;
             }
@@ -939,6 +916,11 @@
             .top-bar-actions {
                 gap: 15px;
             }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 100%;
+            }
         }
         
         @media (max-width: 400px) {
@@ -961,6 +943,14 @@
             
             .top-bar-actions {
                 gap: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -1031,7 +1021,7 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - CENTERED CONTENT -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
@@ -1043,11 +1033,6 @@
                     <a href="registration.html" class="btn btn-secondary">Register Now</a>
                 </div>
             </div>
-        </div>
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
         </div>
     </section>
 
