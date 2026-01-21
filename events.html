@@ -420,34 +420,27 @@
             padding-left: 10px;
         }
         
-        /* Professional Events Hero */
+        /* Events Hero Section - MATCHING NEWS PAGE */
         .events-hero {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 180px 0 100px;
+            background-color: #f8fafc;
+            padding: 150px 0 60px;
             margin-top: 90px;
             position: relative;
             overflow: hidden;
-        }
-        
-        .events-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
-            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            width: 100%;
         }
         
         .events-hero-content {
+            max-width: 800px;
             position: relative;
             z-index: 2;
-            max-width: 700px;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
         }
         
         .events-hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
             line-height: 1.1;
@@ -456,505 +449,329 @@
         .events-hero p {
             font-size: 1.2rem;
             color: var(--gray);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 1px solid var(--light-gray);
-        }
-        
-        .hero-stat {
-            text-align: center;
-        }
-        
-        .hero-stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .hero-stat-label {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        /* Professional Filter Section */
+        /* Events Filter Section - MATCHING NEWS PAGE */
         .events-filter {
-            background: white;
-            padding: 40px 0;
-            border-bottom: 1px solid var(--light-gray);
+            background-color: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
         }
         
         .filter-container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
-        }
-        
-        .filter-search {
-            flex: 1;
-            position: relative;
-        }
-        
-        .filter-search input {
-            width: 100%;
-            padding: 14px 20px 14px 50px;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            transition: var(--transition);
-            background: #f8fafc;
-        }
-        
-        .filter-search input:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        
-        .filter-search i {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-        }
-        
-        .filter-actions {
-            display: flex;
+            flex-wrap: wrap;
             gap: 15px;
-            align-items: center;
         }
         
-        .filter-select {
-            padding: 14px 20px;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--border-radius);
-            font-family: 'Inter', sans-serif;
-            background: #f8fafc;
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: #f1f5f9;
             color: var(--dark);
-            font-weight: 500;
+            border: none;
             cursor: pointer;
             transition: var(--transition);
+            font-weight: 500;
         }
         
-        .filter-select:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: white;
         }
         
-        /* Professional Events Table */
+        .events-sort {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sort-select {
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+        }
+        
+        /* Events Grid - MATCHING NEWS PAGE */
         .events-listing {
             padding: 60px 0;
         }
         
-        .events-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--light-gray);
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
         
-        .events-header h2 {
-            font-size: 1.8rem;
-            color: var(--dark);
-        }
-        
-        .events-count {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        /* Professional Data Table */
-        .events-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
+        .event-card {
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-        
-        .events-table thead {
-            background: #f8fafc;
-            border-bottom: 2px solid var(--light-gray);
-        }
-        
-        .events-table th {
-            padding: 20px;
-            text-align: left;
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid var(--light-gray);
-        }
-        
-        .events-table th:first-child {
-            padding-left: 30px;
-        }
-        
-        .events-table th:last-child {
-            padding-right: 30px;
-        }
-        
-        .events-table tbody tr {
-            border-bottom: 1px solid var(--light-gray);
+            box-shadow: var(--shadow);
             transition: var(--transition);
-        }
-        
-        .events-table tbody tr:hover {
-            background: #f8fafc;
-        }
-        
-        .events-table tbody tr:last-child {
-            border-bottom: none;
-        }
-        
-        .events-table td {
-            padding: 25px 20px;
-            vertical-align: top;
-        }
-        
-        .events-table td:first-child {
-            padding-left: 30px;
-        }
-        
-        .events-table td:last-child {
-            padding-right: 30px;
-        }
-        
-        .event-info {
+            background-color: white;
+            height: 100%;
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
+            flex-direction: column;
         }
         
-        .event-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .event-card.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .event-image {
+            height: 200px;
+            width: 100%;
+            background-color: #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        
-        .event-icon.hackathon {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            color: #dc2626;
-        }
-        
-        .event-icon.workshop {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #059669;
-        }
-        
-        .event-icon.competition {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            color: #d97706;
-        }
-        
-        .event-icon.webinar {
-            background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
-            color: #7c3aed;
-        }
-        
-        .event-icon.networking {
-            background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
-            color: #0891b2;
-        }
-        
-        .event-details h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-        
-        .event-details p {
-            font-size: 0.9rem;
             color: var(--gray);
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-weight: 500;
+            overflow: hidden;
+            position: relative;
         }
         
-        .event-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+        .event-image.featured {
+            height: 100%;
+            min-height: 300px;
         }
         
         .event-tag {
-            padding: 4px 10px;
-            background: var(--light);
-            color: var(--gray);
-            border-radius: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            display: inline-block;
             font-size: 0.8rem;
             font-weight: 500;
+            border-radius: 0 0 var(--border-radius) 0;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         
         .event-date {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.95rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
         
-        .event-date span {
-            display: block;
-            font-size: 0.85rem;
+        .event-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .event-content.featured {
+            padding: 40px;
+        }
+        
+        .event-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .event-title.featured {
+            font-size: 1.8rem;
+        }
+        
+        .event-summary {
             color: var(--gray);
-            font-weight: 400;
-            margin-top: 5px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
         }
         
         .event-status {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
+            gap: 5px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            width: fit-content;
         }
         
         .event-status.upcoming {
-            background: #dbeafe;
-            color: #1e40af;
+            background-color: #dbeafe;
+            color: var(--primary-dark);
         }
         
         .event-status.ongoing {
-            background: #dcfce7;
+            background-color: #dcfce7;
             color: #166534;
         }
         
         .event-status.registration-open {
-            background: #fef3c7;
+            background-color: #fef3c7;
             color: #92400e;
         }
         
-        .event-actions {
-            text-align: right;
-        }
-        
-        /* Featured Event Section */
-        .featured-event {
-            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-            color: white;
+        /* Upcoming Events Section */
+        .upcoming-events {
+            background-color: #f8fafc;
             padding: 80px 0;
-            margin: 60px 0;
-            position: relative;
+        }
+        
+        .calendar-view {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: var(--border-radius);
             overflow: hidden;
+            box-shadow: var(--shadow);
         }
         
-        .featured-event::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            transform: translate(30%, -30%);
-        }
-        
-        .featured-event::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            transform: translate(-30%, 30%);
-        }
-        
-        .featured-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-        
-        .featured-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
+        .calendar-sidebar {
+            background-color: var(--primary);
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
+            padding: 30px;
         }
         
-        .featured-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .featured-content p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .featured-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .featured-stat {
+        .calendar-month {
             text-align: center;
+            margin-bottom: 30px;
         }
         
-        .featured-stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: white;
-            display: block;
+        .calendar-month h3 {
+            font-size: 1.5rem;
             margin-bottom: 5px;
         }
         
-        .featured-stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .calendar-day {
+            text-align: center;
+            padding: 8px;
             font-weight: 500;
         }
         
-        /* Event Categories */
-        .event-categories {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-        
-        .categories-grid {
+        .calendar-dates {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
         }
         
-        .category-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: var(--border-radius);
+        .calendar-date {
             text-align: center;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
             transition: var(--transition);
-            border: 1px solid var(--light-gray);
         }
         
-        .category-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        .calendar-date:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
         
-        .category-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2rem;
+        .calendar-date.event-day {
+            background-color: var(--accent);
+            font-weight: 600;
         }
         
-        .category-icon.hackathon {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            color: #dc2626;
+        .calendar-date.current-day {
+            background-color: white;
+            color: var(--primary);
         }
         
-        .category-icon.workshop {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #059669;
+        .calendar-events {
+            padding: 30px;
         }
         
-        .category-icon.competition {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            color: #d97706;
-        }
-        
-        .category-icon.webinar {
-            background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
-            color: #7c3aed;
-        }
-        
-        .category-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        .category-card p {
-            color: var(--gray);
-            line-height: 1.6;
+        .calendar-events h3 {
             margin-bottom: 20px;
+            font-size: 1.3rem;
         }
         
-        /* Pagination - PROFESSIONAL */
+        .calendar-event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .calendar-event-item {
+            padding: 15px;
+            border-radius: var(--border-radius);
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Pagination - MATCHING NEWS PAGE */
         .pagination {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 8px;
+            gap: 10px;
             margin-top: 60px;
         }
         
         .pagination-btn {
-            min-width: 40px;
+            width: 40px;
             height: 40px;
-            padding: 0 15px;
             border-radius: var(--border-radius);
-            background: white;
-            border: 1px solid var(--light-gray);
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: white;
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: var(--transition);
         }
         
-        .pagination-btn:hover {
-            background: var(--primary);
+        .pagination-btn.active, .pagination-btn:hover {
+            background-color: var(--primary);
             color: white;
             border-color: var(--primary);
         }
         
-        .pagination-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        /* Newsletter - PROFESSIONAL */
+        /* Newsletter Section - MATCHING NEWS PAGE */
         .newsletter {
+            background-color: #f8fafc;
             padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
         
         .newsletter-content {
@@ -964,39 +781,17 @@
         }
         
         .newsletter-form {
-            background: white;
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: var(--dark);
-            text-align: left;
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
         }
         
         .newsletter-input {
-            width: 100%;
-            padding: 15px 20px;
+            flex-grow: 1;
+            padding: 12px 20px;
             border: 1px solid var(--light-gray);
             border-radius: var(--border-radius);
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
         
         /* Footer - EXACT SAME AS INDEX & NEWS */
@@ -1078,14 +873,30 @@
             font-size: 0.9rem;
         }
         
-        /* Responsive Styles */
+        /* Responsive Styles - EXACT SAME AS INDEX & NEWS */
         @media (max-width: 1024px) {
             .events-hero h1 {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .event-card.featured {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-image.featured {
+                height: 250px;
+            }
+            
+            .calendar-view {
+                grid-template-columns: 1fr;
+            }
+            
+            .calendar-sidebar {
+                order: 2;
             }
         }
         
@@ -1110,7 +921,7 @@
             }
             
             .events-hero {
-                padding: 150px 0 80px;
+                padding: 130px 0 40px;
             }
             
             .events-hero h1 {
@@ -1119,46 +930,11 @@
             
             .filter-container {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: flex-start;
             }
             
-            .filter-actions {
-                flex-wrap: wrap;
-            }
-            
-            .events-table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            .events-table thead {
-                display: none;
-            }
-            
-            .events-table tbody tr {
-                display: block;
-                margin-bottom: 20px;
-                border: 1px solid var(--light-gray);
-                border-radius: var(--border-radius);
-                padding: 20px;
-            }
-            
-            .events-table td {
-                display: block;
-                padding: 10px 0;
-                border: none;
-            }
-            
-            .events-table td:first-child,
-            .events-table td:last-child {
-                padding-left: 0;
-                padding-right: 0;
-            }
-            
-            .event-actions {
-                text-align: left;
-                padding-top: 20px;
-                border-top: 1px solid var(--light-gray);
+            .newsletter-form {
+                flex-direction: column;
             }
             
             .search-input {
@@ -1168,12 +944,6 @@
             .search-container.active .search-input {
                 width: 180px;
             }
-            
-            .hero-stats,
-            .featured-stats {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
         }
         
         @media (max-width: 576px) {
@@ -1182,7 +952,7 @@
             }
             
             .events-hero {
-                padding: 130px 0 60px;
+                padding: 130px 0 30px;
             }
             
             .events-hero h1 {
@@ -1191,6 +961,10 @@
             
             .section-title {
                 font-size: 1.8rem;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
             }
             
             .footer-content {
@@ -1208,14 +982,6 @@
             
             .top-bar-actions {
                 gap: 15px;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pagination {
-                flex-wrap: wrap;
             }
         }
         
@@ -1243,6 +1009,10 @@
             
             .events-hero h1 {
                 font-size: 2rem;
+            }
+            
+            .events-hero p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -1313,457 +1083,240 @@
         </ul>
     </div>
 
-    <!-- Professional Events Hero -->
-    <section class="events-hero">
+    <!-- Events Hero Section -->
+    <section class="events-hero" id="events-hero">
         <div class="container">
             <div class="events-hero-content">
                 <h1>Events & Challenges</h1>
-                <p>Participate in our curated events and challenges designed to enhance your skills, connect with industry leaders, and accelerate your professional growth. Join a community of learners and innovators.</p>
-                
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">24+</span>
-                        <span class="hero-stat-label">Upcoming Events</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">6</span>
-                        <span class="hero-stat-label">Categories</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">850+</span>
-                        <span class="hero-stat-label">Participants</span>
-                    </div>
-                </div>
+                <p>Participate in exciting hackathons, workshops, competitions, and networking events to enhance your skills, connect with peers, and showcase your talent.</p>
             </div>
         </div>
     </section>
 
-    <!-- Professional Filter Section -->
+    <!-- Events Filter -->
     <section class="events-filter">
         <div class="container">
             <div class="filter-container">
-                <div class="filter-search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="event-search" placeholder="Search events by title, category, or keyword...">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Events</button>
+                    <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+                    <button class="filter-btn" data-filter="workshop">Workshops</button>
+                    <button class="filter-btn" data-filter="competition">Competitions</button>
+                    <button class="filter-btn" data-filter="webinar">Webinars</button>
+                    <button class="filter-btn" data-filter="networking">Networking</button>
                 </div>
                 
-                <div class="filter-actions">
-                    <select class="filter-select" id="category-filter">
-                        <option value="all">All Categories</option>
-                        <option value="hackathon">Hackathons</option>
-                        <option value="workshop">Workshops</option>
-                        <option value="competition">Competitions</option>
-                        <option value="webinar">Webinars</option>
-                        <option value="networking">Networking</option>
-                    </select>
-                    
-                    <select class="filter-select" id="status-filter">
-                        <option value="all">All Status</option>
-                        <option value="upcoming">Upcoming</option>
-                        <option value="ongoing">Ongoing</option>
-                        <option value="registration-open">Registration Open</option>
-                    </select>
-                    
-                    <select class="filter-select" id="sort-filter">
-                        <option value="date">Sort by Date</option>
-                        <option value="name">Sort by Name</option>
-                        <option value="popularity">Sort by Popularity</option>
+                <div class="events-sort">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="sort-select">
+                        <option value="upcoming">Upcoming First</option>
+                        <option value="date">Date</option>
+                        <option value="popularity">Popularity</option>
                     </select>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Events Listing -->
-    <section class="events-listing">
+    <!-- Events Listing -->
+    <section class="events-listing" id="events-listing">
         <div class="container">
-            <div class="events-header">
-                <h2>Upcoming Events</h2>
-                <div class="events-count">
-                    Showing <strong>6</strong> of <strong>24</strong> events
+            <h2 class="section-title">Featured Events</h2>
+            <p class="section-subtitle">Join our community events to learn, compete, and connect with industry professionals and fellow learners.</p>
+            
+            <div class="events-grid">
+                <!-- Featured Event -->
+                <div class="event-card featured" data-category="hackathon">
+                    <div class="event-image featured" style="background-color: #e0f2fe;">
+                        <div class="event-tag">Hackathon</div>
+                        <span style="font-size: 1.2rem; color: var(--dark);">OpenVector Hackathon 2024</span>
+                    </div>
+                    <div class="event-content featured">
+                        <div class="event-status registration-open">Registration Open</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> March 15-17, 2024</div>
+                        <h3 class="event-title featured">OpenVector Hackathon 2024: Build the Future</h3>
+                        <p class="event-summary">Join our premier 48-hour virtual hackathon where developers, designers, and innovators come together to build solutions for real-world problems. This year's theme focuses on educational technology and accessibility. Compete for $10,000 in prizes, mentorship opportunities, and a chance to have your project featured on our platform.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Hackathon, Competition, Prizes</span>
+                            <span><i class="fas fa-user-friends"></i> 250+ Participants</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="margin-top: 20px; align-self: flex-start;">Register Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-image" style="background-color: #fef3c7;">
+                        <div class="event-tag">Workshop</div>
+                        <span>AI & ML Workshop</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-status upcoming">Upcoming</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> February 28, 2024</div>
+                        <h3 class="event-title">Hands-On AI & Machine Learning Workshop</h3>
+                        <p class="event-summary">Join Dr. Sarah Johnson for an intensive 3-hour workshop on practical AI and ML applications. Learn to build and deploy machine learning models using Python, TensorFlow, and real-world datasets. Perfect for intermediate learners looking to advance their skills.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Workshop, AI, Machine Learning</span>
+                            <span><i class="fas fa-clock"></i> 3 Hours</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 15px;">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card" data-category="competition">
+                    <div class="event-image" style="background-color: #dbeafe;">
+                        <div class="event-tag">Competition</div>
+                        <span>Monthly Coding Challenge</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-status ongoing">Ongoing</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> February 1-29, 2024</div>
+                        <h3 class="event-title">February Algorithm Challenge</h3>
+                        <p class="event-summary">Test your problem-solving skills with our monthly coding challenge. This month features 15 algorithm problems of varying difficulty. Top performers win certification, premium course access, and recognition on our leaderboard.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Competition, Algorithms, Coding</span>
+                            <span><i class="fas fa-trophy"></i> Prizes Available</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 15px;">Join Challenge</a>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card" data-category="webinar">
+                    <div class="event-image" style="background-color: #e0f2fe;">
+                        <div class="event-tag">Webinar</div>
+                        <span>Future of Web Dev</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-status upcoming">Upcoming</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> March 5, 2024</div>
+                        <h3 class="event-title">The Future of Web Development: Trends for 2024</h3>
+                        <p class="event-summary">Join industry leaders as they discuss emerging trends, technologies, and career opportunities in web development for 2024. Learn about new frameworks, tools, and best practices from senior developers at top tech companies.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Webinar, Web Development, Trends</span>
+                            <span><i class="fas fa-clock"></i> 1.5 Hours</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 15px;">Register Free</a>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="event-card" data-category="networking">
+                    <div class="event-image" style="background-color: #fef3c7;">
+                        <div class="event-tag">Networking</div>
+                        <span>Career Networking</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-status registration-open">Registration Open</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> March 22, 2024</div>
+                        <h3 class="event-title">Tech Career Networking Mixer</h3>
+                        <p class="event-summary">Connect with hiring managers, recruiters, and professionals from leading tech companies. This virtual networking event includes breakout rooms, panel discussions, and one-on-one networking opportunities. Perfect for job seekers and career changers.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Networking, Career, Job Search</span>
+                            <span><i class="fas fa-building"></i> 20+ Companies</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 15px;">Register Now</a>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-image" style="background-color: #dbeafe;">
+                        <div class="event-tag">Workshop</div>
+                        <span>Data Science</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-status upcoming">Upcoming</div>
+                        <div class="event-date"><i class="far fa-calendar"></i> March 10, 2024</div>
+                        <h3 class="event-title">Data Visualization Workshop with D3.js</h3>
+                        <p class="event-summary">Master the art of data visualization with this hands-on workshop. Learn to create interactive, responsive data visualizations using D3.js. Bring your own datasets or use our provided examples. Suitable for beginners with basic JavaScript knowledge.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-tag"></i> Workshop, Data Visualization, D3.js</span>
+                            <span><i class="fas fa-laptop-code"></i> Hands-On</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 15px;">Learn More</a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Professional Data Table -->
-            <div class="events-table">
-                <thead>
-                    <tr>
-                        <th>Event</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Row 1 - Featured Hackathon -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon hackathon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>OpenVector Hackathon 2024: Build the Future</h3>
-                                    <p>48-hour virtual hackathon focusing on educational technology and accessibility. Compete for $10,000 in prizes and mentorship opportunities.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Hackathon</span>
-                                        <span class="event-tag">Competition</span>
-                                        <span class="event-tag">Prizes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Mar 15-17, 2024
-                                <span>3 Days</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status registration-open">
-                                <i class="fas fa-user-plus"></i>
-                                Registration Open
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-primary" onclick="registerEvent('OpenVector Hackathon 2024')">
-                                Register Now
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- Row 2 - Workshop -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon workshop">
-                                    <i class="fas fa-chalkboard-teacher"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>Hands-On AI & Machine Learning Workshop</h3>
-                                    <p>Intensive 3-hour workshop on practical AI and ML applications with Python and TensorFlow. Perfect for intermediate learners looking to advance their skills.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Workshop</span>
-                                        <span class="event-tag">AI</span>
-                                        <span class="event-tag">Machine Learning</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Feb 28, 2024
-                                <span>3 Hours</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status upcoming">
-                                <i class="far fa-clock"></i>
-                                Upcoming
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-secondary" onclick="viewEventDetails('AI Workshop')">
-                                View Details
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- Row 3 - Competition -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon competition">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>February Algorithm Challenge</h3>
-                                    <p>Monthly coding challenge featuring 15 algorithm problems of varying difficulty. Top performers win certification and premium course access.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Competition</span>
-                                        <span class="event-tag">Algorithms</span>
-                                        <span class="event-tag">Coding</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Feb 1-29, 2024
-                                <span>Monthly</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status ongoing">
-                                <i class="fas fa-play-circle"></i>
-                                Ongoing
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-primary" onclick="joinChallenge('February Algorithm Challenge')">
-                                Join Challenge
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- Row 4 - Webinar -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon webinar">
-                                    <i class="fas fa-video"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>The Future of Web Development: Trends for 2024</h3>
-                                    <p>Panel discussion with industry leaders on emerging trends, technologies, and career opportunities in web development.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Webinar</span>
-                                        <span class="event-tag">Web Development</span>
-                                        <span class="event-tag">Trends</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Mar 5, 2024
-                                <span>1.5 Hours</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status upcoming">
-                                <i class="far fa-clock"></i>
-                                Upcoming
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-secondary" onclick="registerEvent('Web Development Webinar')">
-                                Register Free
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- Row 5 - Networking -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon networking">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>Tech Career Networking Mixer</h3>
-                                    <p>Virtual networking event with hiring managers, recruiters, and professionals from leading tech companies. Perfect for job seekers.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Networking</span>
-                                        <span class="event-tag">Career</span>
-                                        <span class="event-tag">Job Search</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Mar 22, 2024
-                                <span>2 Hours</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status registration-open">
-                                <i class="fas fa-user-plus"></i>
-                                Registration Open
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-primary" onclick="registerEvent('Tech Career Networking Mixer')">
-                                Register Now
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- Row 6 - Workshop -->
-                    <tr>
-                        <td>
-                            <div class="event-info">
-                                <div class="event-icon workshop">
-                                    <i class="fas fa-chart-bar"></i>
-                                </div>
-                                <div class="event-details">
-                                    <h3>Data Visualization Workshop with D3.js</h3>
-                                    <p>Hands-on workshop to create interactive, responsive data visualizations using D3.js. Suitable for beginners with basic JavaScript knowledge.</p>
-                                    <div class="event-tags">
-                                        <span class="event-tag">Workshop</span>
-                                        <span class="event-tag">Data Visualization</span>
-                                        <span class="event-tag">D3.js</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event-date">
-                                Mar 10, 2024
-                                <span>4 Hours</span>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="event-status upcoming">
-                                <i class="far fa-clock"></i>
-                                Upcoming
-                            </span>
-                        </td>
-                        <td class="event-actions">
-                            <button class="btn btn-secondary" onclick="viewEventDetails('Data Visualization Workshop')">
-                                Learn More
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </div>
-
+            
             <!-- Pagination -->
             <div class="pagination">
                 <button class="pagination-btn active">1</button>
                 <button class="pagination-btn">2</button>
                 <button class="pagination-btn">3</button>
-                <button class="pagination-btn">4</button>
-                <button class="pagination-btn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <button class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Featured Event -->
-    <section class="featured-event">
+    <!-- Upcoming Events Calendar -->
+    <section class="upcoming-events">
         <div class="container">
-            <div class="featured-content">
-                <div class="featured-badge">Featured Event</div>
-                <h2>OpenVector Hackathon 2024</h2>
-                <p>Join our premier 48-hour virtual hackathon where developers, designers, and innovators come together to build solutions for real-world problems. This year's theme focuses on educational technology and accessibility.</p>
-                
-                <div style="display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;">
-                    <button class="btn btn-accent" onclick="registerEvent('OpenVector Hackathon 2024')">
-                        <i class="fas fa-user-plus"></i> Register Now
-                    </button>
-                    <button class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.3);" onclick="viewEventDetails('OpenVector Hackathon 2024')">
-                        <i class="fas fa-info-circle"></i> View Details
-                    </button>
-                </div>
-                
-                <div class="featured-stats">
-                    <div class="featured-stat">
-                        <span class="featured-stat-value">$10,000</span>
-                        <span class="featured-stat-label">Prize Pool</span>
-                    </div>
-                    <div class="featured-stat">
-                        <span class="featured-stat-value">48</span>
-                        <span class="featured-stat-label">Hours</span>
-                    </div>
-                    <div class="featured-stat">
-                        <span class="featured-stat-value">250+</span>
-                        <span class="featured-stat-label">Participants</span>
-                    </div>
-                    <div class="featured-stat">
-                        <span class="featured-stat-value">15</span>
-                        <span class="featured-stat-label">Mentors</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Categories -->
-    <section class="event-categories">
-        <div class="container">
-            <h2 class="section-title">Event Categories</h2>
-            <p class="section-subtitle">Explore different types of events designed to enhance your skills and expand your network</p>
+            <h2 class="section-title">Upcoming Events Calendar</h2>
+            <p class="section-subtitle">Plan your participation with our interactive events calendar. Never miss an important deadline or event.</p>
             
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon hackathon">
-                        <i class="fas fa-code"></i>
+            <div class="calendar-view">
+                <div class="calendar-sidebar">
+                    <div class="calendar-month">
+                        <h3>February 2024</h3>
+                        <p>Current Month</p>
                     </div>
-                    <h3>Hackathons</h3>
-                    <p>Intensive coding competitions where developers build innovative solutions under time constraints.</p>
-                    <button class="btn btn-secondary" onclick="filterEvents('hackathon')">
-                        View Hackathons
-                    </button>
+                    
+                    <div class="calendar-days">
+                        <div class="calendar-day">Sun</div>
+                        <div class="calendar-day">Mon</div>
+                        <div class="calendar-day">Tue</div>
+                        <div class="calendar-day">Wed</div>
+                        <div class="calendar-day">Thu</div>
+                        <div class="calendar-day">Fri</div>
+                        <div class="calendar-day">Sat</div>
+                    </div>
+                    
+                    <div class="calendar-dates" id="calendar-dates">
+                        <!-- Calendar dates will be populated by JavaScript -->
+                    </div>
                 </div>
                 
-                <div class="category-card">
-                    <div class="category-icon workshop">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                <div class="calendar-events">
+                    <h3>Events This Month</h3>
+                    <div class="calendar-event-list">
+                        <div class="calendar-event-item">
+                            <h4>February 15: AI Workshop Registration Deadline</h4>
+                            <p>Last day to register for the Hands-On AI & Machine Learning Workshop</p>
+                        </div>
+                        <div class="calendar-event-item">
+                            <h4>February 20: Monthly Coding Challenge Submission</h4>
+                            <p>Final day to submit solutions for February Algorithm Challenge</p>
+                        </div>
+                        <div class="calendar-event-item">
+                            <h4>February 28: AI & Machine Learning Workshop</h4>
+                            <p>3-hour intensive workshop with Dr. Sarah Johnson</p>
+                        </div>
+                        <div class="calendar-event-item">
+                            <h4>March 1: March Coding Challenge Begins</h4>
+                            <p>New set of algorithm problems released for March</p>
+                        </div>
                     </div>
-                    <h3>Workshops</h3>
-                    <p>Hands-on learning sessions with expert instructors covering specific skills and technologies.</p>
-                    <button class="btn btn-secondary" onclick="filterEvents('workshop')">
-                        View Workshops
-                    </button>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-icon competition">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Competitions</h3>
-                    <p>Skill-based challenges and contests with prizes and recognition for top performers.</p>
-                    <button class="btn btn-secondary" onclick="filterEvents('competition')">
-                        View Competitions
-                    </button>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-icon webinar">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Webinars</h3>
-                    <p>Online seminars and panel discussions with industry experts and thought leaders.</p>
-                    <button class="btn btn-secondary" onclick="filterEvents('webinar')">
-                        View Webinars
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
+    <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
             <div class="newsletter-content">
-                <h2 class="section-title">Stay Updated</h2>
-                <p class="section-subtitle">Subscribe to receive notifications about upcoming events and registration deadlines</p>
+                <h2 class="section-title">Never Miss an Event</h2>
+                <p class="section-subtitle">Subscribe to our events newsletter to receive updates about upcoming hackathons, workshops, competitions, and networking opportunities.</p>
                 
-                <div class="newsletter-form">
-                    <div class="form-group">
-                        <label for="newsletter-email">Email Address</label>
-                        <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="newsletter-interests">Interests (Select all that apply)</label>
-                        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
-                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
-                                <input type="checkbox" name="interests" value="hackathon">
-                                <span>Hackathons</span>
-                            </label>
-                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
-                                <input type="checkbox" name="interests" value="workshop">
-                                <span>Workshops</span>
-                            </label>
-                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
-                                <input type="checkbox" name="interests" value="competition">
-                                <span>Competitions</span>
-                            </label>
-                            <label style="display: flex; align-items: center; gap: 5px; cursor: pointer;">
-                                <input type="checkbox" name="interests" value="webinar">
-                                <span>Webinars</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
-                        Subscribe to Updates
-                    </button>
-                </div>
+                <form class="newsletter-form" id="events-newsletter">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p style="font-size: 0.9rem; color: var(--gray); margin-top: 15px;">
+                    We'll only send event-related updates. You can unsubscribe at any time.
+                </p>
             </div>
         </div>
     </section>
@@ -1888,89 +1441,107 @@
             }
         });
         
-        // Event Search Functionality
-        const eventSearch = document.getElementById('event-search');
-        const tableRows = document.querySelectorAll('.events-table tbody tr');
+        // Events filtering functionality - SIMILAR TO NEWS PAGE
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const eventCards = document.querySelectorAll('.event-card');
         
-        eventSearch.addEventListener('input', () => {
-            const searchTerm = eventSearch.value.toLowerCase();
-            
-            tableRows.forEach(row => {
-                const eventTitle = row.querySelector('.event-details h3').textContent.toLowerCase();
-                const eventDescription = row.querySelector('.event-details p').textContent.toLowerCase();
-                const eventTags = Array.from(row.querySelectorAll('.event-tag')).map(tag => tag.textContent.toLowerCase());
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
                 
-                const matches = eventTitle.includes(searchTerm) || 
-                               eventDescription.includes(searchTerm) || 
-                               eventTags.some(tag => tag.includes(searchTerm));
+                const filterValue = button.getAttribute('data-filter');
                 
-                row.style.display = matches ? '' : 'none';
+                // Show/hide event cards based on filter
+                eventCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
         
-        // Filter Functionality
-        const categoryFilter = document.getElementById('category-filter');
-        const statusFilter = document.getElementById('status-filter');
-        const sortFilter = document.getElementById('sort-filter');
+        // Sort functionality - SIMILAR TO NEWS PAGE
+        const sortSelect = document.getElementById('sort');
+        const eventsGrid = document.querySelector('.events-grid');
         
-        function applyFilters() {
-            const category = categoryFilter.value;
-            const status = statusFilter.value;
-            const sort = sortFilter.value;
+        sortSelect.addEventListener('change', () => {
+            const sortValue = sortSelect.value;
+            const cards = Array.from(eventCards);
             
-            // Filter and sort logic would go here
-            // For demo purposes, we'll just show a notification
-            showNotification(`Filters applied: ${category}, ${status}, sorted by ${sort}`);
-        }
+            // In a real implementation, this would sort based on actual event dates
+            // For this demo, we'll just reorder the cards
+            if (sortValue === 'upcoming') {
+                // Default order (featured first)
+                cards.sort((a, b) => 0);
+            } else if (sortValue === 'date') {
+                // Sort by date (would require actual date parsing in real implementation)
+                cards.reverse();
+            }
+            
+            // Re-append cards in new order
+            cards.forEach(card => {
+                eventsGrid.appendChild(card);
+            });
+        });
         
-        categoryFilter.addEventListener('change', applyFilters);
-        statusFilter.addEventListener('change', applyFilters);
-        sortFilter.addEventListener('change', applyFilters);
-        
-        // Register Event Function
-        function registerEvent(eventName) {
-            if (confirm(`Register for "${eventName}"?`)) {
-                showNotification(`Registering for "${eventName}"...`);
+        // Calendar generation
+        function generateCalendar() {
+            const calendarDates = document.getElementById('calendar-dates');
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = today.getMonth(); // February is month 1
+            
+            // Get first day of month (0 = Sunday, 1 = Monday, etc.)
+            const firstDay = new Date(year, month, 1).getDay();
+            
+            // Get number of days in month
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // Clear previous calendar
+            calendarDates.innerHTML = '';
+            
+            // Add empty cells for days before the first day of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-date';
+                emptyCell.textContent = '';
+                calendarDates.appendChild(emptyCell);
+            }
+            
+            // Add cells for each day of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateCell = document.createElement('div');
+                dateCell.className = 'calendar-date';
+                dateCell.textContent = day;
                 
-                setTimeout(() => {
-                    showNotification(`Successfully registered for "${eventName}"! Check your email for confirmation.`);
-                }, 1000);
+                // Mark today's date
+                if (day === today.getDate() && month === today.getMonth()) {
+                    dateCell.classList.add('current-day');
+                }
+                
+                // Mark event days (example: 5th, 15th, 20th, 28th)
+                if ([5, 15, 20, 28].includes(day)) {
+                    dateCell.classList.add('event-day');
+                    dateCell.title = 'Event on this day';
+                }
+                
+                calendarDates.appendChild(dateCell);
             }
         }
         
-        // View Event Details
-        function viewEventDetails(eventName) {
-            showNotification(`Loading details for "${eventName}"...`);
-            
-            setTimeout(() => {
-                alert(`This would open the detailed page for "${eventName}" with complete information, schedule, speakers, and registration form.`);
-            }, 500);
-        }
+        // Initialize calendar
+        generateCalendar();
         
-        // Join Challenge
-        function joinChallenge(challengeName) {
-            if (confirm(`Join "${challengeName}"?`)) {
-                showNotification(`Joining "${challengeName}"...`);
-                
-                setTimeout(() => {
-                    showNotification(`Successfully joined "${challengeName}"! Check the challenges page to start.`);
-                }, 1000);
-            }
-        }
-        
-        // Filter Events by Category
-        function filterEvents(category) {
-            categoryFilter.value = category;
-            applyFilters();
-        }
-        
-        // Newsletter Form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        // Events newsletter form
+        document.getElementById('events-newsletter').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const email = document.getElementById('newsletter-email').value;
-            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
-                                 .map(checkbox => checkbox.value);
+            const email = this.querySelector('input[type="email"]').value;
             
             // Show success message
             const button = this.querySelector('button');
@@ -1990,20 +1561,6 @@
                 button.innerHTML = originalText;
                 button.style.backgroundColor = '';
             }, 3000);
-        });
-        
-        // Pagination functionality
-        const paginationBtns = document.querySelectorAll('.pagination-btn');
-        
-        paginationBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                paginationBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // In a real application, this would load the corresponding page
-                // For this demo, we'll just show a message
-                showNotification('Loading more events...');
-            });
         });
         
         // Show Notification
@@ -2050,6 +1607,24 @@
             }
         `;
         document.head.appendChild(style);
+        
+        // Pagination functionality
+        const paginationBtns = document.querySelectorAll('.pagination-btn');
+        
+        paginationBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                paginationBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // In a real application, this would load the corresponding page
+                // For this demo, we'll just show a message
+                if (btn.textContent.includes('Next')) {
+                    alert('Loading more events...');
+                } else if (!isNaN(parseInt(btn.textContent))) {
+                    alert(`Loading page ${btn.textContent}...`);
+                }
+            });
+        });
         
         // Prevent zooming with keyboard shortcuts - EXACT SAME AS INDEX & NEWS
         document.addEventListener('keydown', function(e) {
