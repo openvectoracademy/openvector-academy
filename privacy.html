@@ -308,7 +308,7 @@
             border-radius: var(--border-radius);
         }
         
-        /* Mobile Menu - Same as index */
+        /* Mobile Menu - Clean version without dots */
         .mobile-menu {
             position: fixed;
             top: 90px;
@@ -329,15 +329,17 @@
         }
         
         .mobile-menu-list {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
         
         .mobile-menu-link {
             font-size: 1.1rem;
             font-weight: 500;
-            padding: 10px 0;
+            color: var(--dark);
+            padding: 12px 0;
             border-bottom: 1px solid #f1f5f9;
             display: block;
             transition: var(--transition);
@@ -464,7 +466,7 @@
             border: 1px solid #e0f2fe;
         }
         
-        /* Footer - EXACT SAME AS INDEX.HTML */
+        /* Footer - Same as index */
         .footer {
             background-color: var(--dark);
             color: white;
@@ -479,15 +481,12 @@
             margin-bottom: 40px;
         }
         
-        .footer-col {
-            /* Add specific column styling if needed */
-        }
-        
         .footer-logo {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 20px;
+            color: white;
         }
         
         .footer-description {
@@ -499,6 +498,7 @@
             font-size: 1.2rem;
             margin-bottom: 20px;
             font-weight: 600;
+            color: white;
         }
         
         .footer-links {
@@ -532,6 +532,7 @@
             align-items: center;
             justify-content: center;
             transition: var(--transition);
+            color: white;
         }
         
         .social-icon:hover {
@@ -548,12 +549,6 @@
         }
         
         /* Responsive - Same as index plus privacy specific */
-        @media (max-width: 1024px) {
-            .privacy-hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-        
         @media (max-width: 768px) {
             .hamburger-menu {
                 display: flex;
@@ -671,7 +666,7 @@
         </div>
     </header>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu - Clean version without dots -->
     <div class="mobile-menu" id="mobile-menu">
         <ul class="mobile-menu-list">
             <li><a href="index.html" class="mobile-menu-link">Home</a></li>
@@ -872,11 +867,11 @@
         </div>
     </section>
 
-    <!-- Footer - EXACT SAME AS INDEX.HTML -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
+                <div>
                     <div class="footer-logo">OpenVector Academy</div>
                     <p class="footer-description">Learn Without Limits. Quality online education for the digital age.</p>
                     <div class="social-icons">
@@ -884,33 +879,30 @@
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-col">
-                    <h3 class="footer-heading">Quick Links</h3>
+                <div>
+                    <h3 class="footer-heading">Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="courses.html" class="footer-link">Courses</a></li>
-                        <li><a href="resources.html" class="footer-link">Resources</a></li>
-                        <li><a href="news.html" class="footer-link">News</a></li>
-                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="cookies.html" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" class="footer-link">GDPR Compliance</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
+                <div>
                     <h3 class="footer-heading">Support</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="#" class="footer-link">FAQs</a></li>
-                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="support.html" class="footer-link">Help Center</a></li>
+                        <li><a href="refund.html" class="footer-link">Refund Policy</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
+                <div>
                     <h3 class="footer-heading">Contact Info</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-envelope"></i> support@openvector.edu</li>
@@ -921,7 +913,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 OpenVector Academy. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for learners worldwide.</p>
+                <p>&copy; 2018-2026 OpenVector Academy. All rights reserved. | <a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a> | <a href="terms.html" style="color: #94a3b8;">Terms of Service</a></p>
             </div>
         </div>
     </footer>
