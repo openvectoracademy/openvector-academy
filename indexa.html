@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OpenVector Academy | Learn Without Limits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #06b6d4;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        html {
+            overflow-x: hidden;
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+        
+        .header-content {
+            width: 100%;
+            max-width: 100vw;
+            margin: 0 auto;
+            overflow: visible;
+        }
+        
+        .header.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        
+        .logo-img {
+            height: 40px;
+            width: auto;
+            max-width: 100%;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark);
+            white-space: nowrap;
+        }
+        
+        /* Top Bar Actions */
+        .top-bar-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow: visible;
+        }
+        
+        /* Search Container */
+        .search-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .search-icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .search-icon-btn:hover {
+            background-color: #f1f5f9;
+        }
+        
+        .search-input {
+            padding: 8px 15px 8px 40px;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            width: 180px;
+            transition: var(--transition);
+            max-width: 100%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .search-container.active .search-input {
+            opacity: 1;
+            visibility: visible;
+            width: 220px;
+        }
+        
+        .search-container.active .search-icon-btn {
+            position: relative;
+            z-index: 11;
+            background-color: #f1f5f9;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            z-index: 11;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--dark);
+            font-weight: 500;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            white-space: nowrap;
+            flex-shrink: 0;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        
+        .language-toggle:hover {
+            background-color: #f1f5f9;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            flex-shrink: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .hamburger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--dark);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        
+        .hamburger-menu.active span:nth-child(1) {
+            transform: translateY(14px) rotate(45deg);
+        }
+        
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger-menu.active span:nth-child(3) {
+            transform: translateY(-14px) rotate(-45deg);
+        }
+        
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .nav-menu::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 25px;
+            padding: 0 20px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark);
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.btn-primary {
+            color: white;
+            padding: 8px 20px;
+            margin-left: 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 90px;
+            right: -100%;
+            width: 100%;
+            max-width: 300px;
+            height: calc(100vh - 90px);
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: var(--transition);
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .mobile-menu-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-link:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+        
+        /* Hero Section - First Screen View */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 160px 0 100px;
+            margin-top: 90px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            min-height: calc(100vh - 90px);
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        /* Featured Courses */
+        .courses {
+            background-color: white;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .course-img {
+            height: 180px;
+            width: 100%;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .course-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Resources Section */
+        .resources {
+            background-color: #f8fafc;
+        }
+        
+        .resource-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .news-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: white;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .news-date {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            display: inline-block;
+            font-size: 0.9rem;
+            border-radius: 0 0 var(--border-radius) 0;
+        }
+        
+        .news-content {
+            padding: 20px;
+        }
+        
+        /* Live Classes */
+        .live-classes {
+            background-color: #f8fafc;
+        }
+        
+        .live-classes-list {
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+        
+        .live-class-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            flex-wrap: wrap;
+        }
+        
+        .live-class-time {
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        /* Events Section */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .event-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background-color: white;
+        }
+        
+        .event-badge {
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 0 0 var(--border-radius) 0;
+        }
+        
+        .event-content {
+            padding: 20px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: #f8fafc;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--gray);
+        }
+        
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto 0;
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            width: 100%;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-description {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-link {
+            color: #cbd5e1;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .language-toggle span {
+                display: none;
+            }
+            
+            .language-toggle {
+                padding: 8px;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+                min-height: calc(100vh - 90px);
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+                letter-spacing: -0.3px;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+            
+            .search-input {
+                width: 150px;
+            }
+            
+            .search-container.active .search-input {
+                width: 180px;
+            }
+            
+            .live-class-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .live-class-time {
+                margin-top: 0;
+                align-self: flex-end;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 140px 0 70px;
+                min-height: calc(100vh - 90px);
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .course-grid,
+            .resource-cards,
+            .news-grid,
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .search-input {
+                width: 130px;
+            }
+            
+            .search-container.active .search-input {
+                width: 160px;
+            }
+            
+            .top-bar-actions {
+                gap: 15px;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .search-input {
+                width: 120px;
+                font-size: 0.8rem;
+            }
+            
+            .search-container.active .search-input {
+                width: 140px;
+            }
+            
+            .language-toggle {
+                padding: 6px;
+            }
+            
+            .top-bar-actions {
+                gap: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" alt="OpenVector Academy Logo" class="logo-img">
+                    <div class="logo-text">OpenVector Academy</div>
+                </div>
+                
+                <div class="top-bar-actions">
+                    <!-- Search Icon with Expandable Input -->
+                    <div class="search-container" id="search-container">
+                        <button class="search-icon-btn" id="search-toggle">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input type="text" class="search-input" placeholder="Search courses..." id="search-input">
+                    </div>
+                    
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </div>
+                    
+                    <!-- Hamburger Menu -->
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="live.html" class="nav-link">Live Classes</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="registration.html" class="nav-link btn btn-primary">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+            <li><a href="courses.html" class="mobile-menu-link">Courses</a></li>
+            <li><a href="resources.html" class="mobile-menu-link">Resources</a></li>
+            <li><a href="news.html" class="mobile-menu-link">News</a></li>
+            <li><a href="live.html" class="mobile-menu-link">Live Classes</a></li>
+            <li><a href="events.html" class="mobile-menu-link">Events</a></li>
+            <li><a href="about.html" class="mobile-menu-link">About Us</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+            <li><a href="registration.html" class="mobile-menu-link">Register</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section - First Screen View -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learn Without Limits</h1>
+                <p>OpenVector Academy provides world-class education in technology, design, and business. Join thousands of students who have transformed their careers with our expert-led courses and hands-on projects.</p>
+                <div class="hero-buttons">
+                    <a href="live.html" class="btn btn-accent">Join Live Class</a>
+                    <a href="registration.html" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            <p class="section-subtitle">Explore our most popular courses designed to equip you with in-demand skills for today's job market.</p>
+            
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-img" style="background-color: #e0f2fe;">
+                        <span>Machine Learning Fundamentals</span>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Machine Learning Fundamentals</h3>
+                        <p class="course-description">Master the basics of machine learning algorithms, data preprocessing, and model evaluation.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 8 weeks</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                        </div>
+                        <a href="courses.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Course</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img" style="background-color: #fef3c7;">
+                        <span>Full Stack Web Development</span>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Full Stack Web Development</h3>
+                        <p class="course-description">Learn to build modern web applications with React, Node.js, and MongoDB from scratch.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 12 weeks</span>
+                            <span><i class="fas fa-signal"></i> Beginner</span>
+                        </div>
+                        <a href="courses.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Course</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img" style="background-color: #dbeafe;">
+                        <span>Data Science with Python</span>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Science with Python</h3>
+                        <p class="course-description">Learn data analysis, visualization, and statistical modeling using Python and popular libraries.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 10 weeks</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                        </div>
+                        <a href="courses.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Learning Resources</h2>
+            <p class="section-subtitle">Access a wide range of study materials including PDFs, eBooks, and practice exercises to enhance your learning.</p>
+            
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF Guides</h3>
+                    <p>Comprehensive guides covering essential concepts and practical examples.</p>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>eBooks</h3>
+                    <p>Curated collection of digital books from industry experts and thought leaders.</p>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Practice Material</h3>
+                    <p>Hands-on exercises and projects to apply what you've learned in real scenarios.</p>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video explanations for complex topics and practical demonstrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title">Latest News & Updates</h2>
+            <p class="section-subtitle">Stay informed about the latest announcements, platform updates, and educational trends.</p>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">June 15, 2023</div>
+                    <div class="news-content">
+                        <h3>New AI & ML Specialization Launch</h3>
+                        <p>We're excited to announce our new AI and Machine Learning specialization with 5 advanced courses.</p>
+                        <a href="news.html" class="btn btn-secondary" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-date">June 8, 2023</div>
+                    <div class="news-content">
+                        <h3>Platform Performance Upgrades</h3>
+                        <p>Our learning platform has been upgraded for faster load times and improved mobile experience.</p>
+                        <a href="news.html" class="btn btn-secondary" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-date">May 30, 2023</div>
+                    <div class="news-content">
+                        <h3>Student Success Stories</h3>
+                        <p>Read how our graduates landed jobs at top tech companies after completing our programs.</p>
+                        <a href="news.html" class="btn btn-secondary" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Classes -->
+    <section class="live-classes" id="live-classes">
+        <div class="container">
+            <h2 class="section-title">Upcoming Live Classes</h2>
+            <p class="section-subtitle">Join our interactive live sessions with expert instructors and get your questions answered in real-time.</p>
+            
+            <div class="live-classes-list">
+                <div class="live-class-item">
+                    <div>
+                        <h3>Introduction to React Hooks</h3>
+                        <p>with Sarah Johnson, Senior Frontend Developer</p>
+                    </div>
+                    <div class="live-class-time">Tomorrow, 2:00 PM EST</div>
+                </div>
+                
+                <div class="live-class-item">
+                    <div>
+                        <h3>Data Visualization with D3.js</h3>
+                        <p>with Michael Chen, Data Visualization Specialist</p>
+                    </div>
+                    <div class="live-class-time">June 20, 11:00 AM EST</div>
+                </div>
+                
+                <div class="live-class-item">
+                    <div>
+                        <h3>Python for Automation</h3>
+                        <p>with David Rodriguez, Python Expert</p>
+                    </div>
+                    <div class="live-class-time">June 22, 4:00 PM EST</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="live.html" class="btn btn-primary">View All Live Classes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section class="events" id="events">
+        <div class="container">
+            <h2 class="section-title">Events & Challenges</h2>
+            <p class="section-subtitle">Participate in competitions, quizzes, and community events to test your skills and win prizes.</p>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-badge">Coding Challenge</div>
+                    <div class="event-content">
+                        <h3>Monthly Algorithm Challenge</h3>
+                        <p>Test your problem-solving skills with our monthly coding challenge. Top performers win prizes and certification.</p>
+                        <p><strong>Deadline:</strong> June 30, 2023</p>
+                        <a href="events.html" class="btn btn-secondary" style="margin-top: 15px;">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-badge">Hackathon</div>
+                    <div class="event-content">
+                        <h3>OpenVector Hackathon 2023</h3>
+                        <p>48-hour virtual hackathon to build innovative solutions for real-world problems. Great prizes for winners!</p>
+                        <p><strong>Date:</strong> July 15-16, 2023</p>
+                        <a href="events.html" class="btn btn-secondary" style="margin-top: 15px;">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-badge">Webinar</div>
+                    <div class="event-content">
+                        <h3>Future of Web Development</h3>
+                        <p>Join industry leaders as they discuss emerging trends and technologies in web development.</p>
+                        <p><strong>Date:</strong> June 25, 2023</p>
+                        <a href="events.html" class="btn btn-secondary" style="margin-top: 15px;">Join Webinar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About OpenVector Academy</h2>
+            <p class="section-subtitle">We're on a mission to make quality education accessible to everyone, everywhere.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2018, OpenVector Academy has grown to become a leading online education platform, serving over 50,000 students worldwide. Our team of expert instructors and industry professionals are dedicated to creating learning experiences that are engaging, practical, and career-focused.</p>
+                    <p>We believe that education should be without limits - that's why we offer flexible learning paths, affordable pricing, and a supportive community to help you achieve your goals.</p>
+                </div>
+                
+                <h3 style="margin-bottom: 20px;">Meet Our Leadership Team</h3>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Alex Morgan</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Jennifer Lee</h4>
+                        <p>Chief Learning Officer</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Marcus Johnson</h4>
+                        <p>Head of Technology</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Sophia Chen</h4>
+                        <p>Director of Curriculum</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions or need assistance? Our team is here to help you on your learning journey.</p>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    
+                    .form-group {
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">OpenVector Academy</div>
+                    <p class="footer-description">Learn Without Limits. Quality online education for the digital age.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="courses.html" class="footer-link">Courses</a></li>
+                        <li><a href="resources.html" class="footer-link">Resources</a></li>
+                        <li><a href="news.html" class="footer-link">News</a></li>
+                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> support@openvector.edu</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Tech City, TC 10101</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 OpenVector Academy. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for learners worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Close search if open
+            searchContainer.classList.remove('active');
+            searchInput.blur();
+        });
+        
+        // Search Toggle Functionality
+        const searchContainer = document.getElementById('search-container');
+        const searchToggle = document.getElementById('search-toggle');
+        const searchInput = document.getElementById('search-input');
+        
+        searchToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchContainer.classList.toggle('active');
+            
+            if (searchContainer.classList.contains('active')) {
+                searchInput.focus();
+            } else {
+                searchInput.blur();
+            }
+            
+            // Close mobile menu if open
+            hamburgerMenu.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+        
+        // Close search when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchContainer.contains(e.target)) {
+                searchContainer.classList.remove('active');
+                searchInput.blur();
+            }
+            
+            if (!hamburgerMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburgerMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Close search on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchContainer.classList.remove('active');
+                searchInput.blur();
+            }
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            // For this demo, we'll just show an alert
+            alert(`Thank you for your message, ${name}! We'll get back to you at ${email} as soon as possible.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    hamburgerMenu.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    
+                    // Close search if open
+                    searchContainer.classList.remove('active');
+                    searchInput.blur();
+                }
+            });
+        });
+        
+        // Prevent zooming with keyboard shortcuts (Ctrl +, Ctrl -, Ctrl+Mousewheel)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                e.preventDefault();
+            }
+        });
+        
+        // Prevent zooming with pinch gesture on touch devices
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Prevent double-tap zoom on mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Ensure hero is visible on page load
+        window.addEventListener('load', function() {
+            // Scroll to top to ensure hero is visible
+            window.scrollTo(0, 0);
+            
+            // Focus on hero section
+            const heroSection = document.getElementById('hero');
+            if (heroSection) {
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
