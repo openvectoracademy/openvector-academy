@@ -2,183 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
-    <title>OpenVector Academy | World-Class Tech Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenVector Academy | Premium Tech Education Platform</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="World-class online education in technology, design, and business. Join 50,000+ students transforming careers with expert-led courses, hands-on projects, and career support.">
-    <meta name="keywords" content="coding bootcamp, online courses, tech education, programming, data science, web development">
+    <meta name="description" content="World-class technology education with industry-leading curriculum, expert instructors, and career-focused learning.">
+    <meta name="keywords" content="tech education, coding bootcamp, programming courses, data science, AI, web development">
     <meta name="author" content="OpenVector Academy">
-    <meta property="og:title" content="OpenVector Academy | World-Class Tech Education">
-    <meta property="og:description" content="Learn Without Limits. Join 50,000+ students transforming careers.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://openvector.academy">
-    <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
-    
-    <!-- Fonts & Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Performance Optimized CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
+    
+    <!-- Ultra Professional CSS -->
     <style>
-        /* CSS Reset with modern best practices */
-        *, *::before, *::after {
+        /* ===== CSS RESET ===== */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        /* ===== VARIABLES ===== */
         :root {
-            /* Color System */
-            --primary-50: #eff6ff;
-            --primary-100: #dbeafe;
-            --primary-200: #bfdbfe;
-            --primary-300: #93c5fd;
-            --primary-400: #60a5fa;
-            --primary-500: #3b82f6;
-            --primary-600: #2563eb;
-            --primary-700: #1d4ed8;
-            --primary-800: #1e40af;
-            --primary-900: #1e3a8a;
+            /* Colors */
+            --primary: #0052CC;
+            --primary-light: #0066FF;
+            --primary-dark: #003D99;
+            --secondary: #7C4DFF;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --warning: #FFAB00;
+            --error: #FF5630;
             
-            --secondary-50: #faf5ff;
-            --secondary-100: #f3e8ff;
-            --secondary-500: #8b5cf6;
-            --secondary-700: #7c3aed;
+            /* Neutrals */
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --light-gray: #F1F3F5;
+            --medium-gray: #E9ECEF;
+            --border-color: #DEE2E6;
+            --text-light: #6C757D;
+            --text-medium: #495057;
+            --text-dark: #212529;
             
-            --accent-400: #22d3ee;
-            --accent-500: #06b6d4;
-            --accent-600: #0891b2;
+            /* Spacing */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-12: 48px;
+            --space-16: 64px;
+            --space-20: 80px;
+            --space-24: 96px;
             
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --gray-900: #0f172a;
+            /* Typography - Professional Small */
+            --font-xs: 12px;
+            --font-sm: 14px;
+            --font-base: 16px;
+            --font-lg: 18px;
+            --font-xl: 20px;
+            --font-2xl: 24px;
+            --font-3xl: 30px;
+            --font-4xl: 36px;
+            --font-5xl: 48px;
             
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
-            --info: #3b82f6;
-            
-            /* Spacing System */
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
-            --space-20: 5rem;
-            --space-24: 6rem;
-            
-            /* Typography */
-            --text-xs: 0.75rem;
-            --text-sm: 0.875rem;
-            --text-base: 1rem;
-            --text-lg: 1.125rem;
-            --text-xl: 1.25rem;
-            --text-2xl: 1.5rem;
-            --text-3xl: 1.875rem;
-            --text-4xl: 2.25rem;
-            --text-5xl: 3rem;
-            --text-6xl: 3.75rem;
+            /* Line Heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.75;
             
             /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
             
             /* Border Radius */
-            --radius-sm: 0.25rem;
-            --radius: 0.5rem;
-            --radius-md: 0.75rem;
-            --radius-lg: 1rem;
-            --radius-xl: 1.5rem;
-            --radius-full: 9999px;
+            --radius-sm: 4px;
+            --radius: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
             
             /* Transitions */
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Z-index layers */
-            --z-dropdown: 10;
-            --z-sticky: 20;
-            --z-fixed: 30;
-            --z-modal: 40;
-            --z-popover: 50;
-            --z-toast: 60;
+            --transition-fast: 150ms ease;
+            --transition: 250ms ease;
+            --transition-slow: 350ms ease;
         }
         
-        /* Base Styles */
+        /* ===== BASE STYLES ===== */
         html {
             font-size: 16px;
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
+            scroll-padding-top: 60px; /* Adjusted for small header */
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: var(--gray-800);
-            background-color: white;
-            overflow-x: hidden;
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: var(--font-base);
+            line-height: var(--leading-normal);
+            color: var(--text-medium);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Typography Scale */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--gray-900);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: var(--leading-tight);
+            letter-spacing: -0.01em;
         }
         
         h1 {
-            font-size: var(--text-5xl);
-            letter-spacing: -0.025em;
+            font-size: var(--font-4xl);
+            font-weight: 700;
         }
         
         h2 {
-            font-size: var(--text-4xl);
-            letter-spacing: -0.025em;
+            font-size: var(--font-3xl);
         }
         
         h3 {
-            font-size: var(--text-3xl);
+            font-size: var(--font-2xl);
         }
         
         h4 {
-            font-size: var(--text-2xl);
+            font-size: var(--font-xl);
         }
         
         p {
-            color: var(--gray-600);
-            line-height: 1.7;
+            color: var(--text-light);
+            line-height: var(--leading-relaxed);
         }
         
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
             transition: color var(--transition-fast);
         }
         
@@ -188,10 +156,10 @@
             display: block;
         }
         
-        /* Container System */
+        /* ===== LAYOUT ===== */
         .container {
             width: 100%;
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 var(--space-6);
         }
@@ -200,428 +168,183 @@
             max-width: 800px;
         }
         
-        /* Utility Classes */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+        .section {
+            padding: var(--space-16) 0;
         }
         
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+        .section-sm {
+            padding: var(--space-12) 0;
         }
         
-        /* Skip to Main Content */
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary-600);
-            color: white;
-            padding: var(--space-3) var(--space-6);
-            border-radius: 0 0 var(--radius) 0;
-            z-index: 9999;
-            transition: top var(--transition);
+        .section-lg {
+            padding: var(--space-20) 0;
         }
         
-        .skip-to-content:focus {
-            top: 0;
-        }
-        
-        /* Button System */
+        /* ===== BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: var(--space-2);
             padding: var(--space-3) var(--space-6);
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: var(--text-base);
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 500;
             line-height: 1.5;
+            border-radius: var(--radius);
+            border: 1px solid transparent;
             cursor: pointer;
             transition: all var(--transition);
-            border: 2px solid transparent;
-            font-family: inherit;
             white-space: nowrap;
             user-select: none;
-            position: relative;
-            overflow: hidden;
         }
         
-        .btn:focus-visible {
-            outline: 3px solid var(--primary-200);
-            outline-offset: 2px;
-        }
-        
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+        .btn:hover {
+            transform: translateY(-1px);
         }
         
         .btn-primary {
-            background-color: var(--primary-600);
-            color: white;
+            background-color: var(--primary);
+            color: var(--white);
         }
         
-        .btn-primary:hover:not(:disabled) {
-            background-color: var(--primary-700);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-primary:active:not(:disabled) {
-            transform: translateY(0);
-        }
-        
-        .btn-secondary {
-            background-color: white;
-            color: var(--primary-600);
-            border-color: var(--gray-200);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .btn-secondary:hover:not(:disabled) {
-            background-color: var(--gray-50);
-            border-color: var(--gray-300);
-            transform: translateY(-2px);
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
             box-shadow: var(--shadow);
         }
         
-        .btn-accent {
-            background-color: var(--accent-500);
-            color: white;
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
         
-        .btn-accent:hover:not(:disabled) {
-            background-color: var(--accent-600);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .btn-secondary:hover {
+            background-color: var(--light-gray);
+            border-color: var(--text-light);
         }
         
         .btn-outline {
             background-color: transparent;
-            color: var(--primary-600);
-            border-color: var(--primary-600);
+            color: var(--primary);
+            border-color: var(--primary);
         }
         
-        .btn-outline:hover:not(:disabled) {
-            background-color: var(--primary-50);
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
         
         .btn-lg {
             padding: var(--space-4) var(--space-8);
-            font-size: var(--text-lg);
+            font-size: var(--font-lg);
         }
         
-        .btn-icon {
-            width: 44px;
-            height: 44px;
-            padding: 0;
-            border-radius: var(--radius-full);
-        }
-        
-        /* Loading State */
-        .btn-loading {
-            pointer-events: none;
-        }
-        
-        .btn-loading::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            top: 50%;
-            left: 50%;
-            margin-left: -10px;
-            margin-top: -10px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: var(--radius-full);
-            border-top-color: white;
-            animation: spin 0.8s linear infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Toast Notification */
-        .toast-container {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            z-index: var(--z-toast);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-        }
-        
-        .toast {
-            background: white;
-            padding: var(--space-4);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-xl);
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            min-width: 300px;
-            max-width: 400px;
-            transform: translateX(400px);
-            transition: transform var(--transition);
-            border-left: 4px solid var(--primary-600);
-        }
-        
-        .toast.show {
-            transform: translateX(0);
-        }
-        
-        .toast-success {
-            border-left-color: var(--success);
-        }
-        
-        .toast-error {
-            border-left-color: var(--error);
-        }
-        
-        .toast-icon {
-            font-size: var(--text-xl);
-        }
-        
-        /* Header & Navigation */
+        /* ===== HEADER - PROFESSIONAL SMALL ===== */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gray-200);
-            z-index: var(--z-fixed);
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
             transition: all var(--transition);
+            height: 60px; /* Professional small height */
+            border-bottom: 1px solid var(--border-color);
         }
         
         .header.scrolled {
-            box-shadow: var(--shadow-lg);
-            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
         
         .header-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 80px;
+            height: 100%;
         }
         
+        /* Logo - Professional Small */
         .logo {
             display: flex;
             align-items: center;
-            gap: var(--space-3);
-            text-decoration: none;
+            gap: var(--space-2);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px; /* Smaller, professional font size */
+            color: var(--text-dark);
+            padding: var(--space-1) 0;
         }
         
         .logo-img {
-            height: 40px;
+            height: 24px; /* Smaller logo for professional look */
             width: auto;
         }
         
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-            font-size: var(--text-2xl);
-            color: var(--gray-900);
-            letter-spacing: -0.025em;
-        }
-        
-        .nav {
+        /* Desktop Navigation - Professional Small */
+        .nav-desktop {
             display: flex;
             align-items: center;
-            gap: var(--space-8);
+            gap: var(--space-4); /* Tight spacing */
         }
         
         .nav-list {
             display: flex;
-            gap: var(--space-6);
+            gap: var(--space-3); /* Tight spacing */
             list-style: none;
+            margin-right: var(--space-4);
         }
         
         .nav-link {
+            font-size: 13px; /* Small, professional font size */
             font-weight: 500;
-            color: var(--gray-700);
-            padding: var(--space-2) var(--space-3);
-            border-radius: var(--radius);
+            color: var(--text-medium);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
             transition: all var(--transition-fast);
-            position: relative;
+            letter-spacing: -0.01em;
         }
         
         .nav-link:hover {
-            color: var(--primary-600);
-            background-color: var(--primary-50);
+            color: var(--primary);
+            background-color: var(--light-gray);
         }
         
         .nav-link.active {
-            color: var(--primary-600);
+            color: var(--primary);
             font-weight: 600;
+            background-color: rgba(0, 82, 204, 0.05);
         }
         
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 3px;
-            background-color: var(--primary-600);
-            border-radius: var(--radius-full);
+        .nav-cta .btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            font-weight: 500;
         }
         
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: var(--space-4);
-        }
-        
-        /* Search System */
-        .search-wrapper {
-            position: relative;
-        }
-        
-        .search-toggle {
-            background: none;
-            border: none;
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-600);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-        
-        .search-toggle:hover {
-            background-color: var(--gray-100);
-            color: var(--gray-800);
-        }
-        
-        .search-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(8px);
-            z-index: var(--z-modal);
-            display: none;
-            align-items: flex-start;
-            justify-content: center;
-            padding-top: 120px;
-        }
-        
-        .search-modal.active {
-            display: flex;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .search-container {
-            width: 100%;
-            max-width: 600px;
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .search-input-group {
-            position: relative;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: var(--space-4) var(--space-6) var(--space-4) 56px;
-            font-size: var(--text-lg);
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            transition: all var(--transition);
-            background-color: white;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary-500);
-            box-shadow: 0 0 0 3px var(--primary-100);
-        }
-        
-        .search-icon {
-            position: absolute;
-            left: var(--space-6);
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray-400);
-            font-size: var(--text-xl);
-        }
-        
-        .search-results {
-            margin-top: var(--space-4);
-            max-height: 400px;
-            overflow-y: auto;
-            display: none;
-        }
-        
-        .search-result-item {
-            padding: var(--space-3) var(--space-4);
-            border-radius: var(--radius);
-            transition: background-color var(--transition-fast);
-            cursor: pointer;
-        }
-        
-        .search-result-item:hover {
-            background-color: var(--gray-50);
-        }
-        
-        /* Mobile Navigation */
+        /* Mobile Menu Toggle - Professional Small */
         .mobile-menu-toggle {
             display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 16px;
             background: none;
             border: none;
-            width: 44px;
-            height: 44px;
-            padding: var(--space-2);
             cursor: pointer;
-            position: relative;
-            z-index: var(--z-modal);
+            padding: 0;
+            z-index: 1001;
         }
         
         .mobile-menu-toggle span {
             display: block;
-            width: 24px;
+            width: 100%;
             height: 2px;
-            background-color: var(--gray-700);
-            margin: 5px auto;
+            background-color: var(--text-dark);
+            border-radius: 1px;
             transition: all var(--transition);
-            border-radius: var(--radius-full);
         }
         
         .mobile-menu-toggle.active span:nth-child(1) {
@@ -636,49 +359,54 @@
             transform: translateY(-7px) rotate(-45deg);
         }
         
+        /* Mobile Menu - Professional Small */
         .mobile-menu {
             position: fixed;
-            top: 0;
-            right: -100%;
+            top: 60px;
+            left: 0;
             width: 100%;
-            max-width: 400px;
-            height: 100vh;
-            background: white;
-            box-shadow: var(--shadow-xl);
-            z-index: var(--z-modal);
-            padding: 100px var(--space-6) var(--space-8);
+            height: calc(100vh - 60px);
+            background-color: var(--white);
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+            padding: var(--space-4);
             overflow-y: auto;
-            transition: right var(--transition);
+            border-top: 1px solid var(--border-color);
         }
         
         .mobile-menu.active {
-            right: 0;
+            transform: translateX(0);
         }
         
         .mobile-nav-list {
             list-style: none;
-        }
-        
-        .mobile-nav-item {
-            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
         }
         
         .mobile-nav-link {
             display: block;
-            padding: var(--space-4) 0;
+            padding: 10px 12px;
+            font-size: 14px;
             font-weight: 500;
-            color: var(--gray-700);
-            transition: color var(--transition-fast);
+            color: var(--text-dark);
+            border-radius: var(--radius);
+            transition: all var(--transition-fast);
         }
         
-        .mobile-nav-link:hover {
-            color: var(--primary-600);
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: var(--light-gray);
+            color: var(--primary);
         }
         
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, var(--primary-50) 0%, var(--gray-50) 100%);
+            padding: 140px 0 80px; /* Adjusted for small header */
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            margin-top: 60px; /* Matches header height */
             position: relative;
             overflow: hidden;
         }
@@ -688,11 +416,11 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 50%;
+            width: 40%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center right;
+            background: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
             background-size: cover;
-            opacity: 0.1;
+            opacity: 0.05;
         }
         
         .hero-content {
@@ -702,22 +430,28 @@
         }
         
         .hero-title {
-            font-size: var(--text-6xl);
-            line-height: 1.1;
+            font-size: var(--font-4xl);
             margin-bottom: var(--space-6);
-            letter-spacing: -0.03em;
+            line-height: 1.1;
         }
         
         .hero-description {
-            font-size: var(--text-xl);
+            font-size: var(--font-lg);
             margin-bottom: var(--space-8);
-            max-width: 500px;
+            max-width: 540px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-12);
         }
         
         .hero-stats {
             display: flex;
-            gap: var(--space-8);
-            margin-top: var(--space-8);
+            gap: var(--space-12);
+            flex-wrap: wrap;
         }
         
         .stat {
@@ -726,101 +460,57 @@
         }
         
         .stat-number {
-            font-size: var(--text-3xl);
+            font-size: var(--font-3xl);
             font-weight: 700;
-            color: var(--primary-600);
+            color: var(--primary);
+            line-height: 1;
         }
         
         .stat-label {
-            font-size: var(--text-sm);
-            color: var(--gray-600);
+            font-size: var(--font-sm);
+            color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            margin-top: var(--space-1);
         }
         
-        /* Trust Badges */
-        .trust-badges {
-            padding: var(--space-8) 0;
-            background: var(--gray-50);
-        }
-        
-        .trust-badges-title {
+        /* ===== COURSES ===== */
+        .section-header {
             text-align: center;
-            color: var(--gray-600);
-            font-size: var(--text-sm);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: var(--space-6);
-        }
-        
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: var(--space-12);
-        }
-        
-        .trust-logo {
-            height: 40px;
-            opacity: 0.6;
-            filter: grayscale(1);
-            transition: all var(--transition);
-        }
-        
-        .trust-logo:hover {
-            opacity: 1;
-            filter: grayscale(0);
-        }
-        
-        /* Section Common Styles */
-        .section {
-            padding: var(--space-20) 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: var(--space-4);
+            margin-bottom: var(--space-8);
         }
         
         .section-subtitle {
-            text-align: center;
+            font-size: var(--font-lg);
             max-width: 600px;
-            margin: 0 auto var(--space-12);
-            font-size: var(--text-lg);
+            margin: var(--space-3) auto 0;
         }
         
-        /* Courses Grid */
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: var(--space-6);
             margin-top: var(--space-8);
         }
         
         .course-card {
-            background: white;
+            background: var(--white);
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: all var(--transition);
-            border: 1px solid var(--gray-200);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            border: 1px solid var(--border-color);
         }
         
         .course-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-200);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
         }
         
         .course-image {
-            height: 200px;
+            height: 180px;
             overflow: hidden;
-            position: relative;
         }
         
         .course-image img {
@@ -834,447 +524,481 @@
             transform: scale(1.05);
         }
         
-        .course-badge {
-            position: absolute;
-            top: var(--space-4);
-            right: var(--space-4);
-            background: var(--primary-600);
-            color: white;
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-full);
-            font-size: var(--text-xs);
-            font-weight: 600;
-        }
-        
         .course-content {
             padding: var(--space-6);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
         }
         
         .course-category {
-            color: var(--primary-600);
-            font-size: var(--text-sm);
+            display: inline-block;
+            font-size: var(--font-xs);
             font-weight: 600;
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: var(--space-2);
         }
         
         .course-title {
-            font-size: var(--text-xl);
+            font-size: var(--font-xl);
             margin-bottom: var(--space-3);
-            line-height: 1.3;
-        }
-        
-        .course-description {
-            font-size: var(--text-base);
-            color: var(--gray-600);
-            margin-bottom: var(--space-4);
-            flex: 1;
         }
         
         .course-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: var(--space-4);
             padding-top: var(--space-4);
-            border-top: 1px solid var(--gray-200);
-            margin-top: auto;
+            border-top: 1px solid var(--border-color);
         }
         
-        .course-duration, .course-level {
+        .course-info {
+            display: flex;
+            gap: var(--space-4);
+        }
+        
+        .course-info-item {
             display: flex;
             align-items: center;
-            gap: var(--space-2);
-            font-size: var(--text-sm);
-            color: var(--gray-600);
+            gap: var(--space-1);
+            font-size: var(--font-sm);
+            color: var(--text-light);
         }
         
         .course-price {
-            font-size: var(--text-2xl);
-            font-weight: 700;
-            color: var(--gray-900);
+            font-size: var(--font-xl);
+            font-weight: 600;
+            color: var(--text-dark);
         }
         
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
-            color: white;
-        }
-        
-        .testimonials .section-title,
-        .testimonials .section-subtitle {
-            color: white;
-        }
-        
-        .testimonials-grid {
+        /* ===== FEATURES ===== */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: var(--space-6);
             margin-top: var(--space-8);
         }
         
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
+        .feature-card {
+            background: var(--white);
             padding: var(--space-6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-4);
+            color: var(--primary);
+            font-size: var(--font-2xl);
+        }
+        
+        .feature-title {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-2);
+        }
+        
+        /* ===== PATHS ===== */
+        .paths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+        
+        .path-card {
+            background: var(--white);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .path-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .path-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+        
+        .path-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-gray);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: var(--font-xl);
+        }
+        
+        .path-list {
+            list-style: none;
+            margin: var(--space-4) 0;
+        }
+        
+        .path-list li {
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-sm);
+        }
+        
+        .path-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .path-list i {
+            color: var(--success);
+            font-size: var(--font-sm);
+        }
+        
+        /* ===== INSTRUCTORS ===== */
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+        
+        .instructor-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            text-align: center;
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .instructor-image {
+            height: 160px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: var(--font-3xl);
+            font-weight: 600;
+        }
+        
+        .instructor-info {
+            padding: var(--space-6);
+        }
+        
+        .instructor-name {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-1);
+        }
+        
+        .instructor-role {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: var(--font-sm);
+            margin-bottom: var(--space-3);
+        }
+        
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-card {
+            max-width: 600px;
+            margin: var(--space-8) auto 0;
+            background: var(--white);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            text-align: center;
         }
         
         .testimonial-rating {
-            color: #fbbf24;
+            color: #FFC107;
+            font-size: var(--font-lg);
             margin-bottom: var(--space-4);
         }
         
         .testimonial-text {
-            font-size: var(--text-lg);
+            font-size: var(--font-lg);
             font-style: italic;
             margin-bottom: var(--space-6);
-            color: var(--gray-300);
+            color: var(--text-medium);
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: var(--space-4);
         }
         
         .testimonial-avatar {
             width: 56px;
             height: 56px;
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            background: var(--gray-700);
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: var(--font-lg);
         }
         
         .testimonial-info h4 {
-            color: white;
             margin-bottom: var(--space-1);
         }
         
         .testimonial-info p {
-            color: var(--gray-400);
-            font-size: var(--text-sm);
+            font-size: var(--font-sm);
+            color: var(--text-light);
         }
         
-        /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: var(--space-8);
-        }
-        
-        .feature-card {
-            text-align: center;
-            padding: var(--space-6);
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-50);
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-6);
-            color: var(--primary-600);
-            font-size: var(--text-3xl);
-        }
-        
-        .feature-title {
-            font-size: var(--text-xl);
-            margin-bottom: var(--space-3);
-        }
-        
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-6);
-            max-width: 1000px;
-            margin: var(--space-12) auto 0;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            border: 2px solid var(--gray-200);
-            transition: all var(--transition);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .pricing-card.popular {
-            border-color: var(--primary-600);
-            transform: scale(1.05);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .pricing-card.popular::before {
-            content: 'Most Popular';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-600);
-            color: white;
-            padding: var(--space-1) var(--space-4);
-            border-radius: var(--radius-full);
-            font-size: var(--text-sm);
-            font-weight: 600;
-        }
-        
-        .pricing-header {
-            text-align: center;
-            margin-bottom: var(--space-6);
-        }
-        
-        .pricing-title {
-            font-size: var(--text-2xl);
-            margin-bottom: var(--space-2);
-        }
-        
-        .pricing-description {
-            color: var(--gray-600);
-        }
-        
-        .pricing-price {
-            text-align: center;
-            margin: var(--space-8) 0;
-        }
-        
-        .pricing-amount {
-            font-size: var(--text-5xl);
-            font-weight: 800;
-            color: var(--gray-900);
-            line-height: 1;
-        }
-        
-        .pricing-period {
-            color: var(--gray-600);
-            margin-top: var(--space-2);
-        }
-        
-        .pricing-features {
-            flex: 1;
-            margin-bottom: var(--space-8);
-        }
-        
-        .pricing-feature {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            margin-bottom: var(--space-3);
-        }
-        
-        .pricing-feature i {
-            color: var(--success);
-        }
-        
-        /* CTA Section */
+        /* ===== CTA ===== */
         .cta {
-            background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
             text-align: center;
-            padding: var(--space-20) 0;
+            padding: var(--space-16) 0;
         }
         
         .cta-title {
-            font-size: var(--text-4xl);
+            color: var(--white);
             margin-bottom: var(--space-4);
-            color: white;
         }
         
         .cta-description {
-            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.9);
             max-width: 600px;
             margin: 0 auto var(--space-8);
-            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--font-lg);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .cta .btn-secondary {
-            background: white;
-            color: var(--primary-600);
+            background: var(--white);
+            color: var(--primary);
         }
         
-        /* Footer */
+        .cta .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+        
+        .cta .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        /* ===== FOOTER ===== */
         .footer {
-            background: var(--gray-900);
-            color: white;
-            padding: var(--space-20) 0 var(--space-8);
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: var(--space-16) 0 var(--space-8);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-12);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
             margin-bottom: var(--space-12);
         }
         
         .footer-logo {
-            font-size: var(--text-2xl);
-            font-weight: 800;
-            margin-bottom: var(--space-4);
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--font-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-3);
             display: inline-block;
         }
         
         .footer-description {
-            color: var(--gray-400);
-            margin-bottom: var(--space-6);
+            color: var(--text-light);
+            margin-bottom: var(--space-4);
+            font-size: var(--font-sm);
         }
         
         .footer-heading {
-            font-size: var(--text-lg);
+            font-size: var(--font-lg);
             font-weight: 600;
             margin-bottom: var(--space-4);
-            color: white;
+            color: var(--white);
         }
         
         .footer-links {
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
         }
         
         .footer-link {
-            color: var(--gray-400);
-            padding: var(--space-2) 0;
-            display: block;
+            color: var(--text-light);
+            font-size: var(--font-sm);
             transition: color var(--transition-fast);
         }
         
         .footer-link:hover {
-            color: white;
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-2);
+            margin-top: var(--space-3);
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
         }
         
         .footer-bottom {
-            padding-top: var(--space-8);
-            border-top: 1px solid var(--gray-800);
+            padding-top: var(--space-6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            color: var(--gray-500);
-            font-size: var(--text-sm);
+            color: var(--text-light);
+            font-size: var(--font-sm);
         }
         
-        /* Form Styles */
-        .contact-form {
-            max-width: 600px;
-            margin: var(--space-12) auto 0;
-            background: white;
-            padding: var(--space-8);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .form-group {
-            margin-bottom: var(--space-6);
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: var(--space-2);
-            font-weight: 500;
-            color: var(--gray-700);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: var(--space-3) var(--space-4);
-            font-size: var(--text-base);
-            border: 2px solid var(--gray-300);
-            border-radius: var(--radius);
-            transition: all var(--transition);
-            font-family: inherit;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-500);
-            box-shadow: 0 0 0 3px var(--primary-100);
-        }
-        
-        .form-control.error {
-            border-color: var(--error);
-        }
-        
-        .form-error {
-            color: var(--error);
-            font-size: var(--text-sm);
-            margin-top: var(--space-1);
-            display: none;
-        }
-        
-        /* Responsive Design */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1024px) {
-            h1 {
-                font-size: var(--text-5xl);
+            :root {
+                --font-5xl: 36px;
+                --font-4xl: 30px;
+                --font-3xl: 24px;
+                --font-2xl: 20px;
+                --font-xl: 18px;
+                --font-lg: 16px;
+                --font-base: 14px;
+                --font-sm: 12px;
+                --font-xs: 10px;
             }
             
-            h2 {
-                font-size: var(--text-3xl);
+            .section {
+                padding: var(--space-12) 0;
+            }
+            
+            .hero {
+                padding: 120px 0 64px;
             }
             
             .hero-title {
-                font-size: var(--text-5xl);
+                font-size: var(--font-3xl);
             }
             
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
-            
-            .pricing-card.popular {
-                transform: none;
+            .hero-description {
+                font-size: var(--font-base);
             }
         }
         
         @media (max-width: 768px) {
             .mobile-menu-toggle {
-                display: block;
+                display: flex;
             }
             
-            .nav, .header-actions .btn:not(.mobile-menu-toggle) {
+            .nav-desktop {
                 display: none;
             }
             
             .hero {
-                padding: 140px 0 80px;
                 text-align: center;
+                padding: 104px 0 48px;
+            }
+            
+            .hero::before {
+                width: 100%;
+                opacity: 0.03;
             }
             
             .hero-content {
                 max-width: 100%;
             }
             
-            .hero-title {
-                font-size: var(--text-4xl);
-            }
-            
-            .hero-description {
-                font-size: var(--text-lg);
+            .hero-buttons {
+                justify-content: center;
             }
             
             .hero-stats {
                 justify-content: center;
+                gap: var(--space-8);
             }
             
-            .courses-grid {
+            .courses-grid,
+            .features-grid,
+            .paths-grid,
+            .instructors-grid {
                 grid-template-columns: 1fr;
             }
             
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .features-grid {
-                grid-template-columns: 1fr;
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: var(--font-2xl);
             }
             
-            .section {
-                padding: var(--space-12) 0;
+            .hero-description {
+                font-size: var(--font-base);
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
             }
             
             .container {
@@ -1283,232 +1007,153 @@
             
             .btn-lg {
                 padding: var(--space-3) var(--space-6);
-                font-size: var(--text-base);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: var(--text-3xl);
+                font-size: var(--font-base);
             }
             
             .hero-stats {
-                flex-direction: column;
-                gap: var(--space-4);
-            }
-            
-            .trust-logos {
                 gap: var(--space-6);
             }
             
-            .trust-logo {
-                height: 30px;
-            }
-            
-            .cta-title {
-                font-size: var(--text-3xl);
-            }
-        }
-        
-        /* Accessibility Improvements */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-        
-        /* High Contrast Mode Support */
-        @media (prefers-contrast: high) {
-            :root {
-                --primary-600: #0056b3;
-                --primary-700: #004085;
-            }
-        }
-        
-        /* Dark Mode Support */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --gray-50: #1a1a1a;
-                --gray-100: #2a2a2a;
-                --gray-200: #3a3a3a;
-                --gray-300: #4a4a4a;
-                --gray-400: #8a8a8a;
-                --gray-500: #9a9a9a;
-                --gray-600: #aaaaaa;
-                --gray-700: #bababa;
-                --gray-800: #dadada;
-                --gray-900: #f0f0f0;
-            }
-            
-            body {
-                background: #0f172a;
-                color: var(--gray-800);
+            .stat-number {
+                font-size: var(--font-2xl);
             }
             
             .header {
-                background: rgba(26, 26, 26, 0.95);
-                border-bottom-color: var(--gray-700);
+                height: 56px;
             }
             
-            .course-card, .pricing-card, .contact-form {
-                background: var(--gray-100);
-                border-color: var(--gray-700);
+            .mobile-menu {
+                top: 56px;
+                height: calc(100vh - 56px);
+            }
+            
+            .logo {
+                font-size: 14px;
+            }
+            
+            .logo-img {
+                height: 20px;
             }
         }
         
-        /* Print Styles */
-        @media print {
-            .header, .footer, .btn, .mobile-menu-toggle, .search-toggle {
-                display: none !important;
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
-            
-            body {
-                font-size: 12pt;
-                line-height: 1.5;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            
-            .hero, .section {
-                padding: 20pt 0 !important;
-                page-break-inside: avoid;
-            }
-            
-            a {
-                color: #000 !important;
-                text-decoration: underline !important;
-            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* ===== UTILITIES ===== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     </style>
 </head>
 <body>
-    <!-- Skip to Main Content for Accessibility -->
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
-
-    <!-- Toast Notifications Container -->
-    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
-
     <!-- Header -->
-    <header class="header" id="header" role="banner">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <!-- Logo -->
-                <a href="#hero" class="logo" aria-label="OpenVector Academy - Home">
+                <a href="index.html" class="logo">
                     <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
-                         alt="OpenVector Academy Logo" 
-                         class="logo-img"
-                         width="40" 
-                         height="40">
-                    <span class="logo-text">OpenVector</span>
+                         alt="OpenVector Academy" 
+                         class="logo-img">
+                    <span>OpenVector Academy</span>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav class="nav" aria-label="Main Navigation">
-                    <ul class="nav-list" role="menubar">
-                        <li role="none"><a href="#courses" class="nav-link" role="menuitem">Courses</a></li>
-                        <li role="none"><a href="#features" class="nav-link" role="menuitem">Features</a></li>
-                        <li role="none"><a href="#pricing" class="nav-link" role="menuitem">Pricing</a></li>
-                        <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
-                        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <nav class="nav-desktop">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="courses.html" class="nav-link">Courses</a></li>
+                        <li><a href="live.html" class="nav-link">Live</a></li>
+                        <li><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
+                    <div class="nav-cta">
+                        <a href="registration.html" class="btn btn-primary">Get Started</a>
+                    </div>
                 </nav>
 
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <!-- Search Toggle -->
-                    <div class="search-wrapper">
-                        <button class="search-toggle btn-icon" 
-                                id="search-toggle" 
-                                aria-label="Search courses"
-                                aria-expanded="false"
-                                aria-controls="search-modal">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </button>
-                    </div>
-
-                    <!-- Auth Buttons -->
-                    <a href="#login" class="btn btn-outline" aria-label="Sign in to your account">Sign In</a>
-                    <a href="#signup" class="btn btn-primary" aria-label="Create a new account">Get Started</a>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button class="mobile-menu-toggle" 
-                            id="mobile-menu-toggle"
-                            aria-label="Toggle menu"
-                            aria-expanded="false"
-                            aria-controls="mobile-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
+                <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
+                <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
-    <!-- Search Modal -->
-    <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search courses">
-        <div class="search-container">
-            <div class="search-input-group">
-                <i class="fas fa-search search-icon" aria-hidden="true"></i>
-                <input type="search" 
-                       class="search-input" 
-                       id="search-input"
-                       placeholder="Search courses, topics, or instructors..."
-                       aria-label="Search input">
-            </div>
-            <div class="search-results" id="search-results" role="listbox">
-                <!-- Search results will be injected here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
-        <ul class="mobile-nav-list" role="menu">
-            <li class="mobile-nav-item" role="none">
-                <a href="#courses" class="mobile-nav-link" role="menuitem">Courses</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#features" class="mobile-nav-link" role="menuitem">Features</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#pricing" class="mobile-nav-link" role="menuitem">Pricing</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#testimonials" class="mobile-nav-link" role="menuitem">Testimonials</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#about" class="mobile-nav-link" role="menuitem">About</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#contact" class="mobile-nav-link" role="menuitem">Contact</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#login" class="mobile-nav-link" role="menuitem">Sign In</a>
-            </li>
-            <li class="mobile-nav-item" role="none">
-                <a href="#signup" class="btn btn-primary" role="menuitem" style="margin-top: var(--space-4);">Get Started</a>
-            </li>
-        </ul>
-    </nav>
-
     <!-- Hero Section -->
-    <section class="hero" id="hero" role="region" aria-label="Hero Section">
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Learn Without Limits<br> <span style="color: var(--primary-600);">Build Without Boundaries</span></h1>
-                <p class="hero-description">Join 50,000+ students who transformed their careers with world-class tech education. Learn from industry experts with real-world projects.</p>
+                <h1 class="hero-title">Master In-Demand Tech Skills</h1>
+                <p class="hero-description">
+                    Join 50,000+ professionals who transformed their careers with industry-leading curriculum, 
+                    expert mentorship, and hands-on projects from top tech companies.
+                </p>
                 
                 <div class="hero-buttons">
-                    <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
-                    <a href="#pricing" class="btn btn-secondary btn-lg">View Pricing</a>
+                    <a href="courses.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-play-circle"></i>
+                        Explore Courses
+                    </a>
+                    <a href="live.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-calendar-alt"></i>
+                        View Schedule
+                    </a>
                 </div>
                 
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">50K+</span>
-                        <span class="stat-label">Students Trained</span>
+                        <span class="stat-label">Students</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">94%</span>
@@ -1516,414 +1161,328 @@
                     </div>
                     <div class="stat">
                         <span class="stat-number">4.9★</span>
-                        <span class="stat-label">Student Rating</span>
+                        <span class="stat-label">Rating</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="trust-badges" aria-label="Trusted By">
+    <!-- Featured Courses -->
+    <section class="section">
         <div class="container">
-            <p class="trust-badges-title">Trusted by learners at top companies</p>
-            <div class="trust-logos">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="trust-logo" width="120" height="40">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="trust-logo" width="120" height="40">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="trust-logo" width="120" height="40">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="trust-logo" width="120" height="40">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Meta_Platforms_Inc._logo.svg" alt="Meta" class="trust-logo" width="120" height="40">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <p class="section-subtitle">Hand-picked courses taught by industry experts</p>
+            </div>
+            
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <article class="course-card fade-in">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Machine Learning" 
+                             loading="lazy">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category">AI & ML</span>
+                        <h3 class="course-title">Machine Learning Engineering</h3>
+                        <p>Master production ML systems, model deployment, and real-world AI applications.</p>
+                        <div class="course-meta">
+                            <div class="course-info">
+                                <span class="course-info-item">
+                                    <i class="far fa-clock"></i>
+                                    12 weeks
+                                </span>
+                                <span class="course-info-item">
+                                    <i class="fas fa-signal"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="course-price">$1,299</div>
+                        </div>
+                        <a href="courses.html" class="btn btn-outline" style="margin-top: var(--space-4); width: 100%;">
+                            View Details
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Course 2 -->
+                <article class="course-card fade-in">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Web Development" 
+                             loading="lazy">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category">Web Dev</span>
+                        <h3 class="course-title">Full Stack Development</h3>
+                        <p>Build modern web applications with React, Node.js, and cloud deployment.</p>
+                        <div class="course-meta">
+                            <div class="course-info">
+                                <span class="course-info-item">
+                                    <i class="far fa-clock"></i>
+                                    16 weeks
+                                </span>
+                                <span class="course-info-item">
+                                    <i class="fas fa-signal"></i>
+                                    Beginner
+                                </span>
+                            </div>
+                            <div class="course-price">$1,499</div>
+                        </div>
+                        <a href="courses.html" class="btn btn-outline" style="margin-top: var(--space-4); width: 100%;">
+                            View Details
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Course 3 -->
+                <article class="course-card fade-in">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Data Science" 
+                             loading="lazy">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category">Data Science</span>
+                        <h3 class="course-title">Data Science & Analytics</h3>
+                        <p>Master data analysis, visualization, and statistical modeling with Python.</p>
+                        <div class="course-meta">
+                            <div class="course-info">
+                                <span class="course-info-item">
+                                    <i class="far fa-clock"></i>
+                                    14 weeks
+                                </span>
+                                <span class="course-info-item">
+                                    <i class="fas fa-signal"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="course-price">$1,199</div>
+                        </div>
+                        <a href="courses.html" class="btn btn-outline" style="margin-top: var(--space-4); width: 100%;">
+                            View Details
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--space-8);">
+                <a href="courses.html" class="btn btn-primary">View All Courses</a>
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <main id="main-content" role="main">
-        <section class="section" id="courses" aria-labelledby="courses-title">
-            <div class="container">
-                <h2 id="courses-title" class="section-title">Featured Courses</h2>
-                <p class="section-subtitle">Master in-demand skills with project-based learning and expert mentorship.</p>
+    <!-- Why Choose Us -->
+    <section class="section" style="background-color: var(--off-white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose OpenVector?</h2>
+                <p class="section-subtitle">Industry-leading platform for career transformation</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="feature-title">Industry Experts</h3>
+                    <p>Learn from senior engineers from Google, Meta, Netflix, and Amazon.</p>
+                </div>
                 
-                <div class="courses-grid">
-                    <!-- Course 1 -->
-                    <article class="course-card">
-                        <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 alt="Machine Learning engineer working on algorithms" 
-                                 loading="lazy">
-                            <span class="course-badge">Bestseller</span>
-                        </div>
-                        <div class="course-content">
-                            <span class="course-category">AI & Machine Learning</span>
-                            <h3 class="course-title">Machine Learning Engineering</h3>
-                            <p class="course-description">Master production ML systems, model deployment, and ML Ops with real-world projects.</p>
-                            <div class="course-meta">
-                                <div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock" aria-hidden="true"></i>
-                                        <span>12 weeks</span>
-                                    </div>
-                                    <div class="course-level">
-                                        <i class="fas fa-signal" aria-hidden="true"></i>
-                                        <span>Intermediate</span>
-                                    </div>
-                                </div>
-                                <div class="course-price">$1,299</div>
-                            </div>
-                            <a href="#enroll" class="btn btn-primary" style="margin-top: var(--space-4);">Enroll Now</a>
-                        </div>
-                    </article>
-
-                    <!-- Course 2 -->
-                    <article class="course-card">
-                        <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 alt="Full stack web development code on monitor" 
-                                 loading="lazy">
-                            <span class="course-badge">New</span>
-                        </div>
-                        <div class="course-content">
-                            <span class="course-category">Web Development</span>
-                            <h3 class="course-title">Full Stack Development</h3>
-                            <p class="course-description">Build modern web applications with React, Node.js, and cloud deployment.</p>
-                            <div class="course-meta">
-                                <div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock" aria-hidden="true"></i>
-                                        <span>16 weeks</span>
-                                    </div>
-                                    <div class="course-level">
-                                        <i class="fas fa-signal" aria-hidden="true"></i>
-                                        <span>Beginner</span>
-                                    </div>
-                                </div>
-                                <div class="course-price">$1,499</div>
-                            </div>
-                            <a href="#enroll" class="btn btn-primary" style="margin-top: var(--space-4);">Enroll Now</a>
-                        </div>
-                    </article>
-
-                    <!-- Course 3 -->
-                    <article class="course-card">
-                        <div class="course-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                                 alt="Data science visualization dashboard" 
-                                 loading="lazy">
-                        </div>
-                        <div class="course-content">
-                            <span class="course-category">Data Science</span>
-                            <h3 class="course-title">Data Science & Analytics</h3>
-                            <p class="course-description">Master data analysis, visualization, and statistical modeling with Python.</p>
-                            <div class="course-meta">
-                                <div>
-                                    <div class="course-duration">
-                                        <i class="far fa-clock" aria-hidden="true"></i>
-                                        <span>14 weeks</span>
-                                    </div>
-                                    <div class="course-level">
-                                        <i class="fas fa-signal" aria-hidden="true"></i>
-                                        <span>Intermediate</span>
-                                    </div>
-                                </div>
-                                <div class="course-price">$1,199</div>
-                            </div>
-                            <a href="#enroll" class="btn btn-primary" style="margin-top: var(--space-4);">Enroll Now</a>
-                        </div>
-                    </article>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-title">Career Success</h3>
+                    <p>94% job placement rate with average salary increase of 65%.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="section" id="features" aria-labelledby="features-title" style="background-color: var(--gray-50);">
-            <div class="container">
-                <h2 id="features-title" class="section-title">Why Choose OpenVector?</h2>
-                <p class="section-subtitle">Industry-leading education designed for career success.</p>
                 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-tie" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Industry Experts</h3>
-                        <p>Learn from professionals at Google, Microsoft, and Netflix with real-world experience.</p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-briefcase" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Career Support</h3>
-                        <p>1:1 career coaching, resume reviews, and interview preparation included.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Hands-on Projects</h3>
-                        <p>Build portfolio-ready projects that demonstrate real skills to employers.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-certificate" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Industry Certifications</h3>
-                        <p>Earn recognized certifications that validate your skills to employers.</p>
-                    </div>
+                    <h3 class="feature-title">Hands-on Projects</h3>
+                    <p>Build real-world applications and portfolio projects.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
-            <div class="container">
-                <h2 id="testimonials-title" class="section-title">Student Success Stories</h2>
-                <p class="section-subtitle">Hear from our graduates who transformed their careers.</p>
                 
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"The ML Engineering course completely changed my career. I went from a junior developer to a Machine Learning Engineer at Google in 6 months."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">
-                                <!-- Avatar placeholder -->
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Sarah Chen</h4>
-                                <p>Machine Learning Engineer, Google</p>
-                            </div>
-                        </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"The hands-on projects and career coaching were game-changers. I landed a senior developer role with a 60% salary increase."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">
-                                <!-- Avatar placeholder -->
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Michael Rodriguez</h4>
-                                <p>Senior Software Engineer, Netflix</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"Coming from a non-tech background, I was nervous. But the structured curriculum and mentor support made all the difference."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">
-                                <!-- Avatar placeholder -->
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Jessica Williams</h4>
-                                <p>Data Scientist, Amazon</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="feature-title">1:1 Mentorship</h3>
+                    <p>Personalized guidance with weekly feedback and career coaching.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Pricing -->
-        <section class="section" id="pricing" aria-labelledby="pricing-title">
-            <div class="container">
-                <h2 id="pricing-title" class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the plan that fits your learning goals and budget.</p>
+    <!-- Learning Paths -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Paths</h2>
+                <p class="section-subtitle">Structured curriculum for career success</p>
+            </div>
+            
+            <div class="paths-grid">
+                <div class="path-card fade-in">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h3>Software Engineering</h3>
+                            <p style="color: var(--text-light); font-size: var(--font-sm);">Full Stack Development</p>
+                        </div>
+                    </div>
+                    <p>Master frontend, backend, databases, and cloud deployment.</p>
+                    <ul class="path-list">
+                        <li><i class="fas fa-check"></i> Frontend Development (React)</li>
+                        <li><i class="fas fa-check"></i> Backend Development (Node.js)</li>
+                        <li><i class="fas fa-check"></i> Databases & APIs</li>
+                        <li><i class="fas fa-check"></i> DevOps & Cloud</li>
+                    </ul>
+                    <a href="courses.html" class="btn btn-outline" style="width: 100%;">Explore Path</a>
+                </div>
                 
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Starter</h3>
-                            <p class="pricing-description">Perfect for beginners</p>
+                <div class="path-card fade-in">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <div class="pricing-price">
-                            <div class="pricing-amount">$299</div>
-                            <div class="pricing-period">per course</div>
+                        <div>
+                            <h3>AI & Data Science</h3>
+                            <p style="color: var(--text-light); font-size: var(--font-sm);">Machine Learning</p>
                         </div>
-                        <div class="pricing-features">
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Access to one course</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Lifetime course access</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Community support</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-times" aria-hidden="true"></i>
-                                <span>Career coaching</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-times" aria-hidden="true"></i>
-                                <span>Certificate of completion</span>
-                            </div>
-                        </div>
-                        <a href="#signup" class="btn btn-outline">Get Started</a>
                     </div>
-                    
-                    <div class="pricing-card popular">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Professional</h3>
-                            <p class="pricing-description">Most popular choice</p>
-                        </div>
-                        <div class="pricing-price">
-                            <div class="pricing-amount">$999</div>
-                            <div class="pricing-period">per quarter</div>
-                        </div>
-                        <div class="pricing-features">
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Unlimited courses</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>1:1 mentor sessions</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Career coaching</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Industry certificates</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Job placement support</span>
-                            </div>
-                        </div>
-                        <a href="#signup" class="btn btn-primary">Get Started</a>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Enterprise</h3>
-                            <p class="pricing-description">For teams & companies</p>
-                        </div>
-                        <div class="pricing-price">
-                            <div class="pricing-amount">Custom</div>
-                            <div class="pricing-period">contact for pricing</div>
-                        </div>
-                        <div class="pricing-features">
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Unlimited team seats</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Custom learning paths</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Dedicated success manager</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Analytics dashboard</span>
-                            </div>
-                            <div class="pricing-feature">
-                                <i class="fas fa-check" aria-hidden="true"></i>
-                                <span>Custom workshops</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-outline">Contact Sales</a>
-                    </div>
+                    <p>Master AI algorithms, data analysis, and production ML systems.</p>
+                    <ul class="path-list">
+                        <li><i class="fas fa-check"></i> Python for Data Science</li>
+                        <li><i class="fas fa-check"></i> Machine Learning Algorithms</li>
+                        <li><i class="fas fa-check"></i> Deep Learning</li>
+                        <li><i class="fas fa-check"></i> MLOps & Deployment</li>
+                    </ul>
+                    <a href="courses.html" class="btn btn-outline" style="width: 100%;">Explore Path</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="cta" id="cta" aria-labelledby="cta-title">
-            <div class="container container-narrow">
-                <h2 id="cta-title" class="cta-title">Start Your Tech Career Today</h2>
-                <p class="cta-description">Join thousands of successful graduates. No prior experience needed.</p>
-                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
-                    <a href="#signup" class="btn btn-secondary btn-lg">Start Free Trial</a>
-                    <a href="#demo" class="btn btn-outline btn-lg" style="background: transparent; color: white; border-color: white;">Book a Demo</a>
-                </div>
+    <!-- Instructors -->
+    <section class="section" style="background-color: var(--off-white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expert Instructors</h2>
+                <p class="section-subtitle">Learn from industry leaders</p>
             </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="section" id="contact" aria-labelledby="contact-title">
-            <div class="container container-narrow">
-                <h2 id="contact-title" class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">Have questions? Our team is here to help you succeed.</p>
+            
+            <div class="instructors-grid">
+                <div class="instructor-card fade-in">
+                    <div class="instructor-image">SC</div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Sarah Chen</h3>
+                        <p class="instructor-role">Senior ML Engineer</p>
+                        <p style="font-size: var(--font-sm);">Google AI · 10+ years experience</p>
+                    </div>
+                </div>
                 
-                <div class="contact-form">
-                    <form id="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                            <div class="form-error" id="name-error">Please enter your name</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                            <div class="form-error" id="email-error">Please enter a valid email</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" class="form-control" rows="5" required></textarea>
-                            <div class="form-error" id="message-error">Please enter your message</div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="instructor-card fade-in">
+                    <div class="instructor-image">MR</div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Michael Rodriguez</h3>
+                        <p class="instructor-role">Lead Software Engineer</p>
+                        <p style="font-size: var(--font-sm);">Netflix · Scalable systems</p>
+                    </div>
+                </div>
+                
+                <div class="instructor-card fade-in">
+                    <div class="instructor-image">JW</div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Jessica Williams</h3>
+                        <p class="instructor-role">Data Science Director</p>
+                        <p style="font-size: var(--font-sm);">Amazon · AWS data systems</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <p class="section-subtitle">Join thousands who transformed their careers</p>
+            </div>
+            
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The Machine Learning course transformed my career. Within 6 months, 
+                    I became a Machine Learning Engineer at Google with a 120% salary increase."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SC</div>
+                    <div class="testimonial-info">
+                        <h4>Sarah Chen</h4>
+                        <p>Machine Learning Engineer, Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container container-narrow">
+            <h2 class="cta-title">Ready to Transform Your Career?</h2>
+            <p class="cta-description">
+                Join 50,000+ professionals who launched successful tech careers. 
+                No prior experience required — just commitment and drive.
+            </p>
+            <div class="cta-buttons">
+                <a href="registration.html" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    Start Free Trial
+                </a>
+                <a href="courses.html" class="btn btn-outline btn-lg">
+                    <i class="fas fa-book"></i>
+                    Browse Courses
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <a href="#hero" class="footer-logo">OpenVector</a>
-                    <p class="footer-description">World-class tech education for the next generation of innovators.</p>
-                    <div class="social-icons" style="display: flex; gap: var(--space-3); margin-top: var(--space-6);">
-                        <a href="#" aria-label="Twitter" class="btn-icon btn-secondary">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <a href="index.html" class="footer-logo">OpenVector Academy</a>
+                    <p class="footer-description">
+                        World-class technology education platform transforming careers through 
+                        industry-led curriculum and expert mentorship.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="btn-icon btn-secondary">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" aria-label="YouTube" class="btn-icon btn-secondary">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" aria-label="GitHub" class="btn-icon btn-secondary">
-                            <i class="fab fa-github" aria-hidden="true"></i>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
@@ -1931,431 +1490,146 @@
                 <div>
                     <h3 class="footer-heading">Courses</h3>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Web Development</a></li>
-                        <li><a href="#" class="footer-link">Data Science</a></li>
-                        <li><a href="#" class="footer-link">Machine Learning</a></li>
-                        <li><a href="#" class="footer-link">Cybersecurity</a></li>
-                        <li><a href="#" class="footer-link">UI/UX Design</a></li>
+                        <li><a href="courses.html" class="footer-link">Web Development</a></li>
+                        <li><a href="courses.html" class="footer-link">Data Science</a></li>
+                        <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
+                        <li><a href="courses.html" class="footer-link">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                        <li><a href="resources.html" class="footer-link">Learning Materials</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="footer-heading">Company</h3>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-link">About Us</a></li>
-                        <li><a href="#" class="footer-link">Careers</a></li>
-                        <li><a href="#" class="footer-link">Blog</a></li>
-                        <li><a href="#" class="footer-link">Press</a></li>
-                        <li><a href="#" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="footer-heading">Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Help Center</a></li>
-                        <li><a href="#" class="footer-link">FAQ</a></li>
-                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="#" class="footer-link">Terms of Service</a></li>
-                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 OpenVector Academy. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
-                <p style="margin-top: var(--space-2); font-size: var(--text-xs);">Designed with accessibility in mind. WCAG 2.1 AA compliant.</p>
+                <p>&copy; 2023 OpenVector Academy. All rights reserved.</p>
+                <p style="margin-top: var(--space-2);">
+                    Designed for the future of education
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Professional JavaScript Implementation -->
+    <!-- Professional JavaScript -->
     <script>
-        // Performance: Defer script execution until DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
-            // Toast Notification System
-            class Toast {
-                constructor(message, type = 'info', duration = 5000) {
-                    this.message = message;
-                    this.type = type;
-                    this.duration = duration;
-                    this.element = null;
-                    this.id = Date.now().toString();
-                }
-                
-                show() {
-                    const container = document.getElementById('toast-container');
-                    const toast = document.createElement('div');
-                    toast.className = `toast toast-${this.type}`;
-                    toast.id = `toast-${this.id}`;
-                    toast.setAttribute('role', 'alert');
-                    toast.setAttribute('aria-live', 'assertive');
-                    toast.setAttribute('aria-atomic', 'true');
-                    
-                    const icon = this.type === 'success' ? 'check-circle' : 
-                                 this.type === 'error' ? 'exclamation-circle' : 'info-circle';
-                    
-                    toast.innerHTML = `
-                        <i class="fas fa-${icon} toast-icon" aria-hidden="true"></i>
-                        <div>
-                            <strong>${this.type.charAt(0).toUpperCase() + this.type.slice(1)}</strong>
-                            <p style="margin-top: 4px;">${this.message}</p>
-                        </div>
-                    `;
-                    
-                    container.appendChild(toast);
-                    this.element = toast;
-                    
-                    // Animate in
-                    setTimeout(() => toast.classList.add('show'), 10);
-                    
-                    // Auto dismiss
-                    if (this.duration > 0) {
-                        setTimeout(() => this.dismiss(), this.duration);
-                    }
-                    
-                    // Click to dismiss
-                    toast.addEventListener('click', () => this.dismiss());
-                }
-                
-                dismiss() {
-                    if (this.element) {
-                        this.element.classList.remove('show');
-                        setTimeout(() => {
-                            if (this.element && this.element.parentNode) {
-                                this.element.parentNode.removeChild(this.element);
-                            }
-                        }, 300);
-                    }
-                }
-            }
-            
-            // Show toast function
-            function showToast(message, type = 'info', duration = 5000) {
-                const toast = new Toast(message, type, duration);
-                toast.show();
-                return toast;
-            }
-            
-            // Header Scroll Effect
-            const header = document.getElementById('header');
-            let lastScroll = 0;
-            
-            function handleScroll() {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 50) {
-                    header.classList.add('scrolled');
-                    
-                    if (currentScroll > lastScroll && currentScroll > 200) {
-                        header.style.transform = 'translateY(-100%)';
-                    } else {
-                        header.style.transform = 'translateY(0)';
-                    }
-                } else {
-                    header.classList.remove('scrolled');
-                    header.style.transform = 'translateY(0)';
-                }
-                
-                lastScroll = currentScroll;
-            }
-            
-            // Mobile Menu
+            // Mobile Menu Toggle
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             
-            function toggleMobileMenu() {
-                const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
-                mobileMenuToggle.classList.toggle('active');
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
                 mobileMenu.classList.toggle('active');
-                mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
                 
-                // Prevent body scroll when menu is open
-                document.body.style.overflow = !isExpanded ? 'hidden' : '';
-            }
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
             
-            // Search Modal
-            const searchToggle = document.getElementById('search-toggle');
-            const searchModal = document.getElementById('search-modal');
-            const searchInput = document.getElementById('search-input');
-            const searchResults = document.getElementById('search-results');
-            
-            // Mock search data
-            const courses = [
-                { title: 'Machine Learning Engineering', category: 'AI', url: '#ml' },
-                { title: 'Full Stack Web Development', category: 'Web', url: '#web' },
-                { title: 'Data Science & Analytics', category: 'Data', url: '#data' },
-                { title: 'Cybersecurity Fundamentals', category: 'Security', url: '#security' },
-                { title: 'UI/UX Design Principles', category: 'Design', url: '#design' },
-                { title: 'Cloud Computing with AWS', category: 'Cloud', url: '#cloud' },
-                { title: 'Mobile App Development', category: 'Mobile', url: '#mobile' },
-                { title: 'DevOps Engineering', category: 'DevOps', url: '#devops' }
-            ];
-            
-            function performSearch(query) {
-                if (!query.trim()) {
-                    searchResults.style.display = 'none';
-                    return;
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnToggle = mobileMenuToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 }
-                
-                const filtered = courses.filter(course => 
-                    course.title.toLowerCase().includes(query.toLowerCase()) ||
-                    course.category.toLowerCase().includes(query.toLowerCase())
-                );
-                
-                displaySearchResults(filtered);
-            }
+            });
             
-            function displaySearchResults(results) {
-                searchResults.innerHTML = '';
-                
-                if (results.length === 0) {
-                    searchResults.innerHTML = `
-                        <div class="search-result-item" style="text-align: center; color: var(--gray-500);">
-                            No courses found. Try a different search term.
-                        </div>
-                    `;
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    header.classList.add('scrolled');
                 } else {
-                    results.forEach(result => {
-                        const item = document.createElement('a');
-                        item.href = result.url;
-                        item.className = 'search-result-item';
-                        item.innerHTML = `
-                            <strong>${result.title}</strong>
-                            <div style="font-size: 0.875rem; color: var(--gray-500); margin-top: 2px;">
-                                ${result.category}
-                            </div>
-                        `;
-                        searchResults.appendChild(item);
-                    });
+                    header.classList.remove('scrolled');
                 }
-                
-                searchResults.style.display = 'block';
-            }
+            });
             
-            function toggleSearchModal() {
-                const isExpanded = searchToggle.getAttribute('aria-expanded') === 'true';
-                searchModal.classList.toggle('active');
-                searchToggle.setAttribute('aria-expanded', !isExpanded);
-                
-                if (!isExpanded) {
-                    setTimeout(() => searchInput.focus(), 100);
-                }
-            }
-            
-            // Form Validation and Submission
-            const contactForm = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
-            
-            function validateForm() {
-                let isValid = true;
-                const name = document.getElementById('name');
-                const email = document.getElementById('email');
-                const message = document.getElementById('message');
-                
-                // Reset errors
-                [name, email, message].forEach(field => field.classList.remove('error'));
-                document.querySelectorAll('.form-error').forEach(error => error.style.display = 'none');
-                
-                // Validate name
-                if (!name.value.trim()) {
-                    name.classList.add('error');
-                    document.getElementById('name-error').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // Validate email
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email.value)) {
-                    email.classList.add('error');
-                    document.getElementById('email-error').style.display = 'block';
-                    isValid = false;
-                }
-                
-                // Validate message
-                if (!message.value.trim()) {
-                    message.classList.add('error');
-                    document.getElementById('message-error').style.display = 'block';
-                    isValid = false;
-                }
-                
-                return isValid;
-            }
-            
-            async function submitForm(e) {
-                e.preventDefault();
-                
-                if (!validateForm()) {
-                    return;
-                }
-                
-                // Show loading state
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Sending...';
-                submitBtn.classList.add('btn-loading');
-                submitBtn.disabled = true;
-                
-                try {
-                    // Simulate API call
-                    await new Promise(resolve => setTimeout(resolve, 1500));
-                    
-                    // Show success message
-                    showToast('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
-                    
-                    // Reset form
-                    contactForm.reset();
-                    
-                } catch (error) {
-                    showToast('Failed to send message. Please try again.', 'error');
-                } finally {
-                    // Reset button state
-                    submitBtn.textContent = originalText;
-                    submitBtn.classList.remove('btn-loading');
-                    submitBtn.disabled = false;
-                }
-            }
-            
-            // Smooth Scrolling
-            function smoothScroll(e) {
-                if (e.target.matches('a[href^="#"]')) {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetId = e.target.getAttribute('href');
+                    
+                    const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
                     
                     const target = document.querySelector(targetId);
                     if (target) {
                         // Close mobile menu if open
                         if (mobileMenu.classList.contains('active')) {
-                            toggleMobileMenu();
+                            mobileMenuToggle.classList.remove('active');
+                            mobileMenu.classList.remove('active');
+                            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                            document.body.style.overflow = '';
                         }
                         
-                        // Close search modal if open
-                        if (searchModal.classList.contains('active')) {
-                            toggleSearchModal();
-                        }
-                        
-                        const headerHeight = header.offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight - 20;
-                        
+                        // Scroll to target
                         window.scrollTo({
-                            top: targetPosition,
+                            top: target.offsetTop - 60, // Adjusted for small header
                             behavior: 'smooth'
                         });
-                        
-                        // Update focus for accessibility
-                        target.setAttribute('tabindex', '-1');
-                        target.focus();
-                        target.removeAttribute('tabindex');
                     }
-                }
-            }
-            
-            // Keyboard Navigation
-            function handleKeydown(e) {
-                // Close modals on Escape
-                if (e.key === 'Escape') {
-                    if (searchModal.classList.contains('active')) {
-                        toggleSearchModal();
-                    }
-                    if (mobileMenu.classList.contains('active')) {
-                        toggleMobileMenu();
-                    }
-                }
-                
-                // Trap focus in modals
-                if (searchModal.classList.contains('active')) {
-                    const focusable = searchModal.querySelectorAll('button, input, a');
-                    const first = focusable[0];
-                    const last = focusable[focusable.length - 1];
-                    
-                    if (e.key === 'Tab') {
-                        if (e.shiftKey && document.activeElement === first) {
-                            e.preventDefault();
-                            last.focus();
-                        } else if (!e.shiftKey && document.activeElement === last) {
-                            e.preventDefault();
-                            first.focus();
-                        }
-                    }
-                }
-            }
-            
-            // Performance: Lazy load images
-            function lazyLoadImages() {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            observer.unobserve(img);
-                        }
-                    });
                 });
-                
-                images.forEach(img => observer.observe(img));
-            }
+            });
+            
+            // Fade-in animation on scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeObserver.observe(element);
+            });
             
             // Initialize
-            function init() {
-                // Event Listeners
-                window.addEventListener('scroll', handleScroll);
-                window.addEventListener('keydown', handleKeydown);
-                document.addEventListener('click', smoothScroll);
-                
-                // Mobile Menu
-                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-                
-                // Search
-                searchToggle.addEventListener('click', toggleSearchModal);
-                searchInput.addEventListener('input', (e) => performSearch(e.target.value));
-                
-                // Close modals when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!e.target.closest('.search-container') && !e.target.closest('#search-toggle')) {
-                        if (searchModal.classList.contains('active')) {
-                            toggleSearchModal();
-                        }
-                    }
-                    
-                    if (!e.target.closest('.mobile-menu') && !e.target.closest('#mobile-menu-toggle')) {
-                        if (mobileMenu.classList.contains('active')) {
-                            toggleMobileMenu();
-                        }
-                    }
-                });
-                
-                // Form Submission
-                contactForm.addEventListener('submit', submitForm);
-                
-                // Initialize lazy loading
-                lazyLoadImages();
-                
-                // Show welcome toast
-                setTimeout(() => {
-                    showToast('Welcome to OpenVector Academy! 🎓 Start your learning journey today.', 'success');
-                }, 1000);
-                
-                // Performance: Preload critical images
-                const preloadImages = [
-                    'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
-                ];
-                
-                preloadImages.forEach(src => {
-                    const img = new Image();
-                    img.src = src;
-                });
-            }
-            
-            // Start the application
-            init();
-            
-            // Performance: Track page load time
-            window.addEventListener('load', () => {
-                const loadTime = window.performance.timing.domContentLoadedEventEnd - 
-                               window.performance.timing.navigationStart;
-                console.log(`Page loaded in ${loadTime}ms`);
-            });
+            console.log('OpenVector Academy - Professional Small Header Loaded');
         });
     </script>
 </body>
