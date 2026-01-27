@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Exam - Botany | OpenVector Academy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Biology Paper Final - Botany Exam. All 50 MCQs on one page with 30 minute timer.">
+    <meta name="keywords" content="biology exam, botany mcq, biology test, online exam, biology practice">
+    <meta name="author" content="OpenVector Academy">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
+    
+    <!-- Professional CSS -->
+    <style>
+        /* ===== CSS RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* ===== VARIABLES ===== */
+        :root {
+            /* Colors */
+            --primary: #0052CC;
+            --primary-light: #0066FF;
+            --primary-dark: #003D99;
+            --secondary: #7C4DFF;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --warning: #FFAB00;
+            --error: #FF5630;
+            --danger: #DC3545;
+            
+            /* Neutrals */
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --light-gray: #F1F3F5;
+            --medium-gray: #E9ECEF;
+            --border-color: #DEE2E6;
+            --text-light: #6C757D;
+            --text-medium: #495057;
+            --text-dark: #212529;
+            
+            /* Spacing */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-12: 48px;
+            --space-16: 64px;
+            --space-20: 80px;
+            
+            /* Typography */
+            --font-xs: 12px;
+            --font-sm: 14px;
+            --font-base: 16px;
+            --font-lg: 18px;
+            --font-xl: 20px;
+            --font-2xl: 24px;
+            --font-3xl: 30px;
+            --font-4xl: 36px;
+            --font-5xl: 48px;
+            
+            /* Line Heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.75;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+        
+        /* ===== BASE STYLES ===== */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: var(--font-base);
+            line-height: var(--leading-normal);
+            color: var(--text-medium);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: var(--leading-tight);
+            letter-spacing: -0.01em;
+        }
+        
+        h1 {
+            font-size: var(--font-4xl);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: var(--font-3xl);
+        }
+        
+        h3 {
+            font-size: var(--font-2xl);
+        }
+        
+        h4 {
+            font-size: var(--font-xl);
+        }
+        
+        p {
+            color: var(--text-light);
+            line-height: var(--leading-relaxed);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* ===== LAYOUT ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .section {
+            padding: var(--space-16) 0;
+        }
+        
+        .section-sm {
+            padding: var(--space-12) 0;
+        }
+        
+        .section-lg {
+            padding: var(--space-20) 0;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 500;
+            line-height: 1.5;
+            border-radius: var(--radius);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+            user-select: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--light-gray);
+            border-color: var(--text-light);
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            color: var(--white);
+        }
+        
+        .btn-success:hover {
+            background-color: #2a995f;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+            color: var(--white);
+        }
+        
+        .btn-danger:hover {
+            background-color: #c82333;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-lg);
+        }
+        
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--font-sm);
+        }
+        
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+            height: 60px;
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-dark);
+            padding: var(--space-1) 0;
+            z-index: 1001;
+        }
+        
+        .logo-img {
+            height: 32px;
+            width: auto;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: var(--space-3);
+            list-style: none;
+            margin-right: var(--space-4);
+        }
+        
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-medium);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+            background-color: var(--light-gray);
+        }
+        
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+            background-color: rgba(0, 82, 204, 0.05);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+        
+        .nav-cta .btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            font-weight: 500;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        
+        .bar {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: var(--white);
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+            padding: var(--space-6);
+            overflow-y: auto;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-radius: var(--radius);
+            transition: all var(--transition-fast);
+        }
+        
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: var(--light-gray);
+            color: var(--primary);
+        }
+        
+        /* ===== EXAM HERO ===== */
+        .exam-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .exam-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .exam-hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .exam-hero-title {
+            font-size: var(--font-5xl);
+            margin-bottom: var(--space-6);
+            line-height: 1.1;
+        }
+        
+        .exam-hero-description {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-8);
+            color: var(--text-medium);
+        }
+        
+        /* ===== EXAM CONTROL BAR ===== */
+        .exam-control-bar {
+            position: sticky;
+            top: 70px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--space-4) 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .control-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+        
+        .timer-display {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--font-2xl);
+            font-weight: 700;
+            color: var(--text-dark);
+            min-width: 100px;
+        }
+        
+        .timer-warning {
+            color: var(--warning);
+        }
+        
+        .timer-danger {
+            color: var(--error);
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .progress-bar {
+            flex: 1;
+            max-width: 300px;
+            height: 8px;
+            background: var(--light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 1s linear;
+        }
+        
+        .stats-display {
+            display: flex;
+            gap: var(--space-6);
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-sm);
+            font-weight: 500;
+        }
+        
+        .stat-number {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .stat-answered .stat-number {
+            color: var(--success);
+        }
+        
+        .stat-remaining .stat-number {
+            color: var(--warning);
+        }
+        
+        /* ===== EXAM CONTAINER ===== */
+        .exam-container {
+            padding: var(--space-12) 0;
+        }
+        
+        /* ===== QUESTIONS GRID ===== */
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: var(--space-6);
+        }
+        
+        @media (max-width: 1100px) {
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ===== QUESTION CARD ===== */
+        .question-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition);
+        }
+        
+        .question-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .question-number {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .number-badge {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: var(--font-sm);
+        }
+        
+        .question-text {
+            font-size: var(--font-lg);
+            color: var(--text-dark);
+            line-height: var(--leading-relaxed);
+            flex: 1;
+            margin-left: var(--space-4);
+        }
+        
+        .marks-info {
+            background: var(--light-gray);
+            padding: 4px 10px;
+            border-radius: var(--radius);
+            font-size: var(--font-sm);
+            font-weight: 500;
+            color: var(--text-dark);
+            white-space: nowrap;
+        }
+        
+        /* Options Container */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+        
+        .option-item {
+            position: relative;
+        }
+        
+        .option-input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            user-select: none;
+        }
+        
+        .option-label:hover {
+            background: var(--off-white);
+            border-color: var(--primary);
+        }
+        
+        .option-input:checked + .option-label {
+            background: rgba(0, 82, 204, 0.08);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .option-letter {
+            width: 28px;
+            height: 28px;
+            background: var(--light-gray);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--text-medium);
+            flex-shrink: 0;
+            transition: all var(--transition-fast);
+        }
+        
+        .option-input:checked + .option-label .option-letter {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .option-text {
+            flex: 1;
+            font-size: var(--font-base);
+        }
+        
+        /* Status Indicator */
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: var(--font-xs);
+            margin-top: var(--space-3);
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: var(--light-gray);
+        }
+        
+        .status-answered {
+            background: rgba(54, 179, 126, 0.1);
+            color: var(--success);
+        }
+        
+        /* ===== EXAM ACTIONS ===== */
+        .exam-actions {
+            position: sticky;
+            bottom: 0;
+            background: var(--white);
+            border-top: 1px solid var(--border-color);
+            padding: var(--space-6) 0;
+            margin-top: var(--space-8);
+            z-index: 50;
+        }
+        
+        .actions-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+        
+        .quick-jump {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .jump-input {
+            width: 60px;
+            padding: var(--space-2) var(--space-3);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-sm);
+        }
+        
+        .quick-nav {
+            display: flex;
+            gap: var(--space-2);
+        }
+        
+        .nav-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            color: var(--text-medium);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .nav-btn:hover {
+            background: var(--light-gray);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        /* ===== RESULT MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: var(--space-6);
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .result-modal {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+        
+        .result-header {
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+        
+        .result-title {
+            font-size: var(--font-3xl);
+            margin-bottom: var(--space-4);
+        }
+        
+        .result-subtitle {
+            color: var(--text-light);
+            font-size: var(--font-lg);
+        }
+        
+        /* Score Summary */
+        .score-summary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-6);
+            margin-bottom: var(--space-8);
+        }
+        
+        .score-card {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .score-value {
+            font-size: var(--font-4xl);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: var(--space-2) 0;
+        }
+        
+        .score-label {
+            font-size: var(--font-sm);
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .score-percentage {
+            font-size: var(--font-3xl);
+            font-weight: 700;
+        }
+        
+        .score-excellent {
+            color: var(--success);
+        }
+        
+        .score-good {
+            color: #17a2b8;
+        }
+        
+        .score-average {
+            color: var(--warning);
+        }
+        
+        .score-poor {
+            color: var(--error);
+        }
+        
+        /* Detailed Analysis */
+        .detailed-analysis {
+            margin: var(--space-8) 0;
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-4);
+            margin-top: var(--space-4);
+        }
+        
+        .analysis-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-3) var(--space-4);
+            background: var(--off-white);
+            border-radius: var(--radius);
+            border-left: 4px solid;
+        }
+        
+        .analysis-item.correct {
+            border-left-color: var(--success);
+        }
+        
+        .analysis-item.incorrect {
+            border-left-color: var(--error);
+        }
+        
+        .analysis-item.skipped {
+            border-left-color: var(--warning);
+        }
+        
+        .analysis-item.unanswered {
+            border-left-color: var(--text-light);
+        }
+        
+        /* Performance Meter */
+        .performance-meter {
+            margin: var(--space-8) 0;
+        }
+        
+        .meter-bar {
+            height: 12px;
+            background: var(--light-gray);
+            border-radius: 6px;
+            margin: var(--space-4) 0;
+            overflow: hidden;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1s ease;
+        }
+        
+        .meter-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: var(--font-sm);
+            color: var(--text-light);
+        }
+        
+        /* Motivation Section */
+        .motivation-section {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .motivation-icon {
+            font-size: var(--font-3xl);
+            margin-bottom: var(--space-4);
+        }
+        
+        .motivation-title {
+            font-size: var(--font-xl);
+            margin-bottom: var(--space-3);
+            color: var(--text-dark);
+        }
+        
+        .motivation-text {
+            color: var(--text-medium);
+            margin-bottom: var(--space-4);
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            margin-top: var(--space-8);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ===== UTILITIES ===== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-success {
+            color: var(--success);
+        }
+        
+        .text-danger {
+            color: var(--error);
+        }
+        
+        .text-warning {
+            color: var(--warning);
+        }
+        
+        .mb-4 {
+            margin-bottom: var(--space-4);
+        }
+        
+        .mt-4 {
+            margin-top: var(--space-4);
+        }
+        
+        .mt-8 {
+            margin-top: var(--space-8);
+        }
+        
+        .mb-8 {
+            margin-bottom: var(--space-8);
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            :root {
+                --font-5xl: 42px;
+                --font-4xl: 36px;
+                --font-3xl: 28px;
+                --font-2xl: 22px;
+                --font-xl: 18px;
+                --font-lg: 16px;
+                --font-base: 15px;
+            }
+            
+            .section {
+                padding: var(--space-12) 0;
+            }
+            
+            .exam-hero {
+                padding: 130px 0 64px;
+            }
+            
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-bar-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .progress-bar {
+                max-width: 100%;
+            }
+            
+            .stats-display {
+                justify-content: space-between;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .score-summary {
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-4);
+            }
+            
+            .score-value {
+                font-size: var(--font-2xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --font-5xl: 36px;
+                --font-4xl: 30px;
+                --font-3xl: 24px;
+                --font-2xl: 20px;
+            }
+            
+            .exam-hero {
+                text-align: center;
+                padding: 110px 0 48px;
+            }
+            
+            .exam-hero::before {
+                width: 100%;
+                opacity: 0.02;
+            }
+            
+            .score-summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .actions-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .quick-jump {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --font-5xl: 32px;
+                --font-4xl: 26px;
+                --font-3xl: 22px;
+            }
+            
+            .container {
+                padding: 0 var(--space-4);
+            }
+            
+            .question-card {
+                padding: var(--space-4);
+            }
+            
+            .result-modal {
+                padding: var(--space-6);
+            }
+            
+            .timer-display {
+                font-size: var(--font-xl);
+            }
+            
+            .header {
+                height: 64px;
+            }
+            
+            .header.scrolled {
+                height: 56px;
+            }
+            
+            .mobile-menu {
+                top: 64px;
+                height: calc(100vh - 64px);
+            }
+            
+            .logo {
+                font-size: 16px;
+            }
+            
+            .logo-img {
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
+                     alt="OpenVector Academy" 
+                     class="logo-img">
+                <span>OpenVector Academy</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="live.html" class="nav-link">Live</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="registration.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
+                <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
+                <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Exam Hero -->
+    <section class="exam-hero" id="exam-hero">
+        <div class="container">
+            <div class="exam-hero-content">
+                <h1 class="exam-hero-title">Biology Paper Final - Botany</h1>
+                <p class="exam-hero-description">
+                    All 50 questions on one page. Each correct answer scores 1 mark, while wrong answers deduct 0.25 marks. 
+                    Complete the exam within 30 minutes.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6); margin-top: var(--space-8);">
+                    <div style="background: var(--white); padding: var(--space-4); border-radius: var(--radius); border: 1px solid var(--border-color);">
+                        <div style="font-size: var(--font-sm); color: var(--text-light); margin-bottom: 4px;">Questions</div>
+                        <div style="font-size: var(--font-xl); font-weight: 600; color: var(--primary);">50</div>
+                    </div>
+                    <div style="background: var(--white); padding: var(--space-4); border-radius: var(--radius); border: 1px solid var(--border-color);">
+                        <div style="font-size: var(--font-sm); color: var(--text-light); margin-bottom: 4px;">Time Limit</div>
+                        <div style="font-size: var(--font-xl); font-weight: 600; color: var(--primary);">30 Minutes</div>
+                    </div>
+                    <div style="background: var(--white); padding: var(--space-4); border-radius: var(--radius); border: 1px solid var(--border-color);">
+                        <div style="font-size: var(--font-sm); color: var(--text-light); margin-bottom: 4px;">Positive Marks</div>
+                        <div style="font-size: var(--font-xl); font-weight: 600; color: var(--success);">+1 each</div>
+                    </div>
+                    <div style="background: var(--white); padding: var(--space-4); border-radius: var(--radius); border: 1px solid var(--border-color);">
+                        <div style="font-size: var(--font-sm); color: var(--text-light); margin-bottom: 4px;">Negative Marks</div>
+                        <div style="font-size: var(--font-xl); font-weight: 600; color: var(--error);">-0.25 each</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exam Control Bar -->
+    <div class="exam-control-bar" id="exam-control-bar" style="display: none;">
+        <div class="container control-bar-content">
+            <div class="timer-display" id="timer-display">30:00</div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 100%;"></div>
+            </div>
+            
+            <div class="stats-display">
+                <div class="stat-item stat-answered">
+                    <span>Answered:</span>
+                    <span class="stat-number" id="answered-count">0</span>
+                </div>
+                <div class="stat-item stat-remaining">
+                    <span>Remaining:</span>
+                    <span class="stat-number" id="remaining-count">50</span>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary btn-sm" id="submit-exam-btn">
+                <i class="fas fa-paper-plane"></i> Submit Exam
+            </button>
+        </div>
+    </div>
+
+    <!-- Exam Container -->
+    <section class="section-sm" id="exam-container" style="display: none;">
+        <div class="container">
+            <div class="questions-grid" id="questions-grid">
+                <!-- Questions will be loaded here -->
+            </div>
+            
+            <div class="exam-actions">
+                <div class="container actions-content">
+                    <div class="quick-jump">
+                        <span style="font-size: var(--font-sm);">Jump to:</span>
+                        <input type="number" class="jump-input" id="jump-input" min="1" max="50" placeholder="1-50">
+                        <button class="nav-btn" onclick="jumpToQuestion()">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="quick-nav">
+                        <button class="nav-btn" onclick="scrollToTop()" title="Scroll to top">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                        <button class="nav-btn" onclick="scrollToBottom()" title="Scroll to bottom">
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="final-submit-btn">
+                        <i class="fas fa-paper-plane"></i> Final Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="section" id="instructions-section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="margin-bottom: var(--space-6);">Ready to Start the Exam?</h2>
+                <p style="font-size: var(--font-lg); margin-bottom: var(--space-8); color: var(--text-medium);">
+                    Read the instructions carefully before starting. All 50 questions will be displayed on this page.
+                </p>
+                
+                <div style="background: var(--off-white); padding: var(--space-6); border-radius: var(--radius-lg); margin-bottom: var(--space-8); text-align: left;">
+                    <h3 style="margin-bottom: var(--space-4); color: var(--text-dark);">📋 Exam Instructions:</h3>
+                    <ul style="color: var(--text-medium); padding-left: var(--space-6); margin-bottom: var(--space-4);">
+                        <li style="margin-bottom: var(--space-2);">Total <strong>50 questions</strong>, all displayed on this page</li>
+                        <li style="margin-bottom: var(--space-2);">Time limit: <strong>30 minutes</strong></li>
+                        <li style="margin-bottom: var(--space-2);">Marks: <strong>+1 for correct</strong>, <strong>-0.25 for wrong</strong></li>
+                        <li style="margin-bottom: var(--space-2);">No penalty for unanswered questions</li>
+                        <li style="margin-bottom: var(--space-2);">Auto-submit when timer reaches 0</li>
+                        <li style="margin-bottom: var(--space-2);">Answers are saved automatically</li>
+                        <li>Use sticky control bar to track time and progress</li>
+                    </ul>
+                    
+                    <div style="background: var(--white); padding: var(--space-4); border-radius: var(--radius); margin-top: var(--space-4);">
+                        <h4 style="color: var(--text-dark); margin-bottom: var(--space-2);">⚠️ Important:</h4>
+                        <p style="color: var(--text-medium); font-size: var(--font-sm);">
+                            Once started, the timer cannot be paused. All questions must be completed within 30 minutes.
+                            The exam will automatically submit when time runs out.
+                        </p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-lg" onclick="startExam()" style="margin-bottom: var(--space-4);">
+                    <i class="fas fa-play-circle"></i> Start Exam
+                </button>
+                
+                <p style="color: var(--text-light); font-size: var(--font-sm);">
+                    By starting, you agree to complete the exam honestly within the time limit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Modal -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="result-modal">
+            <div class="result-header">
+                <h2 class="result-title" id="result-title">Exam Results</h2>
+                <p class="result-subtitle" id="result-subtitle">Detailed performance analysis</p>
+            </div>
+            
+            <!-- Score Summary -->
+            <div class="score-summary">
+                <div class="score-card">
+                    <div class="score-label">Total Score</div>
+                    <div class="score-value" id="total-score">0</div>
+                    <div class="score-label">Out of 50</div>
+                </div>
+                
+                <div class="score-card">
+                    <div class="score-label">Percentage</div>
+                    <div class="score-value score-percentage" id="percentage">0%</div>
+                    <div class="score-label" id="performance-label">Performance</div>
+                </div>
+                
+                <div class="score-card">
+                    <div class="score-label">Correct Answers</div>
+                    <div class="score-value text-success" id="correct-count">0</div>
+                    <div class="score-label">+1 each</div>
+                </div>
+                
+                <div class="score-card">
+                    <div class="score-label">Negative Marks</div>
+                    <div class="score-value text-danger" id="negative-marks">-0</div>
+                    <div class="score-label">-0.25 each wrong</div>
+                </div>
+            </div>
+            
+            <!-- Detailed Analysis -->
+            <div class="detailed-analysis">
+                <h3 style="margin-bottom: var(--space-4);">Detailed Analysis</h3>
+                <div class="analysis-grid">
+                    <div class="analysis-item correct">
+                        <span>Correct Answers</span>
+                        <strong id="correct-answers">0</strong>
+                    </div>
+                    <div class="analysis-item incorrect">
+                        <span>Wrong Answers</span>
+                        <strong id="wrong-answers">0</strong>
+                    </div>
+                    <div class="analysis-item skipped">
+                        <span>Skipped Questions</span>
+                        <strong id="skipped-questions">0</strong>
+                    </div>
+                    <div class="analysis-item unanswered">
+                        <span>Unanswered</span>
+                        <strong id="unanswered-questions">0</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Performance Meter -->
+            <div class="performance-meter">
+                <h4 style="margin-bottom: var(--space-2);">Accuracy</h4>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="accuracy-bar" style="width: 0%; background: var(--primary);"></div>
+                </div>
+                <div class="meter-labels">
+                    <span>0%</span>
+                    <span id="accuracy-text">0%</span>
+                    <span>100%</span>
+                </div>
+            </div>
+            
+            <!-- Motivation Section -->
+            <div class="motivation-section" id="motivation-section">
+                <!-- Content will be dynamically filled -->
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary btn-lg" onclick="reviewAnswers()">
+                    <i class="fas fa-chart-bar"></i> Review Answers
+                </button>
+                <button class="btn btn-secondary btn-lg" onclick="retakeExam()">
+                    <i class="fas fa-redo"></i> Retake Exam
+                </button>
+                <button class="btn btn-success btn-lg" onclick="downloadResults()">
+                    <i class="fas fa-download"></i> Download Results
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="footer-logo">OpenVector Academy</a>
+                    <p class="footer-description">
+                        World-class technology education platform transforming careers through 
+                        industry-led curriculum and expert mentorship.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Exams</h3>
+                    <ul class="footer-links">
+                        <li><a href="Biology.html" class="footer-link active">Biology Exam</a></li>
+                        <li><a href="#" class="footer-link">Chemistry Exam</a></li>
+                        <li><a href="#" class="footer-link">Physics Exam</a></li>
+                        <li><a href="#" class="footer-link">Mathematics Exam</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="resources.html" class="footer-link">Study Materials</a></li>
+                        <li><a href="#" class="footer-link">Practice Tests</a></li>
+                        <li><a href="#" class="footer-link">Previous Papers</a></li>
+                        <li><a href="#" class="footer-link">Video Tutorials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OpenVector Academy. All rights reserved.</p>
+                <p style="margin-top: var(--space-2);">
+                    Designed for excellence in education
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // All 50 questions data
+        const examData = [
+            // Page 169 Questions
+            {
+                id: 1,
+                question: "কোন আলোতে ফটোসিন্থেসিস ভালো হয়?",
+                options: ["সবুজ", "নীল", "লাল", "বেগুনী"],
+                correct: 2,
+                explanation: "লাল ও নীল আলোতে ফটোসিন্থেসিস সবচেয়ে বেশি হয়।"
+            },
+            {
+                id: 2,
+                question: "প্রথম পর্যায়ে ডিস্কের টিস্যুকে কয়টি ভাগে চিহ্নিত করা যায়?",
+                options: ["২", "৩", "৪", "৫"],
+                correct: 0,
+                explanation: "প্রথম পর্যায়ে ডিস্কের টিস্যুকে ২ ভাগে চিহ্নিত করা যায়।"
+            },
+            {
+                id: 3,
+                question: "সমপার্শ্বীয় ভাস্কুলার বান্ডল কোথায় দেখা যায়?",
+                options: ["পুষ্পক উদ্ভিদের মূলে", "অপুষ্পক উদ্ভিদের মূলে", "পুষ্পক উদ্ভিদের কাণ্ডে", "অপুষ্পক উদ্ভিদের কাণ্ডে"],
+                correct: 2,
+                explanation: "সমপার্শ্বীয় ভাস্কুলার বান্ডল পুষ্পক উদ্ভিদের কাণ্ডে দেখা যায়।"
+            },
+            {
+                id: 4,
+                question: "মানুষের এ পর্যন্ত কয়টি জেনেটিক ডিসঅর্ডারের কথা জানা গিয়েছে?",
+                options: ["৩৫টি", "৩৫০০টি", "৫৩০০টি", "৫৩০টি"],
+                correct: 1,
+                explanation: "মানুষের এ পর্যন্ত প্রায় ৩৫০০ জেনেটিক ডিসঅর্ডারের কথা জানা গিয়েছে।"
+            },
+            {
+                id: 5,
+                question: "বাংলাদেশে Gnetum (নিটাম) এর কয়টি প্রজাতি আছে?",
+                options: ["১/২", "২/৩", "৩/৪", "৪/৫"],
+                correct: 1,
+                explanation: "বাংলাদেশে Gnetum (নিটাম) এর ২-৩টি প্রজাতি আছে।"
+            },
+            {
+                id: 6,
+                question: "মাইটোসিসের কোন দশায় কোষের নিউক্লিয়াসের ক্রোমোসোমগুলোতে জল বিয়োজন শুরু হয়?",
+                options: ["মেটাফেজ", "প্রোফেজ", "প্রো-মেটাফেজ", "অ্যানাফেজ"],
+                correct: 1,
+                explanation: "মাইটোসিসের প্রোফেজ দশায় ক্রোমোসোমে জল বিয়োজন শুরু হয়।"
+            },
+            {
+                id: 7,
+                question: "দুটি কোষের নিউক্লিয়াস ব্যতীত শুধুমাত্র সাইটোপ্লাজমের মিলন ঘটলে তাকে কী বলে?",
+                options: ["হাইব্রিড", "সাইব্রিড", "মেরিস্টেম", "সাইটোট্রিপ্সি"],
+                correct: 1,
+                explanation: "সাইটোপ্লাজমের মিলনকে সাইব্রিড বলে।"
+            },
+            {
+                id: 8,
+                question: "কোন মাসে সাইকাস প্রজাতির চারা সৃষ্টি হতে দেখা যায়?",
+                options: ["মে-জুন", "জুন-জুলাই", "মার্চ-এপ্রিল", "জুলাই-আগস্ট"],
+                correct: 2,
+                explanation: "সাইকাস প্রজাতির চারা মার্চ-এপ্রিল মাসে সৃষ্টি হয়।"
+            },
+            {
+                id: 9,
+                question: "সালোকসংশ্লেষণ প্রক্রিয়ায় নির্গত অক্সিজেনের উৎস—",
+                options: ["সূর্যালোক", "পানি", "CO₂", "ক্লোরোফিল"],
+                correct: 1,
+                explanation: "সালোকসংশ্লেষণে অক্সিজেন পানির জলবিয়োজন থেকে আসে।"
+            },
+            {
+                id: 10,
+                question: "কোষে প্রথম কোষ বিভাজন লক্ষ্য করেন কে?",
+                options: ["রবার্ট হুক", "ভার্নার", "ওয়াল্টার ফ্লেমিং", "হাওয়ার্ড ও পেল্ক"],
+                correct: 2,
+                explanation: "ওয়াল্টার ফ্লেমিং কোষে প্রথম কোষ বিভাজন লক্ষ্য করেন।"
+            },
+            {
+                id: 11,
+                question: "পেরিসাইকেল স্তর হতে আরম্ভ করে ভাস্কুলার বান্ডলসহ কেন্দ্র পর্যন্ত অংশকে কী বলে?",
+                options: ["মজ্জা", "পরিচক্র", "স্টিলি", "কর্টেক্স"],
+                correct: 2,
+                explanation: "এটিকে স্টিলি বলে।"
+            },
+            {
+                id: 12,
+                question: "কোন উদ্ভিদের শুক্রাণু সর্ববৃহৎ?",
+                options: ["Gnetum", "Ginkgo", "Pinus", "Cycas"],
+                correct: 3,
+                explanation: "Cycas উদ্ভিদের শুক্রাণু সর্ববৃহৎ।"
+            },
+            {
+                id: 13,
+                question: "স্টোমা তিনটি সাবসিডিয়ারি কোষ দ্বারা পরিবেষ্টিত হলে তাকে কী বলে?",
+                options: ["Paracytic", "Anisocytic", "Actinocytic", "Anomocytic"],
+                correct: 1,
+                explanation: "তিনটি সাবসিডিয়ারি কোষ দ্বারা পরিবেষ্টিত হলে Anisocytic বলে।"
+            },
+            {
+                id: 14,
+                question: "এক অণু গ্লুকোজ থেকে সর্বোচ্চ কয়টি ATP তৈরি হয়?",
+                options: ["৫০টি", "৩৮টি", "৩৬টি", "২টি"],
+                correct: 2,
+                explanation: "এক অণু গ্লুকোজ থেকে সর্বোচ্চ ৩৬টি ATP তৈরি হয়।"
+            },
+            {
+                id: 15,
+                question: "পৃথিবীতে সর্বাপেক্ষা গুরুত্বপূর্ণ এনজাইম কোনটি?",
+                options: ["রুবিস্কো", "কাইনেজ", "ইপিমারেজ", "আইসোমারেজ"],
+                correct: 0,
+                explanation: "রুবিস্কো পৃথিবীতে সর্বাপেক্ষা গুরুত্বপূর্ণ এনজাইম।"
+            },
+            {
+                id: 16,
+                question: "কত তাপমাত্রায় এনজাইম নিষ্ক্রিয় থাকে?",
+                options: ["30°C", "35°C", "40°C", "45°C"],
+                correct: 2,
+                explanation: "৪০°C তাপমাত্রায় এনজাইম নিষ্ক্রিয় হয়।"
+            },
+            {
+                id: 17,
+                question: "ট্রান্সফিউশন টিস্যু কোন উদ্ভিদে পাওয়া যায়?",
+                options: ["ফার্ন", "নগ্নবীজী", "একবীজপত্রী", "দ্বিবীজপত্রী"],
+                correct: 1,
+                explanation: "ট্রান্সফিউশন টিস্যু নগ্নবীজী উদ্ভিদে পাওয়া যায়।"
+            },
+            {
+                id: 18,
+                question: "নিচের কোনটি এক বীজপত্রী উদ্ভিদ?",
+                options: ["আম", "ধান", "শিম", "মটর"],
+                correct: 1,
+                explanation: "ধান একবীজপত্রী উদ্ভিদ।"
+            },
+            {
+                id: 19,
+                question: "একটি প্রাথমিক ডিম্বকোষ থেকে কয়টি ডিম্বক উৎপন্ন হয়?",
+                options: ["১", "২", "৩", "৮"],
+                correct: 3,
+                explanation: "একটি প্রাথমিক ডিম্বকোষ থেকে ৮টি ডিম্বক উৎপন্ন হয়।"
+            },
+            {
+                id: 20,
+                question: "মাইটোসিসে অপত্য নিউক্লিয়াস কয়টি তৈরি হয়?",
+                options: ["দুইটি", "তিনটি", "চারটি", "পাঁচটি"],
+                correct: 0,
+                explanation: "মাইটোসিসে দুইটি অপত্য নিউক্লিয়াস তৈরি হয়।"
+            },
+            {
+                id: 21,
+                question: "মাইটোসিস বিভাজনের কোন দশায় নিউক্লিয়ার মেমব্রেন ও নিউক্লিওলাসের বিলুপ্তি ঘটে?",
+                options: ["টেলোফেজ", "প্রোফেজ", "প্রো-মেটাফেজ", "মেটাফেজ"],
+                correct: 1,
+                explanation: "প্রোফেজ দশায় নিউক্লিয়ার মেমব্রেন ও নিউক্লিওলাসের বিলুপ্তি ঘটে।"
+            },
+            {
+                id: 22,
+                question: "মায়োসিস কোষ বিভাজনের কোন উপধাপে সমসংস্থ ক্রোমোসোমগুলো পরস্পরের সাথে জোড়া বাঁধে?",
+                options: ["লেপটোটিন", "জাইগোটিন", "প্যাকাইটিন", "ডিপ্লোটিন"],
+                correct: 1,
+                explanation: "জাইগোটিন উপধাপে সমসংস্থ ক্রোমোসোম জোড়া বাঁধে।"
+            },
+            {
+                id: 23,
+                question: "মায়োসিস কোষ বিভাজনের কোন পর্যায়ে কায়াজমাটা দৃষ্টিগোচর হয়?",
+                options: ["জাইগোটিন", "ডিপ্লোটিন", "লেপটোটিন", "প্যাকাইটিন"],
+                correct: 3,
+                explanation: "প্যাকাইটিন পর্যায়ে কায়াজমাটা দৃষ্টিগোচর হয়।"
+            },
+            {
+                id: 24,
+                question: "প্রথম মায়োসিস কোষ বিভাজনের কোন উপদশায় ক্রসিং-ওভার ঘটে?",
+                options: ["লেপটোটিন", "জাইগোটিন", "প্যাকাইটিন", "ডিপ্লোটিন"],
+                correct: 2,
+                explanation: "প্যাকাইটিন উপদশায় ক্রসিং-ওভার ঘটে।"
+            },
+            {
+                id: 25,
+                question: "যে কোষ বিভাজন উদ্ভিদের জনুক্রমের জন্য অত্যাবশ্যক—",
+                options: ["মাইটোসিস", "অ্যামাইটোসিস", "ফিশন", "মায়োসিস"],
+                correct: 3,
+                explanation: "মায়োসিস কোষ বিভাজন জনুক্রমের জন্য অত্যাবশ্যক।"
+            },
+            {
+                id: 26,
+                question: "Cycas উদ্ভিদ প্রাকৃতিকভাবে জন্মে—",
+                options: ["দিনাজপুরে", "পটুয়াখালীর কুয়াকাটায়", "চট্টগ্রামের বারৈয়াডালা বনে", "শ্রীমঙ্গল বনে"],
+                correct: 2,
+                explanation: "Cycas উদ্ভিদ চট্টগ্রামের বারৈয়াডালা বনে প্রাকৃতিকভাবে জন্মে।"
+            },
+            // Page 170 Questions
+            {
+                id: 27,
+                question: "কিসের কারণে নগ্নবীজী উদ্ভিদে ফল হয় না?",
+                options: ["বীজ নেই বলে", "গর্ভাশয় নেই বলে", "পরাগায়ন হয় না বলে", "নিষেক ক্রিয়া হয় না বলে"],
+                correct: 1,
+                explanation: "গর্ভাশয় না থাকায় নগ্নবীজী উদ্ভিদে ফল হয় না।"
+            },
+            {
+                id: 28,
+                question: "টুইস্টেড এস্টিভেশন থাকে কোন ফুলে?",
+                options: ["গন্ধরাজ", "বাবলা", "আকন্দ", "করবী"],
+                correct: 3,
+                explanation: "টুইস্টেড এস্টিভেশন করবী ফুলে থাকে।"
+            },
+            {
+                id: 29,
+                question: "কোন উদ্ভিদটি মালভেসি (Malvaceae) গোত্রভুক্ত নহে?",
+                options: ["ভুট্টা", "জবা", "কার্পাস", "ঢ্যাঁড়স"],
+                correct: 0,
+                explanation: "ভুট্টা মালভেসি গোত্রভুক্ত নয়।"
+            },
+            {
+                id: 30,
+                question: "বাংলাদেশের জাতীয় ফুল উদ্ভিদ কোন গোত্রভুক্ত?",
+                options: ["Liliaceae", "Brassicaceae", "Nymphaeaceae", "Asteraceae"],
+                correct: 2,
+                explanation: "বাংলাদেশের জাতীয় ফুল (শাপলা) Nymphaeaceae গোত্রভুক্ত।"
+            },
+            {
+                id: 31,
+                question: "জাইলেম কলার উপাদান নয় কোনটি?",
+                options: ["সীভনল", "ট্রাকিড", "ট্রাকিয়া", "জাইলেম প্যারেনকাইমা"],
+                correct: 0,
+                explanation: "সীভনল জাইলেম কলার উপাদান নয়।"
+            },
+            {
+                id: 32,
+                question: "জাইলেম টিস্যু কয় ধরনের কোষ নিয়ে গঠিত?",
+                options: ["3", "5", "6", "4"],
+                correct: 3,
+                explanation: "জাইলেম টিস্যু ৪ ধরনের কোষ নিয়ে গঠিত।"
+            },
+            {
+                id: 33,
+                question: "নিচের কোনটি একবীজপত্রী কাণ্ডের প্রস্থচ্ছেদ?",
+                options: [
+                    "পরিবহন কলাগুচ্ছ অরীয় ও ক্যাম্বিয়াম নেই",
+                    "পরিবহন কলাগুচ্ছ সংযুক্ত ও ক্যাম্বিয়াম নেই",
+                    "পরিবহন কলাগুচ্ছ সংযুক্ত ও ক্যাম্বিয়াম আছে",
+                    "পরিবহন কলাগুচ্ছ বাইকোল্যাটারাল"
+                ],
+                correct: 1,
+                explanation: "একবীজপত্রী কাণ্ডে পরিবহন কলাগুচ্ছ সংযুক্ত ও ক্যাম্বিয়াম নেই।"
+            },
+            {
+                id: 34,
+                question: "সমপার্শ্বীয় মুক্ত ভাস্কুলার বান্ডল পাওয়া যায়—",
+                options: ["একবীজপত্রীর মূলে", "দ্বি-বীজপত্রীর মূলে", "একবীজপত্রীর কাণ্ডে", "দ্বি-বীজপত্রীর কাণ্ডে"],
+                correct: 3,
+                explanation: "সমপার্শ্বীয় মুক্ত ভাস্কুলার বান্ডল দ্বিবীজপত্রীর কাণ্ডে পাওয়া যায়।"
+            },
+            {
+                id: 35,
+                question: "দ্বিবীজপত্রী মূলে জাইলেম ও ফ্লোয়েম বান্ডেলের সংখ্যা-",
+                options: ["২-৬", "২-৪", "২-৮", "১-২"],
+                correct: 1,
+                explanation: "দ্বিবীজপত্রী মূলে জাইলেম ও ফ্লোয়েম বান্ডেলের সংখ্যা ২-৪।"
+            },
+            {
+                id: 36,
+                question: "২ থেকে ৪টি পরিবহন কলা গুচ্ছ কোথায় পাওয়া যায়?",
+                options: ["একবীজপত্রী কাণ্ডে", "একবীজপত্রী মূলে", "দ্বিবীজপত্রী কাণ্ডে", "দ্বিবীজপত্রী মূলে"],
+                correct: 3,
+                explanation: "২ থেকে ৪টি পরিবহন কলাগুচ্ছ দ্বিবীজপত্রী মূলে পাওয়া যায়।"
+            },
+            {
+                id: 37,
+                question: "কোন খনিজ লবণের অভাবে গাছের পাতা ও ফুল ঝরে পড়ে?",
+                options: ["P", "Mg", "Fe", "K"],
+                correct: 0,
+                explanation: "ফসফরাস (P) এর অভাবে পাতা ও ফুল ঝরে পড়ে।"
+            },
+            {
+                id: 38,
+                question: "পত্ররন্ধ্রের মাধ্যমে শতকরা কতভাগ প্রস্বেদন হয়?",
+                options: ["৪০%-৫০%", "৫৫-৬৫%", "৮০-৮৫%", "৯০-৯৫%/ ৯০ ভাগ"],
+                correct: 3,
+                explanation: "পত্ররন্ধ্রের মাধ্যমে ৯০-৯৫% প্রস্বেদন হয়।"
+            },
+            {
+                id: 39,
+                question: "হ্যাচ ও স্ল্যাক চক্রে C₄ উদ্ভিদে প্রথম স্থায়ী পদার্থ কি?",
+                options: ["ম্যালিক এসিড", "পাইরুভিক এসিড", "ফসফোগ্লিসারিক এসিড", "অক্সালো-এসিটিক এসিড"],
+                correct: 3,
+                explanation: "C₄ উদ্ভিদে প্রথম স্থায়ী পদার্থ অক্সালো-এসিটিক এসিড।"
+            },
+            {
+                id: 40,
+                question: "সালোকসংশ্লেষণে উদ্ভূত অক্সিজেন-এর উৎস কোনটি?",
+                options: ["CO₂", "H₂O", "স্ট্রোমা", "গ্রানা"],
+                correct: 1,
+                explanation: "সালোকসংশ্লেষণে অক্সিজেনের উৎস পানি (H₂O)।"
+            },
+            {
+                id: 41,
+                question: "ক্রেবস চক্রে ATP উৎপন্ন হয়-",
+                options: ["৩০", "৩৮", "৪০", "২৪"],
+                correct: 3,
+                explanation: "ক্রেবস চক্রে ২৪টি ATP উৎপন্ন হয়।"
+            },
+            {
+                id: 42,
+                question: "জনন নিউক্লিয়াস হতে পুংগ্যামেট তৈরি হয় কয়টি-",
+                options: ["১ টি", "২ টি", "৩ টি", "৪ টি"],
+                correct: 1,
+                explanation: "জনন নিউক্লিয়াস থেকে ২টি পুংগ্যামেট তৈরি হয়।"
+            },
+            {
+                id: 43,
+                question: "কোন ফলটিতে এরিল আছে?",
+                options: ["আম", "কলা", "লিচু", "আনারস"],
+                correct: 2,
+                explanation: "লিচু ফলে এরিল আছে।"
+            },
+            {
+                id: 44,
+                question: "মায়োসিস কোষ বিভাজনের কোন পর্যায়ে কায়াজমাটা দৃষ্টিগোচর হয়?",
+                options: ["জাইগোটিন", "ডিপ্লোটিন", "লেপটোটিন", "প্যাকাইটিন"],
+                correct: 3,
+                explanation: "প্যাকাইটিন পর্যায়ে কায়াজমাটা দৃষ্টিগোচর হয়।"
+            },
+            {
+                id: 45,
+                question: "ব্যক্তবীজী উদ্ভিদের শস্য কিরূপ?",
+                options: ["হ্যাপ্লয়েড", "ডিপ্লয়েড", "অ্যামফিডিপ্লয়েড", "ট্রিপ্লয়েড"],
+                correct: 0,
+                explanation: "ব্যক্তবীজী উদ্ভিদের শস্য হ্যাপ্লয়েড।"
+            },
+            {
+                id: 46,
+                question: "এন্ডোস্পার্ম গঠিত হয় —",
+                options: ["ডেফিনিটিভ নিউক্লিয়াস থেকে", "এন্টিপোডাল সেল থেকে", "সিনারজিড থেকে", "ডিম্বাণু নিউক্লিয়াস থেকে"],
+                correct: 0,
+                explanation: "এন্ডোস্পার্ম ডেফিনিটিভ নিউক্লিয়াস থেকে গঠিত হয়।"
+            },
+            {
+                id: 47,
+                question: "টুইস্টেড এস্টিভেশন থাকে কোন ফুলে?",
+                options: ["গন্ধরাজ", "বাবলা", "আকন্দ", "করবী"],
+                correct: 3,
+                explanation: "টুইস্টেড এস্টিভেশন করবী ফুলে থাকে।"
+            },
+            {
+                id: 48,
+                question: "থুম (Glume) থাকে-",
+                options: ["লেমাতে", "পেলিয়াতে", "গর্ভমুণ্ডে", "পুরদন্ডে (পুষ্পমঞ্জুরিতে)"],
+                correct: 0,
+                explanation: "থুম লেমাতে থাকে।"
+            },
+            {
+                id: 49,
+                question: "সর্বমুখ পরাগধানী, পালকের ন্যায় গর্ভমুণ্ড, ক্যারিওপসিস ফল কোন গোত্রের শনাক্তকারী বৈশিষ্ট্য?",
+                options: ["Malvaceae", "Poaceae", "Liliaceae", "Tiliaceae"],
+                correct: 1,
+                explanation: "এগুলো Poaceae গোত্রের শনাক্তকারী বৈশিষ্ট্য।"
+            },
+            {
+                id: 50,
+                question: "স্পাইকলেট (Spikelet) পুষ্পবিন্যাস দেখা যায় কোন উদ্ভিদে?",
+                options: ["ধান", "আম", "কাঁঠাল", "কলা"],
+                correct: 0,
+                explanation: "স্পাইকলেট পুষ্পবিন্যাস ধান উদ্ভিদে দেখা যায়।"
+            }
+        ];
+
+        // Student answers storage
+        let studentAnswers = {};
+        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timerInterval = null;
+        let examStarted = false;
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set up header scroll effect
+            setupHeaderScroll();
+            
+            // Set up mobile menu
+            setupMobileMenu();
+            
+            // Load all questions
+            loadAllQuestions();
+        });
+
+        // Setup header scroll effect
+        function setupHeaderScroll() {
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Setup mobile menu
+        function setupMobileMenu() {
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const bars = mobileToggle.querySelectorAll('.bar');
+
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                
+                // Hamburger animation
+                if (mobileMenu.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileToggle.click();
+                    }
+                });
+            });
+        }
+
+        // Load all questions onto the page
+        function loadAllQuestions() {
+            const questionsGrid = document.getElementById('questions-grid');
+            
+            examData.forEach((question, index) => {
+                const questionNumber = index + 1;
+                const questionCard = document.createElement('div');
+                questionCard.className = 'question-card';
+                questionCard.id = `question-${questionNumber}`;
+                
+                questionCard.innerHTML = `
+                    <div class="question-header">
+                        <div class="question-number">
+                            <div class="number-badge">${questionNumber}</div>
+                            <div class="question-text">${question.question}</div>
+                        </div>
+                        <div class="marks-info">+1 | -0.25</div>
+                    </div>
+                    
+                    <div class="options-container">
+                        ${question.options.map((option, optionIndex) => `
+                            <div class="option-item">
+                                <input type="radio" 
+                                       id="q${questionNumber}-option${optionIndex}" 
+                                       name="q${questionNumber}" 
+                                       value="${optionIndex}"
+                                       class="option-input"
+                                       ${studentAnswers[questionNumber] === optionIndex ? 'checked' : ''}
+                                       onchange="saveAnswer(${questionNumber}, ${optionIndex})">
+                                <label for="q${questionNumber}-option${optionIndex}" class="option-label">
+                                    <div class="option-letter">${String.fromCharCode(65 + optionIndex)}</div>
+                                    <div class="option-text">${option}</div>
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    ${studentAnswers[questionNumber] !== undefined ? 
+                        `<div class="status-indicator status-answered">✓ Answered</div>` : 
+                        `<div class="status-indicator">○ Unanswered</div>`
+                    }
+                `;
+                
+                questionsGrid.appendChild(questionCard);
+            });
+        }
+
+        // Save answer
+        function saveAnswer(questionNumber, answerIndex) {
+            studentAnswers[questionNumber] = answerIndex;
+            
+            // Update status indicator
+            const questionCard = document.getElementById(`question-${questionNumber}`);
+            const statusIndicator = questionCard.querySelector('.status-indicator');
+            statusIndicator.innerHTML = '✓ Answered';
+            statusIndicator.className = 'status-indicator status-answered';
+            
+            // Update stats
+            updateStats();
+        }
+
+        // Update stats in control bar
+        function updateStats() {
+            const answeredCount = Object.keys(studentAnswers).length;
+            const remainingCount = 50 - answeredCount;
+            
+            document.getElementById('answered-count').textContent = answeredCount;
+            document.getElementById('remaining-count').textContent = remainingCount;
+        }
+
+        // Start exam
+        function startExam() {
+            // Hide instructions
+            document.getElementById('instructions-section').style.display = 'none';
+            
+            // Show exam content
+            document.getElementById('exam-control-bar').style.display = 'block';
+            document.getElementById('exam-container').style.display = 'block';
+            
+            // Start timer
+            startTimer();
+            
+            examStarted = true;
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Timer functions
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            const timerDisplay = document.getElementById('timer-display');
+            const progressFill = document.getElementById('progress-fill');
+            
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Update progress bar
+            const progressPercentage = (timeLeft / (30 * 60)) * 100;
+            progressFill.style.width = `${progressPercentage}%`;
+            
+            // Change color based on time
+            if (timeLeft <= 300) { // 5 minutes
+                timerDisplay.classList.add('timer-danger');
+                progressFill.style.background = 'var(--error)';
+            } else if (timeLeft <= 600) { // 10 minutes
+                timerDisplay.classList.add('timer-warning');
+                progressFill.style.background = 'var(--warning)';
+            } else {
+                timerDisplay.classList.remove('timer-warning', 'timer-danger');
+                progressFill.style.background = 'var(--primary)';
+            }
+        }
+
+        // Navigation functions
+        function jumpToQuestion() {
+            const input = document.getElementById('jump-input');
+            const questionNumber = parseInt(input.value);
+            
+            if (questionNumber >= 1 && questionNumber <= 50) {
+                const questionElement = document.getElementById(`question-${questionNumber}`);
+                if (questionElement) {
+                    questionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Highlight briefly
+                    questionElement.style.boxShadow = '0 0 0 2px var(--primary)';
+                    setTimeout(() => {
+                        questionElement.style.boxShadow = '';
+                    }, 1000);
+                }
+            } else {
+                alert('Please enter a number between 1 and 50');
+            }
+            
+            input.value = '';
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Submit exam
+        function submitExam() {
+            clearInterval(timerInterval);
+            calculateResults();
+            document.getElementById('result-modal').classList.add('active');
+        }
+
+        function calculateResults() {
+            let correctCount = 0;
+            let wrongCount = 0;
+            let unansweredCount = 0;
+            
+            // Calculate results
+            examData.forEach((question, index) => {
+                const questionNumber = index + 1;
+                const studentAnswer = studentAnswers[questionNumber];
+                
+                if (studentAnswer === undefined) {
+                    unansweredCount++;
+                } else if (studentAnswer === question.correct) {
+                    correctCount++;
+                } else {
+                    wrongCount++;
+                }
+            });
+            
+            // Calculate score
+            const totalScore = correctCount - (wrongCount * 0.25);
+            const percentage = ((correctCount / 50) * 100).toFixed(1);
+            const accuracy = (correctCount / (correctCount + wrongCount)) * 100 || 0;
+            
+            // Update result display
+            document.getElementById('total-score').textContent = totalScore.toFixed(2);
+            document.getElementById('percentage').textContent = `${percentage}%`;
+            document.getElementById('correct-count').textContent = correctCount;
+            document.getElementById('negative-marks').textContent = `-${(wrongCount * 0.25).toFixed(2)}`;
+            
+            // Update analysis
+            document.getElementById('correct-answers').textContent = correctCount;
+            document.getElementById('wrong-answers').textContent = wrongCount;
+            document.getElementById('skipped-questions').textContent = 0;
+            document.getElementById('unanswered-questions').textContent = unansweredCount;
+            
+            // Update accuracy bar
+            document.getElementById('accuracy-bar').style.width = `${accuracy}%`;
+            document.getElementById('accuracy-text').textContent = `${accuracy.toFixed(1)}%`;
+            
+            // Update performance feedback
+            updatePerformanceFeedback(percentage, correctCount);
+        }
+
+        function updatePerformanceFeedback(percentage, correctCount) {
+            const performanceLabel = document.getElementById('performance-label');
+            const resultTitle = document.getElementById('result-title');
+            const resultSubtitle = document.getElementById('result-subtitle');
+            const motivationSection = document.getElementById('motivation-section');
+            const percentageElement = document.getElementById('percentage');
+            
+            // Clear previous classes
+            percentageElement.className = 'score-value score-percentage';
+            
+            if (percentage >= 80) {
+                performanceLabel.textContent = "Excellent!";
+                performanceLabel.style.color = "var(--success)";
+                resultTitle.textContent = "🎉 Excellent Performance!";
+                resultSubtitle.textContent = "You've mastered this subject!";
+                percentageElement.classList.add('score-excellent');
+                
+                motivationSection.innerHTML = `
+                    <div class="motivation-icon">🏆</div>
+                    <h3 class="motivation-title">Outstanding Achievement!</h3>
+                    <p class="motivation-text">
+                        Your score of ${percentage}% (${correctCount}/50 correct) demonstrates excellent understanding of botany concepts. 
+                        Keep up the great work!
+                    </p>
+                `;
+            } else if (percentage >= 60) {
+                performanceLabel.textContent = "Good Job!";
+                performanceLabel.style.color = "#17a2b8";
+                resultTitle.textContent = "👍 Good Performance!";
+                resultSubtitle.textContent = "Solid understanding with room for improvement";
+                percentageElement.classList.add('score-good');
+                
+                motivationSection.innerHTML = `
+                    <div class="motivation-icon">⭐</div>
+                    <h3 class="motivation-title">Well Done!</h3>
+                    <p class="motivation-text">
+                        ${percentage}% is a good score. You got ${correctCount} questions correct. 
+                        Focus on the areas you missed to reach excellence.
+                    </p>
+                `;
+            } else if (percentage >= 50) {
+                performanceLabel.textContent = "Average";
+                performanceLabel.style.color = "var(--warning)";
+                resultTitle.textContent = "📚 Room for Improvement";
+                resultSubtitle.textContent = "You're on the right track";
+                percentageElement.classList.add('score-average');
+                
+                motivationSection.innerHTML = `
+                    <div class="motivation-icon">📖</div>
+                    <h3 class="motivation-title">Keep Practicing!</h3>
+                    <p class="motivation-text">
+                        You've scored ${percentage}% (${correctCount}/50). Review the concepts you missed and try again. 
+                        Practice makes perfect!
+                    </p>
+                `;
+            } else {
+                performanceLabel.textContent = "Needs Work";
+                performanceLabel.style.color = "var(--error)";
+                resultTitle.textContent = "📝 Let's Improve Together";
+                resultSubtitle.textContent = "Don't worry, every expert was once a beginner";
+                percentageElement.classList.add('score-poor');
+                
+                motivationSection.innerHTML = `
+                    <div class="motivation-icon">💪</div>
+                    <h3 class="motivation-title">Don't Give Up!</h3>
+                    <p class="motivation-text">
+                        Scoring ${percentage}% means there's room to grow. You got ${correctCount} questions correct. 
+                        Review the material, understand your mistakes, and try again. Every attempt makes you better!
+                    </p>
+                    <p style="color: var(--text-medium); font-style: italic; margin-top: var(--space-2);">
+                        "The expert in anything was once a beginner." - Helen Hayes
+                    </p>
+                `;
+            }
+        }
+
+        // Result actions
+        function reviewAnswers() {
+            // Implementation for reviewing answers
+            alert("Review feature would highlight correct/incorrect answers on the page.\n\nIn a full implementation, this would:\n- Highlight correct answers in green\n- Highlight your wrong answers in red\n- Show explanations for each question");
+        }
+
+        function retakeExam() {
+            if (confirm("Are you sure you want to retake the exam? All current progress will be lost.")) {
+                // Reset everything
+                studentAnswers = {};
+                timeLeft = 30 * 60;
+                clearInterval(timerInterval);
+                
+                // Hide result modal
+                document.getElementById('result-modal').classList.remove('active');
+                
+                // Reset UI
+                resetExamUI();
+                
+                // Restart exam
+                startExam();
+            }
+        }
+
+        function resetExamUI() {
+            // Reset all radio buttons
+            examData.forEach((question, index) => {
+                const questionNumber = index + 1;
+                const questionCard = document.getElementById(`question-${questionNumber}`);
+                const radioButtons = questionCard.querySelectorAll('input[type="radio"]');
+                const statusIndicator = questionCard.querySelector('.status-indicator');
+                
+                radioButtons.forEach(radio => {
+                    radio.checked = false;
+                });
+                
+                statusIndicator.innerHTML = '○ Unanswered';
+                statusIndicator.className = 'status-indicator';
+            });
+            
+            // Reset stats
+            updateStats();
+        }
+
+        function downloadResults() {
+            // Create results data
+            const results = {
+                examTitle: "Biology Paper Final - Botany",
+                date: new Date().toISOString(),
+                score: parseFloat(document.getElementById('total-score').textContent),
+                percentage: document.getElementById('percentage').textContent,
+                correct: parseInt(document.getElementById('correct-count').textContent),
+                totalQuestions: 50,
+                timeSpent: (30 * 60 - timeLeft) + " seconds",
+                answers: studentAnswers
+            };
+            
+            // Convert to JSON
+            const jsonString = JSON.stringify(results, null, 2);
+            
+            // Create download link
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            
+            a.href = url;
+            a.download = `biology-exam-results-${Date.now()}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification("Results downloaded as JSON file!");
+        }
+
+        // Utility functions
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--primary);
+                color: white;
+                padding: 15px 25px;
+                border-radius: var(--radius);
+                z-index: 1000;
+                font-weight: 500;
+                box-shadow: var(--shadow-lg);
+                animation: slideIn 0.3s ease;
+                max-width: 300px;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+            
+            // Add animation styles if not present
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes slideOut {
+                        from { transform: translateX(0); opacity: 1; }
+                        to { transform: translateX(100%); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('submit-exam-btn').addEventListener('click', () => {
+            if (confirm("Are you sure you want to submit the exam? You cannot change answers after submission.")) {
+                submitExam();
+            }
+        });
+
+        document.getElementById('final-submit-btn').addEventListener('click', () => {
+            if (confirm("Are you sure you want to submit the exam? You cannot change answers after submission.")) {
+                submitExam();
+            }
+        });
+
+        document.getElementById('jump-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                jumpToQuestion();
+            }
+        });
+
+        // Auto-save and warning
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && timeLeft > 0) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing exam. Are you sure you want to leave?';
+                return e.returnValue;
+            }
+        });
+
+        // Make functions available globally
+        window.startExam = startExam;
+        window.saveAnswer = saveAnswer;
+        window.jumpToQuestion = jumpToQuestion;
+        window.scrollToTop = scrollToTop;
+        window.scrollToBottom = scrollToBottom;
+        window.submitExam = submitExam;
+        window.reviewAnswers = reviewAnswers;
+        window.retakeExam = retakeExam;
+        window.downloadResults = downloadResults;
+    </script>
+</body>
+</html>
