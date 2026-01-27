@@ -2,514 +2,509 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Resources | OpenVector Academy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive learning resources, guides, and materials for tech education at OpenVector Academy.">
+    <meta name="keywords" content="learning resources, tech guides, coding tutorials, programming materials, educational resources">
+    <meta name="author" content="OpenVector Academy">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
+    
+    <!-- Professional CSS (Same as index.html with additions for resources) -->
     <style>
-        /* CSS Reset and Base Styles - EXACT SAME AS INDEX, NEWS & EVENTS */
+        /* ===== CSS RESET ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        /* ===== VARIABLES ===== */
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #7c3aed;
-            --accent: #06b6d4;
-            --light: #f8fafc;
-            --dark: #0f172a;
-            --gray: #64748b;
-            --light-gray: #e2e8f0;
-            --border-radius: 8px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+            /* Colors */
+            --primary: #0052CC;
+            --primary-light: #0066FF;
+            --primary-dark: #003D99;
+            --secondary: #7C4DFF;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --warning: #FFAB00;
+            --error: #FF5630;
+            
+            /* Neutrals */
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --light-gray: #F1F3F5;
+            --medium-gray: #E9ECEF;
+            --border-color: #DEE2E6;
+            --text-light: #6C757D;
+            --text-medium: #495057;
+            --text-dark: #212529;
+            
+            /* Spacing */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-12: 48px;
+            --space-16: 64px;
+            --space-20: 80px;
+            --space-24: 96px;
+            
+            /* Typography */
+            --font-xs: 12px;
+            --font-sm: 14px;
+            --font-base: 16px;
+            --font-lg: 18px;
+            --font-xl: 20px;
+            --font-2xl: 24px;
+            --font-3xl: 30px;
+            --font-4xl: 36px;
+            --font-5xl: 48px;
+            
+            /* Line Heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.75;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+        
+        /* ===== BASE STYLES ===== */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
         }
         
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: var(--font-base);
+            line-height: var(--leading-normal);
+            color: var(--text-medium);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
-            width: 100%;
         }
         
-        html {
-            overflow-x: hidden;
-            width: 100%;
-        }
-        
-        h1, h2, h3, h4 {
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            line-height: 1.2;
+            color: var(--text-dark);
+            line-height: var(--leading-tight);
+            letter-spacing: -0.01em;
+        }
+        
+        h1 {
+            font-size: var(--font-4xl);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: var(--font-3xl);
+        }
+        
+        h3 {
+            font-size: var(--font-2xl);
+        }
+        
+        h4 {
+            font-size: var(--font-xl);
+        }
+        
+        p {
+            color: var(--text-light);
+            line-height: var(--leading-relaxed);
         }
         
         a {
             text-decoration: none;
             color: inherit;
-        }
-        
-        ul {
-            list-style: none;
+            transition: color var(--transition-fast);
         }
         
         img {
             max-width: 100%;
+            height: auto;
+            display: block;
         }
         
+        /* ===== LAYOUT ===== */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--space-6);
         }
         
+        .container-narrow {
+            max-width: 800px;
+        }
+        
+        .section {
+            padding: var(--space-16) 0;
+        }
+        
+        .section-sm {
+            padding: var(--space-12) 0;
+        }
+        
+        .section-lg {
+            padding: var(--space-20) 0;
+        }
+        
+        /* ===== BUTTONS ===== */
         .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
             font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 500;
+            line-height: 1.5;
+            border-radius: var(--radius);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+            user-select: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
         }
         
         .btn-primary {
             background-color: var(--primary);
-            color: white;
+            color: var(--white);
         }
         
         .btn-primary:hover {
             background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow);
         }
         
         .btn-secondary {
-            background-color: white;
+            background-color: var(--white);
             color: var(--primary);
-            border: 1px solid var(--light-gray);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
         
         .btn-secondary:hover {
-            background-color: #f1f5f9;
-            transform: translateY(-2px);
+            background-color: var(--light-gray);
+            border-color: var(--text-light);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
         
         .btn-accent {
             background-color: var(--accent);
-            color: white;
+            color: var(--white);
         }
         
         .btn-accent:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+            background-color: #00A3C4;
+            box-shadow: var(--shadow);
         }
         
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            text-align: center;
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-lg);
         }
         
-        .section-subtitle {
-            color: var(--gray);
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        /* Header Styles - EXACT SAME AS INDEX, NEWS & EVENTS */
+        /* ===== HEADER (Same as index.html) ===== */
         .header {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            overflow: hidden;
-        }
-        
-        .header-content {
             width: 100%;
-            max-width: 100vw;
-            margin: 0 auto;
-            overflow: visible;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
         
         .header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-md);
+            height: 60px;
         }
         
-        .top-bar {
+        .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--light-gray);
+            height: 100%;
             width: 100%;
-            max-width: 100vw;
-            overflow: hidden;
         }
-        
-        .logo-container {
+
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-dark);
+            padding: var(--space-1) 0;
+            z-index: 1001;
         }
         
         .logo-img {
-            height: 40px;
+            height: 32px;
             width: auto;
-            max-width: 100%;
         }
-        
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--dark);
-            white-space: nowrap;
-        }
-        
-        /* Top Bar Actions - EXACT SAME AS INDEX, NEWS & EVENTS */
-        .top-bar-actions {
+
+        .desktop-nav {
             display: flex;
             align-items: center;
-            gap: 20px;
-            flex-wrap: nowrap;
-            overflow: visible;
-        }
-        
-        /* Search Container - EXACT SAME AS INDEX, NEWS & EVENTS */
-        .search-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-        
-        .search-icon-btn {
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            color: var(--dark);
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-        }
-        
-        .search-icon-btn:hover {
-            background-color: #f1f5f9;
-        }
-        
-        .search-input {
-            padding: 8px 15px 8px 40px;
-            border: 1px solid var(--light-gray);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            width: 180px;
-            transition: var(--transition);
-            max-width: 100%;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            visibility: hidden;
-            background-color: white;
-            z-index: 10;
-        }
-        
-        .search-container.active .search-input {
-            opacity: 1;
-            visibility: visible;
-            width: 220px;
-        }
-        
-        .search-container.active .search-icon-btn {
-            position: relative;
-            z-index: 11;
-            background-color: #f1f5f9;
-        }
-        
-        .search-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-            z-index: 11;
-        }
-        
-        /* Language Toggle - EXACT SAME AS INDEX, NEWS & EVENTS */
-        .language-toggle {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--dark);
-            font-weight: 500;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            white-space: nowrap;
-            flex-shrink: 0;
-            height: 40px;
-            box-sizing: border-box;
-        }
-        
-        .language-toggle:hover {
-            background-color: #f1f5f9;
-        }
-        
-        /* Hamburger Menu - EXACT SAME AS INDEX, NEWS & EVENTS */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            flex-shrink: 0;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        
-        .hamburger-menu span {
-            display: block;
-            height: 3px;
-            width: 100%;
-            background-color: var(--dark);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-        
-        .hamburger-menu.active span:nth-child(1) {
-            transform: translateY(14px) rotate(45deg);
-        }
-        
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger-menu.active span:nth-child(3) {
-            transform: translateY(-14px) rotate(-45deg);
-        }
-        
-        /* Navigation - EXACT SAME AS INDEX, NEWS & EVENTS */
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .nav-menu::-webkit-scrollbar {
-            display: none;
+            gap: var(--space-4);
         }
         
         .nav-list {
             display: flex;
-            gap: 25px;
-            padding: 0 20px;
-            flex-wrap: nowrap;
-            white-space: nowrap;
+            gap: var(--space-3);
+            list-style: none;
+            margin-right: var(--space-4);
         }
         
         .nav-link {
+            font-size: 13px;
             font-weight: 500;
-            color: var(--dark);
-            padding: 8px 0;
+            color: var(--text-medium);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            letter-spacing: -0.01em;
             position: relative;
-            transition: var(--transition);
-            flex-shrink: 0;
         }
         
         .nav-link:hover {
             color: var(--primary);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
+            background-color: var(--light-gray);
         }
         
         .nav-link.active {
             color: var(--primary);
+            font-weight: 600;
+            background-color: rgba(0, 82, 204, 0.05);
         }
         
         .nav-link.active::after {
-            width: 100%;
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 50%;
         }
         
-        .nav-link.btn-primary {
-            color: white;
-            padding: 8px 20px;
-            margin-left: 10px;
-            border-radius: var(--border-radius);
+        .nav-cta .btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            font-weight: 500;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
         }
         
-        /* Mobile Menu - EXACT SAME AS INDEX, NEWS & EVENTS */
+        .bar {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
         .mobile-menu {
             position: fixed;
-            top: 90px;
-            right: -100%;
+            top: 70px;
+            left: 0;
             width: 100%;
-            max-width: 300px;
-            height: calc(100vh - 90px);
-            background-color: white;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            transition: var(--transition);
+            height: calc(100vh - 70px);
+            background-color: var(--white);
             z-index: 999;
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+            padding: var(--space-6);
             overflow-y: auto;
+            border-top: 1px solid var(--border-color);
         }
         
         .mobile-menu.active {
-            right: 0;
+            transform: translateX(0);
         }
         
-        .mobile-menu-list {
+        .mobile-nav-list {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: var(--space-2);
         }
         
-        .mobile-menu-link {
-            font-size: 1.1rem;
-            font-weight: 500;
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f5f9;
+        .mobile-nav-link {
             display: block;
-            transition: var(--transition);
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-radius: var(--radius);
+            transition: all var(--transition-fast);
         }
         
-        .mobile-menu-link:hover {
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: var(--light-gray);
             color: var(--primary);
-            padding-left: 10px;
         }
         
-        /* Resources Hero Section - MATCHING NEWS & EVENTS PAGES */
+        /* ===== RESOURCES HERO ===== */
         .resources-hero {
-            background-color: #f8fafc;
-            padding: 150px 0 60px;
-            margin-top: 90px;
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            margin-top: 70px;
             position: relative;
             overflow: hidden;
-            width: 100%;
+        }
+        
+        .resources-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: 0;
         }
         
         .resources-hero-content {
-            max-width: 800px;
+            max-width: 700px;
             position: relative;
-            z-index: 2;
-            text-align: center;
-            margin: 0 auto;
-            width: 100%;
+            z-index: 1;
         }
         
-        .resources-hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
+        .resources-hero-title {
+            font-size: var(--font-5xl);
+            margin-bottom: var(--space-6);
             line-height: 1.1;
         }
         
-        .resources-hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .resources-hero-description {
+            font-size: var(--font-lg);
+            margin-bottom: var(--space-8);
+            color: var(--text-medium);
         }
         
-        /* Resources Filter Section - PROFESSIONAL TAB DESIGN */
+        /* ===== RESOURCES FILTER ===== */
         .resources-filter {
-            background-color: white;
-            padding: 30px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 40px;
+            background: var(--white);
+            padding: var(--space-6) 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 70px;
+            z-index: 50;
         }
         
         .filter-tabs {
             display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
             justify-content: center;
-            border-bottom: 2px solid var(--light-gray);
-            margin-bottom: 40px;
         }
         
         .filter-tab {
-            padding: 15px 30px;
-            background: none;
-            border: none;
-            border-bottom: 3px solid transparent;
-            cursor: pointer;
+            padding: var(--space-2) var(--space-4);
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-sm);
             font-weight: 500;
-            color: var(--gray);
-            transition: var(--transition);
-            position: relative;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all var(--transition-fast);
         }
         
         .filter-tab:hover {
             color: var(--primary);
+            border-color: var(--primary);
         }
         
         .filter-tab.active {
-            color: var(--primary);
-            border-bottom: 3px solid var(--primary);
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
         }
         
-        /* Resources Table Layout - PROFESSIONAL DESIGN */
-        .resources-listing {
-            padding: 40px 0 80px;
-        }
-        
+        /* ===== RESOURCES HEADER ===== */
         .resources-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: white;
-            border-radius: var(--border-radius);
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            background: var(--white);
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow);
         }
         
         .resources-stats {
             display: flex;
-            gap: 30px;
+            gap: var(--space-8);
         }
         
         .stat-item {
@@ -517,46 +512,52 @@
         }
         
         .stat-value {
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: var(--font-2xl);
+            font-weight: 700;
             color: var(--primary);
+            line-height: 1;
         }
         
         .stat-label {
-            font-size: 0.9rem;
-            color: var(--gray);
+            font-size: var(--font-xs);
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: var(--space-1);
         }
         
-        /* Professional Resources Table */
+        /* ===== RESOURCES TABLE ===== */
         .resources-table {
             width: 100%;
-            background: white;
-            border-radius: var(--border-radius);
+            background: var(--white);
+            border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow);
+            margin-bottom: var(--space-8);
         }
         
         .table-header {
             display: grid;
             grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
-            padding: 20px;
-            background: var(--light);
-            border-bottom: 2px solid var(--light-gray);
+            padding: var(--space-6);
+            background: var(--off-white);
+            border-bottom: 2px solid var(--border-color);
             font-weight: 600;
-            color: var(--dark);
+            color: var(--text-dark);
+            font-size: var(--font-sm);
         }
         
         .table-row {
             display: grid;
             grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
-            padding: 20px;
-            border-bottom: 1px solid var(--light-gray);
+            padding: var(--space-6);
+            border-bottom: 1px solid var(--border-color);
             align-items: center;
-            transition: var(--transition);
+            transition: all var(--transition-fast);
         }
         
         .table-row:hover {
-            background-color: #f8fafc;
+            background-color: var(--off-white);
         }
         
         .table-row:last-child {
@@ -564,109 +565,132 @@
         }
         
         .resource-title {
-            font-weight: 500;
-            color: var(--dark);
-            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: var(--space-2);
         }
         
         .resource-description {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 10px;
+            font-size: var(--font-sm);
+            color: var(--text-light);
+            margin-bottom: var(--space-3);
         }
         
         .resource-tags {
             display: flex;
-            gap: 8px;
+            gap: var(--space-2);
             flex-wrap: wrap;
         }
         
         .resource-tag {
-            background: var(--light);
-            color: var(--gray);
-            padding: 4px 10px;
+            background: var(--light-gray);
+            color: var(--text-light);
+            padding: 2px 8px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: var(--font-xs);
         }
         
         .resource-type {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--space-2);
             font-weight: 500;
+            font-size: var(--font-sm);
         }
         
         .resource-type.pdf {
-            color: #dc2626;
+            color: #FF5630;
         }
         
         .resource-type.ebook {
-            color: #059669;
+            color: var(--success);
         }
         
         .resource-type.video {
-            color: #d97706;
+            color: var(--warning);
         }
         
         .resource-type.code {
-            color: #7c3aed;
+            color: var(--secondary);
+        }
+        
+        .resource-type.templates {
+            color: var(--accent);
         }
         
         .resource-size, .resource-downloads {
-            color: var(--gray);
-            font-size: 0.9rem;
+            color: var(--text-light);
+            font-size: var(--font-sm);
         }
         
         .resource-downloads {
-            font-weight: 500;
+            font-weight: 600;
+            color: var(--text-dark);
         }
         
-        /* Featured Resource Section */
+        /* ===== FEATURED RESOURCE ===== */
         .featured-resource {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 60px 0;
-            margin: 60px 0;
-            border-radius: var(--border-radius);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: var(--space-16) 0;
+            margin: var(--space-12) 0;
+            border-radius: var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-resource::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center;
+            background-size: cover;
+            opacity: 0.05;
         }
         
         .featured-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         .featured-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 8px 20px;
+            color: var(--white);
+            padding: 6px 16px;
             border-radius: 20px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
+            margin-bottom: var(--space-4);
+            font-size: var(--font-sm);
             font-weight: 500;
         }
         
-        /* Resource Categories Grid */
+        /* ===== RESOURCE CATEGORIES ===== */
         .resource-categories {
-            background: var(--light);
-            padding: 80px 0;
+            background: var(--off-white);
+            padding: var(--space-16) 0;
         }
         
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            gap: var(--space-6);
+            margin-top: var(--space-8);
         }
         
         .category-item {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
+            background: var(--white);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
             text-align: center;
-            transition: var(--transition);
+            transition: all var(--transition);
             border: 2px solid transparent;
+            cursor: pointer;
         }
         
         .category-item:hover {
@@ -676,46 +700,59 @@
         }
         
         .category-icon {
-            font-size: 2.5rem;
+            font-size: var(--font-3xl);
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: var(--space-4);
+            width: 72px;
+            height: 72px;
+            background: var(--light-gray);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-4);
         }
         
-        /* Pagination - CLEAN DESIGN */
+        /* ===== PAGINATION ===== */
         .pagination {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            margin-top: 60px;
+            gap: var(--space-2);
+            margin-top: var(--space-12);
         }
         
         .pagination-btn {
-            padding: 10px 18px;
-            border-radius: var(--border-radius);
-            background: white;
-            border: 1px solid var(--light-gray);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius);
+            background: var(--white);
+            border: 1px solid var(--border-color);
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
+            font-size: var(--font-sm);
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .pagination-btn:hover {
             background: var(--primary);
-            color: white;
+            color: var(--white);
             border-color: var(--primary);
         }
         
         .pagination-btn.active {
             background: var(--primary);
-            color: white;
+            color: var(--white);
             border-color: var(--primary);
         }
         
-        /* Newsletter Section - MATCHING NEWS & EVENTS PAGES */
+        /* ===== NEWSLETTER ===== */
         .newsletter {
-            background-color: #f8fafc;
-            padding: 80px 0;
+            background-color: var(--off-white);
+            padding: var(--space-16) 0;
         }
         
         .newsletter-content {
@@ -726,160 +763,209 @@
         
         .newsletter-form {
             display: flex;
-            gap: 10px;
-            margin-top: 30px;
+            gap: var(--space-3);
+            margin-top: var(--space-6);
         }
         
         .newsletter-input {
             flex-grow: 1;
-            padding: 12px 20px;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--border-radius);
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
             font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
         }
         
-        /* Footer - EXACT SAME AS INDEX, NEWS & EVENTS */
+        /* ===== FOOTER (Same as index.html) ===== */
         .footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-            width: 100%;
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: var(--space-16) 0 var(--space-8);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-12);
         }
         
         .footer-logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
+            font-size: var(--font-xl);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: var(--space-3);
+            display: inline-block;
+            color: var(--white);
         }
         
         .footer-description {
-            color: #cbd5e1;
-            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-6);
+            font-size: var(--font-sm);
+            line-height: 1.6;
         }
         
         .footer-heading {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: var(--font-lg);
             font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--white);
         }
         
         .footer-links {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: var(--space-3);
         }
         
         .footer-link {
-            color: #cbd5e1;
-            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-sm);
+            transition: all var(--transition-fast);
+            padding: 4px 0;
         }
         
         .footer-link:hover {
-            color: white;
-            padding-left: 5px;
+            color: var(--white);
+            transform: translateX(4px);
         }
         
-        .social-icons {
+        .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
         }
         
-        .social-icon {
+        .social-link {
             width: 40px;
             height: 40px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            background-color: #334155;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: var(--transition);
+            transition: all var(--transition-fast);
         }
         
-        .social-icon:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
         }
         
         .footer-bottom {
+            padding-top: var(--space-6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: var(--font-sm);
         }
         
-        /* Responsive Styles */
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* ===== UTILITIES ===== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .mb-4 {
+            margin-bottom: var(--space-4);
+        }
+        
+        .mt-4 {
+            margin-top: var(--space-4);
+        }
+        
+        .mt-8 {
+            margin-top: var(--space-8);
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1024px) {
-            .resources-hero h1 {
-                font-size: 2.8rem;
+            :root {
+                --font-5xl: 42px;
+                --font-4xl: 36px;
+                --font-3xl: 28px;
+                --font-2xl: 22px;
+                --font-xl: 18px;
+                --font-lg: 16px;
+                --font-base: 15px;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .section {
+                padding: var(--space-12) 0;
+            }
+            
+            .resources-hero {
+                padding: 130px 0 64px;
             }
             
             .table-header,
             .table-row {
                 grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
             }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
         }
         
         @media (max-width: 768px) {
-            .hamburger-menu {
-                display: flex;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .language-toggle span {
-                display: none;
-            }
-            
-            .language-toggle {
-                padding: 8px;
-                width: 40px;
-                height: 40px;
-                justify-content: center;
+            :root {
+                --font-5xl: 36px;
+                --font-4xl: 30px;
+                --font-3xl: 24px;
+                --font-2xl: 20px;
+                --font-xl: 18px;
             }
             
             .resources-hero {
-                padding: 130px 0 40px;
+                text-align: center;
+                padding: 110px 0 48px;
             }
             
-            .resources-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .filter-tabs {
-                overflow-x: auto;
-                justify-content: flex-start;
-                padding-bottom: 10px;
-            }
-            
-            .table-header {
-                display: none;
-            }
-            
-            .table-row {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                padding: 25px;
+            .resources-hero::before {
+                width: 100%;
+                opacity: 0.02;
             }
             
             .resources-header {
                 flex-direction: column;
-                gap: 20px;
+                gap: var(--space-6);
                 text-align: center;
             }
             
@@ -888,16 +974,18 @@
                 justify-content: space-around;
             }
             
+            .table-header {
+                display: none;
+            }
+            
+            .table-row {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+                padding: var(--space-6);
+            }
+            
             .newsletter-form {
                 flex-direction: column;
-            }
-            
-            .search-input {
-                width: 150px;
-            }
-            
-            .search-container.active .search-input {
-                width: 180px;
             }
             
             .categories-grid {
@@ -905,38 +993,19 @@
             }
         }
         
-        @media (max-width: 576px) {
-            section {
-                padding: 60px 0;
+        @media (max-width: 480px) {
+            :root {
+                --font-5xl: 32px;
+                --font-4xl: 26px;
+                --font-3xl: 22px;
             }
             
-            .resources-hero {
-                padding: 130px 0 30px;
+            .container {
+                padding: 0 var(--space-4);
             }
             
-            .resources-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .search-input {
-                width: 130px;
-            }
-            
-            .search-container.active .search-input {
-                width: 160px;
-            }
-            
-            .top-bar-actions {
-                gap: 15px;
+            .resources-hero-title {
+                font-size: var(--font-3xl);
             }
             
             .categories-grid {
@@ -946,118 +1015,105 @@
             .pagination {
                 flex-wrap: wrap;
             }
+            
+            .header {
+                height: 64px;
+            }
+            
+            .header.scrolled {
+                height: 56px;
+            }
+            
+            .mobile-menu {
+                top: 64px;
+                height: calc(100vh - 64px);
+            }
+            
+            .logo {
+                font-size: 16px;
+            }
+            
+            .logo-img {
+                height: 28px;
+            }
         }
         
-        @media (max-width: 400px) {
-            .logo-text {
-                font-size: 1.2rem;
-            }
-            
-            .search-input {
-                width: 120px;
-                font-size: 0.8rem;
-            }
-            
-            .search-container.active .search-input {
-                width: 140px;
-            }
-            
-            .language-toggle {
-                padding: 6px;
-            }
-            
-            .top-bar-actions {
-                gap: 10px;
-            }
-            
-            .resources-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .resources-hero p {
-                font-size: 1.1rem;
+        @media (max-width: 360px) {
+            .filter-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: var(--space-2);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header - EXACT SAME AS INDEX, NEWS & EVENTS -->
+    <!-- Updated Header -->
     <header class="header" id="header">
-        <div class="header-content">
-            <div class="top-bar">
-                <div class="logo-container">
-                    <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" alt="OpenVector Academy Logo" class="logo-img">
-                    <div class="logo-text">OpenVector Academy</div>
-                </div>
-                
-                <div class="top-bar-actions">
-                    <!-- Search Icon with Expandable Input -->
-                    <div class="search-container" id="search-container">
-                        <button class="search-icon-btn" id="search-toggle">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <input type="text" class="search-input" placeholder="Search resources..." id="search-input">
-                    </div>
-                    
-                    <!-- Language Toggle -->
-                    <div class="language-toggle">
-                        <i class="fas fa-globe"></i>
-                        <span>EN</span>
-                    </div>
-                    
-                    <!-- Hamburger Menu -->
-                    <div class="hamburger-menu" id="hamburger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-            
+        <div class="container nav-wrapper">
+            <!-- Logo with PNG -->
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
+                     alt="OpenVector Academy" 
+                     class="logo-img">
+                <span>OpenVector Academy</span>
+            </a>
+
             <!-- Desktop Navigation -->
-            <nav class="nav-menu">
+            <nav class="desktop-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="live.html" class="nav-link">Live</a></li>
                     <li><a href="resources.html" class="nav-link active">Resources</a></li>
-                    <li><a href="news.html" class="nav-link">News</a></li>
-                    <li><a href="live.html" class="nav-link">Live Classes</a></li>
-                    <li><a href="events.html" class="nav-link">Events</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="registration.html" class="nav-link btn btn-primary">Register</a></li>
                 </ul>
+                <div class="nav-cta">
+                    <a href="registration.html" class="btn btn-primary">Get Started</a>
+                </div>
             </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
+                <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
+                <li><a href="resources.html" class="mobile-nav-link active">Resources</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
-
-    <!-- Mobile Menu - EXACT SAME AS INDEX, NEWS & EVENTS -->
-    <div class="mobile-menu" id="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li><a href="index.html" class="mobile-menu-link">Home</a></li>
-            <li><a href="courses.html" class="mobile-menu-link">Courses</a></li>
-            <li><a href="resources.html" class="mobile-menu-link active">Resources</a></li>
-            <li><a href="news.html" class="mobile-menu-link">News</a></li>
-            <li><a href="live.html" class="mobile-menu-link">Live Classes</a></li>
-            <li><a href="events.html" class="mobile-menu-link">Events</a></li>
-            <li><a href="about.html" class="mobile-menu-link">About Us</a></li>
-            <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
-            <li><a href="registration.html" class="mobile-menu-link">Register</a></li>
-        </ul>
-    </div>
 
     <!-- Resources Hero Section -->
     <section class="resources-hero" id="resources-hero">
         <div class="container">
             <div class="resources-hero-content">
-                <h1>Learning Resources Library</h1>
-                <p>Access our comprehensive collection of study materials, guides, and tools. Professionally curated resources to support your learning journey.</p>
+                <h1 class="resources-hero-title">Learning Resources Library</h1>
+                <p class="resources-hero-description">
+                    Access our comprehensive collection of study materials, guides, and tools. Professionally curated resources to support your learning journey.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Resources Filter -->
-    <section class="resources-filter">
+    <section class="resources-filter" id="resources-filter">
         <div class="container">
             <div class="filter-tabs" id="filter-tabs">
                 <button class="filter-tab active" data-filter="all">All Resources</button>
@@ -1071,13 +1127,13 @@
     </section>
 
     <!-- Resources Listing -->
-    <section class="resources-listing" id="resources-listing">
+    <section class="section section-sm" id="resources-listing">
         <div class="container">
             <!-- Resources Header -->
-            <div class="resources-header">
+            <div class="resources-header fade-in">
                 <div>
-                    <h2 style="margin-bottom: 10px;">Learning Resources</h2>
-                    <p style="color: var(--gray); font-size: 0.95rem;">Browse and download our collection of educational materials</p>
+                    <h2 style="margin-bottom: var(--space-2);">Learning Resources</h2>
+                    <p style="font-size: var(--font-sm);">Browse and download our collection of educational materials</p>
                 </div>
                 <div class="resources-stats">
                     <div class="stat-item">
@@ -1106,7 +1162,7 @@
                 </div>
 
                 <!-- Table Row 1 -->
-                <div class="table-row" data-category="pdf">
+                <div class="table-row fade-in" data-category="pdf">
                     <div>
                         <div class="resource-title">Machine Learning Algorithms Complete Guide</div>
                         <div class="resource-description">Comprehensive guide covering all major ML algorithms with mathematical foundations and implementation examples</div>
@@ -1123,14 +1179,14 @@
                     <div class="resource-size">85 pages</div>
                     <div class="resource-downloads">2,421</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('ML Algorithms Guide.pdf')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('ML Algorithms Guide.pdf')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Table Row 2 -->
-                <div class="table-row" data-category="ebook">
+                <div class="table-row fade-in" data-category="ebook">
                     <div>
                         <div class="resource-title">Data Science Handbook 2024 Edition</div>
                         <div class="resource-description">Complete guide to data science workflows, statistical analysis, and machine learning with Python libraries</div>
@@ -1147,14 +1203,14 @@
                     <div class="resource-size">320 pages</div>
                     <div class="resource-downloads">1,842</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('Data Science Handbook.epub')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Data Science Handbook.epub')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Table Row 3 -->
-                <div class="table-row" data-category="video">
+                <div class="table-row fade-in" data-category="video">
                     <div>
                         <div class="resource-title">AWS Certification Complete Video Course</div>
                         <div class="resource-description">Complete video course covering AWS services, architecture patterns, and certification preparation</div>
@@ -1171,14 +1227,14 @@
                     <div class="resource-size">15 hours</div>
                     <div class="resource-downloads">956</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('AWS Course.zip')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('AWS Course.zip')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Table Row 4 -->
-                <div class="table-row" data-category="code">
+                <div class="table-row fade-in" data-category="code">
                     <div>
                         <div class="resource-title">Complete REST API Examples Collection</div>
                         <div class="resource-description">Flask and FastAPI examples with authentication, database integration, and testing</div>
@@ -1195,14 +1251,14 @@
                     <div class="resource-size">25 examples</div>
                     <div class="resource-downloads">2,718</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('REST API Examples.zip')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('REST API Examples.zip')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Table Row 5 -->
-                <div class="table-row" data-category="pdf">
+                <div class="table-row fade-in" data-category="pdf">
                     <div>
                         <div class="resource-title">Git & GitHub Essential Commands Cheat Sheet</div>
                         <div class="resource-description">Essential Git commands, workflows, and GitHub features for efficient version control</div>
@@ -1219,14 +1275,14 @@
                     <div class="resource-size">2 pages</div>
                     <div class="resource-downloads">4,216</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('Git Cheat Sheet.pdf')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Git Cheat Sheet.pdf')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Table Row 6 -->
-                <div class="table-row" data-category="templates">
+                <div class="table-row fade-in" data-category="templates">
                     <div>
                         <div class="resource-title">Professional Tech Resume Templates 2024</div>
                         <div class="resource-description">Professional resume templates optimized for tech roles with ATS compatibility and modern design</div>
@@ -1236,14 +1292,14 @@
                             <span class="resource-tag">Portfolio</span>
                         </div>
                     </div>
-                    <div class="resource-type pdf">
+                    <div class="resource-type templates">
                         <i class="fas fa-file-alt"></i>
                         <span>Templates</span>
                     </div>
                     <div class="resource-size">8 templates</div>
                     <div class="resource-downloads">3,521</div>
                     <div>
-                        <button class="btn btn-primary" onclick="downloadResource('Resume Templates.zip')">
+                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Resume Templates.zip')">
                             <i class="fas fa-download"></i>
                         </button>
                     </div>
@@ -1266,15 +1322,15 @@
         <div class="container">
             <div class="featured-content">
                 <div class="featured-badge">Featured Resource</div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Machine Learning Mastery Bundle</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                <h2 style="font-size: var(--font-3xl); margin-bottom: var(--space-4); color: var(--white);">Machine Learning Mastery Bundle</h2>
+                <p style="font-size: var(--font-lg); margin-bottom: var(--space-6); opacity: 0.9; color: var(--white);">
                     Everything you need to master machine learning in one comprehensive package. Includes algorithms guide, Python notebooks, datasets, and video tutorials.
                 </p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
                     <button class="btn btn-accent" onclick="downloadResource('ML Mastery Bundle.zip')">
                         <i class="fas fa-download"></i> Download Bundle
                     </button>
-                    <button class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.3);">
+                    <button class="btn btn-outline" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.3);">
                         <i class="fas fa-info-circle"></i> View Details
                     </button>
                 </div>
@@ -1285,72 +1341,74 @@
     <!-- Resource Categories -->
     <section class="resource-categories">
         <div class="container">
-            <h2 class="section-title">Resource Categories</h2>
-            <p class="section-subtitle">Browse resources by category for focused learning</p>
+            <div class="section-header">
+                <h2>Resource Categories</h2>
+                <p class="section-subtitle">Browse resources by category for focused learning</p>
+            </div>
             
             <div class="categories-grid">
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <h3>PDF Guides</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Comprehensive guides and documentation</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Comprehensive guides and documentation</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
                     <h3>eBooks</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">In-depth books and handbooks</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">In-depth books and handbooks</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-video"></i>
                     </div>
                     <h3>Video Tutorials</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Step-by-step video instructions</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Step-by-step video instructions</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Code Libraries</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Reusable code and examples</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Reusable code and examples</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-clipboard-list"></i>
                     </div>
                     <h3>Cheat Sheets</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Quick reference materials</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Quick reference materials</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3>Projects</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Complete project examples</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Complete project examples</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>Datasets</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Practice datasets for analysis</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Practice datasets for analysis</p>
                 </div>
                 
-                <div class="category-item">
+                <div class="category-item fade-in">
                     <div class="category-icon">
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Templates</h3>
-                    <p style="color: var(--gray); margin-top: 10px;">Ready-to-use templates</p>
+                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Ready-to-use templates</p>
                 </div>
             </div>
         </div>
@@ -1367,217 +1425,250 @@
                     <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
-                <p style="font-size: 0.9rem; color: var(--gray); margin-top: 15px;">
+                <p style="font-size: var(--font-sm); color: var(--text-light); margin-top: var(--space-3);">
                     We'll only send resource-related updates. You can unsubscribe at any time.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Footer - EXACT SAME AS INDEX, NEWS & EVENTS -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <div class="footer-logo">OpenVector Academy</div>
-                    <p class="footer-description">Learn Without Limits. Quality online education for the digital age.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <div>
+                    <a href="index.html" class="footer-logo">OpenVector Academy</a>
+                    <p class="footer-description">
+                        World-class technology education platform transforming careers through 
+                        industry-led curriculum and expert mentorship. Join the future of tech education.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="footer-col">
-                    <h3 class="footer-heading">Quick Links</h3>
+                <div>
+                    <h3 class="footer-heading">Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="courses.html" class="footer-link">Courses</a></li>
-                        <li><a href="resources.html" class="footer-link">Resources</a></li>
-                        <li><a href="news.html" class="footer-link">News</a></li>
-                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                        <li><a href="resources.html" class="footer-link">Learning Materials</a></li>
+                        <li><a href="resources.html" class="footer-link">Video Tutorials</a></li>
+                        <li><a href="resources.html" class="footer-link">Code Libraries</a></li>
+                        <li><a href="resources.html" class="footer-link">Templates</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h3 class="footer-heading">Support</h3>
+                <div>
+                    <h3 class="footer-heading">Courses</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="courses.html" class="footer-link">Web Development</a></li>
+                        <li><a href="courses.html" class="footer-link">Data Science</a></li>
+                        <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
+                        <li><a href="courses.html" class="footer-link">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About</a></li>
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="#" class="footer-link">FAQs</a></li>
-                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-heading">Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> resources@openvector.edu</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Tech City, TC 10101</li>
+                        <li><a href="privacy.html" class="footer-link">Privacy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 OpenVector Academy. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for learners worldwide.</p>
+                <p>&copy; 2024 OpenVector Academy. All rights reserved.</p>
+                <p style="margin-top: var(--space-2);">
+                    Designed for the future of education
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle - EXACT SAME AS INDEX, NEWS & EVENTS
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        hamburgerMenu.addEventListener('click', () => {
-            hamburgerMenu.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            
-            // Close search if open
-            searchContainer.classList.remove('active');
-            searchInput.blur();
-        });
-        
-        // Search Toggle Functionality - EXACT SAME AS INDEX, NEWS & EVENTS
-        const searchContainer = document.getElementById('search-container');
-        const searchToggle = document.getElementById('search-toggle');
-        const searchInput = document.getElementById('search-input');
-        
-        searchToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            searchContainer.classList.toggle('active');
-            
-            if (searchContainer.classList.contains('active')) {
-                searchInput.focus();
-            } else {
-                searchInput.blur();
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('header');
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const body = document.body;
+            const bars = mobileToggle.querySelectorAll('.bar');
+
+            /* --- 1. Header Scroll Effect --- */
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            /* --- 2. Mobile Menu Logic --- */
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                
+                // Hamburger animation
+                if (mobileMenu.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                    body.style.overflow = 'hidden';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                    body.style.overflow = '';
+                }
             }
+
+            mobileToggle.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            /* --- 3. Resources Filtering --- */
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const tableRows = document.querySelectorAll('.table-row');
             
-            // Close mobile menu if open
-            hamburgerMenu.classList.remove('active');
-            mobileMenu.classList.remove('active');
-        });
-        
-        // Close search when clicking outside - EXACT SAME AS INDEX, NEWS & EVENTS
-        document.addEventListener('click', (e) => {
-            if (!searchContainer.contains(e.target)) {
-                searchContainer.classList.remove('active');
-                searchInput.blur();
-            }
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    const filterValue = tab.getAttribute('data-filter');
+                    
+                    // Show/hide table rows based on filter
+                    tableRows.forEach(row => {
+                        if (filterValue === 'all' || row.getAttribute('data-category') === filterValue) {
+                            row.style.display = 'grid';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            /* --- 4. Pagination --- */
+            const paginationBtns = document.querySelectorAll('.pagination-btn');
             
-            if (!hamburgerMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
-                hamburgerMenu.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            }
-        });
-        
-        // Close search on escape key - EXACT SAME AS INDEX, NEWS & EVENTS
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                searchContainer.classList.remove('active');
-                searchInput.blur();
-            }
-        });
-        
-        // Header scroll effect - EXACT SAME AS INDEX, NEWS & EVENTS
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    paginationBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // In a real app, this would load the corresponding page
+                    if (btn.textContent.includes('Next')) {
+                        showNotification('Loading more resources...');
+                    } else if (!isNaN(parseInt(btn.textContent))) {
+                        showNotification(`Loading page ${btn.textContent}...`);
+                    }
+                });
+            });
+
+            /* --- 5. Newsletter Form --- */
+            document.getElementById('resources-newsletter').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // Show success message
+                const button = this.querySelector('button');
+                const originalText = button.textContent;
+                
+                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                button.style.backgroundColor = 'var(--success)';
+                
+                // Reset form
+                this.reset();
+                
+                // Show notification
+                showNotification('Thank you! You will now receive resource updates.');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.backgroundColor = '';
+                }, 3000);
+            });
+
+            /* --- 6. Fade-in animation on scroll --- */
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = (Math.random() * 0.3) + 's';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeObserver.observe(element);
+            });
+
+            /* --- 7. Initialize header state --- */
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
             }
-        });
-        
-        // Resources filtering functionality - PROFESSIONAL TAB FILTERING
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        const tableRows = document.querySelectorAll('.table-row');
-        
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                filterTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                const filterValue = tab.getAttribute('data-filter');
-                
-                // Show/hide table rows based on filter
-                tableRows.forEach(row => {
-                    if (filterValue === 'all' || row.getAttribute('data-category') === filterValue) {
-                        row.style.display = 'grid';
-                    } else {
-                        row.style.display = 'none';
+
+            /* --- 8. Category item click --- */
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const category = this.querySelector('h3').textContent.toLowerCase().split(' ')[0];
+                    const tab = document.querySelector(`.filter-tab[data-filter="${category}"]`);
+                    if (tab) {
+                        tab.click();
+                        window.scrollTo({
+                            top: document.getElementById('resources-filter').offsetTop - 70,
+                            behavior: 'smooth'
+                        });
                     }
                 });
             });
         });
-        
-        // Download Resource Function
+
+        /* --- Utility Functions --- */
         function downloadResource(filename) {
-            // Show confirmation
             if (confirm(`Download "${filename}"?`)) {
-                // In a real app, this would trigger actual download
-                // For demo, just show notification
                 showNotification(`Downloading "${filename}"...`);
                 
-                // Simulate download delay
+                // Simulate download
                 setTimeout(() => {
                     showNotification(`"${filename}" downloaded successfully!`);
                 }, 1000);
             }
         }
         
-        // Resources newsletter form
-        document.getElementById('resources-newsletter').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = this.querySelector('input[type="email"]').value;
-            
-            // Show success message
-            const button = this.querySelector('button');
-            const originalText = button.textContent;
-            
-            button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-            button.style.backgroundColor = '#10b981';
-            
-            // Reset form
-            this.reset();
-            
-            // Show notification
-            showNotification('Thank you! You will now receive resource updates.');
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                button.innerHTML = originalText;
-                button.style.backgroundColor = '';
-            }, 3000);
-        });
-        
-        // Pagination functionality
-        const paginationBtns = document.querySelectorAll('.pagination-btn');
-        
-        paginationBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                paginationBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // In a real application, this would load the corresponding page
-                // For this demo, we'll just show a message
-                if (btn.textContent.includes('Next')) {
-                    alert('Loading more resources...');
-                } else if (!isNaN(parseInt(btn.textContent))) {
-                    alert(`Loading page ${btn.textContent}...`);
-                }
-            });
-        });
-        
-        // Show Notification
         function showNotification(message) {
             const notification = document.createElement('div');
             notification.style.cssText = `
@@ -1587,7 +1678,7 @@
                 background: var(--primary);
                 color: white;
                 padding: 15px 25px;
-                border-radius: var(--border-radius);
+                border-radius: var(--radius);
                 z-index: 1000;
                 font-weight: 500;
                 box-shadow: var(--shadow-lg);
@@ -1606,43 +1697,24 @@
                     }
                 }, 300);
             }, 4000);
+            
+            // Add CSS animations if not already present
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes slideOut {
+                        from { transform: translateX(0); opacity: 1; }
+                        to { transform: translateX(100%); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
         }
-        
-        // Add CSS animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Prevent zooming with keyboard shortcuts - EXACT SAME AS INDEX, NEWS & EVENTS
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
-                e.preventDefault();
-            }
-        });
-        
-        // Prevent zooming with pinch gesture on touch devices - EXACT SAME AS INDEX, NEWS & EVENTS
-        document.addEventListener('gesturestart', function(e) {
-            e.preventDefault();
-        });
-        
-        // Prevent double-tap zoom on mobile - EXACT SAME AS INDEX, NEWS & EVENTS
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(e) {
-            const now = Date.now();
-            if (now - lastTouchEnd <= 300) {
-                e.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
     </script>
 </body>
 </html>
