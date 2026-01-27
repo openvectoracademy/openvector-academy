@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Resources | OpenVector Academy</title>
+    <title>Privacy Policy | OpenVector Academy</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Comprehensive learning resources, guides, and materials for tech education at OpenVector Academy.">
-    <meta name="keywords" content="learning resources, tech guides, coding tutorials, programming materials, educational resources">
+    <meta name="description" content="OpenVector Academy's Privacy Policy. Learn how we protect and handle your personal information.">
+    <meta name="keywords" content="privacy policy, data protection, GDPR, privacy statement, data security">
     <meta name="author" content="OpenVector Academy">
     
     <!-- Fonts -->
@@ -19,7 +19,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
     
-    <!-- Professional CSS (Same as index.html with additions for resources) -->
+    <!-- Professional CSS -->
     <style>
         /* ===== CSS RESET ===== */
         * {
@@ -60,7 +60,6 @@
             --space-12: 48px;
             --space-16: 64px;
             --space-20: 80px;
-            --space-24: 96px;
             
             /* Typography */
             --font-xs: 12px;
@@ -107,7 +106,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: var(--font-base);
-            line-height: var(--leading-normal);
+            line-height: var(--leading-relaxed);
             color: var(--text-medium);
             background-color: var(--white);
             -webkit-font-smoothing: antialiased;
@@ -130,25 +129,37 @@
         
         h2 {
             font-size: var(--font-3xl);
+            margin-top: var(--space-12);
+            margin-bottom: var(--space-6);
         }
         
         h3 {
-            font-size: var(--font-2xl);
+            font-size: var(--font-xl);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
         }
         
         h4 {
-            font-size: var(--font-xl);
+            font-size: var(--font-lg);
+            margin-top: var(--space-6);
+            margin-bottom: var(--space-3);
         }
         
         p {
-            color: var(--text-light);
+            color: var(--text-medium);
             line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-4);
         }
         
         a {
             text-decoration: none;
-            color: inherit;
+            color: var(--primary);
             transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
         }
         
         img {
@@ -226,33 +237,7 @@
             border-color: var(--text-light);
         }
         
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-        
-        .btn-accent {
-            background-color: var(--accent);
-            color: var(--white);
-        }
-        
-        .btn-accent:hover {
-            background-color: #00A3C4;
-            box-shadow: var(--shadow);
-        }
-        
-        .btn-lg {
-            padding: var(--space-4) var(--space-8);
-            font-size: var(--font-lg);
-        }
-        
-        /* ===== HEADER (Same as index.html) ===== */
+        /* ===== HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -409,8 +394,8 @@
             color: var(--primary);
         }
         
-        /* ===== RESOURCES HERO ===== */
-        .resources-hero {
+        /* ===== PRIVACY HERO ===== */
+        .privacy-hero {
             padding: 150px 0 80px;
             background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
             margin-top: 70px;
@@ -418,365 +403,234 @@
             overflow: hidden;
         }
         
-        .resources-hero::before {
+        .privacy-hero::before {
             content: '';
             position: absolute;
             top: 0;
             right: 0;
             width: 40%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
+            background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
             background-size: cover;
-            opacity: 0.05;
+            opacity: 0.03;
             z-index: 0;
         }
         
-        .resources-hero-content {
+        .privacy-hero-content {
             max-width: 700px;
             position: relative;
             z-index: 1;
         }
         
-        .resources-hero-title {
+        .privacy-hero-title {
             font-size: var(--font-5xl);
             margin-bottom: var(--space-6);
             line-height: 1.1;
         }
         
-        .resources-hero-description {
+        .privacy-hero-description {
             font-size: var(--font-lg);
-            margin-bottom: var(--space-8);
+            margin-bottom: var(--space-6);
             color: var(--text-medium);
         }
         
-        /* ===== RESOURCES FILTER ===== */
-        .resources-filter {
-            background: var(--white);
-            padding: var(--space-6) 0;
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 70px;
-            z-index: 50;
-        }
-        
-        .filter-tabs {
-            display: flex;
-            gap: var(--space-2);
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .filter-tab {
-            padding: var(--space-2) var(--space-4);
-            background: transparent;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            font-family: 'Inter', sans-serif;
-            font-size: var(--font-sm);
-            font-weight: 500;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-        
-        .filter-tab:hover {
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .filter-tab.active {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-        
-        /* ===== RESOURCES HEADER ===== */
-        .resources-header {
-            display: flex;
-            justify-content: space-between;
+        .last-updated {
+            display: inline-flex;
             align-items: center;
-            margin-bottom: var(--space-8);
-            padding: var(--space-6);
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-        }
-        
-        .resources-stats {
-            display: flex;
-            gap: var(--space-8);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: var(--font-2xl);
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-        
-        .stat-label {
-            font-size: var(--font-xs);
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--light-gray);
+            border-radius: var(--radius);
+            font-size: var(--font-sm);
             color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: var(--space-1);
-        }
-        
-        /* ===== RESOURCES TABLE ===== */
-        .resources-table {
-            width: 100%;
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
             margin-bottom: var(--space-8);
         }
         
-        .table-header {
-            display: grid;
-            grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
-            padding: var(--space-6);
+        /* ===== PRIVACY CONTENT ===== */
+        .privacy-content {
+            padding: var(--space-16) 0;
+        }
+        
+        .content-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--space-8);
+        }
+        
+        .content-section {
+            margin-bottom: var(--space-12);
+        }
+        
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* List Styles */
+        ul, ol {
+            margin-left: var(--space-6);
+            margin-bottom: var(--space-4);
+        }
+        
+        li {
+            margin-bottom: var(--space-2);
+            color: var(--text-medium);
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
             background: var(--off-white);
-            border-bottom: 2px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            padding: var(--space-6);
+            border-radius: var(--radius-sm);
+            margin: var(--space-8) 0;
+        }
+        
+        .highlight-box h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .data-table th {
+            background: var(--off-white);
+            padding: var(--space-4);
+            text-align: left;
             font-weight: 600;
             color: var(--text-dark);
-            font-size: var(--font-sm);
+            border-bottom: 2px solid var(--border-color);
         }
         
-        .table-row {
-            display: grid;
-            grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
-            padding: var(--space-6);
+        .data-table td {
+            padding: var(--space-4);
             border-bottom: 1px solid var(--border-color);
-            align-items: center;
-            transition: all var(--transition-fast);
+            vertical-align: top;
         }
         
-        .table-row:hover {
-            background-color: var(--off-white);
-        }
-        
-        .table-row:last-child {
+        .data-table tr:last-child td {
             border-bottom: none;
         }
         
-        .resource-title {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: var(--space-2);
-        }
-        
-        .resource-description {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-            margin-bottom: var(--space-3);
-        }
-        
-        .resource-tags {
-            display: flex;
-            gap: var(--space-2);
-            flex-wrap: wrap;
-        }
-        
-        .resource-tag {
-            background: var(--light-gray);
-            color: var(--text-light);
-            padding: 2px 8px;
-            border-radius: 20px;
-            font-size: var(--font-xs);
-        }
-        
-        .resource-type {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            font-weight: 500;
-            font-size: var(--font-sm);
-        }
-        
-        .resource-type.pdf {
-            color: #FF5630;
-        }
-        
-        .resource-type.ebook {
-            color: var(--success);
-        }
-        
-        .resource-type.video {
-            color: var(--warning);
-        }
-        
-        .resource-type.code {
-            color: var(--secondary);
-        }
-        
-        .resource-type.templates {
-            color: var(--accent);
-        }
-        
-        .resource-size, .resource-downloads {
-            color: var(--text-light);
-            font-size: var(--font-sm);
-        }
-        
-        .resource-downloads {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-        
-        /* ===== FEATURED RESOURCE ===== */
-        .featured-resource {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: var(--space-16) 0;
-            margin: var(--space-12) 0;
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .featured-resource::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center;
-            background-size: cover;
-            opacity: 0.05;
-        }
-        
-        .featured-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .featured-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: var(--space-4);
-            font-size: var(--font-sm);
-            font-weight: 500;
-        }
-        
-        /* ===== RESOURCE CATEGORIES ===== */
-        .resource-categories {
-            background: var(--off-white);
-            padding: var(--space-16) 0;
-        }
-        
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-6);
+            padding: var(--space-8);
             margin-top: var(--space-8);
         }
         
-        .category-item {
-            background: var(--white);
-            padding: var(--space-8);
-            border-radius: var(--radius-lg);
-            text-align: center;
-            transition: all var(--transition);
-            border: 2px solid transparent;
-            cursor: pointer;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
         }
         
-        .category-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
         }
         
-        .category-icon {
-            font-size: var(--font-3xl);
+        .contact-icon {
             color: var(--primary);
-            margin-bottom: var(--space-4);
-            width: 72px;
-            height: 72px;
-            background: var(--light-gray);
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-4);
+            font-size: var(--font-lg);
+            flex-shrink: 0;
         }
         
-        /* ===== PAGINATION ===== */
-        .pagination {
+        /* ===== TOC ===== */
+        .toc-sidebar {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            padding: var(--space-4) 0;
+        }
+        
+        .toc-title {
+            font-size: var(--font-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-dark);
+        }
+        
+        .toc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .toc-item {
+            margin-bottom: var(--space-2);
+        }
+        
+        .toc-link {
+            display: block;
+            padding: var(--space-2) var(--space-4);
+            color: var(--text-medium);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            font-size: var(--font-sm);
+        }
+        
+        .toc-link:hover {
+            background: var(--light-gray);
+            color: var(--primary);
+        }
+        
+        .toc-link.active {
+            background: rgba(0, 82, 204, 0.08);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .toc-sublist {
+            list-style: none;
+            margin: var(--space-2) 0 0 var(--space-4);
+            padding: 0;
+        }
+        
+        /* ===== QUICK ACTIONS ===== */
+        .quick-actions {
             display: flex;
-            justify-content: center;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+            margin-top: var(--space-8);
+        }
+        
+        .action-btn {
+            display: inline-flex;
             align-items: center;
             gap: var(--space-2);
-            margin-top: var(--space-12);
-        }
-        
-        .pagination-btn {
-            padding: var(--space-2) var(--space-4);
-            border-radius: var(--radius);
+            padding: var(--space-3) var(--space-4);
             background: var(--white);
             border: 1px solid var(--border-color);
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-            font-size: var(--font-sm);
-            min-width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .pagination-btn:hover {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-        
-        .pagination-btn.active {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-        
-        /* ===== NEWSLETTER ===== */
-        .newsletter {
-            background-color: var(--off-white);
-            padding: var(--space-16) 0;
-        }
-        
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            gap: var(--space-3);
-            margin-top: var(--space-6);
-        }
-        
-        .newsletter-input {
-            flex-grow: 1;
-            padding: var(--space-3) var(--space-4);
-            border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            font-family: 'Inter', sans-serif;
-            font-size: var(--font-base);
+            color: var(--text-medium);
+            font-size: var(--font-sm);
+            transition: all var(--transition-fast);
         }
         
-        /* ===== FOOTER (Same as index.html) ===== */
+        .action-btn:hover {
+            background: var(--light-gray);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* ===== FOOTER ===== */
         .footer {
             background-color: var(--text-dark);
             color: var(--white);
@@ -862,33 +716,6 @@
             font-size: var(--font-sm);
         }
         
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
         /* ===== UTILITIES ===== */
         .text-center {
             text-align: center;
@@ -910,6 +737,14 @@
             margin-top: var(--space-8);
         }
         
+        .mb-8 {
+            margin-bottom: var(--space-8);
+        }
+        
+        .font-semibold {
+            font-weight: 600;
+        }
+        
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1024px) {
             :root {
@@ -926,13 +761,8 @@
                 padding: var(--space-12) 0;
             }
             
-            .resources-hero {
+            .privacy-hero {
                 padding: 130px 0 64px;
-            }
-            
-            .table-header,
-            .table-row {
-                grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
             }
             
             .desktop-nav {
@@ -942,6 +772,17 @@
             .mobile-toggle {
                 display: flex;
             }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+            }
+            
+            .toc-sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--space-8);
+            }
         }
         
         @media (max-width: 768px) {
@@ -950,46 +791,25 @@
                 --font-4xl: 30px;
                 --font-3xl: 24px;
                 --font-2xl: 20px;
-                --font-xl: 18px;
             }
             
-            .resources-hero {
+            .privacy-hero {
                 text-align: center;
                 padding: 110px 0 48px;
             }
             
-            .resources-hero::before {
+            .privacy-hero::before {
                 width: 100%;
                 opacity: 0.02;
             }
             
-            .resources-header {
-                flex-direction: column;
-                gap: var(--space-6);
-                text-align: center;
-            }
-            
-            .resources-stats {
-                width: 100%;
-                justify-content: space-around;
-            }
-            
-            .table-header {
-                display: none;
-            }
-            
-            .table-row {
-                grid-template-columns: 1fr;
-                gap: var(--space-4);
+            .content-card {
                 padding: var(--space-6);
             }
             
-            .newsletter-form {
-                flex-direction: column;
-            }
-            
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .data-table {
+                display: block;
+                overflow-x: auto;
             }
         }
         
@@ -1004,16 +824,8 @@
                 padding: 0 var(--space-4);
             }
             
-            .resources-hero-title {
+            .privacy-hero-title {
                 font-size: var(--font-3xl);
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pagination {
-                flex-wrap: wrap;
             }
             
             .header {
@@ -1038,20 +850,56 @@
             }
         }
         
-        @media (max-width: 360px) {
-            .filter-tabs {
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding-bottom: var(--space-2);
+        /* ===== CONTENT GRID ===== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: var(--space-12);
+        }
+        
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header,
+            .footer,
+            .toc-sidebar,
+            .quick-actions,
+            .mobile-toggle {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .privacy-hero,
+            .privacy-content {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .content-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Updated Header -->
+    <!-- Header -->
     <header class="header" id="header">
         <div class="container nav-wrapper">
-            <!-- Logo with PNG -->
+            <!-- Logo -->
             <a href="index.html" class="logo">
                 <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
                      alt="OpenVector Academy" 
@@ -1065,7 +913,7 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="live.html" class="nav-link">Live</a></li>
-                    <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -1088,7 +936,7 @@
                 <li><a href="index.html" class="mobile-nav-link">Home</a></li>
                 <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
                 <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
-                <li><a href="resources.html" class="mobile-nav-link active">Resources</a></li>
+                <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
                 <li><a href="about.html" class="mobile-nav-link">About</a></li>
                 <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
                 <li>
@@ -1100,334 +948,501 @@
         </div>
     </header>
 
-    <!-- Resources Hero Section -->
-    <section class="resources-hero" id="resources-hero">
+    <!-- Privacy Hero Section -->
+    <section class="privacy-hero" id="privacy-hero">
         <div class="container">
-            <div class="resources-hero-content">
-                <h1 class="resources-hero-title">Learning Resources Library</h1>
-                <p class="resources-hero-description">
-                    Access our comprehensive collection of study materials, guides, and tools. Professionally curated resources to support your learning journey.
+            <div class="privacy-hero-content">
+                <h1 class="privacy-hero-title">Privacy Policy</h1>
+                <p class="privacy-hero-description">
+                    At OpenVector Academy, we take your privacy seriously. This Privacy Policy explains how we collect, use, 
+                    disclose, and safeguard your information when you visit our website and use our services.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Filter -->
-    <section class="resources-filter" id="resources-filter">
-        <div class="container">
-            <div class="filter-tabs" id="filter-tabs">
-                <button class="filter-tab active" data-filter="all">All Resources</button>
-                <button class="filter-tab" data-filter="pdf">PDF Guides</button>
-                <button class="filter-tab" data-filter="ebook">eBooks</button>
-                <button class="filter-tab" data-filter="video">Video Tutorials</button>
-                <button class="filter-tab" data-filter="code">Code Libraries</button>
-                <button class="filter-tab" data-filter="templates">Templates</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Listing -->
-    <section class="section section-sm" id="resources-listing">
-        <div class="container">
-            <!-- Resources Header -->
-            <div class="resources-header fade-in">
-                <div>
-                    <h2 style="margin-bottom: var(--space-2);">Learning Resources</h2>
-                    <p style="font-size: var(--font-sm);">Browse and download our collection of educational materials</p>
+                <div class="last-updated">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Last Updated: January 20, 2024</span>
                 </div>
-                <div class="resources-stats">
-                    <div class="stat-item">
-                        <div class="stat-value">128</div>
-                        <div class="stat-label">Resources</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">24.5K</div>
-                        <div class="stat-label">Downloads</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">8</div>
-                        <div class="stat-label">Categories</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professional Resources Table -->
-            <div class="resources-table" id="resources-table">
-                <div class="table-header">
-                    <div>Resource</div>
-                    <div>Type</div>
-                    <div>Size</div>
-                    <div>Downloads</div>
-                    <div></div>
-                </div>
-
-                <!-- Table Row 1 -->
-                <div class="table-row fade-in" data-category="pdf">
-                    <div>
-                        <div class="resource-title">Machine Learning Algorithms Complete Guide</div>
-                        <div class="resource-description">Comprehensive guide covering all major ML algorithms with mathematical foundations and implementation examples</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">Machine Learning</span>
-                            <span class="resource-tag">Python</span>
-                            <span class="resource-tag">Algorithms</span>
-                        </div>
-                    </div>
-                    <div class="resource-type pdf">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>PDF Guide</span>
-                    </div>
-                    <div class="resource-size">85 pages</div>
-                    <div class="resource-downloads">2,421</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('ML Algorithms Guide.pdf')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Table Row 2 -->
-                <div class="table-row fade-in" data-category="ebook">
-                    <div>
-                        <div class="resource-title">Data Science Handbook 2024 Edition</div>
-                        <div class="resource-description">Complete guide to data science workflows, statistical analysis, and machine learning with Python libraries</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">Data Science</span>
-                            <span class="resource-tag">Python</span>
-                            <span class="resource-tag">Analytics</span>
-                        </div>
-                    </div>
-                    <div class="resource-type ebook">
-                        <i class="fas fa-book-open"></i>
-                        <span>eBook</span>
-                    </div>
-                    <div class="resource-size">320 pages</div>
-                    <div class="resource-downloads">1,842</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Data Science Handbook.epub')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Table Row 3 -->
-                <div class="table-row fade-in" data-category="video">
-                    <div>
-                        <div class="resource-title">AWS Certification Complete Video Course</div>
-                        <div class="resource-description">Complete video course covering AWS services, architecture patterns, and certification preparation</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">AWS</span>
-                            <span class="resource-tag">Cloud</span>
-                            <span class="resource-tag">DevOps</span>
-                        </div>
-                    </div>
-                    <div class="resource-type video">
-                        <i class="fas fa-video"></i>
-                        <span>Video Course</span>
-                    </div>
-                    <div class="resource-size">15 hours</div>
-                    <div class="resource-downloads">956</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('AWS Course.zip')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Table Row 4 -->
-                <div class="table-row fade-in" data-category="code">
-                    <div>
-                        <div class="resource-title">Complete REST API Examples Collection</div>
-                        <div class="resource-description">Flask and FastAPI examples with authentication, database integration, and testing</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">Python</span>
-                            <span class="resource-tag">API</span>
-                            <span class="resource-tag">Flask</span>
-                        </div>
-                    </div>
-                    <div class="resource-type code">
-                        <i class="fas fa-code"></i>
-                        <span>Code Library</span>
-                    </div>
-                    <div class="resource-size">25 examples</div>
-                    <div class="resource-downloads">2,718</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('REST API Examples.zip')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Table Row 5 -->
-                <div class="table-row fade-in" data-category="pdf">
-                    <div>
-                        <div class="resource-title">Git & GitHub Essential Commands Cheat Sheet</div>
-                        <div class="resource-description">Essential Git commands, workflows, and GitHub features for efficient version control</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">Git</span>
-                            <span class="resource-tag">GitHub</span>
-                            <span class="resource-tag">Version Control</span>
-                        </div>
-                    </div>
-                    <div class="resource-type pdf">
-                        <i class="fas fa-clipboard-list"></i>
-                        <span>Cheat Sheet</span>
-                    </div>
-                    <div class="resource-size">2 pages</div>
-                    <div class="resource-downloads">4,216</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Git Cheat Sheet.pdf')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Table Row 6 -->
-                <div class="table-row fade-in" data-category="templates">
-                    <div>
-                        <div class="resource-title">Professional Tech Resume Templates 2024</div>
-                        <div class="resource-description">Professional resume templates optimized for tech roles with ATS compatibility and modern design</div>
-                        <div class="resource-tags">
-                            <span class="resource-tag">Resume</span>
-                            <span class="resource-tag">CV</span>
-                            <span class="resource-tag">Portfolio</span>
-                        </div>
-                    </div>
-                    <div class="resource-type templates">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Templates</span>
-                    </div>
-                    <div class="resource-size">8 templates</div>
-                    <div class="resource-downloads">3,521</div>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="downloadResource('Resume Templates.zip')">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="pagination-btn active">1</button>
-                <button class="pagination-btn">2</button>
-                <button class="pagination-btn">3</button>
-                <button class="pagination-btn">4</button>
-                <button class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Resource -->
-    <section class="featured-resource">
-        <div class="container">
-            <div class="featured-content">
-                <div class="featured-badge">Featured Resource</div>
-                <h2 style="font-size: var(--font-3xl); margin-bottom: var(--space-4); color: var(--white);">Machine Learning Mastery Bundle</h2>
-                <p style="font-size: var(--font-lg); margin-bottom: var(--space-6); opacity: 0.9; color: var(--white);">
-                    Everything you need to master machine learning in one comprehensive package. Includes algorithms guide, Python notebooks, datasets, and video tutorials.
-                </p>
-                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
-                    <button class="btn btn-accent" onclick="downloadResource('ML Mastery Bundle.zip')">
-                        <i class="fas fa-download"></i> Download Bundle
+                
+                <div class="quick-actions">
+                    <button class="action-btn" onclick="window.print()">
+                        <i class="fas fa-print"></i>
+                        Print Policy
                     </button>
-                    <button class="btn btn-outline" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.3);">
-                        <i class="fas fa-info-circle"></i> View Details
+                    <button class="action-btn" onclick="downloadPDF()">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </button>
+                    <button class="action-btn" onclick="jumpToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Contact DPO
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resource Categories -->
-    <section class="resource-categories">
+    <!-- Privacy Content -->
+    <section class="privacy-content">
         <div class="container">
-            <div class="section-header">
-                <h2>Resource Categories</h2>
-                <p class="section-subtitle">Browse resources by category for focused learning</p>
-            </div>
-            
-            <div class="categories-grid">
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3>PDF Guides</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Comprehensive guides and documentation</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>eBooks</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">In-depth books and handbooks</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Tutorials</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Step-by-step video instructions</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Code Libraries</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Reusable code and examples</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3>Cheat Sheets</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Quick reference materials</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Projects</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Complete project examples</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Datasets</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Practice datasets for analysis</p>
-                </div>
-                
-                <div class="category-item fade-in">
-                    <div class="category-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Templates</h3>
-                    <p style="color: var(--text-light); margin-top: var(--space-2); font-size: var(--font-sm);">Ready-to-use templates</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="content-grid">
+                <!-- Table of Contents -->
+                <aside class="toc-sidebar" id="toc-sidebar">
+                    <h3 class="toc-title">Contents</h3>
+                    <ul class="toc-list">
+                        <li class="toc-item">
+                            <a href="#overview" class="toc-link active">1. Overview</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#data-collection" class="toc-link">2. Data Collection</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#data-use" class="toc-link">3. Data Use</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#data-sharing" class="toc-link">4. Data Sharing</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#data-security" class="toc-link">5. Data Security</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#your-rights" class="toc-link">6. Your Rights</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#cookies" class="toc-link">7. Cookies</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#children" class="toc-link">8. Children's Privacy</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#changes" class="toc-link">9. Policy Changes</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#contact" class="toc-link">10. Contact Us</a>
+                        </li>
+                    </ul>
+                </aside>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="section-title">Stay Updated with New Resources</h2>
-                <p class="section-subtitle">Subscribe to receive notifications about new learning materials and updates</p>
-                
-                <form class="newsletter-form" id="resources-newsletter">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-                <p style="font-size: var(--font-sm); color: var(--text-light); margin-top: var(--space-3);">
-                    We'll only send resource-related updates. You can unsubscribe at any time.
-                </p>
+                <!-- Main Content -->
+                <main class="privacy-main-content">
+                    <div class="content-card">
+                        <!-- Overview Section -->
+                        <section id="overview" class="content-section">
+                            <h2>1. Overview</h2>
+                            <p>
+                                This Privacy Policy applies to all information collected through our website 
+                                (openvectoracademy.com) and any related services, sales, marketing, or events 
+                                (we refer to them collectively in this Privacy Policy as the "Services").
+                            </p>
+                            <p>
+                                Please read this Privacy Policy carefully as it will help you make informed 
+                                decisions about sharing your personal information with us.
+                            </p>
+                            
+                            <div class="highlight-box">
+                                <h4><i class="fas fa-exclamation-circle"></i> Important Notice</h4>
+                                <p>
+                                    By using our Services, you agree to the collection and use of information in 
+                                    accordance with this policy. If you disagree with any part of this policy, 
+                                    please do not use our Services.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Data Collection Section -->
+                        <section id="data-collection" class="content-section">
+                            <h2>2. Information We Collect</h2>
+                            <p>
+                                We collect information that you provide directly to us, that we collect 
+                                automatically, and that we obtain from third-party sources.
+                            </p>
+                            
+                            <h3>2.1 Personal Information You Provide</h3>
+                            <p>We collect personal information that you voluntarily provide when you:</p>
+                            <ul>
+                                <li>Register for an account or enroll in courses</li>
+                                <li>Subscribe to our newsletter or updates</li>
+                                <li>Complete contact forms or surveys</li>
+                                <li>Make purchases or payments</li>
+                                <li>Participate in forums or discussions</li>
+                                <li>Contact our support team</li>
+                            </ul>
+                            
+                            <h3>2.2 Information Collected Automatically</h3>
+                            <p>When you use our Services, we automatically collect:</p>
+                            <ul>
+                                <li><strong>Log Data:</strong> IP address, browser type, pages visited, time spent</li>
+                                <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+                                <li><strong>Usage Data:</strong> Course progress, quiz scores, interaction data</li>
+                                <li><strong>Location Data:</strong> General location based on IP address</li>
+                            </ul>
+                            
+                            <h3>2.3 Information from Third Parties</h3>
+                            <p>We may receive information about you from:</p>
+                            <ul>
+                                <li>Payment processors (Stripe, PayPal)</li>
+                                <li>Social media platforms (when you connect your account)</li>
+                                <li>Analytics providers (Google Analytics)</li>
+                                <li>Marketing partners and affiliates</li>
+                            </ul>
+                        </section>
+
+                        <!-- Data Use Section -->
+                        <section id="data-use" class="content-section">
+                            <h2>3. How We Use Your Information</h2>
+                            <p>We use the information we collect for various business purposes:</p>
+                            
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Purpose</th>
+                                        <th>Description</th>
+                                        <th>Legal Basis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Service Delivery</strong></td>
+                                        <td>Provide and maintain our educational services</td>
+                                        <td>Contractual necessity</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Account Management</strong></td>
+                                        <td>Create and manage user accounts, process payments</td>
+                                        <td>Contractual necessity</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Communication</strong></td>
+                                        <td>Send important updates, newsletters, and support responses</td>
+                                        <td>Legitimate interest</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Improvement</strong></td>
+                                        <td>Analyze usage to improve our Services and develop new features</td>
+                                        <td>Legitimate interest</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Security</strong></td>
+                                        <td>Protect against fraud, abuse, and security threats</td>
+                                        <td>Legal obligation</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Marketing</strong></td>
+                                        <td>Send promotional communications (with consent)</td>
+                                        <td>Consent</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- Data Sharing Section -->
+                        <section id="data-sharing" class="content-section">
+                            <h2>4. Information Sharing and Disclosure</h2>
+                            <p>
+                                We do not sell your personal information. We may share your information 
+                                in the following circumstances:
+                            </p>
+                            
+                            <h3>4.1 With Your Consent</h3>
+                            <p>We may share your information with third parties when you give us explicit consent to do so.</p>
+                            
+                            <h3>4.2 Service Providers</h3>
+                            <p>We share information with trusted third-party service providers who assist us in:</p>
+                            <ul>
+                                <li>Payment processing (Stripe, PayPal)</li>
+                                <li>Email marketing (Mailchimp)</li>
+                                <li>Analytics (Google Analytics)</li>
+                                <li>Customer support (Zendesk)</li>
+                                <li>Hosting services (AWS)</li>
+                            </ul>
+                            
+                            <h3>4.3 Legal Requirements</h3>
+                            <p>We may disclose your information if required by law or in response to:</p>
+                            <ul>
+                                <li>Court orders or legal process</li>
+                                <li>Government requests</li>
+                                <li>To protect our rights, property, or safety</li>
+                                <li>To prevent fraud or security issues</li>
+                            </ul>
+                            
+                            <h3>4.4 Business Transfers</h3>
+                            <p>
+                                In the event of a merger, acquisition, or sale of assets, your information 
+                                may be transferred as part of that transaction.
+                            </p>
+                        </section>
+
+                        <!-- Data Security Section -->
+                        <section id="data-security" class="content-section">
+                            <h2>5. Data Security</h2>
+                            <p>
+                                We implement appropriate technical and organizational security measures 
+                                to protect your personal information against unauthorized access, 
+                                alteration, disclosure, or destruction.
+                            </p>
+                            
+                            <div class="highlight-box">
+                                <h4><i class="fas fa-shield-alt"></i> Security Measures</h4>
+                                <ul>
+                                    <li><strong>Encryption:</strong> Data in transit (SSL/TLS) and at rest</li>
+                                    <li><strong>Access Controls:</strong> Strict access permissions and authentication</li>
+                                    <li><strong>Regular Audits:</strong> Security assessments and penetration testing</li>
+                                    <li><strong>Employee Training:</strong> Privacy and security awareness training</li>
+                                    <li><strong>Incident Response:</strong> Procedures for data breach response</li>
+                                </ul>
+                            </div>
+                            
+                            <p>
+                                Despite our security measures, no method of transmission over the Internet 
+                                or electronic storage is 100% secure. We cannot guarantee absolute security.
+                            </p>
+                            
+                            <h3>Data Retention</h3>
+                            <p>
+                                We retain personal information only for as long as necessary to fulfill the 
+                                purposes outlined in this policy, unless a longer retention period is required 
+                                by law. Typical retention periods include:
+                            </p>
+                            <ul>
+                                <li>Account data: While account is active + 2 years after closure</li>
+                                <li>Course progress: 5 years from last activity</li>
+                                <li>Payment records: 7 years for tax purposes</li>
+                                <li>Marketing data: Until consent is withdrawn</li>
+                            </ul>
+                        </section>
+
+                        <!-- Your Rights Section -->
+                        <section id="your-rights" class="content-section">
+                            <h2>6. Your Data Protection Rights</h2>
+                            <p>
+                                Depending on your location, you may have certain rights regarding your 
+                                personal information:
+                            </p>
+                            
+                            <div class="highlight-box">
+                                <h4><i class="fas fa-user-check"></i> Your Rights</h4>
+                                <ul>
+                                    <li><strong>Right to Access:</strong> Request copies of your personal data</li>
+                                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+                                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
+                                    <li><strong>Right to Restrict Processing:</strong> Request restriction of processing</li>
+                                    <li><strong>Right to Data Portability:</strong> Request transfer of your data</li>
+                                    <li><strong>Right to Object:</strong> Object to processing of your data</li>
+                                    <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
+                                </ul>
+                            </div>
+                            
+                            <p>
+                                To exercise any of these rights, please contact us using the information 
+                                in the "Contact Us" section. We will respond to your request within 
+                                30 days.
+                            </p>
+                            
+                            <h3>6.1 California Privacy Rights</h3>
+                            <p>
+                                California residents have additional rights under the California Consumer 
+                                Privacy Act (CCPA). To learn more about these rights, please see our 
+                                <a href="ccpa.html">California Privacy Notice</a>.
+                            </p>
+                            
+                            <h3>6.2 GDPR Rights</h3>
+                            <p>
+                                If you are located in the European Economic Area (EEA), you have additional 
+                                rights under the General Data Protection Regulation (GDPR). You may also 
+                                lodge a complaint with your local data protection authority.
+                            </p>
+                        </section>
+
+                        <!-- Cookies Section -->
+                        <section id="cookies" class="content-section">
+                            <h2>7. Cookies and Tracking Technologies</h2>
+                            <p>
+                                We use cookies and similar tracking technologies to collect and store 
+                                information about your use of our Services.
+                            </p>
+                            
+                            <h3>7.1 Types of Cookies We Use</h3>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Cookie Type</th>
+                                        <th>Purpose</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Essential Cookies</strong></td>
+                                        <td>Required for basic site functionality</td>
+                                        <td>Session</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Performance Cookies</strong></td>
+                                        <td>Analyze site usage and improve performance</td>
+                                        <td>1-2 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Functionality Cookies</strong></td>
+                                        <td>Remember preferences and settings</td>
+                                        <td>1 year</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Marketing Cookies</strong></td>
+                                        <td>Deliver targeted advertising</td>
+                                        <td>1 year</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h3>7.2 Managing Cookies</h3>
+                            <p>
+                                Most web browsers allow you to control cookies through their settings. 
+                                You can usually find these settings in the "Options" or "Preferences" 
+                                menu of your browser.
+                            </p>
+                            <p>
+                                To learn more about cookies and how to manage them, visit 
+                                <a href="https://www.allaboutcookies.org" target="_blank">AllAboutCookies.org</a>.
+                            </p>
+                            
+                            <h3>7.3 Do Not Track Signals</h3>
+                            <p>
+                                Our Services do not respond to Do Not Track signals. However, you can 
+                                control tracking through your browser settings and opt-out of certain 
+                                analytics and advertising cookies.
+                            </p>
+                        </section>
+
+                        <!-- Children's Privacy Section -->
+                        <section id="children" class="content-section">
+                            <h2>8. Children's Privacy</h2>
+                            <p>
+                                Our Services are not intended for children under the age of 16. We do not 
+                                knowingly collect personal information from children under 16.
+                            </p>
+                            
+                            <div class="highlight-box">
+                                <h4><i class="fas fa-child"></i> Important Information for Parents</h4>
+                                <p>
+                                    If you are a parent or guardian and believe your child has provided 
+                                    us with personal information, please contact us immediately. We will 
+                                    take steps to delete such information from our records.
+                                </p>
+                            </div>
+                            
+                            <p>
+                                For users between 16 and 18 years old, we recommend obtaining parental 
+                                consent before using our Services.
+                            </p>
+                        </section>
+
+                        <!-- Policy Changes Section -->
+                        <section id="changes" class="content-section">
+                            <h2>9. Changes to This Privacy Policy</h2>
+                            <p>
+                                We may update this Privacy Policy from time to time. We will notify you 
+                                of any changes by posting the new Privacy Policy on this page and updating 
+                                the "Last Updated" date.
+                            </p>
+                            
+                            <h3>9.1 Notification of Changes</h3>
+                            <p>We will notify you of material changes through:</p>
+                            <ul>
+                                <li>Email notification to registered users</li>
+                                <li>Prominent notice on our website</li>
+                                <li>In-app notifications for mobile users</li>
+                            </ul>
+                            
+                            <h3>9.2 Reviewing Changes</h3>
+                            <p>
+                                We encourage you to review this Privacy Policy periodically for any changes. 
+                                Your continued use of our Services after any changes constitutes your 
+                                acceptance of the updated Privacy Policy.
+                            </p>
+                        </section>
+
+                        <!-- Contact Section -->
+                        <section id="contact" class="content-section">
+                            <h2>10. Contact Us</h2>
+                            <p>
+                                If you have any questions, concerns, or requests regarding this Privacy 
+                                Policy or our data practices, please contact us:
+                            </p>
+                            
+                            <div class="contact-card">
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Email</h4>
+                                            <p>privacy@openvectoracademy.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-user-shield"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Data Protection Officer</h4>
+                                            <p>Sarah Johnson, DPO</p>
+                                            <p>dpo@openvectoracademy.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Mailing Address</h4>
+                                            <p>OpenVector Academy</p>
+                                            <p>Attn: Privacy Team</p>
+                                            <p>123 Privacy Lane, Suite 100</p>
+                                            <p>San Francisco, CA 94107</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Phone</h4>
+                                            <p>+1 (555) 123-PRIVACY (774-8229)</p>
+                                            <p style="font-size: var(--font-sm); color: var(--text-light);">
+                                                Available Monday-Friday, 9am-5pm PST
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3>10.1 Complaints</h3>
+                            <p>
+                                If you are not satisfied with our response, you have the right to lodge 
+                                a complaint with your local data protection authority. For EU residents, 
+                                you can find your supervisory authority at 
+                                <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">
+                                    EDPB Members
+                                </a>.
+                            </p>
+                        </section>
+                    </div>
+                    
+                    <!-- Additional Resources -->
+                    <div class="content-card mt-8">
+                        <h3>Additional Resources</h3>
+                        <p>You may also be interested in these related documents:</p>
+                        <ul>
+                            <li><a href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                            <li><a href="ccpa.html">California Privacy Notice (CCPA)</a></li>
+                            <li><a href="gdpr.html">GDPR Compliance Statement</a></li>
+                            <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
+                        </ul>
+                    </div>
+                </main>
             </div>
         </div>
     </section>
@@ -1459,32 +1474,32 @@
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Resources</h3>
+                    <h3 class="footer-heading">Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="resources.html" class="footer-link">Learning Materials</a></li>
-                        <li><a href="resources.html" class="footer-link">Video Tutorials</a></li>
-                        <li><a href="resources.html" class="footer-link">Code Libraries</a></li>
-                        <li><a href="resources.html" class="footer-link">Templates</a></li>
+                        <li><a href="privacy.html" class="footer-link active">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" class="footer-link">GDPR Compliance</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Courses</h3>
+                    <h3 class="footer-heading">Support</h3>
                     <ul class="footer-links">
-                        <li><a href="courses.html" class="footer-link">Web Development</a></li>
-                        <li><a href="courses.html" class="footer-link">Data Science</a></li>
-                        <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
-                        <li><a href="courses.html" class="footer-link">Cybersecurity</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="help-center.html" class="footer-link">Help Center</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="report-abuse.html" class="footer-link">Report Abuse</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="footer-heading">Company</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="privacy.html" class="footer-link">Privacy</a></li>
-                        <li><a href="terms.html" class="footer-link">Terms</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="press.html" class="footer-link">Press</a></li>
                     </ul>
                 </div>
             </div>
@@ -1492,7 +1507,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 OpenVector Academy. All rights reserved.</p>
                 <p style="margin-top: var(--space-2);">
-                    Designed for the future of education
+                    Committed to protecting your privacy and data security.
                 </p>
             </div>
         </div>
@@ -1514,6 +1529,9 @@
                 } else {
                     header.classList.remove('scrolled');
                 }
+                
+                // Update TOC active state
+                updateTocActiveState();
             });
 
             /* --- 2. Mobile Menu Logic --- */
@@ -1545,176 +1563,136 @@
                 });
             });
 
-            /* --- 3. Resources Filtering --- */
-            const filterTabs = document.querySelectorAll('.filter-tab');
-            const tableRows = document.querySelectorAll('.table-row');
+            /* --- 3. Table of Contents Navigation --- */
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('.content-section');
             
-            filterTabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
-                    filterTabs.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
-                    tab.classList.add('active');
+            function updateTocActiveState() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
                     
-                    const filterValue = tab.getAttribute('data-filter');
-                    
-                    // Show/hide table rows based on filter
-                    tableRows.forEach(row => {
-                        if (filterValue === 'all' || row.getAttribute('data-category') === filterValue) {
-                            row.style.display = 'grid';
-                        } else {
-                            row.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            /* --- 4. Pagination --- */
-            const paginationBtns = document.querySelectorAll('.pagination-btn');
-            
-            paginationBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    paginationBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    // In a real app, this would load the corresponding page
-                    if (btn.textContent.includes('Next')) {
-                        showNotification('Loading more resources...');
-                    } else if (!isNaN(parseInt(btn.textContent))) {
-                        showNotification(`Loading page ${btn.textContent}...`);
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.id;
                     }
                 });
-            });
-
-            /* --- 5. Newsletter Form --- */
-            document.getElementById('resources-newsletter').addEventListener('submit', function(e) {
-                e.preventDefault();
                 
-                const email = this.querySelector('input[type="email"]').value;
-                
-                // Show success message
-                const button = this.querySelector('button');
-                const originalText = button.textContent;
-                
-                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-                button.style.backgroundColor = 'var(--success)';
-                
-                // Reset form
-                this.reset();
-                
-                // Show notification
-                showNotification('Thank you! You will now receive resource updates.');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.style.backgroundColor = '';
-                }, 3000);
-            });
-
-            /* --- 6. Fade-in animation on scroll --- */
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationDelay = (Math.random() * 0.3) + 's';
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        fadeObserver.unobserve(entry.target);
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
                     }
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-            
-            fadeElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                fadeObserver.observe(element);
-            });
-
-            /* --- 7. Initialize header state --- */
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
             }
-
-            /* --- 8. Category item click --- */
-            document.querySelectorAll('.category-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const category = this.querySelector('h3').textContent.toLowerCase().split(' ')[0];
-                    const tab = document.querySelector(`.filter-tab[data-filter="${category}"]`);
-                    if (tab) {
-                        tab.click();
+            
+            // Smooth scroll for TOC links
+            tocLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                        
                         window.scrollTo({
-                            top: document.getElementById('resources-filter').offsetTop - 70,
+                            top: targetPosition,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
-        });
 
-        /* --- Utility Functions --- */
-        function downloadResource(filename) {
-            if (confirm(`Download "${filename}"?`)) {
-                showNotification(`Downloading "${filename}"...`);
+            /* --- 4. Print Functionality --- */
+            function printPolicy() {
+                window.print();
+            }
+
+            /* --- 5. PDF Download Functionality --- */
+            function downloadPDF() {
+                // In a real implementation, this would trigger a PDF download
+                // For demo purposes, we'll show a notification
+                showNotification('PDF download starting... This feature requires server-side implementation.');
                 
                 // Simulate download
                 setTimeout(() => {
-                    showNotification(`"${filename}" downloaded successfully!`);
-                }, 1000);
+                    showNotification('Privacy Policy PDF downloaded successfully!');
+                }, 1500);
             }
-        }
-        
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: var(--primary);
-                color: white;
-                padding: 15px 25px;
-                border-radius: var(--radius);
-                z-index: 1000;
-                font-weight: 500;
-                box-shadow: var(--shadow-lg);
-                animation: slideIn 0.3s ease;
-                max-width: 300px;
-            `;
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            // Remove after 4 seconds
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 300);
-            }, 4000);
-            
-            // Add CSS animations if not already present
-            if (!document.querySelector('#notification-styles')) {
-                const style = document.createElement('style');
-                style.id = 'notification-styles';
-                style.textContent = `
-                    @keyframes slideIn {
-                        from { transform: translateX(100%); opacity: 0; }
-                        to { transform: translateX(0); opacity: 1; }
-                    }
-                    @keyframes slideOut {
-                        from { transform: translateX(0); opacity: 1; }
-                        to { transform: translateX(100%); opacity: 0; }
-                    }
+
+            /* --- 6. Jump to Section --- */
+            function jumpToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = section.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            /* --- 7. Show Notification --- */
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: var(--primary);
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: var(--radius);
+                    z-index: 1000;
+                    font-weight: 500;
+                    box-shadow: var(--shadow-lg);
+                    animation: slideIn 0.3s ease;
+                    max-width: 300px;
                 `;
-                document.head.appendChild(style);
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                // Remove after 4 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 4000);
+                
+                // Add CSS animations if not already present
+                if (!document.querySelector('#notification-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'notification-styles';
+                    style.textContent = `
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                        @keyframes slideOut {
+                            from { transform: translateX(0); opacity: 1; }
+                            to { transform: translateX(100%); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
             }
-        }
+
+            /* --- 8. Initialize --- */
+            updateTocActiveState(); // Set initial TOC state
+            
+            // Make functions available globally
+            window.downloadPDF = downloadPDF;
+            window.printPolicy = printPolicy;
+            window.jumpToSection = jumpToSection;
+        });
     </script>
 </body>
 </html>
