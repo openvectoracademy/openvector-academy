@@ -124,7 +124,7 @@
         }
         
         h1 {
-            font-size: var(--font-4xl);
+            font-size: var(--font-5xl);
             font-weight: 700;
         }
         
@@ -242,7 +242,7 @@
             font-size: var(--font-lg);
         }
         
-        /* ===== UPDATED HEADER (From Late Code) ===== */
+        /* ===== UPDATED HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -287,7 +287,7 @@
             width: auto;
         }
 
-        /* Desktop Navigation (From Previous Code) */
+        /* Desktop Navigation */
         .desktop-nav {
             display: flex;
             align-items: center;
@@ -341,7 +341,7 @@
             font-weight: 500;
         }
 
-        /* Mobile Toggle (From Late Code) */
+        /* Mobile Toggle */
         .mobile-toggle {
             display: none;
             flex-direction: column;
@@ -360,7 +360,7 @@
             transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Mobile Menu (From Previous Code) */
+        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 70px;
@@ -403,16 +403,22 @@
             color: var(--primary);
         }
         
-        /* ===== HERO SECTION - FIXED ===== */
+        /* ===== HERO SECTION - UPDATED FOR FIRST SCREEN ===== */
         .hero {
-            padding: 150px 0 80px;
+            /* Removed fixed padding to allow flexible centering */
+            padding: 0;
             background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
             margin-top: 70px;
             position: relative;
             overflow: hidden;
+            
+            /* Flexbox centering to keep content visible in viewport */
             display: flex;
             align-items: center;
-            min-height: calc(100vh - 70px);
+            justify-content: center;
+            
+            /* Fixed height to ensure it stays in the first screen (viewport height - header height) */
+            height: calc(100vh - 70px);
         }
         
         .hero-content {
@@ -421,11 +427,21 @@
             z-index: 1;
             text-align: center;
             width: 100%;
+            
+            /* Flex column for vertical spacing control */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            /* Using gap instead of margins for better responsiveness */
+            gap: var(--space-4);
         }
         
         .hero-title {
             font-size: var(--font-5xl);
-            margin-bottom: var(--space-6);
+            /* Removed margin-bottom, using flex gap instead */
+            margin-bottom: 0;
             line-height: 1.1;
             max-width: 800px;
             margin-left: auto;
@@ -434,7 +450,8 @@
         
         .hero-description {
             font-size: var(--font-lg);
-            margin-bottom: var(--space-8);
+            /* Removed margin-bottom, using flex gap instead */
+            margin-bottom: 0;
             max-width: 600px;
             color: var(--text-medium);
             margin-left: auto;
@@ -445,7 +462,8 @@
             display: flex;
             gap: var(--space-4);
             flex-wrap: wrap;
-            margin-bottom: var(--space-12);
+            /* Removed margin-bottom, using flex gap instead */
+            margin-bottom: 0;
             justify-content: center;
         }
         
@@ -459,6 +477,8 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            /* Ensure stats don't overflow on small viewports */
+            width: 100%;
         }
         
         .stat {
@@ -983,16 +1003,8 @@
                 padding: var(--space-12) 0;
             }
             
-            .hero {
-                padding: 130px 0 64px;
-            }
-            
-            .hero-title {
-                font-size: var(--font-4xl);
-            }
-            
-            .hero-description {
-                font-size: var(--font-base);
+            .hero-content {
+                gap: var(--space-3); /* Slightly tighter on tablet */
             }
             
             .courses-grid,
@@ -1018,11 +1030,6 @@
                 --font-3xl: 24px;
                 --font-2xl: 20px;
                 --font-xl: 18px;
-            }
-            
-            .hero {
-                text-align: center;
-                padding: 110px 0 48px;
             }
             
             .courses-grid,
@@ -1079,6 +1086,11 @@
                 font-size: var(--font-base);
             }
             
+            .hero-content {
+                /* Reduce gap on mobile to ensure fit */
+                gap: var(--space-3);
+            }
+            
             .hero-buttons {
                 flex-direction: column;
                 width: 100%;
@@ -1096,6 +1108,8 @@
             
             .hero-stats {
                 gap: var(--space-6);
+                /* Ensure stats wrap gracefully on tiny screens */
+                justify-content: space-around;
             }
             
             .stat-number {
@@ -1121,6 +1135,12 @@
             
             .logo-img {
                 height: 28px;
+            }
+            
+            /* Update Hero Height for Mobile Header Change */
+            .hero {
+                height: calc(100vh - 64px);
+                margin-top: 64px;
             }
             
             .section-header h2 {
@@ -1228,7 +1248,7 @@
                 <span>OpenVector Academy</span>
             </a>
 
-            <!-- Desktop Navigation (From Previous Code) -->
+            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -1243,7 +1263,7 @@
                 </div>
             </nav>
 
-            <!-- Mobile Toggle (From Late Code) -->
+            <!-- Mobile Toggle -->
             <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -1251,7 +1271,7 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (From Previous Code) -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
             <ul class="mobile-nav-list">
                 <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
