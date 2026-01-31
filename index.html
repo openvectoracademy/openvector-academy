@@ -403,45 +403,42 @@
             color: var(--primary);
         }
         
-        /* ===== HERO SECTION ===== */
+        /* ===== HERO SECTION - FIXED ===== */
         .hero {
             padding: 150px 0 80px;
             background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
             margin-top: 70px;
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
-            background-size: cover;
-            opacity: 0.03;
-            z-index: 0;
+            display: flex;
+            align-items: center;
+            min-height: calc(100vh - 70px);
         }
         
         .hero-content {
-            max-width: 600px;
+            max-width: 100%;
             position: relative;
             z-index: 1;
+            text-align: center;
+            width: 100%;
         }
         
         .hero-title {
             font-size: var(--font-5xl);
             margin-bottom: var(--space-6);
             line-height: 1.1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-description {
             font-size: var(--font-lg);
             margin-bottom: var(--space-8);
-            max-width: 540px;
+            max-width: 600px;
             color: var(--text-medium);
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-buttons {
@@ -449,6 +446,7 @@
             gap: var(--space-4);
             flex-wrap: wrap;
             margin-bottom: var(--space-12);
+            justify-content: center;
         }
         
         .hero-stats {
@@ -457,6 +455,10 @@
             flex-wrap: wrap;
             padding-top: var(--space-6);
             border-top: 1px solid var(--border-color);
+            justify-content: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .stat {
@@ -834,18 +836,6 @@
             overflow: hidden;
         }
         
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center;
-            background-size: cover;
-            opacity: 0.05;
-        }
-        
         .cta-title {
             color: var(--white);
             margin-bottom: var(--space-4);
@@ -1033,24 +1023,6 @@
             .hero {
                 text-align: center;
                 padding: 110px 0 48px;
-            }
-            
-            .hero::before {
-                width: 100%;
-                opacity: 0.02;
-            }
-            
-            .hero-content {
-                max-width: 100%;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .hero-stats {
-                justify-content: center;
-                gap: var(--space-8);
             }
             
             .courses-grid,
@@ -1297,7 +1269,6 @@
         </div>
     </header>
 
-    <!-- Rest of the HTML remains exactly the same... -->
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
