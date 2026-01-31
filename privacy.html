@@ -6,8 +6,7 @@
     <title>Privacy Policy | OpenVector Academy</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="OpenVector Academy's Privacy Policy. Learn how we protect and handle your personal information.">
-    <meta name="keywords" content="privacy policy, data protection, GDPR, privacy statement, data security">
+    <meta name="description" content="Privacy Policy for OpenVector Academy. Learn how we collect, use, and protect your data.">
     <meta name="author" content="OpenVector Academy">
     
     <!-- Fonts -->
@@ -19,7 +18,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
     
-    <!-- Professional CSS -->
+    <!-- Same Professional CSS as Index -->
     <style>
         /* ===== CSS RESET ===== */
         * {
@@ -60,6 +59,7 @@
             --space-12: 48px;
             --space-16: 64px;
             --space-20: 80px;
+            --space-24: 96px;
             
             /* Typography */
             --font-xs: 12px;
@@ -100,13 +100,12 @@
         html {
             font-size: 16px;
             scroll-behavior: smooth;
-            scroll-padding-top: 70px;
         }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: var(--font-base);
-            line-height: var(--leading-relaxed);
+            line-height: var(--leading-relaxed); /* Better reading for text pages */
             color: var(--text-medium);
             background-color: var(--white);
             -webkit-font-smoothing: antialiased;
@@ -120,37 +119,29 @@
             color: var(--text-dark);
             line-height: var(--leading-tight);
             letter-spacing: -0.01em;
-        }
-        
-        h1 {
-            font-size: var(--font-4xl);
-            font-weight: 700;
-        }
-        
-        h2 {
-            font-size: var(--font-3xl);
-            margin-top: var(--space-12);
-            margin-bottom: var(--space-6);
-        }
-        
-        h3 {
-            font-size: var(--font-xl);
-            margin-top: var(--space-8);
             margin-bottom: var(--space-4);
         }
         
-        h4 {
-            font-size: var(--font-lg);
-            margin-top: var(--space-6);
-            margin-bottom: var(--space-3);
-        }
+        h1 { font-size: var(--font-4xl); font-weight: 700; margin-bottom: var(--space-2); }
+        h2 { font-size: var(--font-2xl); margin-top: var(--space-12); border-bottom: 1px solid var(--border-color); padding-bottom: var(--space-2); }
+        h3 { font-size: var(--font-xl); margin-top: var(--space-6); color: var(--text-dark); }
+        h4 { font-size: var(--font-lg); font-weight: 600; margin-top: var(--space-4); }
         
         p {
             color: var(--text-medium);
-            line-height: var(--leading-relaxed);
             margin-bottom: var(--space-4);
         }
         
+        ul, ol {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            color: var(--text-medium);
+        }
+
+        li {
+            margin-bottom: var(--space-2);
+        }
+
         a {
             text-decoration: none;
             color: var(--primary);
@@ -160,12 +151,6 @@
         a:hover {
             color: var(--primary-dark);
             text-decoration: underline;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
         }
         
         /* ===== LAYOUT ===== */
@@ -178,18 +163,6 @@
         
         .container-narrow {
             max-width: 800px;
-        }
-        
-        .section {
-            padding: var(--space-16) 0;
-        }
-        
-        .section-sm {
-            padding: var(--space-12) 0;
-        }
-        
-        .section-lg {
-            padding: var(--space-20) 0;
         }
         
         /* ===== BUTTONS ===== */
@@ -211,33 +184,30 @@
             user-select: none;
         }
         
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+        .btn:hover { transform: translateY(-2px); text-decoration: none; }
         
         .btn-primary {
             background-color: var(--primary);
             color: var(--white);
         }
-        
         .btn-primary:hover {
             background-color: var(--primary-dark);
             box-shadow: var(--shadow);
         }
         
-        .btn-secondary {
-            background-color: var(--white);
+        .btn-outline {
+            background-color: transparent;
             color: var(--primary);
-            border-color: var(--border-color);
-            box-shadow: var(--shadow-sm);
+            border-color: var(--primary);
+        }
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
         
-        .btn-secondary:hover {
-            background-color: var(--light-gray);
-            border-color: var(--text-light);
-        }
-        
-        /* ===== HEADER ===== */
+        .btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--font-sm); }
+
+        /* ===== HEADER (Same as Index) ===== */
         .header {
             position: fixed;
             top: 0;
@@ -251,10 +221,7 @@
             transition: all 0.3s ease;
         }
         
-        .header.scrolled {
-            box-shadow: var(--shadow-md);
-            height: 60px;
-        }
+        .header.scrolled { box-shadow: var(--shadow-md); height: 60px; }
         
         .nav-wrapper {
             display: flex;
@@ -272,85 +239,18 @@
             font-weight: 600;
             font-size: 18px;
             color: var(--text-dark);
-            padding: var(--space-1) 0;
             z-index: 1001;
         }
-        
-        .logo-img {
-            height: 32px;
-            width: auto;
-        }
+        .logo-img { height: 32px; width: auto; }
 
-        .desktop-nav {
-            display: flex;
-            align-items: center;
-            gap: var(--space-4);
-        }
-        
-        .nav-list {
-            display: flex;
-            gap: var(--space-3);
-            list-style: none;
-            margin-right: var(--space-4);
-        }
-        
-        .nav-link {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-medium);
-            padding: 6px 10px;
-            border-radius: var(--radius-sm);
-            transition: all var(--transition-fast);
-            letter-spacing: -0.01em;
-            position: relative;
-        }
-        
-        .nav-link:hover {
-            color: var(--primary);
-            background-color: var(--light-gray);
-        }
-        
-        .nav-link.active {
-            color: var(--primary);
-            font-weight: 600;
-            background-color: rgba(0, 82, 204, 0.05);
-        }
-        
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 50%;
-        }
-        
-        .nav-cta .btn {
-            font-size: 13px;
-            padding: 6px 12px;
-            font-weight: 500;
-        }
+        .desktop-nav { display: flex; align-items: center; gap: var(--space-4); }
+        .nav-list { display: flex; gap: var(--space-3); list-style: none; margin-right: var(--space-4); }
+        .nav-link { font-size: 13px; font-weight: 500; color: var(--text-medium); padding: 6px 10px; border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-link:hover { color: var(--primary); background-color: var(--light-gray); }
+        .nav-cta .btn { font-size: 13px; padding: 6px 12px; font-weight: 500; }
 
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            z-index: 1001;
-            padding: 8px;
-        }
-        
-        .bar {
-            width: 24px;
-            height: 2px;
-            background: var(--text-dark);
-            transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; z-index: 1001; padding: 8px; }
+        .bar { width: 24px; height: 2px; background: var(--text-dark); transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
         .mobile-menu {
             position: fixed;
@@ -366,275 +266,53 @@
             overflow-y: auto;
             border-top: 1px solid var(--border-color);
         }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-nav-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+        .mobile-nav-link { display: block; padding: 10px 12px; font-size: 14px; font-weight: 500; color: var(--text-dark); border-radius: var(--radius); }
+        .mobile-nav-link:hover { background-color: var(--light-gray); color: var(--primary); }
         
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        
-        .mobile-nav-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
-        }
-        
-        .mobile-nav-link {
-            display: block;
-            padding: 10px 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-dark);
-            border-radius: var(--radius);
-            transition: all var(--transition-fast);
-        }
-        
-        .mobile-nav-link:hover,
-        .mobile-nav-link.active {
-            background-color: var(--light-gray);
-            color: var(--primary);
-        }
-        
-        /* ===== PRIVACY HERO ===== */
-        .privacy-hero {
-            padding: 150px 0 80px;
-            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+        /* ===== PAGE HEADER ===== */
+        .page-header {
             margin-top: 70px;
-            position: relative;
-            overflow: hidden;
+            background-color: var(--off-white);
+            padding: var(--space-12) 0;
+            border-bottom: 1px solid var(--border-color);
         }
         
-        .privacy-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
-            background-size: cover;
-            opacity: 0.03;
-            z-index: 0;
+        .page-title-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: var(--space-4);
         }
-        
-        .privacy-hero-content {
-            max-width: 700px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .privacy-hero-title {
-            font-size: var(--font-5xl);
-            margin-bottom: var(--space-6);
-            line-height: 1.1;
-        }
-        
-        .privacy-hero-description {
-            font-size: var(--font-lg);
-            margin-bottom: var(--space-6);
-            color: var(--text-medium);
-        }
-        
-        .last-updated {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-2) var(--space-4);
-            background: var(--light-gray);
-            border-radius: var(--radius);
+
+        .page-meta {
             font-size: var(--font-sm);
             color: var(--text-light);
-            margin-bottom: var(--space-8);
+            margin-bottom: var(--space-1);
         }
         
-        /* ===== PRIVACY CONTENT ===== */
-        .privacy-content {
+        /* ===== CONTENT STYLES ===== */
+        .policy-content {
             padding: var(--space-16) 0;
         }
-        
-        .content-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            margin-bottom: var(--space-8);
-        }
-        
-        .content-section {
-            margin-bottom: var(--space-12);
-        }
-        
-        .content-section:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* List Styles */
-        ul, ol {
-            margin-left: var(--space-6);
-            margin-bottom: var(--space-4);
-        }
-        
-        li {
-            margin-bottom: var(--space-2);
-            color: var(--text-medium);
-        }
-        
-        /* Highlight Box */
+
         .highlight-box {
-            background: var(--off-white);
+            background-color: #E6F0FF; /* Very light blue */
             border-left: 4px solid var(--primary);
-            padding: var(--space-6);
-            border-radius: var(--radius-sm);
-            margin: var(--space-8) 0;
-        }
-        
-        .highlight-box h4 {
-            margin-top: 0;
-            color: var(--primary);
-        }
-        
-        /* Table Styles */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
+            padding: var(--space-4);
+            border-radius: 0 var(--radius) var(--radius) 0;
             margin: var(--space-6) 0;
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
         }
-        
-        .data-table th {
-            background: var(--off-white);
-            padding: var(--space-4);
-            text-align: left;
-            font-weight: 600;
-            color: var(--text-dark);
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .data-table td {
-            padding: var(--space-4);
-            border-bottom: 1px solid var(--border-color);
-            vertical-align: top;
-        }
-        
-        .data-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        /* Contact Card */
-        .contact-card {
-            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            margin-top: var(--space-8);
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-3);
-        }
-        
-        .contact-icon {
-            color: var(--primary);
-            font-size: var(--font-lg);
-            flex-shrink: 0;
-        }
-        
-        /* ===== TOC ===== */
-        .toc-sidebar {
-            position: sticky;
-            top: 100px;
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
-            padding: var(--space-4) 0;
-        }
-        
-        .toc-title {
-            font-size: var(--font-lg);
-            font-weight: 600;
-            margin-bottom: var(--space-4);
-            color: var(--text-dark);
-        }
-        
-        .toc-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .toc-item {
-            margin-bottom: var(--space-2);
-        }
-        
-        .toc-link {
-            display: block;
-            padding: var(--space-2) var(--space-4);
-            color: var(--text-medium);
-            text-decoration: none;
-            border-radius: var(--radius-sm);
-            transition: all var(--transition-fast);
-            font-size: var(--font-sm);
-        }
-        
-        .toc-link:hover {
-            background: var(--light-gray);
-            color: var(--primary);
-        }
-        
-        .toc-link.active {
-            background: rgba(0, 82, 204, 0.08);
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        .toc-sublist {
-            list-style: none;
-            margin: var(--space-2) 0 0 var(--space-4);
-            padding: 0;
-        }
-        
-        /* ===== QUICK ACTIONS ===== */
-        .quick-actions {
-            display: flex;
-            gap: var(--space-4);
-            flex-wrap: wrap;
-            margin-top: var(--space-8);
-        }
-        
-        .action-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-4);
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            color: var(--text-medium);
-            font-size: var(--font-sm);
-            transition: all var(--transition-fast);
-        }
-        
-        .action-btn:hover {
-            background: var(--light-gray);
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        /* ===== FOOTER ===== */
+        .highlight-box p { margin-bottom: 0; color: var(--primary-dark); }
+
+        /* ===== FOOTER (Same as Index) ===== */
         .footer {
             background-color: var(--text-dark);
             color: var(--white);
             padding: var(--space-16) 0 var(--space-8);
+            border-top: 1px solid var(--border-color);
         }
         
         .footer-content {
@@ -667,46 +345,19 @@
             color: var(--white);
         }
         
-        .footer-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-        }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+        .footer-link { color: rgba(255, 255, 255, 0.7); font-size: var(--font-sm); transition: all var(--transition-fast); padding: 4px 0; }
+        .footer-link:hover { color: var(--white); transform: translateX(4px); text-decoration: none; }
         
-        .footer-link {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: var(--font-sm);
-            transition: all var(--transition-fast);
-            padding: 4px 0;
-        }
-        
-        .footer-link:hover {
-            color: var(--white);
-            transform: translateX(4px);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: var(--space-3);
-            margin-top: var(--space-4);
-        }
-        
+        .social-links { display: flex; gap: var(--space-3); margin-top: var(--space-4); }
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             transition: all var(--transition-fast);
         }
-        
-        .social-link:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
-        }
+        .social-link:hover { background: var(--primary); transform: translateY(-2px); }
         
         .footer-bottom {
             padding-top: var(--space-6);
@@ -715,183 +366,18 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: var(--font-sm);
         }
-        
-        /* ===== UTILITIES ===== */
-        .text-center {
-            text-align: center;
-        }
-        
-        .text-primary {
-            color: var(--primary);
-        }
-        
-        .mb-4 {
-            margin-bottom: var(--space-4);
-        }
-        
-        .mt-4 {
-            margin-top: var(--space-4);
-        }
-        
-        .mt-8 {
-            margin-top: var(--space-8);
-        }
-        
-        .mb-8 {
-            margin-bottom: var(--space-8);
-        }
-        
-        .font-semibold {
-            font-weight: 600;
-        }
-        
-        /* ===== RESPONSIVE DESIGN ===== */
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            :root {
-                --font-5xl: 42px;
-                --font-4xl: 36px;
-                --font-3xl: 28px;
-                --font-2xl: 22px;
-                --font-xl: 18px;
-                --font-lg: 16px;
-                --font-base: 15px;
-            }
-            
-            .section {
-                padding: var(--space-12) 0;
-            }
-            
-            .privacy-hero {
-                padding: 130px 0 64px;
-            }
-            
-            .desktop-nav {
-                display: none;
-            }
-            
-            .mobile-toggle {
-                display: flex;
-            }
-            
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-8);
-            }
-            
-            .toc-sidebar {
-                position: static;
-                max-height: none;
-                margin-bottom: var(--space-8);
-            }
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: flex; }
         }
-        
-        @media (max-width: 768px) {
-            :root {
-                --font-5xl: 36px;
-                --font-4xl: 30px;
-                --font-3xl: 24px;
-                --font-2xl: 20px;
-            }
-            
-            .privacy-hero {
-                text-align: center;
-                padding: 110px 0 48px;
-            }
-            
-            .privacy-hero::before {
-                width: 100%;
-                opacity: 0.02;
-            }
-            
-            .content-card {
-                padding: var(--space-6);
-            }
-            
-            .data-table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
-        
         @media (max-width: 480px) {
-            :root {
-                --font-5xl: 32px;
-                --font-4xl: 26px;
-                --font-3xl: 22px;
-            }
-            
-            .container {
-                padding: 0 var(--space-4);
-            }
-            
-            .privacy-hero-title {
-                font-size: var(--font-3xl);
-            }
-            
-            .header {
-                height: 64px;
-            }
-            
-            .header.scrolled {
-                height: 56px;
-            }
-            
-            .mobile-menu {
-                top: 64px;
-                height: calc(100vh - 64px);
-            }
-            
-            .logo {
-                font-size: 16px;
-            }
-            
-            .logo-img {
-                height: 28px;
-            }
-        }
-        
-        /* ===== CONTENT GRID ===== */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: var(--space-12);
-        }
-        
-        /* ===== PRINT STYLES ===== */
-        @media print {
-            .header,
-            .footer,
-            .toc-sidebar,
-            .quick-actions,
-            .mobile-toggle {
-                display: none !important;
-            }
-            
-            body {
-                font-size: 12pt;
-                line-height: 1.4;
-            }
-            
-            .privacy-hero,
-            .privacy-content {
-                padding: 0;
-                margin: 0;
-            }
-            
-            .container {
-                max-width: 100%;
-                padding: 0;
-            }
-            
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            
-            .content-card {
-                box-shadow: none;
-                border: 1px solid #ccc;
-            }
+            .header { height: 64px; }
+            .page-header { margin-top: 64px; padding: var(--space-8) 0; }
+            .mobile-menu { top: 64px; height: calc(100vh - 64px); }
+            .page-title-block { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+            .footer-content { grid-template-columns: 1fr; gap: var(--space-6); }
         }
     </style>
 </head>
@@ -899,21 +385,15 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container nav-wrapper">
-            <!-- Logo -->
             <a href="index.html" class="logo">
-                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
-                     alt="OpenVector Academy" 
-                     class="logo-img">
+                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" alt="OpenVector Academy" class="logo-img">
                 <span>OpenVector Academy</span>
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="courses.html" class="nav-link">Courses</a></li>
-                    <li><a href="live.html" class="nav-link">Live</a></li>
-                    <li><a href="resources.html" class="nav-link">Resources</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -922,7 +402,6 @@
                 </div>
             </nav>
 
-            <!-- Mobile Toggle -->
             <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -935,515 +414,88 @@
             <ul class="mobile-nav-list">
                 <li><a href="index.html" class="mobile-nav-link">Home</a></li>
                 <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
-                <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
-                <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
                 <li><a href="about.html" class="mobile-nav-link">About</a></li>
                 <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
                 <li>
-                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
-                        Get Started
-                    </a>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">Get Started</a>
                 </li>
             </ul>
         </div>
     </header>
 
-    <!-- Privacy Hero Section -->
-    <section class="privacy-hero" id="privacy-hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="privacy-hero-content">
-                <h1 class="privacy-hero-title">Privacy Policy</h1>
-                <p class="privacy-hero-description">
-                    At OpenVector Academy, we take your privacy seriously. This Privacy Policy explains how we collect, use, 
-                    disclose, and safeguard your information when you visit our website and use our services.
-                </p>
-                <div class="last-updated">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>Last Updated: January 20, 2024</span>
+            <div class="page-title-block">
+                <div>
+                    <div class="page-meta">Legal & Privacy</div>
+                    <h1>Privacy Policy</h1>
                 </div>
-                
-                <div class="quick-actions">
-                    <button class="action-btn" onclick="window.print()">
-                        <i class="fas fa-print"></i>
-                        Print Policy
-                    </button>
-                    <button class="action-btn" onclick="downloadPDF()">
-                        <i class="fas fa-download"></i>
-                        Download PDF
-                    </button>
-                    <button class="action-btn" onclick="jumpToSection('contact')">
-                        <i class="fas fa-envelope"></i>
-                        Contact DPO
-                    </button>
-                </div>
+                <a href="index.html" class="btn btn-outline btn-sm">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Privacy Content -->
-    <section class="privacy-content">
-        <div class="container">
-            <div class="content-grid">
-                <!-- Table of Contents -->
-                <aside class="toc-sidebar" id="toc-sidebar">
-                    <h3 class="toc-title">Contents</h3>
-                    <ul class="toc-list">
-                        <li class="toc-item">
-                            <a href="#overview" class="toc-link active">1. Overview</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#data-collection" class="toc-link">2. Data Collection</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#data-use" class="toc-link">3. Data Use</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#data-sharing" class="toc-link">4. Data Sharing</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#data-security" class="toc-link">5. Data Security</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#your-rights" class="toc-link">6. Your Rights</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#cookies" class="toc-link">7. Cookies</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#children" class="toc-link">8. Children's Privacy</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#changes" class="toc-link">9. Policy Changes</a>
-                        </li>
-                        <li class="toc-item">
-                            <a href="#contact" class="toc-link">10. Contact Us</a>
-                        </li>
-                    </ul>
-                </aside>
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container container-narrow">
+            <p class="text-light">Last updated: October 24, 2023</p>
 
-                <!-- Main Content -->
-                <main class="privacy-main-content">
-                    <div class="content-card">
-                        <!-- Overview Section -->
-                        <section id="overview" class="content-section">
-                            <h2>1. Overview</h2>
-                            <p>
-                                This Privacy Policy applies to all information collected through our website 
-                                (openvectoracademy.com) and any related services, sales, marketing, or events 
-                                (we refer to them collectively in this Privacy Policy as the "Services").
-                            </p>
-                            <p>
-                                Please read this Privacy Policy carefully as it will help you make informed 
-                                decisions about sharing your personal information with us.
-                            </p>
-                            
-                            <div class="highlight-box">
-                                <h4><i class="fas fa-exclamation-circle"></i> Important Notice</h4>
-                                <p>
-                                    By using our Services, you agree to the collection and use of information in 
-                                    accordance with this policy. If you disagree with any part of this policy, 
-                                    please do not use our Services.
-                                </p>
-                            </div>
-                        </section>
+            <p>At OpenVector Academy, accessible from https://openvectoracademy.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by OpenVector Academy and how we use it.</p>
 
-                        <!-- Data Collection Section -->
-                        <section id="data-collection" class="content-section">
-                            <h2>2. Information We Collect</h2>
-                            <p>
-                                We collect information that you provide directly to us, that we collect 
-                                automatically, and that we obtain from third-party sources.
-                            </p>
-                            
-                            <h3>2.1 Personal Information You Provide</h3>
-                            <p>We collect personal information that you voluntarily provide when you:</p>
-                            <ul>
-                                <li>Register for an account or enroll in courses</li>
-                                <li>Subscribe to our newsletter or updates</li>
-                                <li>Complete contact forms or surveys</li>
-                                <li>Make purchases or payments</li>
-                                <li>Participate in forums or discussions</li>
-                                <li>Contact our support team</li>
-                            </ul>
-                            
-                            <h3>2.2 Information Collected Automatically</h3>
-                            <p>When you use our Services, we automatically collect:</p>
-                            <ul>
-                                <li><strong>Log Data:</strong> IP address, browser type, pages visited, time spent</li>
-                                <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
-                                <li><strong>Usage Data:</strong> Course progress, quiz scores, interaction data</li>
-                                <li><strong>Location Data:</strong> General location based on IP address</li>
-                            </ul>
-                            
-                            <h3>2.3 Information from Third Parties</h3>
-                            <p>We may receive information about you from:</p>
-                            <ul>
-                                <li>Payment processors (Stripe, PayPal)</li>
-                                <li>Social media platforms (when you connect your account)</li>
-                                <li>Analytics providers (Google Analytics)</li>
-                                <li>Marketing partners and affiliates</li>
-                            </ul>
-                        </section>
-
-                        <!-- Data Use Section -->
-                        <section id="data-use" class="content-section">
-                            <h2>3. How We Use Your Information</h2>
-                            <p>We use the information we collect for various business purposes:</p>
-                            
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Purpose</th>
-                                        <th>Description</th>
-                                        <th>Legal Basis</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Service Delivery</strong></td>
-                                        <td>Provide and maintain our educational services</td>
-                                        <td>Contractual necessity</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Account Management</strong></td>
-                                        <td>Create and manage user accounts, process payments</td>
-                                        <td>Contractual necessity</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Communication</strong></td>
-                                        <td>Send important updates, newsletters, and support responses</td>
-                                        <td>Legitimate interest</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Improvement</strong></td>
-                                        <td>Analyze usage to improve our Services and develop new features</td>
-                                        <td>Legitimate interest</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Security</strong></td>
-                                        <td>Protect against fraud, abuse, and security threats</td>
-                                        <td>Legal obligation</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Marketing</strong></td>
-                                        <td>Send promotional communications (with consent)</td>
-                                        <td>Consent</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-
-                        <!-- Data Sharing Section -->
-                        <section id="data-sharing" class="content-section">
-                            <h2>4. Information Sharing and Disclosure</h2>
-                            <p>
-                                We do not sell your personal information. We may share your information 
-                                in the following circumstances:
-                            </p>
-                            
-                            <h3>4.1 With Your Consent</h3>
-                            <p>We may share your information with third parties when you give us explicit consent to do so.</p>
-                            
-                            <h3>4.2 Service Providers</h3>
-                            <p>We share information with trusted third-party service providers who assist us in:</p>
-                            <ul>
-                                <li>Payment processing (Stripe, PayPal)</li>
-                                <li>Email marketing (Mailchimp)</li>
-                                <li>Analytics (Google Analytics)</li>
-                                <li>Customer support (Zendesk)</li>
-                                <li>Hosting services (AWS)</li>
-                            </ul>
-                            
-                            <h3>4.3 Legal Requirements</h3>
-                            <p>We may disclose your information if required by law or in response to:</p>
-                            <ul>
-                                <li>Court orders or legal process</li>
-                                <li>Government requests</li>
-                                <li>To protect our rights, property, or safety</li>
-                                <li>To prevent fraud or security issues</li>
-                            </ul>
-                            
-                            <h3>4.4 Business Transfers</h3>
-                            <p>
-                                In the event of a merger, acquisition, or sale of assets, your information 
-                                may be transferred as part of that transaction.
-                            </p>
-                        </section>
-
-                        <!-- Data Security Section -->
-                        <section id="data-security" class="content-section">
-                            <h2>5. Data Security</h2>
-                            <p>
-                                We implement appropriate technical and organizational security measures 
-                                to protect your personal information against unauthorized access, 
-                                alteration, disclosure, or destruction.
-                            </p>
-                            
-                            <div class="highlight-box">
-                                <h4><i class="fas fa-shield-alt"></i> Security Measures</h4>
-                                <ul>
-                                    <li><strong>Encryption:</strong> Data in transit (SSL/TLS) and at rest</li>
-                                    <li><strong>Access Controls:</strong> Strict access permissions and authentication</li>
-                                    <li><strong>Regular Audits:</strong> Security assessments and penetration testing</li>
-                                    <li><strong>Employee Training:</strong> Privacy and security awareness training</li>
-                                    <li><strong>Incident Response:</strong> Procedures for data breach response</li>
-                                </ul>
-                            </div>
-                            
-                            <p>
-                                Despite our security measures, no method of transmission over the Internet 
-                                or electronic storage is 100% secure. We cannot guarantee absolute security.
-                            </p>
-                            
-                            <h3>Data Retention</h3>
-                            <p>
-                                We retain personal information only for as long as necessary to fulfill the 
-                                purposes outlined in this policy, unless a longer retention period is required 
-                                by law. Typical retention periods include:
-                            </p>
-                            <ul>
-                                <li>Account data: While account is active + 2 years after closure</li>
-                                <li>Course progress: 5 years from last activity</li>
-                                <li>Payment records: 7 years for tax purposes</li>
-                                <li>Marketing data: Until consent is withdrawn</li>
-                            </ul>
-                        </section>
-
-                        <!-- Your Rights Section -->
-                        <section id="your-rights" class="content-section">
-                            <h2>6. Your Data Protection Rights</h2>
-                            <p>
-                                Depending on your location, you may have certain rights regarding your 
-                                personal information:
-                            </p>
-                            
-                            <div class="highlight-box">
-                                <h4><i class="fas fa-user-check"></i> Your Rights</h4>
-                                <ul>
-                                    <li><strong>Right to Access:</strong> Request copies of your personal data</li>
-                                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
-                                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
-                                    <li><strong>Right to Restrict Processing:</strong> Request restriction of processing</li>
-                                    <li><strong>Right to Data Portability:</strong> Request transfer of your data</li>
-                                    <li><strong>Right to Object:</strong> Object to processing of your data</li>
-                                    <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
-                                </ul>
-                            </div>
-                            
-                            <p>
-                                To exercise any of these rights, please contact us using the information 
-                                in the "Contact Us" section. We will respond to your request within 
-                                30 days.
-                            </p>
-                            
-                            <h3>6.1 California Privacy Rights</h3>
-                            <p>
-                                California residents have additional rights under the California Consumer 
-                                Privacy Act (CCPA). To learn more about these rights, please see our 
-                                <a href="ccpa.html">California Privacy Notice</a>.
-                            </p>
-                            
-                            <h3>6.2 GDPR Rights</h3>
-                            <p>
-                                If you are located in the European Economic Area (EEA), you have additional 
-                                rights under the General Data Protection Regulation (GDPR). You may also 
-                                lodge a complaint with your local data protection authority.
-                            </p>
-                        </section>
-
-                        <!-- Cookies Section -->
-                        <section id="cookies" class="content-section">
-                            <h2>7. Cookies and Tracking Technologies</h2>
-                            <p>
-                                We use cookies and similar tracking technologies to collect and store 
-                                information about your use of our Services.
-                            </p>
-                            
-                            <h3>7.1 Types of Cookies We Use</h3>
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Cookie Type</th>
-                                        <th>Purpose</th>
-                                        <th>Duration</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Essential Cookies</strong></td>
-                                        <td>Required for basic site functionality</td>
-                                        <td>Session</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Performance Cookies</strong></td>
-                                        <td>Analyze site usage and improve performance</td>
-                                        <td>1-2 years</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Functionality Cookies</strong></td>
-                                        <td>Remember preferences and settings</td>
-                                        <td>1 year</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Marketing Cookies</strong></td>
-                                        <td>Deliver targeted advertising</td>
-                                        <td>1 year</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                            <h3>7.2 Managing Cookies</h3>
-                            <p>
-                                Most web browsers allow you to control cookies through their settings. 
-                                You can usually find these settings in the "Options" or "Preferences" 
-                                menu of your browser.
-                            </p>
-                            <p>
-                                To learn more about cookies and how to manage them, visit 
-                                <a href="https://www.allaboutcookies.org" target="_blank">AllAboutCookies.org</a>.
-                            </p>
-                            
-                            <h3>7.3 Do Not Track Signals</h3>
-                            <p>
-                                Our Services do not respond to Do Not Track signals. However, you can 
-                                control tracking through your browser settings and opt-out of certain 
-                                analytics and advertising cookies.
-                            </p>
-                        </section>
-
-                        <!-- Children's Privacy Section -->
-                        <section id="children" class="content-section">
-                            <h2>8. Children's Privacy</h2>
-                            <p>
-                                Our Services are not intended for children under the age of 16. We do not 
-                                knowingly collect personal information from children under 16.
-                            </p>
-                            
-                            <div class="highlight-box">
-                                <h4><i class="fas fa-child"></i> Important Information for Parents</h4>
-                                <p>
-                                    If you are a parent or guardian and believe your child has provided 
-                                    us with personal information, please contact us immediately. We will 
-                                    take steps to delete such information from our records.
-                                </p>
-                            </div>
-                            
-                            <p>
-                                For users between 16 and 18 years old, we recommend obtaining parental 
-                                consent before using our Services.
-                            </p>
-                        </section>
-
-                        <!-- Policy Changes Section -->
-                        <section id="changes" class="content-section">
-                            <h2>9. Changes to This Privacy Policy</h2>
-                            <p>
-                                We may update this Privacy Policy from time to time. We will notify you 
-                                of any changes by posting the new Privacy Policy on this page and updating 
-                                the "Last Updated" date.
-                            </p>
-                            
-                            <h3>9.1 Notification of Changes</h3>
-                            <p>We will notify you of material changes through:</p>
-                            <ul>
-                                <li>Email notification to registered users</li>
-                                <li>Prominent notice on our website</li>
-                                <li>In-app notifications for mobile users</li>
-                            </ul>
-                            
-                            <h3>9.2 Reviewing Changes</h3>
-                            <p>
-                                We encourage you to review this Privacy Policy periodically for any changes. 
-                                Your continued use of our Services after any changes constitutes your 
-                                acceptance of the updated Privacy Policy.
-                            </p>
-                        </section>
-
-                        <!-- Contact Section -->
-                        <section id="contact" class="content-section">
-                            <h2>10. Contact Us</h2>
-                            <p>
-                                If you have any questions, concerns, or requests regarding this Privacy 
-                                Policy or our data practices, please contact us:
-                            </p>
-                            
-                            <div class="contact-card">
-                                <div class="contact-info">
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Email</h4>
-                                            <p>privacy@openvectoracademy.com</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-user-shield"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Data Protection Officer</h4>
-                                            <p>Sarah Johnson, DPO</p>
-                                            <p>dpo@openvectoracademy.com</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Mailing Address</h4>
-                                            <p>OpenVector Academy</p>
-                                            <p>Attn: Privacy Team</p>
-                                            <p>123 Privacy Lane, Suite 100</p>
-                                            <p>San Francisco, CA 94107</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="contact-item">
-                                        <div class="contact-icon">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Phone</h4>
-                                            <p>+1 (555) 123-PRIVACY (774-8229)</p>
-                                            <p style="font-size: var(--font-sm); color: var(--text-light);">
-                                                Available Monday-Friday, 9am-5pm PST
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h3>10.1 Complaints</h3>
-                            <p>
-                                If you are not satisfied with our response, you have the right to lodge 
-                                a complaint with your local data protection authority. For EU residents, 
-                                you can find your supervisory authority at 
-                                <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">
-                                    EDPB Members
-                                </a>.
-                            </p>
-                        </section>
-                    </div>
-                    
-                    <!-- Additional Resources -->
-                    <div class="content-card mt-8">
-                        <h3>Additional Resources</h3>
-                        <p>You may also be interested in these related documents:</p>
-                        <ul>
-                            <li><a href="terms-of-service.html">Terms of Service</a></li>
-                            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                            <li><a href="ccpa.html">California Privacy Notice (CCPA)</a></li>
-                            <li><a href="gdpr.html">GDPR Compliance Statement</a></li>
-                            <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
-                        </ul>
-                    </div>
-                </main>
+            <div class="highlight-box">
+                <p><strong>Please read this privacy policy carefully.</strong> If you continue to use our services, you agree to the data practices described in this policy.</p>
             </div>
+
+            <h2>1. Information We Collect</h2>
+            <p>We collect information to provide better services to all our users. This includes:</p>
+            <ul>
+                <li><strong>Log Data:</strong> Like many other websites, we use log files. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.</li>
+                <li><strong>Personal Information:</strong> When you register for an account, we may ask for personal information such as Name, Email Address, and Phone Number.</li>
+                <li><strong>Cookies and Tracking:</strong> We use cookies to improve user experience. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser.</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the information we collect in various ways, including to:</p>
+            <ul>
+                <li>Provide, maintain, and improve our services.</li>
+                <li>Process transactions and send you related information, including purchase confirmations and invoices.</li>
+                <li>Send technical notices, updates, security alerts, and support and administrative messages.</li>
+                <li>Respond to your comments, questions, and customer service requests.</li>
+                <li>Monitor and analyze trends, usage, and activities in connection with our services.</li>
+            </ul>
+
+            <h2>3. Data Security</h2>
+            <p>We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure.</p>
+
+            <h2>4. Third-Party Services</h2>
+            <p>We may employ third-party companies and services to facilitate our Service ("Service Providers"), provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used.</p>
+            <p>These third parties have access to your Personal Information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+
+            <h2>5. Your Privacy Rights</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal data:</p>
+            <ul>
+                <li><strong>The right to access:</strong> You have the right to request copies of your personal data.</li>
+                <li><strong>The right to rectification:</strong> You have the right to request that we correct any information you believe is inaccurate.</li>
+                <li><strong>The right to erasure:</strong> You have the right to request that we erase your personal data, under certain conditions.</li>
+                <li><strong>The right to object:</strong> You have the right to object to our processing of your personal data, under certain conditions.</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <p>Our Service does not address anyone under the age of 18 ("Children"). We do not knowingly collect personally identifiable information from children under 18. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.</p>
+
+            <h2>7. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li>By email: <a href="mailto:privacy@openvectoracademy.com">privacy@openvectoracademy.com</a></li>
+                <li>By visiting this page on our website: <a href="contact.html">OpenVector Academy Contact Form</a></li>
+            </ul>
         </div>
     </section>
 
@@ -1458,38 +510,20 @@
                         industry-led curriculum and expert mentorship. Join the future of tech education.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
                 <div>
-                    <h3 class="footer-heading">Legal</h3>
+                    <h3 class="footer-heading">Courses</h3>
                     <ul class="footer-links">
-                        <li><a href="privacy.html" class="footer-link active">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="footer-link">Terms of Service</a></li>
-                        <li><a href="cookie-policy.html" class="footer-link">Cookie Policy</a></li>
-                        <li><a href="gdpr.html" class="footer-link">GDPR Compliance</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="footer-heading">Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
-                        <li><a href="help-center.html" class="footer-link">Help Center</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                        <li><a href="report-abuse.html" class="footer-link">Report Abuse</a></li>
+                        <li><a href="courses.html" class="footer-link">Web Development</a></li>
+                        <li><a href="courses.html" class="footer-link">Data Science</a></li>
+                        <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
+                        <li><a href="courses.html" class="footer-link">Cybersecurity</a></li>
                     </ul>
                 </div>
                 
@@ -1498,22 +532,20 @@
                     <ul class="footer-links">
                         <li><a href="about.html" class="footer-link">About Us</a></li>
                         <li><a href="careers.html" class="footer-link">Careers</a></li>
-                        <li><a href="blog.html" class="footer-link">Blog</a></li>
-                        <li><a href="press.html" class="footer-link">Press</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 OpenVector Academy. All rights reserved.</p>
-                <p style="margin-top: var(--space-2);">
-                    Committed to protecting your privacy and data security.
-                </p>
+                <p>&copy; 2023 OpenVector Academy. All rights reserved.</p>
+                <p style="margin-top: var(--space-2);">Designed for the future of education</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('header');
@@ -1522,23 +554,16 @@
             const body = document.body;
             const bars = mobileToggle.querySelectorAll('.bar');
 
-            /* --- 1. Header Scroll Effect --- */
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     header.classList.add('scrolled');
                 } else {
                     header.classList.remove('scrolled');
                 }
-                
-                // Update TOC active state
-                updateTocActiveState();
             });
 
-            /* --- 2. Mobile Menu Logic --- */
             function toggleMenu() {
                 mobileMenu.classList.toggle('active');
-                
-                // Hamburger animation
                 if (mobileMenu.classList.contains('active')) {
                     bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
                     bars[1].style.opacity = '0';
@@ -1553,145 +578,26 @@
             }
 
             mobileToggle.addEventListener('click', toggleMenu);
-
-            // Close menu when clicking a link
             mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (mobileMenu.classList.contains('active')) {
-                        toggleMenu();
-                    }
+                    if (mobileMenu.classList.contains('active')) toggleMenu();
                 });
             });
-
-            /* --- 3. Table of Contents Navigation --- */
-            const tocLinks = document.querySelectorAll('.toc-link');
-            const sections = document.querySelectorAll('.content-section');
             
-            function updateTocActiveState() {
-                let currentSection = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                        currentSection = section.id;
-                    }
-                });
-                
-                tocLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${currentSection}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-            
-            // Smooth scroll for TOC links
-            tocLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const headerHeight = header.offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnToggle = mobileToggle.contains(event.target);
+                if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
             });
 
-            /* --- 4. Print Functionality --- */
-            function printPolicy() {
-                window.print();
-            }
-
-            /* --- 5. PDF Download Functionality --- */
-            function downloadPDF() {
-                // In a real implementation, this would trigger a PDF download
-                // For demo purposes, we'll show a notification
-                showNotification('PDF download starting... This feature requires server-side implementation.');
-                
-                // Simulate download
-                setTimeout(() => {
-                    showNotification('Privacy Policy PDF downloaded successfully!');
-                }, 1500);
-            }
-
-            /* --- 6. Jump to Section --- */
-            function jumpToSection(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = section.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                    mobileToggle.focus();
                 }
-            }
-
-            /* --- 7. Show Notification --- */
-            function showNotification(message) {
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 100px;
-                    right: 20px;
-                    background: var(--primary);
-                    color: white;
-                    padding: 15px 25px;
-                    border-radius: var(--radius);
-                    z-index: 1000;
-                    font-weight: 500;
-                    box-shadow: var(--shadow-lg);
-                    animation: slideIn 0.3s ease;
-                    max-width: 300px;
-                `;
-                notification.textContent = message;
-                document.body.appendChild(notification);
-                
-                // Remove after 4 seconds
-                setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.3s ease';
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            notification.parentNode.removeChild(notification);
-                        }
-                    }, 300);
-                }, 4000);
-                
-                // Add CSS animations if not already present
-                if (!document.querySelector('#notification-styles')) {
-                    const style = document.createElement('style');
-                    style.id = 'notification-styles';
-                    style.textContent = `
-                        @keyframes slideIn {
-                            from { transform: translateX(100%); opacity: 0; }
-                            to { transform: translateX(0); opacity: 1; }
-                        }
-                        @keyframes slideOut {
-                            from { transform: translateX(0); opacity: 1; }
-                            to { transform: translateX(100%); opacity: 0; }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-            }
-
-            /* --- 8. Initialize --- */
-            updateTocActiveState(); // Set initial TOC state
-            
-            // Make functions available globally
-            window.downloadPDF = downloadPDF;
-            window.printPolicy = printPolicy;
-            window.jumpToSection = jumpToSection;
+            });
         });
     </script>
 </body>
