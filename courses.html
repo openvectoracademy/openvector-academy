@@ -474,12 +474,11 @@
             color: var(--text-light);
         }
         
-        /* ===== COURSE FILTERS ===== */
+        /* ===== COURSE FILTERS - FIXED (NOT STICKY) ===== */
         .course-filters {
             background-color: var(--off-white);
             padding: var(--space-8) 0;
-            position: sticky;
-            top: 70px;
+            /* Removed sticky positioning - now scrolls normally */
             z-index: 900;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
@@ -1331,7 +1330,7 @@
         </div>
     </section>
 
-    <!-- Course Filters -->
+    <!-- Course Filters - Now scrolls normally -->
     <section class="course-filters" id="course-filters">
         <div class="container">
             <!-- Category Filters -->
