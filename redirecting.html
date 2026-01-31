@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | OpenVector Academy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Registration successful. Thank you for joining OpenVector Academy.">
+    <meta name="robots" content="noindex, follow"> <!-- Prevent search engines from indexing this page -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
+    
+    <!-- Consistent CSS (Same as Index) -->
+    <style>
+        /* ===== CSS RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* ===== VARIABLES ===== */
+        :root {
+            /* Colors */
+            --primary: #0052CC;
+            --primary-light: #0066FF;
+            --primary-dark: #003D99;
+            --secondary: #7C4DFF;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --warning: #FFAB00;
+            --error: #FF5630;
+            
+            /* Neutrals */
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --light-gray: #F1F3F5;
+            --medium-gray: #E9ECEF;
+            --border-color: #DEE2E6;
+            --text-light: #6C757D;
+            --text-medium: #495057;
+            --text-dark: #212529;
+            
+            /* Spacing */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-12: 48px;
+            --space-16: 64px;
+            --space-20: 80px;
+            --space-24: 96px;
+            
+            /* Typography */
+            --font-xs: 12px;
+            --font-sm: 14px;
+            --font-base: 16px;
+            --font-lg: 18px;
+            --font-xl: 20px;
+            --font-2xl: 24px;
+            --font-3xl: 30px;
+            --font-4xl: 36px;
+            --font-5xl: 48px;
+            
+            /* Line Heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.75;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+        
+        /* ===== BASE STYLES ===== */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: var(--font-base);
+            line-height: var(--leading-normal);
+            color: var(--text-medium);
+            background-color: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: var(--leading-tight);
+            letter-spacing: -0.01em;
+        }
+        
+        h1 { font-size: var(--font-4xl); font-weight: 700; }
+        h2 { font-size: var(--font-3xl); }
+        h3 { font-size: var(--font-2xl); }
+        h4 { font-size: var(--font-xl); }
+        
+        p {
+            color: var(--text-light);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-4);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+        
+        /* ===== LAYOUT ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+        }
+
+        .section {
+            padding: var(--space-16) 0;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 500;
+            line-height: 1.5;
+            border-radius: var(--radius);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+            user-select: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--light-gray);
+            border-color: var(--text-light);
+        }
+        
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-lg);
+        }
+        
+        /* ===== HEADER (Identical to Index) ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+            height: 60px;
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-dark);
+            z-index: 1001;
+        }
+        
+        .logo-img {
+            height: 32px;
+            width: auto;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: var(--space-3);
+            list-style: none;
+            margin-right: var(--space-4);
+        }
+        
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-medium);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+            background-color: var(--light-gray);
+        }
+        
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+            background-color: rgba(0, 82, 204, 0.05);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+        
+        .nav-cta .btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            font-weight: 500;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        
+        .bar {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: var(--white);
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+            padding: var(--space-6);
+            overflow-y: auto;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-radius: var(--radius);
+            transition: all var(--transition-fast);
+        }
+        
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: var(--light-gray);
+            color: var(--primary);
+        }
+
+        /* ===== THANK YOU PAGE SPECIFIC ===== */
+        .thank-you-wrapper {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-8);
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+        }
+
+        .thank-you-card {
+            background-color: var(--white);
+            padding: var(--space-12) var(--space-16);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-8);
+            color: var(--white);
+            font-size: 48px;
+            box-shadow: 0 10px 30px rgba(0, 82, 204, 0.2);
+        }
+
+        .thank-you-title {
+            font-size: var(--font-3xl);
+            color: var(--text-dark);
+            margin-bottom: var(--space-2);
+        }
+
+        .thank-you-subtitle {
+            font-size: var(--font-lg);
+            color: var(--text-light);
+            margin-bottom: var(--space-8);
+        }
+
+        .timer-box {
+            background-color: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            position: relative;
+        }
+
+        .timer-label {
+            font-size: var(--font-sm);
+            color: var(--text-light);
+            margin-bottom: var(--space-3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .timer-count {
+            font-size: var(--font-5xl);
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+        }
+
+        /* Simple loading spinner animation for the last second */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .timer-loading {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+            color: var(--text-light);
+            font-size: var(--font-3xl);
+        }
+        
+        /* ===== FOOTER (Identical to Index) ===== */
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: var(--space-16) 0 var(--space-8);
+            margin-top: auto; /* Pushes footer to bottom if content is short */
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-12);
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--font-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-3);
+            display: inline-block;
+            color: var(--white);
+        }
+        
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-6);
+            font-size: var(--font-sm);
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: var(--font-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--white);
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--font-sm);
+            transition: all var(--transition-fast);
+            padding: 4px 0;
+        }
+        
+        .footer-link:hover {
+            color: var(--white);
+            transform: translateX(4px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            padding-top: var(--space-6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: var(--font-sm);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            :root {
+                --font-5xl: 42px;
+                --font-4xl: 36px;
+                --font-3xl: 28px;
+                --font-2xl: 22px;
+                --font-xl: 18px;
+                --font-lg: 16px;
+                --font-base: 15px;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --font-5xl: 36px;
+                --font-4xl: 30px;
+                --font-3xl: 24px;
+                --font-2xl: 20px;
+                --font-xl: 18px;
+            }
+            
+            .header {
+                height: 64px;
+            }
+            
+            .header.scrolled {
+                height: 56px;
+            }
+            
+            .mobile-menu {
+                top: 64px;
+                height: calc(100vh - 64px);
+            }
+            
+            .logo {
+                font-size: 16px;
+            }
+            
+            .logo-img {
+                height: 28px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --font-5xl: 32px;
+                --font-4xl: 26px;
+                --font-3xl: 22px;
+            }
+
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .thank-you-card {
+                padding: var(--space-8) var(--space-6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
+                     alt="OpenVector Academy" 
+                     class="logo-img">
+                <span>OpenVector Academy</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="live.html" class="nav-link">Live</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="registration.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="courses.html" class="mobile-nav-link">Courses</a></li>
+                <li><a href="live.html" class="mobile-nav-link">Live Classes</a></li>
+                <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
+                        Get Started
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Thank You Content -->
+    <section class="thank-you-wrapper">
+        <div class="container">
+            <div class="thank-you-card fade-in">
+                <div class="icon-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h1 class="thank-you-title">Submission Successful!</h1>
+                <p class="thank-you-subtitle">Thank you for contacting OpenVector Academy. We will respond as soon as possible.</p>
+                
+                <div class="timer-box">
+                    <div class="timer-label">Redirecting to home page in</div>
+                    <div class="timer-count" id="timer">5</div>
+                    <div class="timer-label">seconds...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="footer-logo">OpenVector Academy</a>
+                    <p class="footer-description">
+                        World-class technology education platform transforming careers through 
+                        industry-led curriculum and expert mentorship.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html" class="footer-link">Web Development</a></li>
+                        <li><a href="courses.html" class="footer-link">Data Science</a></li>
+                        <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
+                        <li><a href="resources.html" class="footer-link">Learning Materials</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 OpenVector Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('header');
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const body = document.body;
+            const bars = mobileToggle.querySelectorAll('.bar');
+
+            /* --- 1. Header Logic (Same as Index) --- */
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                if (mobileMenu.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                    body.style.overflow = 'hidden';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                    body.style.overflow = '';
+                }
+            }
+
+            mobileToggle.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnToggle = mobileToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            /* --- 2. Animation --- */
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = (Math.random() * 0.3) + 's';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeObserver.observe(element);
+            });
+
+            /* --- 3. REDIRECT TIMER LOGIC --- */
+            let timeLeft = 5; // 5 seconds countdown
+            const timerElement = document.getElementById('timer');
+            
+            const countdown = setInterval(() => {
+                timeLeft--;
+                
+                if (timeLeft >= 0) {
+                    timerElement.textContent = timeLeft;
+                } else {
+                    timerElement.innerHTML = '<i class="fas fa-sync timer-loading"></i>'; // Loading icon for the last second
+                }
+            }, 1000);
+
+            // Redirect after 5 seconds
+            setTimeout(() => {
+                clearInterval(countdown);
+                timerElement.textContent = '0';
+                
+                // Optional: Show a slight "Processing" message before redirect
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            }, 5000); // 5000ms = 5 seconds
+
+            /* --- 4. Keyboard Navigation --- */
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                    mobileToggle.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
