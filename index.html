@@ -403,16 +403,30 @@
             color: var(--primary);
         }
         
-        /* ===== HERO SECTION - FIXED ===== */
+        /* ===== UPDATED HERO SECTION - MOVED HIGHER UP ===== */
         .hero {
-            padding: 150px 0 80px;
+            padding: 80px 0 60px; /* Reduced from 150px 0 80px */
             background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
-            margin-top: 70px;
+            margin-top: 70px; /* This matches the header height */
             position: relative;
             overflow: hidden;
             display: flex;
             align-items: center;
-            min-height: calc(100vh - 70px);
+            min-height: calc(90vh - 70px); /* Reduced min-height to make it shorter */
+            text-align: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
+            background-size: cover;
+            opacity: 0.03;
+            z-index: 0;
         }
         
         .hero-content {
@@ -421,11 +435,12 @@
             z-index: 1;
             text-align: center;
             width: 100%;
+            padding: 20px 0; /* Added some vertical padding for better spacing */
         }
         
         .hero-title {
             font-size: var(--font-5xl);
-            margin-bottom: var(--space-6);
+            margin-bottom: var(--space-4); /* Reduced from space-6 */
             line-height: 1.1;
             max-width: 800px;
             margin-left: auto;
@@ -984,7 +999,7 @@
             }
             
             .hero {
-                padding: 130px 0 64px;
+                padding: 60px 0 48px;
             }
             
             .hero-title {
@@ -1022,7 +1037,13 @@
             
             .hero {
                 text-align: center;
-                padding: 110px 0 48px;
+                padding: 50px 0 40px;
+                min-height: calc(80vh - 70px);
+            }
+            
+            .hero::before {
+                width: 100%;
+                opacity: 0.02;
             }
             
             .courses-grid,
@@ -1269,7 +1290,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - NOW HIGHER UP -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
