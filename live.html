@@ -6,8 +6,8 @@
     <title>Live Classes | OpenVector Academy</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Join interactive live coding sessions with expert instructors. Real-time learning, Q&A, and hands-on practice.">
-    <meta name="keywords" content="live coding classes, interactive learning, real-time instruction, web development, data science, AI">
+    <meta name="description" content="Join live coding sessions, webinars, and tech workshops at OpenVector Academy.">
+    <meta name="keywords" content="live coding, webinars, tech workshops, live stream">
     <meta name="author" content="OpenVector Academy">
     
     <!-- Fonts -->
@@ -19,7 +19,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
     
-    <!-- Consistent CSS with index.html -->
+    <!-- Ultra Professional CSS (Consistent with Index) -->
     <style>
         /* ===== CSS RESET ===== */
         * {
@@ -62,7 +62,7 @@
             --space-20: 80px;
             --space-24: 96px;
             
-            /* Typography - Professional Small */
+            /* Typography */
             --font-xs: 12px;
             --font-sm: 14px;
             --font-base: 16px;
@@ -101,7 +101,6 @@
         html {
             font-size: 16px;
             scroll-behavior: smooth;
-            scroll-padding-top: 70px; /* Adjusted for header height */
         }
         
         body {
@@ -109,7 +108,7 @@
             font-size: var(--font-base);
             line-height: var(--leading-normal);
             color: var(--text-medium);
-            background-color: var(--white);
+            background-color: var(--off-white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
@@ -123,38 +122,21 @@
             letter-spacing: -0.01em;
         }
         
-        h1 {
-            font-size: var(--font-4xl);
-            font-weight: 700;
-        }
-        
-        h2 {
-            font-size: var(--font-3xl);
-        }
-        
-        h3 {
-            font-size: var(--font-2xl);
-        }
-        
-        h4 {
-            font-size: var(--font-xl);
-        }
+        h1 { font-size: var(--font-5xl); font-weight: 700; }
+        h2 { font-size: var(--font-3xl); }
+        h3 { font-size: var(--font-2xl); }
+        h4 { font-size: var(--font-xl); }
         
         p {
             color: var(--text-light);
             line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-4);
         }
         
         a {
             text-decoration: none;
             color: inherit;
             transition: color var(--transition-fast);
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
         }
         
         /* ===== LAYOUT ===== */
@@ -165,84 +147,11 @@
             padding: 0 var(--space-6);
         }
         
-        .container-narrow {
-            max-width: 800px;
-        }
-        
         .section {
             padding: var(--space-16) 0;
         }
-        
-        .section-sm {
-            padding: var(--space-12) 0;
-        }
-        
-        .section-lg {
-            padding: var(--space-20) 0;
-        }
-        
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-6);
-            font-family: 'Inter', sans-serif;
-            font-size: var(--font-base);
-            font-weight: 500;
-            line-height: 1.5;
-            border-radius: var(--radius);
-            border: 1px solid transparent;
-            cursor: pointer;
-            transition: all var(--transition);
-            white-space: nowrap;
-            user-select: none;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            box-shadow: var(--shadow);
-        }
-        
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary);
-            border-color: var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--light-gray);
-            border-color: var(--text-light);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-        
-        .btn-lg {
-            padding: var(--space-4) var(--space-8);
-            font-size: var(--font-lg);
-        }
-        
-        /* ===== UPDATED HEADER ===== */
+
+        /* ===== HEADER (Identical to Index) ===== */
         .header {
             position: fixed;
             top: 0;
@@ -269,7 +178,6 @@
             width: 100%;
         }
 
-        /* Logo with PNG */
         .logo {
             display: flex;
             align-items: center;
@@ -278,7 +186,6 @@
             font-weight: 600;
             font-size: 18px;
             color: var(--text-dark);
-            padding: var(--space-1) 0;
             z-index: 1001;
         }
         
@@ -287,7 +194,6 @@
             width: auto;
         }
 
-        /* Desktop Navigation */
         .desktop-nav {
             display: flex;
             align-items: center;
@@ -341,7 +247,6 @@
             font-weight: 500;
         }
 
-        /* Mobile Toggle */
         .mobile-toggle {
             display: none;
             flex-direction: column;
@@ -360,7 +265,6 @@
             transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 70px;
@@ -402,106 +306,75 @@
             background-color: var(--light-gray);
             color: var(--primary);
         }
-        
-        /* ===== LIVE HERO ===== */
-        .live-hero {
-            padding: 150px 0 100px;
+
+        /* ===== LIVE PAGE HERO ===== */
+        .page-header {
             background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
             margin-top: 70px;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
+            padding: var(--space-12) 0;
+            border-bottom: 1px solid var(--border-color);
         }
-        
-        .live-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center right;
-            background-size: cover;
-            opacity: 0.03;
-            z-index: 0;
-        }
-        
-        .live-hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 1;
-            margin: 0 auto;
-        }
-        
-        .live-hero h1 {
-            font-size: var(--font-5xl);
-            margin-bottom: var(--space-6);
-            line-height: 1.1;
-        }
-        
-        .live-hero p {
-            font-size: var(--font-lg);
-            margin-bottom: var(--space-8);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            color: var(--text-medium);
-        }
-        
-        .hero-buttons {
+
+        .page-title-block {
             display: flex;
-            gap: var(--space-4);
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
-            justify-content: center;
-            margin-top: var(--space-6);
+            gap: var(--space-4);
+        }
+
+        .live-badge {
+            background: var(--error); /* Red for LIVE */
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: var(--radius-xl);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
         
-        /* ===== SECTION HEADER ===== */
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-8);
-        }
-        
-        .section-title {
-            font-size: var(--font-3xl);
-            margin-bottom: var(--space-4);
-        }
-        
-        .section-subtitle {
-            font-size: var(--font-lg);
-            max-width: 600px;
-            margin: 0 auto;
-            color: var(--text-light);
-        }
-        
-        /* ===== LIVE STREAM SECTION ===== */
-        .live-stream-section {
-            background-color: var(--white);
-        }
-        
-        .stream-container {
+        /* ===== CUSTOM VIDEO PLAYER (Restricted Logic) ===== */
+        .live-stream-container {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: var(--space-8);
+            gap: var(--space-6);
             margin-top: var(--space-8);
         }
-        
+
         .video-player {
             background: var(--white);
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
+            position: relative;
             border: 1px solid var(--border-color);
         }
-        
+
+        .player-wrapper {
+            width: 100%;
+            background: #000;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0; /* Top radius only */
+            overflow: hidden;
+            position: relative;
+        }
+
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            background: #000;
-            overflow: hidden;
+            height: 0;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
-        
+
         #player {
             position: absolute;
             top: 0;
@@ -510,81 +383,152 @@
             height: 100%;
             border: none;
         }
-        
-        .live-indicator {
+
+        /* Overlays & Restrictions */
+        .secure-overlay {
             position: absolute;
-            top: var(--space-4);
-            left: var(--space-4);
-            background-color: #ef4444;
-            color: var(--white);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10; /* Below UI, above video */
+        }
+
+        .live-indicator-ui {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--error);
+            color: white;
             padding: 6px 12px;
-            border-radius: 20px;
-            font-size: var(--font-sm);
-            font-weight: 600;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: bold;
             display: flex;
             align-items: center;
             gap: 6px;
-            z-index: 2;
-            box-shadow: var(--shadow);
+            z-index: 25;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
-        
-        .live-indicator::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
+
+        .security-notice {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 25;
+            display: none;
+            pointer-events: none;
         }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
+
+        .block-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 50;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            flex-direction: column;
+            text-align: center;
+            padding: var(--space-4);
         }
-        
-        .video-info {
-            padding: var(--space-6);
-            border-top: 1px solid var(--border-color);
+
+        .block-overlay i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: var(--error);
         }
-        
-        .video-title {
-            font-size: var(--font-xl);
-            margin-bottom: var(--space-3);
-            color: var(--text-dark);
-        }
-        
-        .video-description {
-            color: var(--text-light);
-            line-height: var(--leading-relaxed);
-            margin-bottom: var(--space-4);
-        }
-        
-        .stream-stats {
-            display: flex;
-            gap: var(--space-6);
-            margin-top: var(--space-4);
-        }
-        
-        .stat {
+
+        /* Custom Player Controls */
+        .controls {
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: var(--text-light);
-            font-size: var(--font-sm);
+            padding: 12px 16px;
+            background: rgba(33, 37, 41, 0.95); /* Dark bar for controls */
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            position: relative;
+            z-index: 20;
+            gap: var(--space-4);
         }
-        
-        .stat i {
-            color: var(--primary);
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--primary-light);
+        }
+
+        .progress-container {
+            flex-grow: 1;
+            position: relative;
+            height: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .progress-bar-bg {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            font-size: 14px;
+            color: #aaa;
+            font-family: 'Inter', monospace;
+            white-space: nowrap;
+        }
+
+        /* Fullscreen Handling */
+        .player-wrapper:-webkit-full-screen { width: 100%; height: 100%; border-radius: 0; }
+        .player-wrapper:-moz-full-screen { width: 100%; height: 100%; border-radius: 0; }
+        .player-wrapper:fullscreen { width: 100%; height: 100%; border-radius: 0; }
         
-        /* ===== STREAM SIDEBAR ===== */
+        .player-wrapper:-webkit-full-screen .video-container { width: 100%; height: 100%; padding-top: 0; }
+        .player-wrapper:-moz-full-screen .video-container { width: 100%; height: 100%; padding-top: 0; }
+        .player-wrapper:fullscreen .video-container { width: 100%; height: 100%; padding-top: 0; }
+
+        /* ===== SIDEBAR & SCHEDULE ===== */
         .stream-sidebar {
             display: flex;
             flex-direction: column;
             gap: var(--space-6);
         }
-        
+
         .sidebar-card {
             background: var(--white);
             border-radius: var(--radius-lg);
@@ -592,321 +536,97 @@
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
         }
-        
+
         .card-title {
             font-size: var(--font-lg);
             margin-bottom: var(--space-4);
             color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: var(--space-2);
         }
-        
-        .upcoming-list {
+
+        .schedule-list {
             list-style: none;
         }
-        
-        .upcoming-item {
-            padding: var(--space-3) 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .upcoming-item:last-child {
-            border-bottom: none;
-        }
-        
-        .upcoming-time {
-            font-size: var(--font-sm);
-            color: var(--primary);
-            margin-bottom: 4px;
-            font-weight: 500;
-        }
-        
-        .upcoming-title {
-            font-size: var(--font-base);
-            color: var(--text-dark);
-        }
-        
-        /* ===== CHAT CONTAINER ===== */
-        .chat-container {
-            height: 300px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
+
+        .schedule-item {
             padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--light-gray);
+            transition: background var(--transition);
+            cursor: pointer;
         }
-        
-        .chat-message {
-            display: flex;
-            gap: var(--space-3);
-            align-items: flex-start;
-        }
-        
-        .chat-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: var(--font-sm);
-            font-weight: 600;
-            color: var(--white);
-            flex-shrink: 0;
-        }
-        
-        .chat-content {
-            flex: 1;
-        }
-        
-        .chat-user {
-            font-weight: 600;
-            font-size: var(--font-sm);
-            margin-bottom: 4px;
-            color: var(--text-dark);
-        }
-        
-        .chat-text {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-            line-height: 1.4;
-        }
-        
-        .chat-input {
-            display: flex;
-            gap: var(--space-3);
-            margin-top: var(--space-4);
-        }
-        
-        .chat-input input {
-            flex: 1;
-            padding: 10px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            font-family: 'Inter', sans-serif;
-            font-size: var(--font-sm);
-            background-color: var(--white);
-            color: var(--text-dark);
-        }
-        
-        .chat-input input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
-        }
-        
-        /* ===== FEATURED STREAMS ===== */
-        .featured-streams {
+
+        .schedule-item:hover {
             background-color: var(--off-white);
         }
-        
-        .streams-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: var(--space-6);
-            margin-top: var(--space-8);
+
+        .schedule-item:last-child {
+            border-bottom: none;
         }
-        
-        .stream-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all var(--transition);
-            border: 1px solid var(--border-color);
-        }
-        
-        .stream-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-light);
-        }
-        
-        .stream-thumbnail {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            background: #000;
-            overflow: hidden;
-        }
-        
-        .stream-thumbnail img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-slow);
-        }
-        
-        .stream-card:hover .stream-thumbnail img {
-            transform: scale(1.08);
-        }
-        
-        .stream-card-info {
-            padding: var(--space-6);
-        }
-        
-        .stream-card-title {
-            font-size: var(--font-lg);
-            margin-bottom: var(--space-2);
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-        
-        .stream-card-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--text-light);
+
+        .schedule-time {
             font-size: var(--font-sm);
-            margin-bottom: var(--space-4);
-        }
-        
-        /* ===== UPCOMING SESSIONS ===== */
-        .upcoming-sessions {
-            background-color: var(--white);
-        }
-        
-        .sessions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--space-6);
-            margin-top: var(--space-8);
-        }
-        
-        .session-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            box-shadow: var(--shadow);
-            transition: all var(--transition);
-            border: 1px solid var(--border-color);
-        }
-        
-        .session-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary);
-        }
-        
-        .session-time {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            margin-bottom: var(--space-4);
-            padding-bottom: var(--space-3);
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .session-time i {
             color: var(--primary);
-        }
-        
-        .session-date {
             font-weight: 600;
-            color: var(--text-dark);
+            margin-bottom: var(--space-1);
+            display: block;
         }
-        
-        .session-duration {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-        }
-        
-        .session-instructor {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            margin-bottom: var(--space-4);
-        }
-        
-        .instructor-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 600;
-            font-size: var(--font-sm);
-            flex-shrink: 0;
-        }
-        
-        .instructor-info h4 {
+
+        .schedule-title {
             font-size: var(--font-base);
-            margin-bottom: 2px;
+            color: var(--text-dark);
+            display: block;
         }
-        
-        .instructor-info p {
+
+        .chat-simulation {
+            height: 200px;
+            overflow-y: auto;
+            background: var(--off-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
             font-size: var(--font-sm);
-            color: var(--text-light);
         }
-        
-        /* ===== CTA ===== */
-        .cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            text-align: center;
-            padding: var(--space-20) 0;
-            position: relative;
-            overflow: hidden;
+
+        .chat-msg {
+            margin-bottom: var(--space-3);
+            color: var(--text-medium);
         }
-        
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center;
-            background-size: cover;
-            opacity: 0.05;
+
+        .chat-msg strong {
+            color: var(--primary);
         }
-        
-        .cta-title {
-            color: var(--white);
-            margin-bottom: var(--space-4);
-            position: relative;
-        }
-        
-        .cta-description {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto var(--space-8);
-            font-size: var(--font-lg);
-            position: relative;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: var(--space-4);
+
+        /* ===== BUTTONS (Reused) ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-family: 'Inter', sans-serif;
+            font-size: var(--font-base);
+            font-weight: 500;
+            line-height: 1.5;
+            border-radius: var(--radius);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+            user-select: none;
         }
         
-        .cta .btn-secondary {
-            background: var(--white);
-            color: var(--primary);
-        }
-        
-        .cta .btn-outline {
-            background: transparent;
+        .btn-primary {
+            background-color: var(--primary);
             color: var(--white);
-            border-color: var(--white);
         }
         
-        .cta .btn-outline:hover {
-            background: var(--white);
-            color: var(--primary);
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow);
         }
-        
-        /* ===== FOOTER ===== */
+
+        /* ===== FOOTER (Identical to Index) ===== */
         .footer {
             background-color: var(--text-dark);
             color: var(--white);
@@ -991,259 +711,40 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: var(--font-sm);
         }
-        
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-        
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 1200px) {
-            .container {
-                max-width: 100%;
-                padding: 0 var(--space-8);
-            }
-        }
-        
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            :root {
-                --font-5xl: 42px;
-                --font-4xl: 36px;
-                --font-3xl: 28px;
-                --font-2xl: 22px;
-                --font-xl: 18px;
-                --font-lg: 16px;
-                --font-base: 15px;
-            }
-            
-            .section {
-                padding: var(--space-12) 0;
-            }
-            
-            .live-hero {
-                padding: 130px 0 80px;
-            }
-            
-            .live-hero h1 {
-                font-size: var(--font-4xl);
-            }
-            
-            .live-hero p {
-                font-size: var(--font-base);
-            }
-            
-            .stream-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-6);
-            }
-            
-            .streams-grid,
-            .sessions-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-            
-            .desktop-nav {
-                display: none;
-            }
-            
-            .mobile-toggle {
-                display: flex;
-            }
+            .live-stream-container { grid-template-columns: 1fr; }
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: flex; }
         }
         
         @media (max-width: 768px) {
-            :root {
-                --font-5xl: 36px;
-                --font-4xl: 30px;
-                --font-3xl: 24px;
-                --font-2xl: 20px;
-                --font-xl: 18px;
-            }
-            
-            .live-hero {
-                text-align: center;
-                padding: 110px 0 60px;
-            }
-            
-            .live-hero::before {
-                width: 100%;
-                opacity: 0.02;
-            }
-            
-            .live-hero-content {
-                max-width: 100%;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .streams-grid,
-            .sessions-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-4);
-            }
-            
-            .stream-card,
-            .session-card {
-                max-width: 100%;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .cta-buttons .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: var(--space-6);
-            }
+            .header { height: 64px; }
+            .header.scrolled { height: 56px; }
+            .mobile-menu { top: 64px; height: calc(100vh - 64px); }
+            .logo { font-size: 16px; }
+            .logo-img { height: 28px; }
+            .page-header { margin-top: 64px; }
+            .footer-content { grid-template-columns: 1fr; gap: var(--space-6); }
         }
-        
+
         @media (max-width: 480px) {
-            :root {
-                --font-5xl: 32px;
-                --font-4xl: 26px;
-                --font-3xl: 22px;
-            }
-            
-            .container {
-                padding: 0 var(--space-4);
-            }
-            
-            .live-hero h1 {
-                font-size: var(--font-3xl);
-            }
-            
-            .live-hero p {
-                font-size: var(--font-base);
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .hero-buttons .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .btn-lg {
-                padding: var(--space-3) var(--space-6);
-                font-size: var(--font-base);
-            }
-            
-            .header {
-                height: 64px;
-            }
-            
-            .header.scrolled {
-                height: 56px;
-            }
-            
-            .mobile-menu {
-                top: 64px;
-                height: calc(100vh - 64px);
-            }
-            
-            .logo {
-                font-size: 16px;
-            }
-            
-            .logo-img {
-                height: 28px;
-            }
-            
-            .section-title {
-                font-size: var(--font-2xl);
-            }
-            
-            .section-subtitle {
-                font-size: var(--font-base);
-            }
-        }
-        
-        @media (max-width: 360px) {
-            .hero-buttons .btn,
-            .cta-buttons .btn {
-                font-size: var(--font-sm);
-                padding: var(--space-3) var(--space-4);
-            }
-            
-            .streams-grid,
-            .sessions-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* ===== UTILITIES ===== */
-        .text-center {
-            text-align: center;
-        }
-        
-        .text-primary {
-            color: var(--primary);
-        }
-        
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        .mb-4 {
-            margin-bottom: var(--space-4);
-        }
-        
-        .mt-4 {
-            margin-top: var(--space-4);
-        }
-        
-        .mt-8 {
-            margin-top: var(--space-8);
-        }
-        
-        .hidden {
-            display: none !important;
+            .container { padding: 0 var(--space-4); }
+            .controls { flex-wrap: wrap; justify-content: space-between; }
+            .progress-container { width: 100%; order: -1; margin-bottom: 8px; }
         }
     </style>
 </head>
 <body>
-    <!-- Updated Header (Matching index.html) -->
+    <!-- Updated Header -->
     <header class="header" id="header">
         <div class="container nav-wrapper">
-            <!-- Logo with PNG -->
             <a href="index.html" class="logo">
-                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
-                     alt="OpenVector Academy" 
-                     class="logo-img">
+                <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" alt="OpenVector Academy" class="logo-img">
                 <span>OpenVector Academy</span>
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -1258,7 +759,6 @@
                 </div>
             </nav>
 
-            <!-- Mobile Toggle -->
             <button class="mobile-toggle" aria-label="Menu" id="mobile-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -1276,304 +776,143 @@
                 <li><a href="about.html" class="mobile-nav-link">About</a></li>
                 <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
                 <li>
-                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">
-                        Get Started
-                    </a>
+                    <a href="registration.html" class="btn btn-primary" style="margin-top: var(--space-4); width: 100%;">Get Started</a>
                 </li>
             </ul>
         </div>
     </header>
 
-    <!-- Live Hero -->
-    <section class="live-hero" id="live-hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="live-hero-content fade-in">
-                <h1>Live Interactive Learning</h1>
-                <p>Join expert-led live sessions, ask questions in real-time, and collaborate with fellow learners. Experience the power of interactive education with industry professionals.</p>
-                <div class="hero-buttons">
-                    <a href="#live-stream" class="btn btn-primary">Watch Live Now</a>
-                    <a href="#upcoming-sessions" class="btn btn-secondary">View Schedule</a>
+            <div class="page-title-block">
+                <div>
+                    <h1>Live Masterclasses</h1>
+                    <p style="margin-top: var(--space-2);">Join interactive coding sessions in real-time.</p>
+                </div>
+                <div class="live-badge">
+                    <i class="fas fa-circle" style="font-size: 10px;"></i> LIVE NOW
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Live Stream Section -->
-    <section class="live-stream-section" id="live-stream">
+    <!-- Main Content -->
+    <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Live Now</h2>
-                <p class="section-subtitle">Join the current session and interact with our expert instructor</p>
-            </div>
-            
-            <div class="stream-container">
-                <!-- Main Video Player -->
-                <div class="video-player fade-in">
-                    <div class="video-container">
-                        <div id="player"></div>
-                        <div class="live-indicator">LIVE NOW</div>
-                    </div>
-                    <div class="video-info">
-                        <h3 class="video-title">Web Development Masterclass: Building Modern Applications</h3>
-                        <p class="video-description">Join our expert instructor as we build a complete web application from scratch using modern technologies like React, Node.js, and MongoDB. This live session covers best practices, debugging techniques, and deployment strategies.</p>
-                        <div class="stream-stats">
-                            <div class="stat">
-                                <i class="fas fa-eye"></i>
-                                <span id="viewer-count">2,458 watching</span>
+            <div class="live-stream-container">
+                
+                <!-- Main Video Player with Restrictions -->
+                <div class="video-player">
+                    <div class="player-wrapper">
+                        <div class="video-container">
+                            <div id="player"></div>
+                            
+                            <!-- SECURITY OVERLAYS (From your restriction code) -->
+                            <div class="secure-overlay" id="secure-overlay"></div>
+                            <div class="live-indicator-ui">LIVE</div>
+                            <div class="security-notice" id="security-notice">
+                                <i class="fas fa-shield-alt"></i> Secure Mode: Right-click disabled
                             </div>
-                            <div class="stat">
-                                <i class="fas fa-heart"></i>
-                                <span id="like-count">1,247 likes</span>
+                            <div class="block-overlay" id="block-overlay">
+                                <i class="fas fa-ban"></i>
+                                <div>Navigation to YouTube is blocked</div>
                             </div>
-                            <div class="stat">
-                                <i class="fas fa-share"></i>
-                                <span id="share-count">342 shares</span>
+                        </div>
+                        
+                        <!-- CUSTOM CONTROLS -->
+                        <div class="controls" id="controls">
+                            <button class="control-btn play-pause-btn" id="play-pause-btn" title="Play/Pause">
+                                <i class="fas fa-play" id="play-icon"></i>
+                                <i class="fas fa-pause" id="pause-icon" style="display:none"></i>
+                            </button>
+                            
+                            <button class="control-btn rewind-btn" id="rewind-btn" title="Rewind 10s">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            
+                            <button class="control-btn forward-btn" id="forward-btn" title="Forward 10s">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            
+                            <div class="progress-container" id="progress-container">
+                                <div class="progress-bar-bg">
+                                    <div class="progress-fill" id="progress"></div>
+                                </div>
                             </div>
+                            
+                            <div class="time-display">
+                                <span class="current-time" id="current-time">0:00</span>
+                            </div>
+                            
+                            <button class="control-btn volume-btn" id="volume-btn" title="Mute/Unmute">
+                                <i class="fas fa-volume-up" id="volume-high"></i>
+                                <i class="fas fa-volume-mute" id="volume-mute" style="display:none"></i>
+                            </button>
+                            
+                            <button class="control-btn fullscreen-btn" id="fullscreen-btn" title="Fullscreen">
+                                <i class="fas fa-expand" id="expand-icon"></i>
+                                <i class="fas fa-compress" id="compress-icon" style="display:none"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Stream Sidebar -->
+                <!-- Sidebar Info -->
                 <div class="stream-sidebar">
-                    <!-- Upcoming Streams -->
-                    <div class="sidebar-card fade-in">
-                        <h3 class="card-title">
-                            <i class="fas fa-calendar-alt"></i> Upcoming Streams
-                        </h3>
-                        <ul class="upcoming-list">
-                            <li class="upcoming-item">
-                                <div class="upcoming-time">Today, 3:00 PM EST</div>
-                                <div class="upcoming-title">Advanced JavaScript Patterns</div>
+                    <div class="sidebar-card">
+                        <h3 class="card-title"><i class="fas fa-info-circle"></i> Current Session</h3>
+                        <h4 style="margin-bottom: 8px;">Full Stack Architecture</h4>
+                        <p style="font-size: 14px;">Deep dive into microservices, containerization with Docker, and cloud deployment strategies.</p>
+                        <div style="display: flex; gap: 10px; margin-top: 12px;">
+                            <div style="background: var(--off-white); padding: 4px 8px; border-radius: 4px; font-size: 12px; color: var(--text-light);">
+                                <i class="fas fa-user"></i> 2,405 watching
+                            </div>
+                            <div style="background: var(--off-white); padding: 4px 8px; border-radius: 4px; font-size: 12px; color: var(--text-light);">
+                                <i class="fas fa-clock"></i> 45:00 left
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="card-title"><i class="fas fa-comments"></i> Live Chat</h3>
+                        <div class="chat-simulation">
+                            <div class="chat-msg"><strong>Instructor:</strong> Welcome everyone! Let's start by initializing the repo.</div>
+                            <div class="chat-msg"><strong>DevUser1:</strong> Can you repeat that last command?</div>
+                            <div class="chat-msg"><strong>Instructor:</strong> Sure, it's `git init .`</div>
+                            <div class="chat-msg"><strong>DevUser2:</strong> Audio is crystal clear today.</div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 8px; font-size: 14px;">Join Discussion</button>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="card-title"><i class="fas fa-calendar-alt"></i> Upcoming</h3>
+                        <ul class="schedule-list">
+                            <li class="schedule-item">
+                                <span class="schedule-time">Tomorrow, 10:00 AM</span>
+                                <span class="schedule-title">React Hooks Deep Dive</span>
                             </li>
-                            <li class="upcoming-item">
-                                <div class="upcoming-time">Tomorrow, 10:00 AM EST</div>
-                                <div class="upcoming-title">React Performance Optimization</div>
+                            <li class="schedule-item">
+                                <span class="schedule-time">Wed, 2:00 PM</span>
+                                <span class="schedule-title">Python for Data Analysis</span>
                             </li>
-                            <li class="upcoming-item">
-                                <div class="upcoming-time">Tomorrow, 2:00 PM EST</div>
-                                <div class="upcoming-title">Building RESTful APIs with Express</div>
-                            </li>
-                            <li class="upcoming-item">
-                                <div class="upcoming-time">Friday, 11:00 AM EST</div>
-                                <div class="upcoming-title">Database Design Best Practices</div>
+                            <li class="schedule-item">
+                                <span class="schedule-time">Fri, 11:00 AM</span>
+                                <span class="schedule-title">CSS Grid Mastery</span>
                             </li>
                         </ul>
                     </div>
-
-                    <!-- Live Chat -->
-                    <div class="sidebar-card fade-in">
-                        <h3 class="card-title">
-                            <i class="fas fa-comments"></i> Live Chat
-                        </h3>
-                        <div class="chat-container" id="chat-container">
-                            <div class="chat-message">
-                                <div class="chat-avatar">JD</div>
-                                <div class="chat-content">
-                                    <div class="chat-user">John Developer</div>
-                                    <div class="chat-text">Great explanation of hooks! When will we cover custom hooks?</div>
-                                </div>
-                            </div>
-                            <div class="chat-message">
-                                <div class="chat-avatar">SC</div>
-                                <div class="chat-content">
-                                    <div class="chat-user">Sarah Coder</div>
-                                    <div class="chat-text">Can you show how to handle errors in async functions?</div>
-                                </div>
-                            </div>
-                            <div class="chat-message">
-                                <div class="chat-avatar">MT</div>
-                                <div class="chat-content">
-                                    <div class="chat-user">Mike Techie</div>
-                                    <div class="chat-text">The state management example was really helpful!</div>
-                                </div>
-                            </div>
-                            <div class="chat-message">
-                                <div class="chat-avatar">AI</div>
-                                <div class="chat-content">
-                                    <div class="chat-user">OpenVector Instructor</div>
-                                    <div class="chat-text">We'll cover custom hooks in the next section. Stay tuned!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat-input">
-                            <input type="text" placeholder="Type your message..." id="chat-input">
-                            <button class="btn btn-primary" id="send-chat-btn">Send</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Streams -->
-    <section class="featured-streams" id="featured-streams">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Streams</h2>
-                <p class="section-subtitle">Browse our most popular live sessions and upcoming events</p>
-            </div>
-            
-            <div class="streams-grid">
-                <div class="stream-card fade-in" data-video-id="dQw4w9WgXcQ" data-title="Python for Data Science" data-description="Master Python programming for data analysis and visualization">
-                    <div class="stream-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Python Programming">
-                    </div>
-                    <div class="stream-card-info">
-                        <h3 class="stream-card-title">Python for Data Science</h3>
-                        <div class="stream-card-meta">
-                            <span>Dr. Sarah Johnson</span>
-                            <span>Starts in 2 hours</span>
-                        </div>
-                        <button class="btn btn-primary watch-stream-btn" style="width: 100%; margin-top: var(--space-3);">
-                            <i class="fas fa-play"></i> Watch Stream
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="stream-card fade-in" data-video-id="9bZkp7q19f0" data-title="Advanced React Patterns" data-description="Learn advanced React patterns and best practices">
-                    <div class="stream-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="React Development">
-                    </div>
-                    <div class="stream-card-info">
-                        <h3 class="stream-card-title">Advanced React Patterns</h3>
-                        <div class="stream-card-meta">
-                            <span>Mike Chen</span>
-                            <span>Live Now</span>
-                        </div>
-                        <button class="btn btn-primary watch-stream-btn" style="width: 100%; margin-top: var(--space-3);">
-                            <i class="fas fa-play"></i> Watch Stream
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="stream-card fade-in" data-video-id="C0DPdy98e4c" data-title="UI/UX Design Principles" data-description="Master the fundamentals of UI/UX design">
-                    <div class="stream-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="UI/UX Design">
-                    </div>
-                    <div class="stream-card-info">
-                        <h3 class="stream-card-title">UI/UX Design Principles</h3>
-                        <div class="stream-card-meta">
-                            <span>Lisa Rodriguez</span>
-                            <span>Tomorrow, 1:00 PM</span>
-                        </div>
-                        <button class="btn btn-primary watch-stream-btn" style="width: 100%; margin-top: var(--space-3);">
-                            <i class="fas fa-play"></i> Watch Stream
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Upcoming Sessions -->
-    <section class="upcoming-sessions" id="upcoming-sessions">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Upcoming Live Sessions</h2>
-                <p class="section-subtitle">Schedule your learning with our upcoming live classes</p>
-            </div>
-            
-            <div class="sessions-grid">
-                <div class="session-card fade-in">
-                    <div class="session-time">
-                        <i class="far fa-calendar-alt"></i>
-                        <div>
-                            <div class="session-date">June 25, 2023</div>
-                            <div class="session-duration">2:00 PM - 4:00 PM EST</div>
-                        </div>
-                    </div>
-                    <h3>Advanced JavaScript Patterns</h3>
-                    <p>Learn modern JavaScript patterns for building scalable applications</p>
-                    
-                    <div class="session-instructor">
-                        <div class="instructor-avatar">MC</div>
-                        <div class="instructor-info">
-                            <h4>Michael Chen</h4>
-                            <p>Senior Frontend Engineer</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-outline" style="width: 100%;">
-                        <i class="fas fa-bell"></i>
-                        Set Reminder
-                    </button>
-                </div>
-                
-                <div class="session-card fade-in">
-                    <div class="session-time">
-                        <i class="far fa-calendar-alt"></i>
-                        <div>
-                            <div class="session-date">June 26, 2023</div>
-                            <div class="session-duration">10:00 AM - 12:00 PM EST</div>
-                        </div>
-                    </div>
-                    <h3>React Performance Optimization</h3>
-                    <p>Master techniques for optimizing React application performance</p>
-                    
-                    <div class="session-instructor">
-                        <div class="instructor-avatar">SC</div>
-                        <div class="instructor-info">
-                            <h4>Sarah Chen</h4>
-                            <p>React Specialist</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-outline" style="width: 100%;">
-                        <i class="fas fa-bell"></i>
-                        Set Reminder
-                    </button>
-                </div>
-                
-                <div class="session-card fade-in">
-                    <div class="session-time">
-                        <i class="far fa-calendar-alt"></i>
-                        <div>
-                            <div class="session-date">June 27, 2023</div>
-                            <div class="session-duration">1:00 PM - 3:00 PM EST</div>
-                        </div>
-                    </div>
-                    <h3>Building RESTful APIs</h3>
-                    <p>Learn to design and build robust REST APIs with Node.js</p>
-                    
-                    <div class="session-instructor">
-                        <div class="instructor-avatar">JW</div>
-                        <div class="instructor-info">
-                            <h4>Jessica Williams</h4>
-                            <p>Backend Engineer</p>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-outline" style="width: 100%;">
-                        <i class="fas fa-bell"></i>
-                        Set Reminder
-                    </button>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: var(--space-8);">
-                <a href="#featured-streams" class="btn btn-primary">View All Upcoming Sessions</a>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta" id="cta">
+    <section style="background: var(--off-white); text-align: center; padding: var(--space-20) 0;">
         <div class="container container-narrow">
-            <h2 class="cta-title">Experience Live Learning</h2>
-            <p class="cta-description">
-                Join our community of learners and interact with expert instructors in real-time. 
-                Get your questions answered instantly and learn through practical examples.
-            </p>
-            <div class="cta-buttons">
-                <a href="registration.html" class="btn btn-secondary btn-lg">
-                    <i class="fas fa-rocket"></i>
-                    Join Free Session
-                </a>
-                <a href="#featured-streams" class="btn btn-outline btn-lg">
-                    <i class="fas fa-calendar-alt"></i>
-                    View Schedule
-                </a>
-            </div>
+            <h2>Don't Miss the Next Stream</h2>
+            <p>Subscribe to our calendar to get notified 10 minutes before we go live.</p>
+            <button class="btn btn-primary btn-lg">Subscribe to Notifications</button>
         </div>
     </section>
 
@@ -1585,21 +924,13 @@
                     <a href="index.html" class="footer-logo">OpenVector Academy</a>
                     <p class="footer-description">
                         World-class technology education platform transforming careers through 
-                        industry-led curriculum and expert mentorship. Join the future of tech education.
+                        industry-led curriculum and expert mentorship.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
@@ -1609,17 +940,6 @@
                         <li><a href="courses.html" class="footer-link">Web Development</a></li>
                         <li><a href="courses.html" class="footer-link">Data Science</a></li>
                         <li><a href="courses.html" class="footer-link">Machine Learning</a></li>
-                        <li><a href="courses.html" class="footer-link">Cybersecurity</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="footer-heading">Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="live.html" class="footer-link">Live Classes</a></li>
-                        <li><a href="resources.html" class="footer-link">Learning Materials</a></li>
-                        <li><a href="events.html" class="footer-link">Events</a></li>
-                        <li><a href="blog.html" class="footer-link">Blog</a></li>
                     </ul>
                 </div>
                 
@@ -1627,8 +947,8 @@
                     <h3 class="footer-heading">Company</h3>
                     <ul class="footer-links">
                         <li><a href="about.html" class="footer-link">About</a></li>
-                        <li><a href="careers.html" class="footer-link">Careers</a></li>
                         <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
                         <li><a href="privacy.html" class="footer-link">Privacy</a></li>
                     </ul>
                 </div>
@@ -1636,17 +956,14 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2023 OpenVector Academy. All rights reserved.</p>
-                <p style="margin-top: var(--space-2);">
-                    Designed for the future of education
-                </p>
             </div>
         </div>
     </footer>
 
-    <!-- YouTube IFrame API -->
+    <!-- YouTube IFrame API (Required for player) -->
     <script src="https://www.youtube.com/iframe_api"></script>
-    
-    <!-- JavaScript (Matching index.html functionality) -->
+
+    <!-- JavaScript Logic (Consistent with your restriction code) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('header');
@@ -1655,7 +972,7 @@
             const body = document.body;
             const bars = mobileToggle.querySelectorAll('.bar');
 
-            /* --- 1. Header Scroll Effect --- */
+            /* --- 1. Header Logic (Same as Index) --- */
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     header.classList.add('scrolled');
@@ -1664,11 +981,8 @@
                 }
             });
 
-            /* --- 2. Mobile Menu Logic --- */
             function toggleMenu() {
                 mobileMenu.classList.toggle('active');
-                
-                // Hamburger animation
                 if (mobileMenu.classList.contains('active')) {
                     bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
                     bars[1].style.opacity = '0';
@@ -1683,96 +997,31 @@
             }
 
             mobileToggle.addEventListener('click', toggleMenu);
-
-            // Close menu when clicking a link
             mobileMenu.querySelectorAll('.mobile-nav-link, .btn').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (mobileMenu.classList.contains('active')) {
-                        toggleMenu();
-                    }
+                    if (mobileMenu.classList.contains('active')) toggleMenu();
                 });
             });
 
-            // Close mobile menu when clicking outside
             document.addEventListener('click', function(event) {
                 const isClickInsideMenu = mobileMenu.contains(event.target);
                 const isClickOnToggle = mobileToggle.contains(event.target);
-                
                 if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
                     toggleMenu();
                 }
             });
 
-            /* --- 3. Fade-in animation on scroll --- */
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationDelay = (Math.random() * 0.3) + 's';
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        fadeObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-            
-            fadeElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                fadeObserver.observe(element);
-            });
-
-            /* --- 4. Smooth scrolling for anchor links --- */
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        // Close mobile menu if open
-                        if (mobileMenu.classList.contains('active')) {
-                            toggleMenu();
-                        }
-                        
-                        // Calculate offset for header height
-                        const headerHeight = header.offsetHeight;
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                        
-                        // Smooth scroll
-                        window.scrollTo({
-                            top: targetPosition - headerHeight - 10,
-                            behavior: 'smooth'
-                        });
-                        
-                        e.preventDefault();
-                    }
-                });
-            });
-
-            /* --- 5. Initialize header state --- */
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            }
-
-            /* --- 6. Keyboard navigation --- */
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                    toggleMenu();
-                    mobileToggle.focus();
-                }
-            });
-            
-            /* --- 7. YouTube Player Initialization --- */
+            /* --- 2. CUSTOM YOUTUBE PLAYER IMPLEMENTATION (Restricted Logic) --- */
             let player;
-            let currentVideoId = 'gCNeDWCI0vo'; // Default live stream video
-            
-            // Load YouTube IFrame API
+            let isPlaying = false;
+            let isMuted = false;
+            let currentVolume = 100;
+            let isFullscreen = false;
+            let securityCheckInterval;
+            let controlsTimeout;
+            let currentVideoId = 'gCNeDWCI0vo'; // Placeholder Video ID
+
+            // Load YouTube IFrame API and create player
             function onYouTubeIframeAPIReady() {
                 player = new YT.Player('player', {
                     height: '100%',
@@ -1783,222 +1032,213 @@
                         'modestbranding': 1,
                         'rel': 0,
                         'showinfo': 0,
-                        'controls': 1,
-                        'disablekb': 0,
-                        'fs': 1,
+                        'controls': 0, // Hiding default controls
+                        'disablekb': 1,
+                        'fs': 0,
                         'iv_load_policy': 3,
                         'origin': window.location.origin
                     },
                     events: {
                         'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange,
-                        'onError': onPlayerError
+                        'onStateChange': onPlayerStateChange
                     }
                 });
             }
-            
+
+            // When player is ready
             function onPlayerReady(event) {
-                // Player is ready
-                console.log('Player is ready');
-                // Start playing automatically (with user interaction)
-                event.target.playVideo();
+                updateTimeDisplay();
+                startSecurityMonitoring();
+                setInterval(updateProgress, 200);
+                
+                // Listen for fullscreen changes
+                document.addEventListener('fullscreenchange', handleFullscreenChange);
+                document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+                document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+                
+                // Add click event to show controls in fullscreen
+                document.getElementById('secure-overlay').addEventListener('click', handleScreenClick);
+                
+                // Auto play
+                player.playVideo();
             }
-            
+
+            // Handle player state changes
             function onPlayerStateChange(event) {
-                // Handle player state changes
-                console.log('Player state changed:', event.data);
+                if (event.data === YT.PlayerState.PLAYING) {
+                    isPlaying = true;
+                    document.getElementById('play-icon').style.display = 'none';
+                    document.getElementById('pause-icon').style.display = 'block';
+                } else {
+                    isPlaying = false;
+                    document.getElementById('play-icon').style.display = 'block';
+                    document.getElementById('pause-icon').style.display = 'none';
+                }
             }
-            
-            function onPlayerError(event) {
-                console.error('Player error:', event.data);
+
+            // Handle fullscreen changes
+            function handleFullscreenChange() {
+                isFullscreen = !!(document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.mozFullScreenElement || 
+                                   document.msFullscreenElement);
+                
+                if (isFullscreen) {
+                    document.getElementById('expand-icon').style.display = 'none';
+                    document.getElementById('compress-icon').style.display = 'block';
+                    document.getElementById('controls').classList.add('hidden');
+                } else {
+                    document.getElementById('expand-icon').style.display = 'block';
+                    document.getElementById('compress-icon').style.display = 'none';
+                    document.getElementById('controls').classList.remove('hidden');
+                    clearTimeout(controlsTimeout);
+                }
             }
-            
-            /* --- 8. Stream Selection --- */
-            document.querySelectorAll('.watch-stream-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const streamCard = this.closest('.stream-card');
-                    const videoId = streamCard.getAttribute('data-video-id');
-                    const title = streamCard.getAttribute('data-title');
-                    const description = streamCard.getAttribute('data-description');
-                    
-                    // Update current video
-                    currentVideoId = videoId;
-                    
-                    // Load new video
-                    if (player && player.loadVideoById) {
-                        player.loadVideoById(videoId);
-                        player.playVideo();
+
+            // Handle screen click in fullscreen
+            function handleScreenClick() {
+                if (isFullscreen) {
+                    showControlsTemporarily();
+                } else {
+                    togglePlayPause();
+                }
+            }
+
+            // Show controls for 5 seconds in fullscreen
+            function showControlsTemporarily() {
+                if (isFullscreen) {
+                    document.getElementById('controls').classList.remove('hidden');
+                    clearTimeout(controlsTimeout);
+                    controlsTimeout = setTimeout(() => {
+                        if (isFullscreen) {
+                            document.getElementById('controls').classList.add('hidden');
+                        }
+                    }, 5000);
+                }
+            }
+
+            // SECURITY FUNCTIONS (Restrictions as requested)
+            function startSecurityMonitoring() {
+                // Block right-click
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    showSecurityNotice();
+                    return false;
+                });
+                
+                // Block keyboard shortcuts
+                document.addEventListener('keydown', function(e) {
+                    if (e.ctrlKey || e.metaKey) {
+                        e.preventDefault();
+                        showSecurityNotice();
                     }
-                    
-                    // Update video info
-                    document.querySelector('.video-title').textContent = title;
-                    document.querySelector('.video-description').textContent = description;
-                    
-                    // Show notification
-                    showNotification(`Now playing: ${title}`);
-                    
-                    // Scroll to live stream section
-                    const liveStreamSection = document.getElementById('live-stream');
-                    if (liveStreamSection) {
-                        window.scrollTo({
-                            top: liveStreamSection.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
+                    if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+                        e.preventDefault();
+                        showSecurityNotice();
+                    }
+                    if (e.keyCode === 32 && e.target === document.body) {
+                        e.preventDefault();
+                        togglePlayPause();
                     }
                 });
-            });
-            
-            function showNotification(message) {
-                // Create notification element
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 100px;
-                    right: 20px;
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-                    color: white;
-                    padding: 12px 20px;
-                    border-radius: var(--radius);
-                    z-index: 1000;
-                    font-weight: 600;
-                    box-shadow: var(--shadow-lg);
-                    animation: slideIn 0.3s ease;
-                `;
-                notification.textContent = message;
-                document.body.appendChild(notification);
-                
-                // Remove after 3 seconds
-                setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.3s ease';
-                    setTimeout(() => {
-                        document.body.removeChild(notification);
-                    }, 300);
-                }, 3000);
+
+                // Navigation restriction
+                window.addEventListener('beforeunload', function(e) {
+                    if (window.location.href.includes('youtube.com') || window.location.href.includes('youtu.be')) {
+                        e.preventDefault();
+                        e.returnValue = 'Navigation blocked';
+                        showBlockOverlay();
+                        return 'Navigation blocked';
+                    }
+                });
             }
+
+            function showSecurityNotice() {
+                const notice = document.getElementById('security-notice');
+                notice.style.display = 'block';
+                setTimeout(() => { notice.style.display = 'none'; }, 2000);
+            }
+
+            function showBlockOverlay() {
+                const overlay = document.getElementById('block-overlay');
+                overlay.style.display = 'flex';
+                setTimeout(() => { overlay.style.display = 'none'; }, 3000);
+            }
+
+            // PLAYER CONTROL FUNCTIONS
+            function togglePlayPause() {
+                if (isPlaying) {
+                    player.pauseVideo();
+                } else {
+                    player.playVideo();
+                }
+            }
+
+            // Toggle play/pause
+            document.getElementById('play-pause-btn').addEventListener('click', togglePlayPause);
             
-            /* --- 9. Chat Functionality --- */
-            const chatInput = document.getElementById('chat-input');
-            const sendChatBtn = document.getElementById('send-chat-btn');
-            const chatContainer = document.getElementById('chat-container');
-            
-            sendChatBtn.addEventListener('click', sendChatMessage);
-            chatInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendChatMessage();
+            // Volume mute
+            document.getElementById('volume-btn').addEventListener('click', () => {
+                if (isMuted) {
+                    player.unMute();
+                    document.getElementById('volume-high').style.display = 'block';
+                    document.getElementById('volume-mute').style.display = 'none';
+                    isMuted = false;
+                } else {
+                    player.mute();
+                    document.getElementById('volume-high').style.display = 'none';
+                    document.getElementById('volume-mute').style.display = 'block';
+                    isMuted = true;
                 }
             });
-            
-            function sendChatMessage() {
-                const message = chatInput.value.trim();
-                if (message) {
-                    const messageElement = document.createElement('div');
-                    messageElement.className = 'chat-message';
-                    
-                    // For demo, use "You" as the sender
-                    const initials = 'Y';
-                    messageElement.innerHTML = `
-                        <div class="chat-avatar">${initials}</div>
-                        <div class="chat-content">
-                            <div class="chat-user">You</div>
-                            <div class="chat-text">${message}</div>
-                        </div>
-                    `;
-                    chatContainer.appendChild(messageElement);
-                    chatContainer.scrollTop = chatContainer.scrollHeight;
-                    chatInput.value = '';
-                    
-                    // Simulate instructor response after 2 seconds
-                    setTimeout(() => {
-                        simulateInstructorResponse();
-                    }, 2000);
+
+            // Fullscreen
+            document.getElementById('fullscreen-btn').addEventListener('click', () => {
+                const container = document.querySelector('.player-wrapper');
+                if (!isFullscreen) {
+                    if (container.requestFullscreen) container.requestFullscreen();
+                    else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
+                    else if (container.mozRequestFullScreen) container.mozRequestFullScreen();
+                    else if (container.msRequestFullscreen) container.msRequestFullscreen();
+                } else {
+                    if (document.exitFullscreen) document.exitFullscreen();
+                    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                    else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+                    else if (document.msExitFullscreen) document.msExitFullscreen();
                 }
+            });
+
+            // Update progress bar
+            function updateProgress() {
+                if (!player || !player.getDuration) return;
+                const currentTime = player.getCurrentTime();
+                const duration = player.getDuration();
+                const progressPercent = (currentTime / duration) * 100;
+                document.getElementById('progress').style.width = `${progressPercent}%`;
+                updateTimeDisplay();
             }
-            
-            function simulateInstructorResponse() {
-                const responses = [
-                    { user: 'OpenVector Instructor', initials: 'AI', text: 'Great question! Let me elaborate on that.' },
-                    { user: 'OpenVector Instructor', initials: 'AI', text: 'Thanks for your input! That\'s a good point.' },
-                    { user: 'OpenVector Instructor', initials: 'AI', text: 'I\'ll cover that in more detail in a moment.' },
-                    { user: 'OpenVector Instructor', initials: 'AI', text: 'Excellent observation! Keep the questions coming.' }
-                ];
-                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                
-                const responseElement = document.createElement('div');
-                responseElement.className = 'chat-message';
-                responseElement.innerHTML = `
-                    <div class="chat-avatar">${randomResponse.initials}</div>
-                    <div class="chat-content">
-                        <div class="chat-user">${randomResponse.user}</div>
-                        <div class="chat-text">${randomResponse.text}</div>
-                    </div>
-                `;
-                chatContainer.appendChild(responseElement);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            function updateTimeDisplay() {
+                if (!player || !player.getDuration) return;
+                const currentTime = player.getCurrentTime();
+                const minutes = Math.floor(currentTime / 60);
+                const secs = Math.floor(currentTime % 60);
+                document.getElementById('current-time').textContent = `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
             }
-            
-            // Simulate live chat updates
-            setInterval(() => {
-                const messages = [
-                    { user: 'New Viewer', initials: 'NV', text: 'Just joined, this stream is amazing!' },
-                    { user: 'CodeLearner', initials: 'CL', text: 'Can you explain that concept again?' },
-                    { user: 'DevStudent', initials: 'DS', text: 'The examples are really helpful' },
-                    { user: 'TechEnthusiast', initials: 'TE', text: 'When will the next session on this topic be?' }
-                ];
-                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-                const messageElement = document.createElement('div');
-                messageElement.className = 'chat-message';
-                messageElement.innerHTML = `
-                    <div class="chat-avatar">${randomMessage.initials}</div>
-                    <div class="chat-content">
-                        <div class="chat-user">${randomMessage.user}</div>
-                        <div class="chat-text">${randomMessage.text}</div>
-                    </div>
-                `;
-                chatContainer.appendChild(messageElement);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            }, 15000);
-            
-            /* --- 10. Update Viewer Stats --- */
-            setInterval(() => {
-                const viewerElement = document.getElementById('viewer-count');
-                const likeElement = document.getElementById('like-count');
-                const shareElement = document.getElementById('share-count');
-                
-                const currentViewers = parseInt(viewerElement.textContent.replace(/,/g, ''));
-                const currentLikes = parseInt(likeElement.textContent.replace(/,/g, ''));
-                const currentShares = parseInt(shareElement.textContent.replace(/,/g, ''));
-                
-                // Random changes (simulate live updates)
-                const viewerChange = Math.floor(Math.random() * 21) - 5;
-                const likeChange = Math.floor(Math.random() * 11);
-                const shareChange = Math.floor(Math.random() * 6);
-                
-                const newViewers = Math.max(1000, currentViewers + viewerChange);
-                const newLikes = Math.max(1000, currentLikes + likeChange);
-                const newShares = Math.max(300, currentShares + shareChange);
-                
-                viewerElement.textContent = `${newViewers.toLocaleString()} watching`;
-                likeElement.textContent = `${newLikes.toLocaleString()} likes`;
-                shareElement.textContent = `${newShares.toLocaleString()} shares`;
-            }, 10000);
-            
-            /* --- 11. Set Reminder Functionality --- */
-            document.querySelectorAll('.btn-outline').forEach(button => {
-                if (button.innerHTML.includes('fa-bell')) {
-                    button.addEventListener('click', function() {
-                        const sessionCard = this.closest('.session-card');
-                        const sessionTitle = sessionCard.querySelector('h3').textContent;
-                        const sessionDate = sessionCard.querySelector('.session-date').textContent;
-                        
-                        // Change button state
-                        this.innerHTML = '<i class="fas fa-check"></i> Reminder Set';
-                        this.classList.remove('btn-outline');
-                        this.classList.add('btn-primary');
-                        this.disabled = true;
-                        
-                        showNotification(`Reminder set for: ${sessionTitle} on ${sessionDate}`);
-                    });
-                }
+
+            // Seek on progress click
+            document.getElementById('progress-container').addEventListener('click', (e) => {
+                if (!player || !player.getDuration) return;
+                const rect = e.currentTarget.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                const duration = player.getDuration();
+                player.seekTo(percent * duration, true);
+            });
+
+            // Clean up
+            window.addEventListener('beforeunload', () => {
+                if (securityCheckInterval) clearInterval(securityCheckInterval);
+                if (controlsTimeout) clearTimeout(controlsTimeout);
             });
         });
     </script>
