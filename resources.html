@@ -19,7 +19,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png">
     
-    <!-- Professional CSS (Same as index.html with additions for resources) -->
+    <!-- Professional CSS -->
     <style>
         /* ===== CSS RESET ===== */
         * {
@@ -247,12 +247,17 @@
             box-shadow: var(--shadow);
         }
         
+        .btn-sm {
+            padding: var(--space-2) var(--space-3);
+            font-size: var(--font-sm);
+        }
+        
         .btn-lg {
             padding: var(--space-4) var(--space-8);
             font-size: var(--font-lg);
         }
         
-        /* ===== HEADER (Same as index.html) ===== */
+        /* ===== HEADER ===== */
         .header {
             position: fixed;
             top: 0;
@@ -450,13 +455,11 @@
         }
         
         /* ===== RESOURCES FILTER ===== */
+        /* REMOVED sticky positioning */
         .resources-filter {
             background: var(--white);
             padding: var(--space-6) 0;
             border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 70px;
-            z-index: 50;
         }
         
         .filter-tabs {
@@ -776,7 +779,7 @@
             font-size: var(--font-base);
         }
         
-        /* ===== FOOTER (Same as index.html) ===== */
+        /* ===== FOOTER ===== */
         .footer {
             background-color: var(--text-dark);
             color: var(--white);
@@ -1048,10 +1051,9 @@
     </style>
 </head>
 <body>
-    <!-- Updated Header -->
+    <!-- Header -->
     <header class="header" id="header">
         <div class="container nav-wrapper">
-            <!-- Logo with PNG -->
             <a href="index.html" class="logo">
                 <img src="https://i.postimg.cc/v85QFpyn/In-Shot-20260120-230854934.png" 
                      alt="OpenVector Academy" 
@@ -1137,11 +1139,11 @@
                 </div>
                 <div class="resources-stats">
                     <div class="stat-item">
-                        <div class="stat-value">128</div>
+                        <div class="stat-value">129</div>
                         <div class="stat-label">Resources</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-value">24.5K</div>
+                        <div class="stat-value">25.1K</div>
                         <div class="stat-label">Downloads</div>
                     </div>
                     <div class="stat-item">
@@ -1161,7 +1163,32 @@
                     <div></div>
                 </div>
 
-                <!-- Table Row 1 -->
+                <!-- Table Row 1: GST Question Bank -->
+                <div class="table-row fade-in" data-category="pdf">
+                    <div>
+                        <div class="resource-title">GST Question Bank - University Admission Materials</div>
+                        <div class="resource-description">Comprehensive GST (Goods and Services Tax) question bank for university admission test preparation. Includes solved examples and practice problems.</div>
+                        <div class="resource-tags">
+                            <span class="resource-tag">GST</span>
+                            <span class="resource-tag">Taxation</span>
+                            <span class="resource-tag">University Admission</span>
+                            <span class="resource-tag">Study Material</span>
+                        </div>
+                    </div>
+                    <div class="resource-type pdf">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF Guide</span>
+                    </div>
+                    <div class="resource-size">65 pages</div>
+                    <div class="resource-downloads">1,850</div>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="downloadGSTResource()">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Table Row 2 -->
                 <div class="table-row fade-in" data-category="pdf">
                     <div>
                         <div class="resource-title">Machine Learning Algorithms Complete Guide</div>
@@ -1185,7 +1212,7 @@
                     </div>
                 </div>
 
-                <!-- Table Row 2 -->
+                <!-- Table Row 3 -->
                 <div class="table-row fade-in" data-category="ebook">
                     <div>
                         <div class="resource-title">Data Science Handbook 2024 Edition</div>
@@ -1209,7 +1236,7 @@
                     </div>
                 </div>
 
-                <!-- Table Row 3 -->
+                <!-- Table Row 4 -->
                 <div class="table-row fade-in" data-category="video">
                     <div>
                         <div class="resource-title">AWS Certification Complete Video Course</div>
@@ -1233,7 +1260,7 @@
                     </div>
                 </div>
 
-                <!-- Table Row 4 -->
+                <!-- Table Row 5 -->
                 <div class="table-row fade-in" data-category="code">
                     <div>
                         <div class="resource-title">Complete REST API Examples Collection</div>
@@ -1257,7 +1284,7 @@
                     </div>
                 </div>
 
-                <!-- Table Row 5 -->
+                <!-- Table Row 6 -->
                 <div class="table-row fade-in" data-category="pdf">
                     <div>
                         <div class="resource-title">Git & GitHub Essential Commands Cheat Sheet</div>
@@ -1281,7 +1308,7 @@
                     </div>
                 </div>
 
-                <!-- Table Row 6 -->
+                <!-- Table Row 7 -->
                 <div class="table-row fade-in" data-category="templates">
                     <div>
                         <div class="resource-title">Professional Tech Resume Templates 2024</div>
@@ -1666,6 +1693,24 @@
                 setTimeout(() => {
                     showNotification(`"${filename}" downloaded successfully!`);
                 }, 1000);
+            }
+        }
+        
+        // Special function for GST resource download
+        function downloadGSTResource() {
+            const filename = "GST Question Bank - University Admission Materials.pdf";
+            const gstUrl = "https://drive.google.com/uc?export=download&id=14JL2YpHG-sfHa2sMHPF4FX0L6eo0Y10m";
+            
+            if (confirm(`Download "${filename}"?`)) {
+                showNotification(`Opening GST Question Bank...`);
+                
+                // Open Google Drive PDF in new tab
+                window.open(gstUrl, '_blank');
+                
+                // Simulate download tracking
+                setTimeout(() => {
+                    showNotification(`"${filename}" opened in new tab. If download doesn't start, use the download button in Google Drive viewer.`);
+                }, 500);
             }
         }
         
