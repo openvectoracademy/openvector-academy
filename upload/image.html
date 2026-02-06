@@ -1090,9 +1090,10 @@
 
     <!-- JavaScript -->
     <script>
-        // API Configuration
+        // ===== CONFIGURATION =====
         const IMAGEBB_API_KEY = '61efcea661db85bc3909f88fd02010d3';
         const IMAGEBB_UPLOAD_URL = 'https://api.imgbb.com/1/upload';
+        const DEBUG_MODE = true; // Set to false in production
         
         // Local Storage Keys
         const STORAGE_KEYS = {
@@ -1107,19 +1108,29 @@
             textHeight: 100, // Height for text area at bottom
             gridSpacing: 0 // No spacing between images
         };
+        
+        // Global variables
+        let selectedFiles = [];
+        let lastSubmissionTime = localStorage.getItem(STORAGE_KEYS.LAST_SUBMISSION);
+        let cooldownActive = false;
 
         document.addEventListener('DOMContentLoaded', () => {
+            // DOM Elements
             const header = document.getElementById('header');
             const mobileToggle = document.getElementById('mobile-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             const body = document.body;
             const bars = mobileToggle.querySelectorAll('.bar');
             
-            let selectedFiles = [];
-            let lastSubmissionTime = localStorage.getItem(STORAGE_KEYS.LAST_SUBMISSION);
-            let cooldownActive = false;
+            const fileInput = document.getElementById('file-input');
+            const dropArea = document.getElementById('drop-area');
+            const fileList = document.getElementById('file-list');
+            const fileItemsContainer = document.getElementById('file-items-container');
+            const fileCount = document.getElementById('file-count');
+            const submitBtn = document.getElementById('submit-btn');
+            const form = document.getElementById('user-info-form');
 
-            /* --- 1. Header Scroll Effect --- */
+            /* ===== 1. HEADER SCROLL EFFECT ===== */
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     header.classList.add('scrolled');
@@ -1128,7 +1139,7 @@
                 }
             });
 
-            /* --- 2. Mobile Menu Logic --- */
+            /* ===== 2. MOBILE MENU LOGIC ===== */
             function toggleMenu() {
                 mobileMenu.classList.toggle('active');
                 
@@ -1156,7 +1167,7 @@
                 });
             });
 
-            /* --- 3. Cooldown Check --- */
+            /* ===== 3. COOLDOWN CHECK ===== */
             function checkCooldown() {
                 if (!lastSubmissionTime) {
                     cooldownActive = false;
@@ -1176,25 +1187,18 @@
                     document.getElementById('cooldown-message').textContent = 
                         `You can submit again in ${daysLeft} day${daysLeft > 1 ? 's' : ''}`;
                     document.getElementById('cooldown-notice').classList.add('visible');
-                    document.getElementById('submit-btn').disabled = true;
+                    submitBtn.disabled = true;
                 } else {
                     cooldownActive = false;
                     document.getElementById('cooldown-notice').classList.remove('visible');
-                    document.getElementById('submit-btn').disabled = selectedFiles.length < 3;
+                    submitBtn.disabled = selectedFiles.length < 3;
                 }
             }
             
             // Initial cooldown check
             checkCooldown();
 
-            /* --- 4. File Upload Handling --- */
-            const fileInput = document.getElementById('file-input');
-            const dropArea = document.getElementById('drop-area');
-            const fileList = document.getElementById('file-list');
-            const fileItemsContainer = document.getElementById('file-items-container');
-            const fileCount = document.getElementById('file-count');
-            const submitBtn = document.getElementById('submit-btn');
-
+            /* ===== 4. FILE UPLOAD HANDLING ===== */
             // Prevent default drag behaviors
             ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
                 dropArea.addEventListener(eventName, preventDefaults, false);
@@ -1252,7 +1256,9 @@
                     }
                     
                     // Check if file already exists
-                    const existingFile = selectedFiles.find(f => f.name === file.name && f.size === file.size);
+                    const existingFile = selectedFiles.find(f => 
+                        f.name === file.name && f.size === file.size
+                    );
                     if (existingFile) {
                         showNotification('File already selected', 'warning');
                         return false;
@@ -1318,15 +1324,8 @@
                 return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
             }
 
-            // Expose removeFile to global scope for onclick attribute
-            window.removeFile = function(index) {
-                selectedFiles.splice(index, 1);
-                updateFileList();
-                showNotification('File removed from selection', 'info');
-            };
-
-            /* --- 5. Form Submission --- */
-            document.getElementById('user-info-form').addEventListener('submit', async function(e) {
+            /* ===== 5. FORM SUBMISSION ===== */
+            form.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 if (cooldownActive) {
@@ -1357,11 +1356,57 @@
                 document.getElementById('loader').classList.add('visible');
                 
                 try {
-                    // Step 1: Merge images exactly like AlaminEdge style
+                    if (DEBUG_MODE) {
+                        console.log('Starting submission process...', {
+                            userName,
+                            telegramId,
+                            fileCount: selectedFiles.length
+                        });
+                    }
+                    
+                    // Check connection first
+                    const isConnected = await checkImageBBConnection();
+                    if (!isConnected) {
+                        throw new Error('Cannot connect to image hosting service. Please check your internet connection.');
+                    }
+                    
+                    // Step 1: Merge images
                     const mergedImageFile = await mergeImagesAlaminEdgeStyle(selectedFiles, userName, telegramId);
                     
-                    // Step 2: Upload merged image to ImageBB
-                    const mergedImageUrl = await uploadMergedImageToImageBB(mergedImageFile);
+                    // Check file size
+                    if (mergedImageFile.size > 10 * 1024 * 1024) { // 10MB limit
+                        throw new Error('Merged image is too large. Please select fewer or smaller images.');
+                    }
+                    
+                    if (DEBUG_MODE) {
+                        console.log('Merged image created:', {
+                            name: mergedImageFile.name,
+                            size: formatFileSize(mergedImageFile.size),
+                            type: mergedImageFile.type
+                        });
+                    }
+                    
+                    // Step 2: Upload with retry logic
+                    let mergedImageUrl;
+                    let retryCount = 0;
+                    const maxRetries = 2;
+                    
+                    while (retryCount <= maxRetries) {
+                        try {
+                            mergedImageUrl = await uploadMergedImageToImageBB(mergedImageFile);
+                            if (DEBUG_MODE) {
+                                console.log(`Upload successful on attempt ${retryCount + 1}:`, mergedImageUrl);
+                            }
+                            break; // Success, exit loop
+                        } catch (uploadError) {
+                            retryCount++;
+                            if (retryCount > maxRetries) {
+                                throw uploadError; // Re-throw after max retries
+                            }
+                            console.log(`Upload attempt ${retryCount} failed, retrying in ${retryCount} seconds...`);
+                            await new Promise(resolve => setTimeout(resolve, 1000 * retryCount)); // Exponential backoff
+                        }
+                    }
                     
                     // Step 3: Store submission data
                     await saveSubmissionData(userName, telegramId, mergedImageUrl);
@@ -1373,29 +1418,58 @@
                     document.getElementById('loader').classList.remove('visible');
                     document.getElementById('success-message').classList.add('visible');
                     
+                    // Clear form
+                    selectedFiles = [];
+                    updateFileList();
+                    form.reset();
+                    
                 } catch (error) {
-                    console.error('Submission error:', error);
-                    showNotification('Submission failed. Please try again.', 'error');
+                    console.error('Complete submission error:', {
+                        error: error.message,
+                        stack: error.stack,
+                        userName: userName,
+                        fileCount: selectedFiles.length,
+                        timestamp: new Date().toISOString()
+                    });
+                    
+                    // Show specific error messages
+                    let userMessage = 'Submission failed. Please try again.';
+                    
+                    if (error.message.includes('Network error') || error.message.includes('Failed to fetch')) {
+                        userMessage = 'Network error. Please check your internet connection and try again.';
+                    } else if (error.message.includes('too large')) {
+                        userMessage = error.message;
+                    } else if (error.message.includes('ImageBB') || error.message.includes('API')) {
+                        userMessage = 'Image hosting service is temporarily unavailable. Please try again later.';
+                    } else if (error.message.includes('connection')) {
+                        userMessage = 'Cannot connect to the server. Please check your internet connection.';
+                    }
+                    
+                    showNotification(userMessage, 'error');
                     document.getElementById('loader').classList.remove('visible');
                     document.getElementById('upload-section').style.display = 'block';
                 }
             });
 
-            /* --- 6. Initialize header state --- */
+            /* ===== 6. INITIALIZE HEADER STATE ===== */
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             }
         });
 
-        /* --- Image Processing Functions (AlaminEdge Style) --- */
+        /* ===== IMAGE PROCESSING FUNCTIONS (AlaminEdge Style) ===== */
         async function mergeImagesAlaminEdgeStyle(files, userName, telegramId) {
             return new Promise(async (resolve, reject) => {
                 try {
-                    // Create canvas like AlaminEdge
+                    if (DEBUG_MODE) {
+                        console.log('Starting image merge...');
+                    }
+                    
+                    // Create canvas
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
                     
-                    // Set canvas size exactly like AlaminEdge
+                    // Set canvas size
                     canvas.width = CANVAS_CONFIG.width;
                     canvas.height = CANVAS_CONFIG.height;
                     
@@ -1426,17 +1500,34 @@
                     const cellWidth = Math.floor(CANVAS_CONFIG.width / gridCols);
                     const cellHeight = Math.floor(imageAreaHeight / gridRows);
                     
+                    if (DEBUG_MODE) {
+                        console.log('Grid layout:', {
+                            gridCols,
+                            gridRows,
+                            cellWidth,
+                            cellHeight,
+                            imageAreaHeight
+                        });
+                    }
+                    
                     // Load all images first
                     const imagePromises = files.map(file => {
                         return new Promise((resolveImg, rejectImg) => {
                             const img = new Image();
                             img.onload = () => resolveImg(img);
-                            img.onerror = rejectImg;
+                            img.onerror = (err) => {
+                                console.error('Failed to load image:', file.name, err);
+                                rejectImg(new Error(`Failed to load image: ${file.name}`));
+                            };
                             img.src = URL.createObjectURL(file);
                         });
                     });
                     
                     const images = await Promise.all(imagePromises);
+                    
+                    if (DEBUG_MODE) {
+                        console.log('All images loaded successfully');
+                    }
                     
                     // Draw white background
                     ctx.fillStyle = 'white';
@@ -1463,7 +1554,7 @@
                     const text = `${userName} | TG: ${telegramId}`;
                     
                     // Text background bar exactly like AlaminEdge
-                    ctx.fillStyle = "rgba(0, 82, 204, 0.9)"; // Your primary color with transparency
+                    ctx.fillStyle = "rgba(0, 82, 204, 0.9)";
                     ctx.fillRect(0, imageAreaHeight, canvas.width, CANVAS_CONFIG.textHeight);
                     
                     // Text styling exactly like AlaminEdge
@@ -1512,59 +1603,114 @@
                     });
                     
                     // Convert canvas to blob
-                    canvas.toBlob(async (blob) => {
-                        try {
-                            if (blob) {
-                                // Convert blob to file with proper naming
-                                const fileName = `merged-${Date.now()}-${userName.replace(/\s+/g, '-').toLowerCase()}.png`;
-                                const file = new File([blob], fileName, { type: 'image/png' });
-                                resolve(file);
-                            } else {
-                                reject(new Error('Canvas to blob conversion failed'));
+                    canvas.toBlob((blob) => {
+                        if (blob) {
+                            const fileName = `merged-${Date.now()}-${userName.replace(/\s+/g, '-').toLowerCase()}.png`;
+                            const file = new File([blob], fileName, { type: 'image/png' });
+                            
+                            if (DEBUG_MODE) {
+                                console.log('Canvas converted to blob:', {
+                                    fileName,
+                                    size: formatFileSize(blob.size)
+                                });
                             }
-                        } catch (error) {
-                            reject(error);
+                            
+                            resolve(file);
+                        } else {
+                            reject(new Error('Canvas to blob conversion failed - blob is null'));
                         }
-                    }, 'image/png', 1.0);
+                    }, 'image/png', 0.95); // Slightly reduced quality for smaller file size
                     
                 } catch (error) {
+                    console.error('Image merge error:', error);
                     reject(error);
                 }
             });
         }
 
+        /* ===== IMAGEBB UPLOAD FUNCTION ===== */
         async function uploadMergedImageToImageBB(file) {
-            return new Promise((resolve, reject) => {
-                const formData = new FormData();
-                formData.append('image', file);
-                
-                const uploadUrl = `${IMAGEBB_UPLOAD_URL}?key=${IMAGEBB_API_KEY}&expiration=600`;
-                
-                fetch(uploadUrl, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.success) {
-                        resolve(data.data.url);
-                    } else {
-                        console.error('ImageBB API error:', data);
-                        reject(new Error(data.error?.message || 'Image upload failed'));
-                    }
-                })
-                .catch(error => {
-                    console.error('Upload error:', error);
-                    reject(new Error('Network error during upload'));
+            if (DEBUG_MODE) {
+                console.log('Uploading file to ImageBB:', {
+                    name: file.name,
+                    size: formatFileSize(file.size),
+                    type: file.type
                 });
-            });
+            }
+            
+            const formData = new FormData();
+            formData.append('image', file);
+            
+            // Remove expiration parameter as it might cause issues
+            const uploadUrl = `${IMAGEBB_UPLOAD_URL}?key=${IMAGEBB_API_KEY}`;
+            
+            if (DEBUG_MODE) {
+                console.log('Uploading to:', uploadUrl);
+            }
+            
+            try {
+                const response = await fetch(uploadUrl, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors' // Explicitly set CORS mode
+                });
+                
+                if (DEBUG_MODE) {
+                    console.log('Response status:', response.status, response.statusText);
+                }
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                if (DEBUG_MODE) {
+                    console.log('ImageBB API response:', data);
+                }
+                
+                if (data.success) {
+                    if (DEBUG_MODE) {
+                        console.log('Image uploaded successfully:', data.data.url);
+                    }
+                    return data.data.url;
+                } else {
+                    console.error('ImageBB API error response:', data);
+                    throw new Error(data.error?.message || `Image upload failed: ${JSON.stringify(data)}`);
+                }
+            } catch (error) {
+                console.error('Upload to ImageBB failed:', error);
+                throw error;
+            }
         }
 
+        /* ===== CONNECTION CHECK ===== */
+        async function checkImageBBConnection() {
+            try {
+                if (DEBUG_MODE) {
+                    console.log('Checking ImageBB connection...');
+                }
+                
+                // Simple HEAD request to check if API is accessible
+                const testResponse = await fetch(`https://api.imgbb.com/1/upload?key=${IMAGEBB_API_KEY}`, {
+                    method: 'HEAD',
+                    mode: 'cors'
+                });
+                
+                const isOk = testResponse.ok;
+                
+                if (DEBUG_MODE) {
+                    console.log('Connection test result:', isOk);
+                }
+                
+                return isOk;
+            } catch (error) {
+                console.warn('ImageBB connection test failed:', error);
+                return false;
+            }
+        }
+
+        /* ===== SAVE SUBMISSION DATA ===== */
         async function saveSubmissionData(userName, telegramId, mergedImageUrl) {
             // Prepare submission data
             const submissionData = {
@@ -1575,8 +1721,12 @@
                 submissionId: generateSubmissionId()
             };
             
+            if (DEBUG_MODE) {
+                console.log('Saving submission data:', submissionData);
+            }
+            
             // Simulate processing delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Store in localStorage for reference
             const submissions = JSON.parse(localStorage.getItem('openvector_submissions') || '[]');
@@ -1584,29 +1734,42 @@
                 id: submissionData.submissionId,
                 timestamp: submissionData.submissionTime,
                 userName: submissionData.userName,
-                telegramId: submissionData.telegramId
+                telegramId: submissionData.telegramId,
+                imageUrl: submissionData.mergedImageUrl
             });
             localStorage.setItem('openvector_submissions', JSON.stringify(submissions));
             
             // Log submission (in production, this would be a server API call)
-            console.log('Submission processed:', {
+            console.log('Submission processed successfully:', {
                 userName: submissionData.userName,
                 telegramId: submissionData.telegramId,
-                imageCount: selectedFiles.length,
-                submissionId: submissionData.submissionId
+                submissionId: submissionData.submissionId,
+                imageUrl: submissionData.mergedImageUrl.substring(0, 50) + '...'
             });
             
             return true;
         }
 
+        /* ===== HELPER FUNCTIONS ===== */
         function generateSubmissionId() {
             return 'sub_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
         }
 
-        /* --- Form Reset --- */
+        // Expose removeFile to global scope for onclick attribute
+        window.removeFile = function(index) {
+            selectedFiles.splice(index, 1);
+            updateFileList();
+            showNotification('File removed from selection', 'info');
+        };
+
+        /* ===== FORM RESET ===== */
         function resetForm() {
             selectedFiles = [];
-            updateFileList();
+            
+            // Re-initialize updateFileList if needed
+            if (typeof updateFileList === 'function') {
+                updateFileList();
+            }
             
             document.getElementById('user-name').value = '';
             document.getElementById('telegram-id').value = '';
@@ -1614,12 +1777,18 @@
             document.getElementById('success-message').classList.remove('visible');
             document.getElementById('upload-section').style.display = 'block';
             
-            checkCooldown();
+            // Re-check cooldown
+            lastSubmissionTime = localStorage.getItem(STORAGE_KEYS.LAST_SUBMISSION);
+            cooldownActive = false;
+            
+            if (typeof checkCooldown === 'function') {
+                checkCooldown();
+            }
             
             showNotification('Form reset successfully', 'info');
         }
 
-        /* --- Notification System --- */
+        /* ===== NOTIFICATION SYSTEM ===== */
         function showNotification(message, type = 'info') {
             const colors = {
                 success: 'var(--success)',
@@ -1687,6 +1856,14 @@
                 `;
                 document.head.appendChild(style);
             }
+        }
+
+        // Make formatFileSize available globally
+        window.formatFileSize = formatFileSize;
+
+        // Initialize
+        if (typeof updateFileList === 'function') {
+            updateFileList();
         }
     </script>
 </body>
