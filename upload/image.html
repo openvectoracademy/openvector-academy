@@ -1090,10 +1090,24 @@
 
     <!-- JavaScript -->
     <script>
-        // API Configuration (embedded securely)
+        // API Configuration
         const IMAGEBB_API_KEY = '61efcea661db85bc3909f88fd02010d3';
         const IMAGEBB_UPLOAD_URL = 'https://api.imgbb.com/1/upload';
         
+        // Local Storage Keys
+        const STORAGE_KEYS = {
+            LAST_SUBMISSION: 'openvector_last_submission',
+            COOLDOWN_DAYS: 3
+        };
+        
+        // Canvas Configuration (Matching the AlaminEdge style)
+        const CANVAS_CONFIG = {
+            width: 1200,  // Same as AlaminEdge
+            height: 1200, // Same as AlaminEdge
+            textHeight: 100, // Height for text area at bottom
+            gridSpacing: 0 // No spacing between images
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('header');
             const mobileToggle = document.getElementById('mobile-toggle');
@@ -1102,7 +1116,7 @@
             const bars = mobileToggle.querySelectorAll('.bar');
             
             let selectedFiles = [];
-            let lastSubmissionTime = localStorage.getItem('lastSubmissionTime');
+            let lastSubmissionTime = localStorage.getItem(STORAGE_KEYS.LAST_SUBMISSION);
             let cooldownActive = false;
 
             /* --- 1. Header Scroll Effect --- */
@@ -1151,7 +1165,7 @@
                 }
                 
                 const now = Date.now();
-                const threeDays = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+                const threeDays = STORAGE_KEYS.COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
                 const timePassed = now - parseInt(lastSubmissionTime);
                 
                 if (timePassed < threeDays) {
@@ -1226,7 +1240,7 @@
             function handleFiles(files) {
                 const newFiles = Array.from(files).filter(file => {
                     // Check file type
-                    if (!file.type.match('image.*')) {
+                    if (!file.type.startsWith('image/')) {
                         showNotification('Only image files are allowed', 'error');
                         return false;
                     }
@@ -1343,17 +1357,17 @@
                 document.getElementById('loader').classList.add('visible');
                 
                 try {
-                    // Step 1: Merge images with text overlay
-                    const mergedImageBlob = await mergeImagesWithOverlay(selectedFiles, userName, telegramId);
+                    // Step 1: Merge images exactly like AlaminEdge style
+                    const mergedImageFile = await mergeImagesAlaminEdgeStyle(selectedFiles, userName, telegramId);
                     
                     // Step 2: Upload merged image to ImageBB
-                    const mergedImageUrl = await uploadMergedImageToImageBB(mergedImageBlob);
+                    const mergedImageUrl = await uploadMergedImageToImageBB(mergedImageFile);
                     
-                    // Step 3: Send data to server
-                    await sendToServer(userName, telegramId, mergedImageUrl);
+                    // Step 3: Store submission data
+                    await saveSubmissionData(userName, telegramId, mergedImageUrl);
                     
-                    // Store submission time
-                    localStorage.setItem('lastSubmissionTime', Date.now().toString());
+                    // Store submission time for cooldown
+                    localStorage.setItem(STORAGE_KEYS.LAST_SUBMISSION, Date.now().toString());
                     
                     // Show success message
                     document.getElementById('loader').classList.remove('visible');
@@ -1373,19 +1387,27 @@
             }
         });
 
-        /* --- Image Processing Functions --- */
-        async function mergeImagesWithOverlay(files, userName, telegramId) {
+        /* --- Image Processing Functions (AlaminEdge Style) --- */
+        async function mergeImagesAlaminEdgeStyle(files, userName, telegramId) {
             return new Promise(async (resolve, reject) => {
                 try {
-                    // Create canvas for merged image
+                    // Create canvas like AlaminEdge
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
                     
-                    // Calculate grid layout (2x2 for 4 images, 3x2 for 5-6 images, 3x3 for 7-9 images, 3x4 for 10 images)
+                    // Set canvas size exactly like AlaminEdge
+                    canvas.width = CANVAS_CONFIG.width;
+                    canvas.height = CANVAS_CONFIG.height;
+                    
+                    // Calculate grid layout based on number of images
                     const imageCount = files.length;
                     let gridCols, gridRows;
                     
-                    if (imageCount <= 4) {
+                    // Smart grid calculation for best layout
+                    if (imageCount <= 3) {
+                        gridCols = imageCount;
+                        gridRows = 1;
+                    } else if (imageCount === 4) {
                         gridCols = 2;
                         gridRows = 2;
                     } else if (imageCount <= 6) {
@@ -1394,21 +1416,17 @@
                     } else if (imageCount <= 9) {
                         gridCols = 3;
                         gridRows = 3;
-                    } else {
+                    } else { // 10 images
                         gridCols = 3;
-                        gridRows = 4; // For 10 images
+                        gridRows = 4; // Will have 2 empty slots
                     }
                     
-                    const cellWidth = 800 / gridCols;
-                    const cellHeight = 800 / gridRows;
-                    canvas.width = 800;
-                    canvas.height = 800;
+                    // Calculate image area (excluding text area)
+                    const imageAreaHeight = CANVAS_CONFIG.height - CANVAS_CONFIG.textHeight;
+                    const cellWidth = Math.floor(CANVAS_CONFIG.width / gridCols);
+                    const cellHeight = Math.floor(imageAreaHeight / gridRows);
                     
-                    // Fill background with white
-                    ctx.fillStyle = 'white';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                    
-                    // Load and draw all images
+                    // Load all images first
                     const imagePromises = files.map(file => {
                         return new Promise((resolveImg, rejectImg) => {
                             const img = new Image();
@@ -1420,7 +1438,11 @@
                     
                     const images = await Promise.all(imagePromises);
                     
-                    // Draw images in grid
+                    // Draw white background
+                    ctx.fillStyle = 'white';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    
+                    // Draw images in grid (EXACTLY like AlaminEdge)
                     for (let i = 0; i < Math.min(images.length, gridCols * gridRows); i++) {
                         const img = images[i];
                         const col = i % gridCols;
@@ -1429,37 +1451,43 @@
                         const x = col * cellWidth;
                         const y = row * cellHeight;
                         
-                        // Calculate scaling to fit cell
-                        const scale = Math.min(cellWidth / img.width, cellHeight / img.height);
-                        const scaledWidth = img.width * scale;
-                        const scaledHeight = img.height * scale;
-                        const offsetX = (cellWidth - scaledWidth) / 2;
-                        const offsetY = (cellHeight - scaledHeight) / 2;
+                        // Fill cell with white background
+                        ctx.fillStyle = 'white';
+                        ctx.fillRect(x, y, cellWidth, cellHeight);
                         
-                        ctx.drawImage(img, x + offsetX, y + offsetY, scaledWidth, scaledHeight);
-                        
-                        // Add border around each image
-                        ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
-                        ctx.lineWidth = 1;
-                        ctx.strokeRect(x, y, cellWidth, cellHeight);
+                        // Draw image to fill cell (no borders, no spacing)
+                        ctx.drawImage(img, x, y, cellWidth, cellHeight);
                     }
                     
-                    // Add text overlay at the bottom right corner
-                    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-                    ctx.font = 'bold 16px Arial';
-                    ctx.textAlign = 'right';
-                    ctx.textBaseline = 'bottom';
+                    // ADD TEXT OVERLAY EXACTLY LIKE AlaminEdge
+                    const text = `${userName} | TG: ${telegramId}`;
                     
-                    const textX = canvas.width - 20;
-                    const textY = canvas.height - 10;
+                    // Text background bar exactly like AlaminEdge
+                    ctx.fillStyle = "rgba(0, 82, 204, 0.9)"; // Your primary color with transparency
+                    ctx.fillRect(0, imageAreaHeight, canvas.width, CANVAS_CONFIG.textHeight);
                     
-                    // Add name
-                    ctx.fillText(`Name: ${userName}`, textX, textY - 30);
+                    // Text styling exactly like AlaminEdge
+                    ctx.font = "bold 40px 'Poppins', sans-serif";
+                    ctx.fillStyle = "#ffffff";
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "middle";
                     
-                    // Add Telegram ID
-                    ctx.fillText(`TG: ${telegramId}`, textX, textY);
+                    // Draw text with shadow exactly like AlaminEdge
+                    ctx.shadowColor = "rgba(0, 0, 0, 0.8)";
+                    ctx.shadowBlur = 10;
+                    ctx.shadowOffsetX = 2;
+                    ctx.shadowOffsetY = 2;
                     
-                    // Add timestamp
+                    // Calculate text position
+                    const textX = canvas.width / 2;
+                    const textY = imageAreaHeight + (CANVAS_CONFIG.textHeight / 2);
+                    
+                    // Draw the main text
+                    ctx.fillText(text, textX, textY);
+                    
+                    // Add timestamp in smaller font
+                    ctx.font = "20px 'Inter', sans-serif";
+                    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
                     const now = new Date();
                     const timestamp = now.toLocaleDateString('en-US', { 
                         year: 'numeric', 
@@ -1468,17 +1496,36 @@
                         hour: '2-digit',
                         minute: '2-digit'
                     });
-                    ctx.font = '12px Arial';
-                    ctx.fillText(`Submitted: ${timestamp}`, textX, textY - 50);
+                    ctx.fillText(`Submitted: ${timestamp}`, textX, textY + 40);
+                    
+                    // Reset shadow
+                    ctx.shadowColor = "transparent";
+                    ctx.shadowBlur = 0;
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    
+                    // Clean up object URLs
+                    images.forEach(img => {
+                        if (img.src.startsWith('blob:')) {
+                            URL.revokeObjectURL(img.src);
+                        }
+                    });
                     
                     // Convert canvas to blob
-                    canvas.toBlob(blob => {
-                        if (blob) {
-                            resolve(blob);
-                        } else {
-                            reject(new Error('Canvas to blob conversion failed'));
+                    canvas.toBlob(async (blob) => {
+                        try {
+                            if (blob) {
+                                // Convert blob to file with proper naming
+                                const fileName = `merged-${Date.now()}-${userName.replace(/\s+/g, '-').toLowerCase()}.png`;
+                                const file = new File([blob], fileName, { type: 'image/png' });
+                                resolve(file);
+                            } else {
+                                reject(new Error('Canvas to blob conversion failed'));
+                            }
+                        } catch (error) {
+                            reject(error);
                         }
-                    }, 'image/jpeg', 0.9);
+                    }, 'image/png', 1.0);
                     
                 } catch (error) {
                     reject(error);
@@ -1486,10 +1533,10 @@
             });
         }
 
-        async function uploadMergedImageToImageBB(blob) {
+        async function uploadMergedImageToImageBB(file) {
             return new Promise((resolve, reject) => {
                 const formData = new FormData();
-                formData.append('image', blob, 'merged-image.jpg');
+                formData.append('image', file);
                 
                 const uploadUrl = `${IMAGEBB_UPLOAD_URL}?key=${IMAGEBB_API_KEY}&expiration=600`;
                 
@@ -1497,22 +1544,29 @@
                     method: 'POST',
                     body: formData
                 })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.success) {
                         resolve(data.data.url);
                     } else {
-                        reject(new Error('Merged image upload failed'));
+                        console.error('ImageBB API error:', data);
+                        reject(new Error(data.error?.message || 'Image upload failed'));
                     }
                 })
                 .catch(error => {
-                    reject(error);
+                    console.error('Upload error:', error);
+                    reject(new Error('Network error during upload'));
                 });
             });
         }
 
-        async function sendToServer(userName, telegramId, mergedImageUrl) {
-            // Prepare data
+        async function saveSubmissionData(userName, telegramId, mergedImageUrl) {
+            // Prepare submission data
             const submissionData = {
                 userName: userName,
                 telegramId: telegramId,
@@ -1521,25 +1575,24 @@
                 submissionId: generateSubmissionId()
             };
             
-            // Simulate server processing delay
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // Simulate processing delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
             
-            // Store submission reference
-            const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
+            // Store in localStorage for reference
+            const submissions = JSON.parse(localStorage.getItem('openvector_submissions') || '[]');
             submissions.push({
                 id: submissionData.submissionId,
                 timestamp: submissionData.submissionTime,
                 userName: submissionData.userName,
-                telegramId: submissionData.telegramId,
-                mergedImageUrl: submissionData.mergedImageUrl
+                telegramId: submissionData.telegramId
             });
-            localStorage.setItem('submissions', JSON.stringify(submissions));
+            localStorage.setItem('openvector_submissions', JSON.stringify(submissions));
             
             // Log submission (in production, this would be a server API call)
             console.log('Submission processed:', {
                 userName: submissionData.userName,
                 telegramId: submissionData.telegramId,
-                mergedImageUrl: submissionData.mergedImageUrl,
+                imageCount: selectedFiles.length,
                 submissionId: submissionData.submissionId
             });
             
